@@ -1,0 +1,33 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: ingles-backend
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - shared-net
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  tunnel:
+    image: ngrok/ngrok:latest
+    container_name: ingles-tunnel
+    restart: unless-stopped
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    command: http ingles-backend:8000 --domain=${NGROK_DOMAIN}
+    networks:
+      - shared-net
+    depends_on:
+      - backend
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+
+networks:
+  shared-net:
+    external: true

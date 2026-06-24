@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card p-4 shadow-sm rounded-4">
+  <h2>Resultado: {{ attempt.score }}/{{ attempt.total }}</h2>
+  <p>{{ ((attempt.score / attempt.total) * 100)|round(1) }}%</p>
+  {% for ans in attempt.answers %}
+    <div class="p-3 my-2 rounded-3 {{ 'ok' if ans.is_correct else 'bad' }}">
+      <strong>{{ ans.question.prompt }}</strong><br>
+      Respuesta marcada: {{ ans.selected_option }} · Correcta: {{ ans.question.correct_option }}<br>
+      <small>{{ ans.question.explanation }}</small>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

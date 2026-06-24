@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero p-4 mb-4 rounded-4 shadow-sm">
+  <h1 class="fw-bold">Bienvenida, {{ current_user.full_name }}</h1>
+  <p class="mb-0">Seleccione un nivel, estudie la teoría y resuelva el test asociado.</p>
+</div>
+<div class="row g-3">
+  {% for level in levels %}
+  <div class="col-md-6">
+    <div class="card h-100 shadow-sm rounded-4">
+      <div class="card-body">
+        <h3>{{ level.code }} · {{ level.name }}</h3>
+        <p>{{ level.description }}</p>
+        {% for topic in level.topics %}
+          <a class="btn btn-outline-primary mb-2" href="{{ url_for('main.topic', topic_id=topic.id) }}">{{ topic.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<h3 class="mt-4">Últimos resultados</h3>
+<table class="table table-striped bg-white rounded shadow-sm">
+  <tr><th>Fecha</th><th>Tema</th><th>Puntaje</th></tr>
+  {% for a in attempts %}<tr><td>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</td><td>{{ a.topic.title }}</td><td>{{ a.score }}/{{ a.total }}</td></tr>{% endfor %}
+</table>
+{% endblock %}

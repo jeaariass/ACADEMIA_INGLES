@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Ranking e historial</h2>
+<table class="table table-striped bg-white shadow-sm">
+<tr><th>Fecha</th><th>Usuario</th><th>Tema</th><th>Puntaje</th></tr>
+{% for a in attempts %}<tr><td>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</td><td>{{ a.user.full_name }}</td><td>{{ a.topic.title }}</td><td>{{ a.score }}/{{ a.total }}</td></tr>{% endfor %}
+</table>
+{% endblock %}
