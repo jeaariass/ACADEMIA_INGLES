@@ -44,3 +44,31 @@ def create_question():
     db.session.add(Question(topic_id=int(request.form["topic_id"]), prompt=request.form["prompt"].strip(), option_a=request.form["option_a"].strip(), option_b=request.form["option_b"].strip(), option_c=request.form["option_c"].strip(), option_d=request.form["option_d"].strip(), correct_option=request.form["correct_option"].strip().upper(), explanation=request.form.get("explanation", "")))
     db.session.commit()
     return redirect(url_for("admin.panel"))
+
+@admin_bp.route("/user", methods=["POST"])
+@login_required
+@admin_required
+def create_user():
+    username = request.form["username"].strip()
+    if User.query.filter_by(username=username).first():
+        flash(f"Usuario '{username}' ya existe.", "warning")
+        return redirect(url_for("admin.panel"))
+    u = User(username=username, full_name=request.form["full_name"].strip(), role=request.form.get("role", "student"))
+    u.set_password(request.form["password"])
+    db.session.add(u)
+    db.session.commit()
+    flash(f"Usuario '{username}' creado.", "success")
+    return redirect(url_for("admin.panel"))
+
+@admin_bp.route("/user/<int:user_id>/delete", methods=["POST"])
+@login_required
+@admin_required
+def delete_user(user_id):
+    u = User.query.get_or_404(user_id)
+    if u.id == current_user.id:
+        flash("No puedes eliminar tu propia cuenta.", "danger")
+        return redirect(url_for("admin.panel"))
+    db.session.delete(u)
+    db.session.commit()
+    flash(f"Usuario '{u.username}' eliminado.", "success")
+    return redirect(url_for("admin.panel"))
