@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}{{ assessment.title }} · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section narrow-page final-shell">
+  <a class="back-link" href="{{ url_for('assessment.index') }}"><i class="bi bi-arrow-left"></i> All assessments</a>
+
+  <article class="final-hero-card">
+    <div>
+      <span class="eyebrow light">FINAL COMPREHENSIVE ASSESSMENT · A1–C2</span>
+      <h1>{{ assessment.title }}</h1>
+      <p>{{ assessment.description }}</p>
+      <div class="final-badges">
+        <span><i class="bi bi-ui-checks-grid"></i>{{ bank_count }} questions</span>
+        <span><i class="bi bi-layers-fill"></i>6 level stages</span>
+        <span><i class="bi bi-headphones"></i>Listening</span>
+        <span><i class="bi bi-book-half"></i>Reading</span>
+        <span><i class="bi bi-graph-up-arrow"></i>Growth comparison</span>
+      </div>
+    </div>
+    <div class="final-levels">
+      {% for item in bank_summary %}<span>{{ item.code }}<small>{{ item.count }}</small></span>{% endfor %}
+    </div>
+  </article>
+
+  <div class="final-overview-grid">
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">HOW IT WORKS</span><h2>One complete route through all six levels</h2></div></div>
+      <div class="final-flow">
+        <div><strong>1</strong><span><b>Start at A1</b><small>Each stage contains 12 questions and is submitted separately.</small></span></div>
+        <div><strong>2</strong><span><b>Continue through C2</b><small>The final is comprehensive, not adaptive. Every level is sampled.</small></span></div>
+        <div><strong>3</strong><span><b>Estimate your final platform level</b><small>The result considers performance at the target level and the foundation below it.</small></span></div>
+        <div><strong>4</strong><span><b>Compare with your initial diagnostic</b><small>If you completed the placement test, the report shows descriptive skill changes.</small></span></div>
+      </div>
+    </section>
+
+    <section class="content-card final-note-card">
+      <div class="content-card-header"><div><span class="eyebrow">COURSE COMPLETION</span><h2>Final assessment access</h2></div></div>
+      {% if course_progress %}
+      <div class="final-course-progress">
+        <strong>{{ course_progress.completed }}/{{ course_progress.total }}</strong>
+        <span>published lessons completed</span>
+        <div class="level-progress-track"><i style="width: {{ course_progress.percentage }}%"></i></div>
+      </div>
+      {% endif %}
+      <p>This result is a <strong>CEFR-aligned platform estimate</strong>, not an official CEFR certification. Speaking and extended writing are not directly scored in this version.</p>
+      <p class="final-small-note">Skill changes versus the initial diagnostic are descriptive indicators because the two assessments use different item sets and the diagnostic route is adaptive.</p>
+    </section>
+  </div>
+
+  <section class="content-card final-start-card">
+    <div>
+      <span class="eyebrow">READY</span>
+      <h2>Complete your final evaluation</h2>
+      <p>{{ assessment.instructions }}</p>
+    </div>
+    <form method="post" action="{{ url_for('assessment.start', code=assessment.code) }}">
+      <button class="btn btn-primary btn-modern btn-lg" type="submit">Start final assessment <i class="bi bi-arrow-right"></i></button>
+    </form>
+  </section>
+
+  {% if latest_attempt %}
+  <div class="previous-attempt final-previous">
+    <span><i class="bi bi-clock-history"></i> Latest final assessment</span>
+    <strong>{{ latest_attempt.estimated_level or '—' }} · {{ latest_attempt.percentage }}%</strong>
+    <a href="{{ url_for('assessment.result', attempt_id=latest_attempt.id) }}">View report</a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

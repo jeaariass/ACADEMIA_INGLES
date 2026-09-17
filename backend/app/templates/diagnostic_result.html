@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block title %}Diagnostic Result · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section diagnostic-result-page">
+  <div class="diagnostic-result-hero">
+    <div class="diagnostic-level-result">
+      <span>Estimated level</span>
+      <strong>{{ attempt.estimated_level }}</strong>
+      <small>CEFR-aligned platform estimate</small>
+    </div>
+    <div class="diagnostic-result-copy">
+      <span class="eyebrow light">INITIAL DIAGNOSTIC COMPLETED</span>
+      <h1>Your placement profile is ready</h1>
+      <p>You completed <strong>{{ profile.answered_count }}</strong> adaptive diagnostic questions. The route changed according to your performance.</p>
+      <div class="diagnostic-disclaimer"><i class="bi bi-info-circle-fill"></i><span>This result estimates your starting point for the platform. It is not an official CEFR certification and does not yet score speaking or extended writing.</span></div>
+    </div>
+  </div>
+
+  <section class="content-card diagnostic-route-card">
+    <div class="content-card-header"><div><span class="eyebrow">ADAPTIVE ROUTE</span><h2>Levels tested</h2></div></div>
+    <div class="diagnostic-route">
+      {% for stage in profile.level_path %}
+      <div class="diagnostic-route-stage {{ 'final' if stage.code == attempt.estimated_level else '' }}">
+        <span>{{ loop.index }}</span><strong>{{ stage.code }}</strong><b>{{ stage.percentage }}%</b><small>{{ stage.correct }}/{{ stage.total }}</small>
+      </div>
+      {% if not loop.last %}<i class="bi bi-arrow-right"></i>{% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="content-card assessment-breakdown-card">
+    <div class="content-card-header"><div><span class="eyebrow">SKILL PROFILE</span><h2>Performance across answered items</h2></div></div>
+    <div class="skill-result-grid">
+      {% for stat in profile.skill_stats %}
+      <div class="skill-result-card">
+        <div><strong>{{ stat.label }}</strong><span>{{ stat.correct }}/{{ stat.total }} correct</span></div>
+        <b>{{ stat.percentage }}%</b>
+        <div class="skill-progress"><span style="width: {{ stat.percentage }}%"></span></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="assessment-insight-grid diagnostic-insight-grid">
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">AREAS TO REVIEW</span><h2>Missed-item topics</h2></div></div>
+      {% if profile.recommendations %}
+      <div class="recommendation-list review">
+        {% for item in profile.recommendations %}
+        <div>
+          <i class="bi bi-arrow-repeat"></i>
+          <span><strong>{{ item.topic.level.code }} · {{ item.topic.title }}</strong><small>{{ item.correct }}/{{ item.total }} diagnostic item(s) correct</small></span>
+          <a href="{{ url_for('main.topic', topic_id=item.topic.id) }}">Review</a>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="diagnostic-microcopy">These are review signals from a placement test, not a full topic mastery score.</p>
+      {% else %}<p class="assessment-empty-copy">No clear review signal was identified among the items you answered.</p>{% endif %}
+    </section>
+
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">STRONG RESPONSES</span><h2>Topics answered well</h2></div></div>
+      {% if profile.strengths %}
+      <div class="recommendation-list success">
+        {% for item in profile.strengths %}
+        <div><i class="bi bi-check-circle-fill"></i><span><strong>{{ item.topic.level.code }} · {{ item.topic.title }}</strong><small>{{ item.percentage }}% on linked diagnostic items</small></span></div>
+        {% endfor %}
+      </div>
+      {% else %}<p class="assessment-empty-copy">The diagnostic needs more evidence before highlighting topic-level strengths.</p>{% endif %}
+    </section>
+  </div>
+
+  {% if profile.suggested_topic %}
+  <section class="diagnostic-next-card">
+    <div class="diagnostic-next-icon"><i class="bi bi-compass-fill"></i></div>
+    <div>
+      <span class="eyebrow">RECOMMENDED START</span>
+      <h2>{{ profile.suggested_topic.level.code }} · {{ profile.suggested_topic.title }}</h2>
+      <p>Use this lesson as your next learning or review point based on the diagnostic route and missed items.</p>
+    </div>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('main.topic', topic_id=profile.suggested_topic.id) }}">Open lesson <i class="bi bi-arrow-right"></i></a>
+  </section>
+  {% endif %}
+
+  <div class="after-review-actions">
+    <div><span class="eyebrow">NEXT STEP</span><h2>Use the estimate to guide your study</h2><p>You can retake the diagnostic later, but your lesson and level-assessment results should be used together with this placement estimate.</p></div>
+    <a class="btn btn-outline-primary btn-modern" href="{{ url_for('main.dashboard') }}">Go to Home</a>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('assessment.intro', code=assessment.code) }}">Diagnostic overview <i class="bi bi-arrow-right"></i></a>
+  </div>
+</section>
+{% endblock %}

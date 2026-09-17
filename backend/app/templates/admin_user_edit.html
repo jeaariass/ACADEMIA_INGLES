@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %}Edit {{ edited_user.username }} · Administration{% endblock %}
+{% block content %}
+<section class="page-section admin-edit-page">
+  <a class="back-link" href="{{ url_for('admin.panel') }}"><i class="bi bi-arrow-left"></i> Back to administration</a>
+
+  <div class="admin-edit-layout">
+    <section class="admin-edit-card">
+      <div class="admin-edit-heading">
+        <div class="admin-edit-avatar">{{ (edited_user.full_name or edited_user.username)[0]|upper }}</div>
+        <div>
+          <span class="eyebrow">USER ACCOUNT</span>
+          <h1>Edit {{ edited_user.full_name }}</h1>
+          <p>Update the account details below. Leaving the password fields empty keeps the current password.</p>
+        </div>
+      </div>
+
+      <form method="post" class="admin-edit-form">
+        <div class="admin-edit-grid">
+          <div>
+            <label class="form-label">Username</label>
+            <input class="form-control" name="username" maxlength="80"
+                   value="{{ edited_user.username }}" required>
+            <small>Used to sign in. It must be unique.</small>
+          </div>
+
+          <div>
+            <label class="form-label">Full name</label>
+            <input class="form-control" name="full_name" maxlength="120"
+                   value="{{ edited_user.full_name }}" required>
+            <small>Displayed throughout the platform.</small>
+          </div>
+
+          <div>
+            <label class="form-label">Role</label>
+            <select class="form-select" name="role"
+                    {% if edited_user.id == current_user.id %}data-self-admin="true"{% endif %}>
+              <option value="student" {% if edited_user.role == 'student' %}selected{% endif %}
+                      {% if edited_user.id == current_user.id %}disabled{% endif %}>Student</option>
+              <option value="admin" {% if edited_user.role == 'admin' %}selected{% endif %}>Administrator</option>
+            </select>
+            {% if edited_user.id == current_user.id %}
+            <small>Your active administrator account cannot demote itself.</small>
+            {% else %}
+            <small>Administrators can access the administration panel.</small>
+            {% endif %}
+          </div>
+
+          <div class="admin-readonly-field">
+            <label class="form-label">Account ID</label>
+            <div class="admin-readonly-value">#{{ edited_user.id }}</div>
+            <small>System identifier. Read-only.</small>
+          </div>
+
+          <div class="admin-readonly-field">
+            <label class="form-label">Created</label>
+            <div class="admin-readonly-value">
+              {{ edited_user.created_at.strftime('%Y-%m-%d %H:%M') if edited_user.created_at else '—' }}
+            </div>
+            <small>System metadata. Read-only.</small>
+          </div>
+        </div>
+
+        <div class="admin-password-reset">
+          <div>
+            <span class="eyebrow">PASSWORD RESET</span>
+            <h2>Set a new password</h2>
+            <p>Optional. The administrator does not need the user's existing password.</p>
+          </div>
+
+          <div class="admin-edit-grid">
+            <div>
+              <label class="form-label">New password</label>
+              <input class="form-control" name="new_password" type="password" minlength="8"
+                     autocomplete="new-password" placeholder="Leave blank to keep current password">
+            </div>
+            <div>
+              <label class="form-label">Confirm new password</label>
+              <input class="form-control" name="confirm_password" type="password" minlength="8"
+                     autocomplete="new-password" placeholder="Repeat new password">
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-edit-actions">
+          <a class="btn btn-outline-secondary btn-modern" href="{{ url_for('admin.panel') }}">Cancel</a>
+          <button class="btn btn-primary btn-modern" type="submit">
+            <i class="bi bi-check2-circle"></i> Save changes
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="admin-account-summary">
+      <span class="eyebrow">ACCOUNT SUMMARY</span>
+      <h2>{{ edited_user.username }}</h2>
+
+      <div class="admin-summary-role {{ 'is-admin' if edited_user.is_admin else 'is-student' }}">
+        <i class="bi {{ 'bi-shield-check' if edited_user.is_admin else 'bi-mortarboard-fill' }}"></i>
+        {{ 'Administrator' if edited_user.is_admin else 'Student' }}
+      </div>
+
+      <div class="admin-summary-stats">
+        <div><strong>{{ stats.completed_lessons }}</strong><span>Completed lessons</span></div>
+        <div><strong>{{ stats.practice_attempts }}</strong><span>Practice attempts</span></div>
+        <div><strong>{{ stats.assessment_attempts }}</strong><span>Assessment attempts</span></div>
+      </div>
+
+      <div class="admin-edit-note">
+        <i class="bi bi-database-check"></i>
+        <div>
+          <strong>Learning history is preserved</strong>
+          <span>Changing the username, name, role, or password does not reset lesson progress or assessment results.</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

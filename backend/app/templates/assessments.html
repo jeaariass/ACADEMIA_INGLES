@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}Assessments · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section">
+  <div class="page-title-row">
+    <div>
+      <span class="eyebrow">ASSESSMENTS & PLACEMENT</span>
+      <h1>Assessments</h1>
+      <p>Estimate your starting point, complete level assessments, and finish with a comprehensive A1–C2 evaluation.</p>
+    </div>
+    <div class="page-title-icon"><i class="bi bi-clipboard2-check-fill"></i></div>
+  </div>
+
+  <div class="assessment-grid">
+    {% for card in assessment_cards %}
+    {% set assessment = card.assessment %}
+    <article class="assessment-card
+      {{ 'diagnostic-card' if assessment.assessment_type == 'diagnostic' else '' }}
+      {{ 'final-card' if assessment.assessment_type == 'final' else '' }}
+      {{ 'assessment-locked' if not card.unlocked else '' }}">
+
+      <div class="assessment-card-top">
+        <span class="assessment-type">
+          {% if assessment.assessment_type == 'diagnostic' %}PLACEMENT
+          {% elif assessment.assessment_type == 'final' %}FINAL
+          {% else %}{{ assessment.assessment_type|upper }}{% endif %}
+        </span>
+        {% if assessment.level %}<span class="assessment-level">{{ assessment.level.code }}</span>{% endif %}
+        {% if assessment.assessment_type == 'diagnostic' %}
+          <span class="diagnostic-adaptive-chip"><i class="bi bi-diagram-3-fill"></i> Adaptive</span>
+        {% elif assessment.assessment_type == 'final' %}
+          <span class="final-comprehensive-chip"><i class="bi bi-stars"></i> A1–C2</span>
+        {% endif %}
+      </div>
+
+      <h2>{{ assessment.title }}</h2>
+      <p>{{ assessment.description }}</p>
+
+      <div class="assessment-meta">
+        {% if assessment.duration_minutes %}<span><i class="bi bi-clock"></i>{{ assessment.duration_minutes }} min max</span>{% endif %}
+
+        {% if assessment.assessment_type == 'diagnostic' %}
+          <span><i class="bi bi-signpost-split"></i>36–72 questions</span>
+          <span><i class="bi bi-bar-chart-steps"></i>A1–C2 estimate</span>
+        {% elif assessment.assessment_type == 'final' %}
+          <span><i class="bi bi-ui-checks-grid"></i>{{ assessment.question_links|length }} questions</span>
+          <span><i class="bi bi-layers-fill"></i>6 level stages</span>
+          <span><i class="bi bi-graph-up-arrow"></i>Growth report</span>
+        {% else %}
+          <span><i class="bi bi-ui-checks-grid"></i>{{ assessment.question_links|length }} questions</span>
+          {% if assessment.passing_score is not none %}<span><i class="bi bi-bullseye"></i>{{ assessment.passing_score|int }}% threshold</span>{% endif %}
+        {% endif %}
+      </div>
+
+      {% if card.progress %}
+      <div class="assessment-unlock-progress">
+        <div>
+          <span>{{ 'Course completion' if assessment.assessment_type == 'final' else 'Course progress' }}</span>
+          <strong>{{ card.progress.completed }}/{{ card.progress.total }}</strong>
+        </div>
+        <div class="level-progress-track"><span style="width: {{ card.progress.percentage }}%"></span></div>
+      </div>
+      {% endif %}
+
+      {% if card.unlocked %}
+      <a class="btn btn-primary btn-modern" href="{{ url_for('assessment.intro', code=assessment.code) }}">
+        {% if assessment.assessment_type == 'diagnostic' %}Open diagnostic
+        {% elif assessment.assessment_type == 'final' %}Open final assessment
+        {% elif current_user.is_admin %}Open assessment
+        {% else %}Start when ready{% endif %}
+        <i class="bi bi-arrow-right"></i>
+      </a>
+      {% else %}
+      <button class="btn btn-secondary btn-modern" type="button" disabled><i class="bi bi-lock-fill"></i> Locked</button>
+      <p class="assessment-lock-reason">{{ card.reason }}</p>
+      {% endif %}
+    </article>
+    {% else %}
+    <div class="empty-state">
+      <span class="empty-state-icon"><i class="bi bi-clipboard"></i></span>
+      <h3>No assessments available yet</h3>
+      <p>Published assessments will appear here.</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

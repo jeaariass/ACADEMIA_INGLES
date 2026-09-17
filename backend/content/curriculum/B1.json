@@ -1,0 +1,4003 @@
+{
+  "level": {
+    "code": "B1",
+    "order": 3,
+    "name": "Intermediate",
+    "description": "Develop independent communication for travel, work, study, experiences, opinions, narratives, and common real-life situations."
+  },
+  "topics": [
+    {
+      "code": "B1_T01",
+      "order": 1,
+      "title": "Present Perfect vs Past Simple",
+      "objective": "Choose between the present perfect and past simple when talking about experiences and finished past events.",
+      "theory": "Use the present perfect when the exact past time is not important or when the action connects to the present. Use the past simple when the time is finished or explicitly stated. Compare 'I have visited Rome' with 'I visited Rome in 2024'.",
+      "examples": [
+        "I've seen that film twice.",
+        "I saw it last Friday.",
+        "She has worked here for three years.",
+        "She started here in 2023."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I've visited Paris last year.",
+          "correct": "I visited Paris last year."
+        },
+        {
+          "wrong": "Did you ever try sushi?",
+          "correct": "Have you ever tried sushi?"
+        }
+      ],
+      "key_vocabulary": [
+        "experience",
+        "finished time",
+        "ever",
+        "never",
+        "already",
+        "yet",
+        "last year",
+        "in 2024"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T01_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the best sentence.",
+          "option_a": "I've been to London last year.",
+          "option_b": "I went to London last year.",
+          "option_c": "I have gone to London last year.",
+          "option_d": "I did been to London last year.",
+          "correct_option": "B",
+          "explanation": "Use the past simple with a finished time such as 'last year'."
+        },
+        {
+          "code": "B1_T01_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: ___ you ever ___ a marathon?",
+          "option_a": "Did / run",
+          "option_b": "Have / run",
+          "option_c": "Have / ran",
+          "option_d": "Did / ran",
+          "correct_option": "B",
+          "explanation": "Use present perfect for life experience without a finished time."
+        },
+        {
+          "code": "B1_T01_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: She ___ that book three times.",
+          "option_a": "read yesterday",
+          "option_b": "has read",
+          "option_c": "did read last week",
+          "option_d": "was reading",
+          "correct_option": "B",
+          "explanation": "No finished time is stated; the experience matters."
+        },
+        {
+          "code": "B1_T01_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: We ___ the project on Monday.",
+          "option_a": "have finished",
+          "option_b": "finished",
+          "option_c": "have finish",
+          "option_d": "finish since",
+          "correct_option": "B",
+          "explanation": "Monday is a finished past time."
+        },
+        {
+          "code": "B1_T01_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct pair.",
+          "option_a": "I've met him in 2022. / We have talked yesterday.",
+          "option_b": "I met him in 2022. / We talked yesterday.",
+          "option_c": "I have met him in 2022. / We talked yesterday.",
+          "option_d": "I met him in 2022. / We have talked yesterday.",
+          "correct_option": "B",
+          "explanation": "Both sentences use explicit finished times."
+        },
+        {
+          "code": "B1_T01_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'I've worked with Ana for two years. We met at a conference in Madrid.' Which event has a specific finished past time?",
+          "option_a": "Working with Ana",
+          "option_b": "Meeting at the conference",
+          "option_c": "Both",
+          "option_d": "Neither",
+          "correct_option": "B",
+          "explanation": "The meeting is linked to a specific past event."
+        },
+        {
+          "code": "B1_T01_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I've never tried surfing.",
+          "option_b": "She finished the course last month.",
+          "option_c": "Have you seen Tom today?",
+          "option_d": "We have moved here in 2021.",
+          "correct_option": "D",
+          "explanation": "Use 'We moved here in 2021.'"
+        },
+        {
+          "code": "B1_T01_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: I ___ my keys, so I can't open the door.",
+          "option_a": "lost yesterday",
+          "option_b": "have lost",
+          "option_c": "lose last night",
+          "option_d": "did lost",
+          "correct_option": "B",
+          "explanation": "The present result is important: the keys are still missing."
+        },
+        {
+          "code": "B1_T01_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Why can't the speaker enter the apartment?",
+          "option_a": "They forgot the address",
+          "option_b": "They have lost the keys",
+          "option_c": "They moved yesterday",
+          "option_d": "They are waiting for a friend",
+          "correct_option": "B",
+          "explanation": "The speaker says the keys are missing now.",
+          "audio_text": "I've lost my apartment keys, and I can't get inside. I think I left them at the café.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T01_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "When did the speaker visit Prague?",
+          "option_a": "This year",
+          "option_b": "Last summer",
+          "option_c": "Three times",
+          "option_d": "Never",
+          "correct_option": "B",
+          "explanation": "The speaker gives a finished time.",
+          "audio_text": "I've been to Prague twice. The last time I went was last summer.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T01_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Two Different Trips",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T01_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Which trip happened in a clearly finished past period?",
+              "option_a": "Japan",
+              "option_b": "Iceland",
+              "option_c": "Both equally",
+              "option_d": "Neither",
+              "correct_option": "B",
+              "explanation": "The Iceland trip is dated 2023 and described as completed."
+            },
+            {
+              "code": "B1_T01_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Why hasn't Daniel had much free time in Japan?",
+              "option_a": "The weather is bad",
+              "option_b": "He has attended meetings",
+              "option_c": "He is driving",
+              "option_d": "He has been sick",
+              "correct_option": "B",
+              "explanation": "He has attended meetings almost every day."
+            },
+            {
+              "code": "B1_T01_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence would be incorrect about the text?",
+              "option_a": "He went to Iceland in 2023.",
+              "option_b": "He has already visited Osaka.",
+              "option_c": "He hasn't had much free time.",
+              "option_d": "He has visited Iceland in 2023.",
+              "correct_option": "D",
+              "explanation": "A finished time requires the past simple."
+            }
+          ],
+          "content_text": "Daniel has traveled abroad several times, but two trips stand out for different reasons. He went to Iceland in 2023 with three friends. They rented a car, drove around the south coast, and visited several waterfalls. The weather changed constantly, but Daniel says the trip was unforgettable. More recently, he has traveled to Japan for work. He has been there for ten days and has already visited Tokyo and Osaka. He hasn't had much free time because he has attended meetings almost every day. However, he has tried several local dishes and has learned a few useful expressions in Japanese. Daniel says Iceland felt like an adventure, while Japan has been a completely different experience because he is combining work and travel."
+        },
+        {
+          "code": "B1_T01_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Career Update",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T01_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "When did the speaker change companies?",
+              "option_a": "Five years ago",
+              "option_b": "Last September",
+              "option_c": "In January",
+              "option_d": "This week",
+              "correct_option": "B",
+              "explanation": "The company change happened last September."
+            },
+            {
+              "code": "B1_T01_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What has the speaker already done with the new skills?",
+              "option_a": "Used them in two projects",
+              "option_b": "Changed careers",
+              "option_c": "Taught a course",
+              "option_d": "Stopped studying",
+              "correct_option": "A",
+              "explanation": "The speaker has used the skills in two projects."
+            }
+          ],
+          "audio_text": "I've worked in marketing for five years, but I changed companies last September. Since then, I've learned a lot about digital advertising. I completed a short analytics course in January, and I've already used some of those skills in two projects. I haven't decided what course to take next.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T02",
+      "order": 2,
+      "title": "Present Perfect with For and Since",
+      "objective": "Use for and since to describe situations that started in the past and continue to the present.",
+      "theory": "Use 'for' with a period of time and 'since' with a starting point. Present perfect often appears with both: 'I've lived here for six years' and 'I've lived here since 2020'.",
+      "examples": [
+        "We've known each other for a decade.",
+        "She's worked here since May.",
+        "I haven't seen him for two weeks.",
+        "How long have you lived here?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I've lived here since five years.",
+          "correct": "I've lived here for five years."
+        },
+        {
+          "wrong": "She's worked here for 2022.",
+          "correct": "She's worked here since 2022."
+        }
+      ],
+      "key_vocabulary": [
+        "for",
+        "since",
+        "how long",
+        "period",
+        "starting point",
+        "since Monday",
+        "for three months"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T02_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I've lived here ___ 2019.",
+          "option_a": "for",
+          "option_b": "since",
+          "option_c": "during",
+          "option_d": "ago",
+          "correct_option": "B",
+          "explanation": "2019 is a starting point."
+        },
+        {
+          "code": "B1_T02_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: She's studied English ___ three years.",
+          "option_a": "since",
+          "option_b": "for",
+          "option_c": "from",
+          "option_d": "at",
+          "correct_option": "B",
+          "explanation": "Three years is a period."
+        },
+        {
+          "code": "B1_T02_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "We've known them since a long time.",
+          "option_b": "We've known them for a long time.",
+          "option_c": "We know them for a long time ago.",
+          "option_d": "We've knew them for a long time.",
+          "correct_option": "B",
+          "explanation": "Use for with a period of time."
+        },
+        {
+          "code": "B1_T02_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: How long ___ you ___ here?",
+          "option_a": "did / live",
+          "option_b": "have / lived",
+          "option_c": "have / live",
+          "option_d": "are / lived",
+          "correct_option": "B",
+          "explanation": "Use present perfect to ask about duration continuing now."
+        },
+        {
+          "code": "B1_T02_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the best option: 'He has worked remotely ___ March.'",
+          "option_a": "for",
+          "option_b": "since",
+          "option_c": "ago",
+          "option_d": "during",
+          "correct_option": "B",
+          "explanation": "March is a starting point."
+        },
+        {
+          "code": "B1_T02_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'Nina started university in 2024 and she is still there.' Which sentence matches?",
+          "option_a": "Nina studied there for 2024.",
+          "option_b": "Nina has studied there since 2024.",
+          "option_c": "Nina has studied there for 2024.",
+          "option_d": "Nina studies there ago 2024.",
+          "correct_option": "B",
+          "explanation": "Use since with the starting year."
+        },
+        {
+          "code": "B1_T02_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I've waited for an hour.",
+          "option_b": "She's been here since eight.",
+          "option_c": "We've lived here for 2020.",
+          "option_d": "They haven't spoken for months.",
+          "correct_option": "C",
+          "explanation": "Use 'since 2020'."
+        },
+        {
+          "code": "B1_T02_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: I haven't eaten anything ___ this morning.",
+          "option_a": "for",
+          "option_b": "since",
+          "option_c": "ago",
+          "option_d": "during",
+          "correct_option": "B",
+          "explanation": "This morning is a starting point."
+        },
+        {
+          "code": "B1_T02_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "How long has the speaker worked at the company?",
+          "option_a": "Since 2018",
+          "option_b": "For eight months",
+          "option_c": "For three years",
+          "option_d": "Since Monday",
+          "correct_option": "C",
+          "explanation": "The speaker says three years.",
+          "audio_text": "I've worked at this company for three years, and I've been in my current team since January.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T02_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Since when has the café been open?",
+          "option_a": "2010",
+          "option_b": "Ten years",
+          "option_c": "Last month",
+          "option_d": "Three hours",
+          "correct_option": "A",
+          "explanation": "The speaker gives 2010 as the starting point.",
+          "audio_text": "This café has been open since 2010, and my family has managed it for more than a decade.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T02_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Long Friendship",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T02_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "How long have they lived in different cities?",
+              "option_a": "Since secondary school",
+              "option_b": "For six years",
+              "option_c": "For eight months",
+              "option_d": "Since 2021",
+              "correct_option": "B",
+              "explanation": "The text says for the last six years."
+            },
+            {
+              "code": "B1_T02_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Since when has Hannah worked in Manchester?",
+              "option_a": "Since 2021",
+              "option_b": "For four years",
+              "option_c": "Since last month",
+              "option_d": "For eight months",
+              "correct_option": "A",
+              "explanation": "The text states since 2021."
+            },
+            {
+              "code": "B1_T02_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "They've been friends since school.",
+              "option_b": "They haven't met for eight months.",
+              "option_c": "Lucy has lived in Bristol for four years.",
+              "option_d": "Hannah has worked there for 2021.",
+              "correct_option": "D",
+              "explanation": "Use 'since 2021'."
+            }
+          ],
+          "content_text": "Lucy and Hannah have been close friends since secondary school. They first met when they were thirteen, and they have stayed in touch ever since. For the last six years, they have lived in different cities, but they still speak every week. Hannah has worked as a nurse in Manchester since 2021, while Lucy has lived in Bristol for four years. They haven't seen each other in person for eight months because their schedules have been busy. Next month, however, they are planning a weekend together. Lucy says their friendship has changed over time, but it has remained important to both of them."
+        },
+        {
+          "code": "B1_T02_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Learning a Skill",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T02_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "How long has the speaker owned the current camera?",
+              "option_a": "Since February",
+              "option_b": "For two years",
+              "option_c": "Since teenage years",
+              "option_d": "For one month",
+              "correct_option": "B",
+              "explanation": "The speaker says for two years."
+            },
+            {
+              "code": "B1_T02_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Since when has the speaker taken the online course?",
+              "option_a": "February",
+              "option_b": "Two years ago",
+              "option_c": "Teenage years",
+              "option_d": "Several months ago exactly",
+              "correct_option": "A",
+              "explanation": "The course has continued since February."
+            }
+          ],
+          "audio_text": "I've been interested in photography since I was a teenager. I've owned my current camera for two years, and I've taken an online course since February. I haven't finished it yet, but I've practiced regularly for several months.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T03",
+      "order": 3,
+      "title": "Past Continuous",
+      "objective": "Describe actions that were in progress at a particular moment in the past.",
+      "theory": "Form the past continuous with was/were + verb-ing. It is often used for background actions, actions in progress at a specific past time, and situations interrupted by another event.",
+      "examples": [
+        "I was driving at eight.",
+        "They were studying when I called.",
+        "She wasn't sleeping.",
+        "Were you waiting for me?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I was drive.",
+          "correct": "I was driving."
+        },
+        {
+          "wrong": "They was working.",
+          "correct": "They were working."
+        }
+      ],
+      "key_vocabulary": [
+        "was",
+        "were",
+        "wasn't",
+        "weren't",
+        "while",
+        "at that moment",
+        "in progress"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T03_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: At 9 p.m., I ___ a report.",
+          "option_a": "wrote",
+          "option_b": "was writing",
+          "option_c": "am writing",
+          "option_d": "have written",
+          "correct_option": "B",
+          "explanation": "The action was in progress at a specific past time."
+        },
+        {
+          "code": "B1_T03_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: They ___ dinner when I arrived.",
+          "option_a": "were having",
+          "option_b": "was having",
+          "option_c": "had always",
+          "option_d": "have",
+          "correct_option": "A",
+          "explanation": "Use were + verb-ing with they."
+        },
+        {
+          "code": "B1_T03_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct negative.",
+          "option_a": "She wasn't listening.",
+          "option_b": "She didn't listening.",
+          "option_c": "She weren't listening.",
+          "option_d": "She wasn't listen.",
+          "correct_option": "A",
+          "explanation": "Use wasn't + verb-ing."
+        },
+        {
+          "code": "B1_T03_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct question.",
+          "option_a": "Were you sleeping?",
+          "option_b": "Did you sleeping?",
+          "option_c": "Was you sleeping?",
+          "option_d": "Were you sleep?",
+          "correct_option": "A",
+          "explanation": "Use Were + subject + verb-ing."
+        },
+        {
+          "code": "B1_T03_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: While I was cooking, my brother ___ TV.",
+          "option_a": "was watching",
+          "option_b": "watched always",
+          "option_c": "is watching",
+          "option_d": "has watched",
+          "correct_option": "A",
+          "explanation": "Two actions were in progress simultaneously."
+        },
+        {
+          "code": "B1_T03_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'At midnight, people were still dancing.' What does this emphasize?",
+          "option_a": "A repeated habit",
+          "option_b": "An action in progress",
+          "option_c": "A future plan",
+          "option_d": "A completed life experience",
+          "correct_option": "B",
+          "explanation": "Past continuous shows an action in progress."
+        },
+        {
+          "code": "B1_T03_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "We were waiting outside.",
+          "option_b": "He was talking to Sara.",
+          "option_c": "They was driving home.",
+          "option_d": "I wasn't paying attention.",
+          "correct_option": "C",
+          "explanation": "Use 'They were driving'."
+        },
+        {
+          "code": "B1_T03_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: What ___ you ___ when the lights went out?",
+          "option_a": "did / do",
+          "option_b": "were / doing",
+          "option_c": "was / doing",
+          "option_d": "have / done",
+          "correct_option": "B",
+          "explanation": "Use past continuous for the interrupted action."
+        },
+        {
+          "code": "B1_T03_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What was the speaker doing when the phone rang?",
+          "option_a": "Cooking",
+          "option_b": "Driving",
+          "option_c": "Sleeping",
+          "option_d": "Studying",
+          "correct_option": "A",
+          "explanation": "The speaker was cooking.",
+          "audio_text": "I was cooking dinner when my phone rang, so I turned the stove down before I answered.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T03_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What were the children doing at five?",
+          "option_a": "Playing outside",
+          "option_b": "Doing homework",
+          "option_c": "Eating dinner",
+          "option_d": "Sleeping",
+          "correct_option": "A",
+          "explanation": "They were playing outside.",
+          "audio_text": "At five o'clock, the children were playing outside while their parents were preparing dinner.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T03_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "The Power Cut",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T03_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What was the writer doing when the power went off?",
+              "option_a": "Cooking",
+              "option_b": "Working on a laptop",
+              "option_c": "Watching a film",
+              "option_d": "Sleeping",
+              "correct_option": "B",
+              "explanation": "The writer was working on a laptop."
+            },
+            {
+              "code": "B1_T03_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What were the upstairs neighbors doing?",
+              "option_a": "Cooking dinner",
+              "option_b": "Checking the panel",
+              "option_c": "Watching a film",
+              "option_d": "Baking a cake",
+              "correct_option": "A",
+              "explanation": "They were cooking dinner."
+            },
+            {
+              "code": "B1_T03_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "People were talking in the hallway.",
+              "option_b": "The writer was working.",
+              "option_c": "The neighbors were cooking.",
+              "option_d": "The family was watch a film.",
+              "correct_option": "D",
+              "explanation": "Use 'was watching'."
+            }
+          ],
+          "content_text": "Last Friday evening, several people in our building were doing different things when the electricity suddenly went off. I was working on my laptop in the living room. My neighbors upstairs were cooking dinner, and the family across the hall was watching a film. For a few seconds, nobody knew what had happened. People opened their doors and started talking in the hallway. While we were waiting for the lights to return, someone used a phone flashlight to check the electrical panel. The power came back after about twenty minutes. Fortunately, nobody was hurt, but one neighbor had been baking a cake and was worried about the oven."
+        },
+        {
+          "code": "B1_T03_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "An Interrupted Meeting",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T03_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What were they discussing?",
+              "option_a": "A project schedule",
+              "option_b": "The monthly budget",
+              "option_c": "A holiday",
+              "option_d": "A fire",
+              "correct_option": "B",
+              "explanation": "They were discussing the monthly budget."
+            },
+            {
+              "code": "B1_T03_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What did the manager explain?",
+              "option_a": "There was a real fire",
+              "option_b": "The alarm was a test",
+              "option_c": "The meeting was canceled forever",
+              "option_d": "The stairs were closed",
+              "correct_option": "B",
+              "explanation": "The manager said it was only a test."
+            }
+          ],
+          "audio_text": "We were discussing the monthly budget when the fire alarm started. Everyone stopped talking and left the meeting room. While we were walking downstairs, the building manager told us it was only a test.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T04",
+      "order": 4,
+      "title": "Past Simple vs Past Continuous",
+      "objective": "Combine past simple and past continuous to describe interrupted actions and background events.",
+      "theory": "Use the past continuous for an action already in progress and the past simple for the shorter event that interrupts or changes it. 'I was walking home when it started to rain.'",
+      "examples": [
+        "She was driving when the car broke down.",
+        "While I was studying, my friend called.",
+        "They arrived while we were eating.",
+        "I dropped my phone while I was running."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I was walked when it rained.",
+          "correct": "I was walking when it started to rain."
+        },
+        {
+          "wrong": "While I cooked, the phone was ringing once.",
+          "correct": "While I was cooking, the phone rang."
+        }
+      ],
+      "key_vocabulary": [
+        "when",
+        "while",
+        "background",
+        "interruption",
+        "suddenly",
+        "in progress"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T04_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I ___ home when I ___ an accident.",
+          "option_a": "drove / was seeing",
+          "option_b": "was driving / saw",
+          "option_c": "drove / saw while",
+          "option_d": "was drove / saw",
+          "correct_option": "B",
+          "explanation": "The driving was in progress; seeing the accident was the shorter event."
+        },
+        {
+          "code": "B1_T04_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: While they ___, it ___ to snow.",
+          "option_a": "walked / was starting",
+          "option_b": "were walking / started",
+          "option_c": "were walk / started",
+          "option_d": "walked / started always",
+          "correct_option": "B",
+          "explanation": "Use past continuous for background and past simple for the event."
+        },
+        {
+          "code": "B1_T04_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the best sentence.",
+          "option_a": "I read when she was calling.",
+          "option_b": "I was reading when she called.",
+          "option_c": "I was read when she called.",
+          "option_d": "I read while she called for hours.",
+          "correct_option": "B",
+          "explanation": "The ongoing action is 'was reading'."
+        },
+        {
+          "code": "B1_T04_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: The lights went out while we ___ dinner.",
+          "option_a": "had",
+          "option_b": "were having",
+          "option_c": "have",
+          "option_d": "are having",
+          "correct_option": "B",
+          "explanation": "The dinner was in progress."
+        },
+        {
+          "code": "B1_T04_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which clause usually describes the interruption?",
+          "option_a": "Past simple clause",
+          "option_b": "Past continuous clause",
+          "option_c": "Present perfect clause",
+          "option_d": "Future clause",
+          "correct_option": "A",
+          "explanation": "The shorter interrupting event is commonly past simple."
+        },
+        {
+          "code": "B1_T04_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'While Marta was cycling, she heard a strange noise.' Which action was already in progress?",
+          "option_a": "Hearing the noise",
+          "option_b": "Cycling",
+          "option_c": "Both began at exactly the same instant",
+          "option_d": "Neither",
+          "correct_option": "B",
+          "explanation": "Cycling was the ongoing background action."
+        },
+        {
+          "code": "B1_T04_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I was sleeping when you called.",
+          "option_b": "While we were eating, the doorbell rang.",
+          "option_c": "They were played football when it started raining.",
+          "option_d": "He fell while he was skiing.",
+          "correct_option": "C",
+          "explanation": "Use 'were playing'."
+        },
+        {
+          "code": "B1_T04_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: She ___ her ankle while she ___.",
+          "option_a": "hurt / was running",
+          "option_b": "was hurting / ran once",
+          "option_c": "hurts / was running",
+          "option_d": "hurt / ran every day",
+          "correct_option": "A",
+          "explanation": "The injury is the shorter event; running was in progress."
+        },
+        {
+          "code": "B1_T04_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What happened while the speaker was walking?",
+          "option_a": "A bus arrived",
+          "option_b": "It started raining",
+          "option_c": "The phone broke",
+          "option_d": "A dog barked",
+          "correct_option": "B",
+          "explanation": "Rain started during the walk.",
+          "audio_text": "I was walking to the station when it suddenly started raining, so I ran into a shop.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T04_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What interrupted the meeting?",
+          "option_a": "A phone call",
+          "option_b": "A fire alarm",
+          "option_c": "A visitor",
+          "option_d": "Lunch",
+          "correct_option": "B",
+          "explanation": "The fire alarm interrupted it.",
+          "audio_text": "We were having our weekly meeting when the fire alarm went off.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T04_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Bicycle Accident",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T04_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What caused Nina to lose her balance?",
+              "option_a": "Heavy rain",
+              "option_b": "A car door opening",
+              "option_c": "Fast traffic",
+              "option_d": "A broken phone",
+              "correct_option": "B",
+              "explanation": "A car door opened as she approached."
+            },
+            {
+              "code": "B1_T04_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Who came to help?",
+              "option_a": "A colleague",
+              "option_b": "A passerby",
+              "option_c": "A police officer",
+              "option_d": "Her manager",
+              "correct_option": "B",
+              "explanation": "A passerby came to help."
+            },
+            {
+              "code": "B1_T04_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Nina was cycling to work.",
+              "option_b": "A car opened its door.",
+              "option_c": "A passerby was walking nearby.",
+              "option_d": "She was fell from the bicycle.",
+              "correct_option": "D",
+              "explanation": "Use 'She fell' or 'She was falling', depending on meaning."
+            }
+          ],
+          "content_text": "On Tuesday morning, Nina was cycling to work along a quiet street. The sun was shining, and traffic was moving slowly. As she was approaching an intersection, a car suddenly opened its door. Nina tried to stop, but she lost her balance and fell. A passerby was walking nearby and immediately came to help. While Nina was checking her arm, the driver got out and apologized. Luckily, she wasn't seriously injured, but her bicycle wheel was damaged. She called her office while she was waiting for a taxi and explained what had happened."
+        },
+        {
+          "code": "B1_T04_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Missed Stop",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T04_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Why did the speaker miss the stop?",
+              "option_a": "The bus changed route",
+              "option_b": "The speaker was reading",
+              "option_c": "The driver forgot",
+              "option_d": "It was dark",
+              "correct_option": "B",
+              "explanation": "The speaker was reading and not paying attention."
+            },
+            {
+              "code": "B1_T04_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What did the speaker do next?",
+              "option_a": "Stayed on the bus",
+              "option_b": "Got off and walked back",
+              "option_c": "Called a taxi",
+              "option_d": "Went home another day",
+              "correct_option": "B",
+              "explanation": "The speaker got off at the next stop and walked back."
+            }
+          ],
+          "audio_text": "I was reading an article on the bus when I realized we had passed my stop. I wasn't paying attention to the route because the article was interesting. I got off at the next stop and walked back.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T05",
+      "order": 5,
+      "title": "First Conditional",
+      "objective": "Talk about realistic future possibilities and their likely results.",
+      "theory": "Form the first conditional with if + present simple, will + base verb. The clauses can change order. Other modals or imperatives may sometimes appear in the result clause.",
+      "examples": [
+        "If it rains, we'll stay inside.",
+        "I'll call you if I arrive early.",
+        "If you study, you'll improve.",
+        "If you see Marta, tell her to call me."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "If it will rain, we'll stay home.",
+          "correct": "If it rains, we'll stay home."
+        },
+        {
+          "wrong": "If you study, you will improves.",
+          "correct": "If you study, you will improve."
+        }
+      ],
+      "key_vocabulary": [
+        "if",
+        "unless",
+        "will",
+        "possible",
+        "result",
+        "condition",
+        "future"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T05_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: If it ___ tomorrow, we'll cancel the picnic.",
+          "option_a": "will rain",
+          "option_b": "rains",
+          "option_c": "rained",
+          "option_d": "is raining yesterday",
+          "correct_option": "B",
+          "explanation": "Use present simple in the if-clause."
+        },
+        {
+          "code": "B1_T05_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I'll call you if I ___ late.",
+          "option_a": "will be",
+          "option_b": "am",
+          "option_c": "was",
+          "option_d": "have been yesterday",
+          "correct_option": "B",
+          "explanation": "Use present simple after if."
+        },
+        {
+          "code": "B1_T05_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "If she studies, she will pass.",
+          "option_b": "If she will study, she passes.",
+          "option_c": "If she studied, she will pass.",
+          "option_d": "If she studies, she will passes.",
+          "correct_option": "A",
+          "explanation": "This is the standard first conditional form."
+        },
+        {
+          "code": "B1_T05_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: If we miss the bus, we ___ a taxi.",
+          "option_a": "take yesterday",
+          "option_b": "will take",
+          "option_c": "took",
+          "option_d": "have taken",
+          "correct_option": "B",
+          "explanation": "Use will for the likely future result."
+        },
+        {
+          "code": "B1_T05_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Meaning of 'unless' in 'Unless you hurry, you'll miss the train.'",
+          "option_a": "because",
+          "option_b": "if not",
+          "option_c": "although",
+          "option_d": "when",
+          "correct_option": "B",
+          "explanation": "Unless means 'if not'."
+        },
+        {
+          "code": "B1_T05_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'If the weather is good, we'll eat outside.' What must happen for them to eat outside?",
+          "option_a": "They buy food",
+          "option_b": "The weather is good",
+          "option_c": "It rains",
+          "option_d": "They finish work",
+          "correct_option": "B",
+          "explanation": "Good weather is the condition."
+        },
+        {
+          "code": "B1_T05_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "If you call, I'll answer.",
+          "option_b": "We'll go if we finish early.",
+          "option_c": "If he will come, I'll tell you.",
+          "option_d": "Unless it rains, we'll walk.",
+          "correct_option": "C",
+          "explanation": "Do not normally use will in the if-clause."
+        },
+        {
+          "code": "B1_T05_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: If you don't save the file, you ___ your changes.",
+          "option_a": "lose yesterday",
+          "option_b": "will lose",
+          "option_c": "lost",
+          "option_d": "have lost",
+          "correct_option": "B",
+          "explanation": "The likely future result uses will."
+        },
+        {
+          "code": "B1_T05_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What will they do if the train is delayed?",
+          "option_a": "Cancel the trip",
+          "option_b": "Take a bus",
+          "option_c": "Wait forever",
+          "option_d": "Call the hotel only",
+          "correct_option": "B",
+          "explanation": "They will take a bus.",
+          "audio_text": "If the train is delayed by more than an hour, we'll take the bus instead.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T05_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What will happen if the speaker finishes early?",
+          "option_a": "They'll call a friend",
+          "option_b": "They'll stay at work",
+          "option_c": "They'll cancel dinner",
+          "option_d": "They'll travel tomorrow",
+          "correct_option": "A",
+          "explanation": "The speaker will call.",
+          "audio_text": "If I finish work early, I'll call you and we can have dinner together.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T05_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Weather-Dependent Event",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T05_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Where will the film be shown if the weather stays dry?",
+              "option_a": "Community hall",
+              "option_b": "Park",
+              "option_c": "Cinema",
+              "option_d": "Library",
+              "correct_option": "B",
+              "explanation": "The outdoor plan is the park."
+            },
+            {
+              "code": "B1_T05_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Why should visitors arrive early if the event moves indoors?",
+              "option_a": "The film starts earlier",
+              "option_b": "There will be fewer seats",
+              "option_c": "The hall closes",
+              "option_d": "Tickets are cheaper",
+              "correct_option": "B",
+              "explanation": "Indoor seating is more limited."
+            },
+            {
+              "code": "B1_T05_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "If it rains, they'll move inside.",
+              "option_b": "If it stays dry, the film will start at eight.",
+              "option_c": "If visitors arrive early, they may find seats.",
+              "option_d": "If it will rain, they will cancel the website.",
+              "correct_option": "D",
+              "explanation": "Use present simple in the if-clause."
+            }
+          ],
+          "content_text": "Our community is planning an outdoor film night on Saturday. If the weather stays dry, the film will start at eight in the park. People can bring blankets and snacks. If it rains, the organizers will move the event to the community hall. If that happens, there will be fewer seats, so visitors will need to arrive early. The organizers say they will post a final update online at four in the afternoon. If you don't check the website, you may not know where the event is taking place."
+        },
+        {
+          "code": "B1_T05_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Work Deadline",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T05_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "When will the client review the report if it is finished on time?",
+              "option_a": "Thursday",
+              "option_b": "Friday",
+              "option_c": "Monday",
+              "option_d": "Next month",
+              "correct_option": "B",
+              "explanation": "The client will review it Friday."
+            },
+            {
+              "code": "B1_T05_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What will happen if the client requests changes?",
+              "option_a": "They'll cancel the project",
+              "option_b": "They'll update the report",
+              "option_c": "They'll ignore the client",
+              "option_d": "They'll send it immediately unchanged",
+              "correct_option": "B",
+              "explanation": "They will update it on Monday."
+            }
+          ],
+          "audio_text": "If we finish the report by Thursday, the client will review it on Friday. If they ask for changes, we'll update it on Monday. Unless there are major problems, we'll send the final version next week.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T06",
+      "order": 6,
+      "title": "Second Conditional",
+      "objective": "Discuss hypothetical, unlikely, or imaginary present and future situations.",
+      "theory": "Use if + past simple, would + base verb for hypothetical situations. 'If I had more time, I would travel more.' The form 'were' is common with all subjects in more formal English, especially 'If I were you'.",
+      "examples": [
+        "If I had more money, I'd travel.",
+        "If she knew the answer, she'd tell us.",
+        "What would you do if you lost your phone?",
+        "If I were you, I'd wait."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "If I would have time, I'd help.",
+          "correct": "If I had time, I'd help."
+        },
+        {
+          "wrong": "If he had a car, he will drive.",
+          "correct": "If he had a car, he would drive."
+        }
+      ],
+      "key_vocabulary": [
+        "would",
+        "if I were you",
+        "hypothetical",
+        "imaginary",
+        "unlikely",
+        "advice"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T06_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: If I ___ more free time, I'd learn Italian.",
+          "option_a": "have",
+          "option_b": "had",
+          "option_c": "will have",
+          "option_d": "would have",
+          "correct_option": "B",
+          "explanation": "Use past simple in the if-clause."
+        },
+        {
+          "code": "B1_T06_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: She would travel more if she ___ more money.",
+          "option_a": "has",
+          "option_b": "had",
+          "option_c": "will have",
+          "option_d": "would had",
+          "correct_option": "B",
+          "explanation": "Use past simple after if."
+        },
+        {
+          "code": "B1_T06_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "If I were you, I'd apologize.",
+          "option_b": "If I would be you, I apologize.",
+          "option_c": "If I am you, I'd apologized.",
+          "option_d": "If I was you, I will apologize always.",
+          "correct_option": "A",
+          "explanation": "'If I were you' is the standard advice form."
+        },
+        {
+          "code": "B1_T06_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: What ___ you do if you won a free trip?",
+          "option_a": "will",
+          "option_b": "would",
+          "option_c": "did",
+          "option_d": "have",
+          "correct_option": "B",
+          "explanation": "Use would in the result question."
+        },
+        {
+          "code": "B1_T06_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which situation is most likely hypothetical?",
+          "option_a": "If it rains tomorrow, we'll stay in.",
+          "option_b": "If I were a millionaire, I'd buy a house by the sea.",
+          "option_c": "If you heat ice, it melts.",
+          "option_d": "I went home because I was tired.",
+          "correct_option": "B",
+          "explanation": "This is imaginary or unlikely."
+        },
+        {
+          "code": "B1_T06_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'If Mark lived closer, he would visit more often.' What is implied?",
+          "option_a": "Mark lives nearby",
+          "option_b": "Mark does not live close",
+          "option_c": "Mark visits every day",
+          "option_d": "Mark will definitely move",
+          "correct_option": "B",
+          "explanation": "The conditional suggests he currently lives farther away."
+        },
+        {
+          "code": "B1_T06_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "If I had a car, I'd drive.",
+          "option_b": "She'd help if she knew.",
+          "option_c": "If he would study, he'd improve.",
+          "option_d": "What would you buy if you won?",
+          "correct_option": "C",
+          "explanation": "Use 'If he studied'."
+        },
+        {
+          "code": "B1_T06_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: If we ___ near the beach, we'd swim every day.",
+          "option_a": "live",
+          "option_b": "lived",
+          "option_c": "will live",
+          "option_d": "would lived",
+          "correct_option": "B",
+          "explanation": "Use past simple in the if-clause."
+        },
+        {
+          "code": "B1_T06_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What would the speaker do with more free time?",
+          "option_a": "Work more",
+          "option_b": "Learn to cook",
+          "option_c": "Move abroad",
+          "option_d": "Buy a car",
+          "correct_option": "B",
+          "explanation": "The speaker would learn to cook.",
+          "audio_text": "If I had more free time, I'd take a cooking course and learn to make better meals.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T06_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What advice is given?",
+          "option_a": "Leave the job immediately",
+          "option_b": "Talk to the manager first",
+          "option_c": "Ignore the problem",
+          "option_d": "Move cities",
+          "correct_option": "B",
+          "explanation": "The speaker says 'If I were you'.",
+          "audio_text": "If I were you, I'd talk to your manager before making any big decision.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T06_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Different Career",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T06_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What career would James probably choose?",
+              "option_a": "Doctor",
+              "option_b": "Teacher",
+              "option_c": "Engineer",
+              "option_d": "Chef",
+              "correct_option": "B",
+              "explanation": "He says he would probably become a teacher."
+            },
+            {
+              "code": "B1_T06_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What is one concern about changing careers?",
+              "option_a": "He dislikes teaching",
+              "option_b": "It would require training and lower initial pay",
+              "option_c": "He hates mathematics",
+              "option_d": "He must move abroad",
+              "correct_option": "B",
+              "explanation": "Training and salary are concerns."
+            },
+            {
+              "code": "B1_T06_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "If he changed careers, he'd need training.",
+              "option_b": "If money were not a concern, he'd consider it.",
+              "option_c": "If he would choose again, he'd become a teacher.",
+              "option_d": "He would teach economics.",
+              "correct_option": "C",
+              "explanation": "Use 'If he chose again'."
+            }
+          ],
+          "content_text": "James sometimes imagines having a completely different career. He works in finance, but if he could choose again, he would probably become a teacher. He enjoys explaining ideas and helping younger colleagues at work. If he became a teacher, he says he would teach economics or mathematics. However, he knows that changing careers would require more training and a lower salary at first. If money were not a concern, he would consider the change more seriously."
+        },
+        {
+          "code": "B1_T06_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Dream Home",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T06_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Where would the speaker like to live?",
+              "option_a": "Near the mountains",
+              "option_b": "In a city center",
+              "option_c": "On an island",
+              "option_d": "Next to an airport",
+              "correct_option": "A",
+              "explanation": "The speaker mentions the mountains."
+            },
+            {
+              "code": "B1_T06_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What would the speaker probably get if there were a large garden?",
+              "option_a": "A car",
+              "option_b": "A dog",
+              "option_c": "A horse",
+              "option_d": "A boat",
+              "correct_option": "B",
+              "explanation": "The speaker says probably a dog."
+            }
+          ],
+          "audio_text": "If I could choose any place to live, I'd move somewhere near the mountains. I'd work remotely, grow vegetables, and spend more time outdoors. If the house had a large garden, I'd probably get a dog too.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T07",
+      "order": 7,
+      "title": "Obligation, Necessity, and Prohibition",
+      "objective": "Use must, have to, don't have to, and mustn't to talk about rules and necessity.",
+      "theory": "Use must and have to for obligation, though context and tone differ. 'Don't have to' means there is no necessity. 'Mustn't' means something is prohibited.",
+      "examples": [
+        "You must wear a seat belt.",
+        "I have to finish this today.",
+        "You don't have to come early.",
+        "You mustn't smoke here."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "You don't have to park here. = Parking is prohibited.",
+          "correct": "You mustn't park here. = Parking is prohibited."
+        },
+        {
+          "wrong": "I must to leave.",
+          "correct": "I must leave."
+        }
+      ],
+      "key_vocabulary": [
+        "must",
+        "have to",
+        "don't have to",
+        "mustn't",
+        "required",
+        "optional",
+        "prohibited"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T07_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which sentence expresses prohibition?",
+          "option_a": "You don't have to enter.",
+          "option_b": "You mustn't enter.",
+          "option_c": "You should enter.",
+          "option_d": "You have entered.",
+          "correct_option": "B",
+          "explanation": "Mustn't means prohibited."
+        },
+        {
+          "code": "B1_T07_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which sentence means something is optional?",
+          "option_a": "You must come.",
+          "option_b": "You have to come.",
+          "option_c": "You don't have to come.",
+          "option_d": "You mustn't come.",
+          "correct_option": "C",
+          "explanation": "Don't have to means no necessity."
+        },
+        {
+          "code": "B1_T07_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: Employees ___ wear identification badges.",
+          "option_a": "have to",
+          "option_b": "don't have to always not",
+          "option_c": "mustn't if required",
+          "option_d": "would",
+          "correct_option": "A",
+          "explanation": "This expresses workplace necessity."
+        },
+        {
+          "code": "B1_T07_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: Visitors ___ take photographs in this area. It's forbidden.",
+          "option_a": "don't have to",
+          "option_b": "mustn't",
+          "option_c": "should",
+          "option_d": "can",
+          "correct_option": "B",
+          "explanation": "Mustn't expresses prohibition."
+        },
+        {
+          "code": "B1_T07_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct form.",
+          "option_a": "I must to finish.",
+          "option_b": "I must finish.",
+          "option_c": "I must finishing.",
+          "option_d": "I must finished.",
+          "correct_option": "B",
+          "explanation": "Use base verb after must."
+        },
+        {
+          "code": "B1_T07_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'You don't have to book in advance, but it is recommended.' What does this mean?",
+          "option_a": "Booking is forbidden",
+          "option_b": "Booking is required",
+          "option_c": "Booking is optional",
+          "option_d": "Booking is impossible",
+          "correct_option": "C",
+          "explanation": "There is no obligation."
+        },
+        {
+          "code": "B1_T07_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "We have to leave by six.",
+          "option_b": "You mustn't use your phone here.",
+          "option_c": "She has to wear a uniform.",
+          "option_d": "He musts finish today.",
+          "correct_option": "D",
+          "explanation": "Modal 'must' does not take -s."
+        },
+        {
+          "code": "B1_T07_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: Because the office is closed Friday, we ___ come in.",
+          "option_a": "mustn't",
+          "option_b": "don't have to",
+          "option_c": "have to",
+          "option_d": "must",
+          "correct_option": "B",
+          "explanation": "There is no need to come in."
+        },
+        {
+          "code": "B1_T07_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What must visitors do?",
+          "option_a": "Wear a badge",
+          "option_b": "Pay cash",
+          "option_c": "Leave phones at home",
+          "option_d": "Book a hotel",
+          "correct_option": "A",
+          "explanation": "Visitors must wear a badge.",
+          "audio_text": "All visitors must wear a badge while they are inside the building.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T07_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What is prohibited?",
+          "option_a": "Using the stairs",
+          "option_b": "Parking in front of the gate",
+          "option_c": "Arriving early",
+          "option_d": "Wearing a badge",
+          "correct_option": "B",
+          "explanation": "The speaker says parking there is prohibited.",
+          "audio_text": "You mustn't park in front of the gate because emergency vehicles need access.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T07_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Office Rules",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T07_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "When do employees have to be available?",
+              "option_a": "8 to 10",
+              "option_b": "10 to 3",
+              "option_c": "3 to 8",
+              "option_d": "Only Friday",
+              "correct_option": "B",
+              "explanation": "They must be available between ten and three."
+            },
+            {
+              "code": "B1_T07_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What mustn't employees share?",
+              "option_a": "Lunch",
+              "option_b": "Passwords",
+              "option_c": "Meeting times",
+              "option_d": "Badges",
+              "correct_option": "B",
+              "explanation": "They mustn't share passwords."
+            },
+            {
+              "code": "B1_T07_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which statement is incorrect in form?",
+              "option_a": "Visitors have to sign in.",
+              "option_b": "Employees don't have to arrive at eight.",
+              "option_c": "Staff must protect information.",
+              "option_d": "Everyone must to wear a badge.",
+              "correct_option": "D",
+              "explanation": "Use 'must wear'."
+            }
+          ],
+          "content_text": "Employees at Northbridge Design have a flexible schedule, but there are several important rules. Staff have to be available between ten and three for meetings. They don't have to arrive at eight every morning, and they can sometimes work from home. However, everyone must protect confidential client information. Employees mustn't share passwords or leave sensitive documents on their desks overnight. Visitors have to sign in at reception and wear a temporary badge. They don't have to be accompanied in the café area, but they must stay with a staff member in the main offices."
+        },
+        {
+          "code": "B1_T07_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Gym Instructions",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T07_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What does the gym provide?",
+              "option_a": "Shoes",
+              "option_b": "A towel",
+              "option_c": "A bag",
+              "option_d": "Weights to take home",
+              "correct_option": "B",
+              "explanation": "The gym provides a towel."
+            },
+            {
+              "code": "B1_T07_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Where mustn't people leave bags?",
+              "option_a": "At reception",
+              "option_b": "Near the equipment",
+              "option_c": "In lockers",
+              "option_d": "At home",
+              "correct_option": "B",
+              "explanation": "Bags must not be left near equipment."
+            }
+          ],
+          "audio_text": "You have to bring clean indoor shoes into the exercise area. You don't have to bring a towel because the gym provides one. You mustn't leave bags near the equipment, and you must return weights after using them.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T08",
+      "order": 8,
+      "title": "Gerunds and Infinitives",
+      "objective": "Use common verb patterns with gerunds and infinitives.",
+      "theory": "Some verbs are followed by -ing, such as enjoy, avoid, finish, and suggest. Others are followed by to + infinitive, such as want, decide, hope, plan, and need. Some verbs allow both with differences or little change in meaning.",
+      "examples": [
+        "I enjoy reading.",
+        "She decided to leave.",
+        "We hope to travel.",
+        "He finished writing the report."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I enjoy to swim.",
+          "correct": "I enjoy swimming."
+        },
+        {
+          "wrong": "She decided going home.",
+          "correct": "She decided to go home."
+        }
+      ],
+      "key_vocabulary": [
+        "enjoy doing",
+        "avoid doing",
+        "finish doing",
+        "decide to do",
+        "hope to do",
+        "plan to do"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T08_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I enjoy ___ in the morning.",
+          "option_a": "to run",
+          "option_b": "running",
+          "option_c": "run to",
+          "option_d": "ran",
+          "correct_option": "B",
+          "explanation": "Enjoy is followed by a gerund."
+        },
+        {
+          "code": "B1_T08_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: She decided ___ the offer.",
+          "option_a": "accepting",
+          "option_b": "to accept",
+          "option_c": "accept",
+          "option_d": "accepted to",
+          "correct_option": "B",
+          "explanation": "Decide is followed by to + infinitive."
+        },
+        {
+          "code": "B1_T08_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: We hope ___ you soon.",
+          "option_a": "seeing",
+          "option_b": "to see",
+          "option_c": "saw",
+          "option_d": "see to",
+          "correct_option": "B",
+          "explanation": "Hope is followed by to + infinitive."
+        },
+        {
+          "code": "B1_T08_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: He finished ___ the presentation.",
+          "option_a": "prepare",
+          "option_b": "to prepare",
+          "option_c": "preparing",
+          "option_d": "prepared to",
+          "correct_option": "C",
+          "explanation": "Finish is followed by -ing."
+        },
+        {
+          "code": "B1_T08_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "They avoided driving at night.",
+          "option_b": "They avoided to drive at night.",
+          "option_c": "They avoided drive at night.",
+          "option_d": "They avoid drove at night.",
+          "correct_option": "A",
+          "explanation": "Avoid is followed by a gerund."
+        },
+        {
+          "code": "B1_T08_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'Maya plans to study abroad but avoids flying when possible.' Which verb is followed by an infinitive?",
+          "option_a": "plans",
+          "option_b": "avoids",
+          "option_c": "possible",
+          "option_d": "flying",
+          "correct_option": "A",
+          "explanation": "Plan is followed by to + infinitive."
+        },
+        {
+          "code": "B1_T08_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I want to learn.",
+          "option_b": "She enjoys cooking.",
+          "option_c": "We decided leaving early.",
+          "option_d": "He finished cleaning.",
+          "correct_option": "C",
+          "explanation": "Use 'decided to leave'."
+        },
+        {
+          "code": "B1_T08_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: They suggested ___ earlier.",
+          "option_a": "leave",
+          "option_b": "to leave",
+          "option_c": "leaving",
+          "option_d": "left to",
+          "correct_option": "C",
+          "explanation": "Suggest is followed by a gerund."
+        },
+        {
+          "code": "B1_T08_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What does the speaker enjoy doing?",
+          "option_a": "Cooking",
+          "option_b": "Running",
+          "option_c": "Driving",
+          "option_d": "Studying",
+          "correct_option": "A",
+          "explanation": "The speaker enjoys cooking.",
+          "audio_text": "I enjoy cooking for friends, but I hate washing all the dishes afterward.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T08_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What did the speaker decide to do?",
+          "option_a": "Change jobs",
+          "option_b": "Travel",
+          "option_c": "Buy a car",
+          "option_d": "Study medicine",
+          "correct_option": "A",
+          "explanation": "The speaker decided to change jobs.",
+          "audio_text": "After several difficult months, I decided to look for a new job.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T08_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Changing Habits",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T08_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What did Priya decide to change?",
+              "option_a": "Her job title",
+              "option_b": "Her routine",
+              "option_c": "Her apartment",
+              "option_d": "Her phone",
+              "correct_option": "B",
+              "explanation": "She decided to change her routine."
+            },
+            {
+              "code": "B1_T08_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What does she enjoy doing before sleep?",
+              "option_a": "Exercising",
+              "option_b": "Reading",
+              "option_c": "Working",
+              "option_d": "Cooking",
+              "correct_option": "B",
+              "explanation": "She enjoys reading."
+            },
+            {
+              "code": "B1_T08_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "decided to change",
+              "option_b": "enjoys reading",
+              "option_c": "plans to exercise",
+              "option_d": "hopes joining",
+              "correct_option": "D",
+              "explanation": "Use 'hopes to join'."
+            }
+          ],
+          "content_text": "After years of working late, Priya decided to change her routine. She started going to bed earlier and stopped checking work email after nine. She enjoys reading before sleep because it helps her relax. She also plans to exercise three times a week and hopes to join a weekend hiking group. At first, she found it difficult to avoid looking at her phone, but after a few weeks it became easier. Priya says she wants to continue improving her routine because she has more energy now."
+        },
+        {
+          "code": "B1_T08_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Weekend Plans",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T08_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What has the speaker finished doing?",
+              "option_a": "Working",
+              "option_b": "Cleaning",
+              "option_c": "Cooking",
+              "option_d": "Studying",
+              "correct_option": "B",
+              "explanation": "The speaker has finished cleaning."
+            },
+            {
+              "code": "B1_T08_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What have they decided to do?",
+              "option_a": "Meet at two",
+              "option_b": "Cancel the exhibition",
+              "option_c": "Stay home",
+              "option_d": "Go to work",
+              "correct_option": "A",
+              "explanation": "They decided to meet at two."
+            }
+          ],
+          "audio_text": "I've finished cleaning the apartment, so I want to go out. I'm thinking about visiting the new art exhibition. My friend offered to come with me, and we've decided to meet at two.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T09",
+      "order": 9,
+      "title": "Defining Relative Clauses",
+      "objective": "Use who, which, and that to add essential information about people and things.",
+      "theory": "Use who for people, which for things, and that for people or things in many defining relative clauses. These clauses identify exactly which person or thing we mean.",
+      "examples": [
+        "The woman who called is my manager.",
+        "The book that you lent me was excellent.",
+        "This is the café which opened last week.",
+        "People who work remotely need good internet."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "The woman which called me.",
+          "correct": "The woman who called me."
+        },
+        {
+          "wrong": "The computer who broke.",
+          "correct": "The computer that broke."
+        }
+      ],
+      "key_vocabulary": [
+        "who",
+        "which",
+        "that",
+        "person",
+        "thing",
+        "identify",
+        "relative clause"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T09_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose: The man ___ lives next door is a doctor.",
+          "option_a": "which",
+          "option_b": "who",
+          "option_c": "where",
+          "option_d": "what",
+          "correct_option": "B",
+          "explanation": "Use who for people."
+        },
+        {
+          "code": "B1_T09_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose: The laptop ___ I bought is very light.",
+          "option_a": "who",
+          "option_b": "which",
+          "option_c": "where",
+          "option_d": "whose only",
+          "correct_option": "B",
+          "explanation": "Use which for a thing."
+        },
+        {
+          "code": "B1_T09_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which sentence is correct?",
+          "option_a": "The woman which called is here.",
+          "option_b": "The woman who called is here.",
+          "option_c": "The woman where called is here.",
+          "option_d": "The woman what called is here.",
+          "correct_option": "B",
+          "explanation": "Use who for a person."
+        },
+        {
+          "code": "B1_T09_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: This is the film ___ everyone recommended.",
+          "option_a": "who",
+          "option_b": "that",
+          "option_c": "where person",
+          "option_d": "whose",
+          "correct_option": "B",
+          "explanation": "That can refer to things in defining clauses."
+        },
+        {
+          "code": "B1_T09_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "People who work here get free lunch.",
+          "option_b": "People which work here get free lunch.",
+          "option_c": "People where work here get free lunch.",
+          "option_d": "People what work here get free lunch.",
+          "correct_option": "A",
+          "explanation": "Use who for people."
+        },
+        {
+          "code": "B1_T09_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'The app that I use for budgeting is free.' What does the relative clause identify?",
+          "option_a": "The budget",
+          "option_b": "The specific app",
+          "option_c": "The user",
+          "option_d": "The price",
+          "correct_option": "B",
+          "explanation": "It tells us which app."
+        },
+        {
+          "code": "B1_T09_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "The student who won is absent.",
+          "option_b": "The phone that I ordered arrived.",
+          "option_c": "The person which helped me was kind.",
+          "option_d": "The book which I borrowed is here.",
+          "correct_option": "C",
+          "explanation": "Use who/that for a person."
+        },
+        {
+          "code": "B1_T09_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: The restaurant ___ serves vegan food is near here.",
+          "option_a": "who",
+          "option_b": "that",
+          "option_c": "where who",
+          "option_d": "what",
+          "correct_option": "B",
+          "explanation": "That refers to the restaurant."
+        },
+        {
+          "code": "B1_T09_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Who is the speaker describing?",
+          "option_a": "A colleague who speaks three languages",
+          "option_b": "A neighbor who cooks",
+          "option_c": "A teacher who retired",
+          "option_d": "A driver",
+          "correct_option": "A",
+          "explanation": "The description is of a multilingual colleague.",
+          "audio_text": "I work with a colleague who speaks Spanish, French, and English fluently.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T09_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What is being described?",
+          "option_a": "A phone",
+          "option_b": "A website that compares prices",
+          "option_c": "A restaurant",
+          "option_d": "A bus route",
+          "correct_option": "B",
+          "explanation": "The speaker describes a website.",
+          "audio_text": "I found a website that compares hotel prices from several travel companies.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T09_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Useful Local Service",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T09_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Who recommended the repair shop?",
+              "option_a": "The owner",
+              "option_b": "A friend who works in IT",
+              "option_c": "A customer",
+              "option_d": "The technician",
+              "correct_option": "B",
+              "explanation": "The writer's IT friend recommended it."
+            },
+            {
+              "code": "B1_T09_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What can urgent customers sometimes receive the same day?",
+              "option_a": "A new computer",
+              "option_b": "Their repaired devices",
+              "option_c": "A refund",
+              "option_d": "A free tablet",
+              "correct_option": "B",
+              "explanation": "Urgent repairs may be completed the same day."
+            },
+            {
+              "code": "B1_T09_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which clause is incorrect?",
+              "option_a": "the owner who has worked there",
+              "option_b": "customers who need urgent repairs",
+              "option_c": "computers that are cheaper",
+              "option_d": "a friend which works in IT",
+              "correct_option": "D",
+              "explanation": "Use 'who' for a person."
+            }
+          ],
+          "content_text": "There's a small repair shop near my office that has become very popular. The owner, who has worked with electronics for more than twenty years, repairs phones, laptops, and tablets. Customers who need urgent repairs can sometimes get their devices back on the same day. The shop also sells refurbished computers that are cheaper than new ones. A friend who works in IT recommended the place to me after my laptop screen broke. The technician who helped me explained the problem clearly and repaired it within two days."
+        },
+        {
+          "code": "B1_T09_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Choosing a Course",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T09_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What kind of course does the speaker want?",
+              "option_a": "A course focused on practical data skills",
+              "option_b": "A language course",
+              "option_c": "A cooking course",
+              "option_d": "A driving course",
+              "correct_option": "A",
+              "explanation": "The speaker wants practical data skills."
+            },
+            {
+              "code": "B1_T09_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Who recommended the program?",
+              "option_a": "A manager",
+              "option_b": "A teacher who runs evening classes",
+              "option_c": "A friend",
+              "option_d": "A student",
+              "correct_option": "B",
+              "explanation": "The teacher recommended it."
+            }
+          ],
+          "audio_text": "I'm looking for a course that focuses on practical data skills. I spoke to a teacher who runs evening classes, and she recommended a program that includes Python and data visualization.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T10",
+      "order": 10,
+      "title": "Passive Voice: Present and Past",
+      "objective": "Use the passive voice when the action or result is more important than the person who performs it.",
+      "theory": "Form the passive with be + past participle. Present simple passive: is/are + participle. Past simple passive: was/were + participle. Use by when the agent is important.",
+      "examples": [
+        "The emails are sent every morning.",
+        "The bridge was built in 1998.",
+        "English is spoken here.",
+        "The report was prepared by Ana."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "The report was prepare.",
+          "correct": "The report was prepared."
+        },
+        {
+          "wrong": "Cars are make here.",
+          "correct": "Cars are made here."
+        }
+      ],
+      "key_vocabulary": [
+        "is made",
+        "are produced",
+        "was built",
+        "were sent",
+        "by",
+        "passive",
+        "agent"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T10_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: Coffee ___ in many countries.",
+          "option_a": "grows",
+          "option_b": "is grown",
+          "option_c": "is grow",
+          "option_d": "was grow",
+          "correct_option": "B",
+          "explanation": "Present passive: is + past participle."
+        },
+        {
+          "code": "B1_T10_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: The building ___ in 2005.",
+          "option_a": "built",
+          "option_b": "was built",
+          "option_c": "is build",
+          "option_d": "was build",
+          "correct_option": "B",
+          "explanation": "Past passive: was + participle."
+        },
+        {
+          "code": "B1_T10_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "The reports are checked daily.",
+          "option_b": "The reports checked daily.",
+          "option_c": "The reports are check daily.",
+          "option_d": "The reports is checked daily.",
+          "correct_option": "A",
+          "explanation": "Plural present passive uses are + participle."
+        },
+        {
+          "code": "B1_T10_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: The invitations ___ yesterday.",
+          "option_a": "were sent",
+          "option_b": "are send",
+          "option_c": "sent by themselves",
+          "option_d": "was sent",
+          "correct_option": "A",
+          "explanation": "Past plural passive uses were sent."
+        },
+        {
+          "code": "B1_T10_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which sentence focuses on the result rather than the agent?",
+          "option_a": "Ana wrote the report.",
+          "option_b": "The report was written by Ana.",
+          "option_c": "Ana is writing.",
+          "option_d": "Ana writes reports.",
+          "correct_option": "B",
+          "explanation": "The passive puts the report first."
+        },
+        {
+          "code": "B1_T10_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'The museum was renovated in 2022.' What is emphasized?",
+          "option_a": "Who renovated it",
+          "option_b": "The museum and the action",
+          "option_c": "The future plan",
+          "option_d": "A habit",
+          "correct_option": "B",
+          "explanation": "The museum and renovation are foregrounded."
+        },
+        {
+          "code": "B1_T10_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "Phones are sold here.",
+          "option_b": "The road was closed yesterday.",
+          "option_c": "The files were uploaded.",
+          "option_d": "The product is make in Italy.",
+          "correct_option": "D",
+          "explanation": "Use 'is made'."
+        },
+        {
+          "code": "B1_T10_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: These documents ___ by the manager every Friday.",
+          "option_a": "review",
+          "option_b": "are reviewed",
+          "option_c": "was reviewed",
+          "option_d": "are review",
+          "correct_option": "B",
+          "explanation": "Use present passive for a regular process."
+        },
+        {
+          "code": "B1_T10_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "When was the station renovated?",
+          "option_a": "2018",
+          "option_b": "2020",
+          "option_c": "2022",
+          "option_d": "Last month",
+          "correct_option": "C",
+          "explanation": "The speaker says 2022.",
+          "audio_text": "The old station was renovated in 2022, and a new ticket hall was added.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T10_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What is produced at the factory?",
+          "option_a": "Bicycles",
+          "option_b": "Phones",
+          "option_c": "Furniture",
+          "option_d": "Food",
+          "correct_option": "A",
+          "explanation": "The factory produces bicycles.",
+          "audio_text": "More than five hundred bicycles are produced at this factory every week.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T10_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "How Coffee Reaches the Cup",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T10_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What happens after the beans are picked?",
+              "option_a": "They are processed and dried",
+              "option_b": "They are immediately served",
+              "option_c": "They are thrown away",
+              "option_d": "They are planted again only",
+              "correct_option": "A",
+              "explanation": "They are processed and dried."
+            },
+            {
+              "code": "B1_T10_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Where are the beans roasted?",
+              "option_a": "Only where they are grown",
+              "option_b": "In other countries after transport",
+              "option_c": "In customers' homes only",
+              "option_d": "Before they are picked",
+              "correct_option": "B",
+              "explanation": "They are transported and then roasted."
+            },
+            {
+              "code": "B1_T10_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Coffee is grown in tropical regions.",
+              "option_b": "Beans are transported.",
+              "option_c": "Different temperatures are used.",
+              "option_d": "The beans are package and sent.",
+              "correct_option": "D",
+              "explanation": "Use 'are packaged'."
+            }
+          ],
+          "content_text": "Coffee is grown in many tropical regions around the world. After the beans are picked, they are processed and dried. They are then transported to other countries, where they are roasted. Different temperatures are used to create different flavors. After roasting, the beans are packaged and sent to shops, cafés, and restaurants. In many cafés, the beans are ground immediately before the coffee is prepared. Although machines are used for several stages, many important decisions are still made by people with specialist knowledge."
+        },
+        {
+          "code": "B1_T10_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Renovation Announcement",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T10_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Why will the library close?",
+              "option_a": "A staff holiday",
+              "option_b": "Renovation work",
+              "option_c": "A festival",
+              "option_d": "A fire",
+              "correct_option": "B",
+              "explanation": "Renovation work is taking place."
+            },
+            {
+              "code": "B1_T10_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Which section was renovated last year?",
+              "option_a": "Adult study area",
+              "option_b": "Children's section",
+              "option_c": "Café",
+              "option_d": "Entrance",
+              "correct_option": "B",
+              "explanation": "The children's section was renovated."
+            }
+          ],
+          "audio_text": "The main library will be closed for two weeks. New lighting is being installed, and several reading areas are being redesigned. Last year, the children's section was renovated, but the adult study area was not changed.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T11",
+      "order": 11,
+      "title": "Reported Speech: Statements",
+      "objective": "Report what someone said without repeating the exact words.",
+      "theory": "In reported speech, pronouns, time expressions, and verb forms may change depending on context. A common pattern is said (that) + clause. For example: 'I'm tired' → She said that she was tired.",
+      "examples": [
+        "'I'm busy.' → He said he was busy.",
+        "'We live here.' → They said they lived there.",
+        "'I can't come.' → She said she couldn't come.",
+        "He told me he was leaving."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She said me she was tired.",
+          "correct": "She told me she was tired. / She said she was tired."
+        },
+        {
+          "wrong": "He said that he is tired yesterday.",
+          "correct": "He said that he was tired."
+        }
+      ],
+      "key_vocabulary": [
+        "said",
+        "told",
+        "reported",
+        "that",
+        "was",
+        "could",
+        "would",
+        "there"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T11_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Report: 'I'm tired.'",
+          "option_a": "She said she was tired.",
+          "option_b": "She said me tired.",
+          "option_c": "She says she tired yesterday.",
+          "option_d": "She told that she is tired.",
+          "correct_option": "A",
+          "explanation": "A common backshift is am → was."
+        },
+        {
+          "code": "B1_T11_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Report: 'We can't come.'",
+          "option_a": "They said they couldn't come.",
+          "option_b": "They said they can't came.",
+          "option_c": "They told they couldn't.",
+          "option_d": "They said us not come.",
+          "correct_option": "A",
+          "explanation": "Can commonly changes to could."
+        },
+        {
+          "code": "B1_T11_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "He said me he was busy.",
+          "option_b": "He told me he was busy.",
+          "option_c": "He told that he was busy me.",
+          "option_d": "He said to me that busy.",
+          "correct_option": "B",
+          "explanation": "Tell usually takes an object: told me."
+        },
+        {
+          "code": "B1_T11_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Report: 'I will call you.'",
+          "option_a": "She said she would call me.",
+          "option_b": "She said she will called me.",
+          "option_c": "She told she would call.",
+          "option_d": "She said me she call.",
+          "correct_option": "A",
+          "explanation": "Will often changes to would."
+        },
+        {
+          "code": "B1_T11_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which reporting verb normally requires an object?",
+          "option_a": "said",
+          "option_b": "told",
+          "option_c": "spoke",
+          "option_d": "talked",
+          "correct_option": "B",
+          "explanation": "Tell is normally followed by a person."
+        },
+        {
+          "code": "B1_T11_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: Maya said, 'I don't know the answer.' Which report is correct?",
+          "option_a": "Maya said she didn't know the answer.",
+          "option_b": "Maya told she doesn't know.",
+          "option_c": "Maya said me no answer.",
+          "option_d": "Maya said she not knew.",
+          "correct_option": "A",
+          "explanation": "This is the standard reported form."
+        },
+        {
+          "code": "B1_T11_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "He said he was leaving.",
+          "option_b": "She told me she was busy.",
+          "option_c": "They said they could help.",
+          "option_d": "He said me he was tired.",
+          "correct_option": "D",
+          "explanation": "Use 'told me' or 'said he...'."
+        },
+        {
+          "code": "B1_T11_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Report: 'We are working from home.'",
+          "option_a": "They said they were working from home.",
+          "option_b": "They said they work from home yesterday.",
+          "option_c": "They told they were work.",
+          "option_d": "They said us working.",
+          "correct_option": "A",
+          "explanation": "Are working commonly backshifts to were working."
+        },
+        {
+          "code": "B1_T11_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What did Clara say?",
+          "option_a": "She was running late",
+          "option_b": "She had canceled permanently",
+          "option_c": "She was already there",
+          "option_d": "She was sick",
+          "correct_option": "A",
+          "explanation": "The speaker reports Clara's message.",
+          "audio_text": "Clara called and said she was running about fifteen minutes late.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T11_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What did the manager tell the team?",
+          "option_a": "The deadline had moved",
+          "option_b": "The office was closed forever",
+          "option_c": "The client canceled",
+          "option_d": "The budget doubled",
+          "correct_option": "A",
+          "explanation": "The deadline moved.",
+          "audio_text": "The manager told us that the deadline had moved from Thursday to Friday.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T11_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Message Passed On",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T11_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What did Emma say about the client?",
+              "option_a": "The client hated everything",
+              "option_b": "The client was happy but wanted changes",
+              "option_c": "The client canceled",
+              "option_d": "The client wanted more text",
+              "correct_option": "B",
+              "explanation": "The client liked the first design but requested changes."
+            },
+            {
+              "code": "B1_T11_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What did the client want regarding the home page?",
+              "option_a": "More text",
+              "option_b": "Less text",
+              "option_c": "No photographs",
+              "option_d": "A new logo only",
+              "correct_option": "B",
+              "explanation": "The home page should include less text."
+            },
+            {
+              "code": "B1_T11_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which report is incorrect?",
+              "option_a": "Emma said the client was happy.",
+              "option_b": "She told Ryan the colors needed changes.",
+              "option_c": "Ryan said he would update the design.",
+              "option_d": "Emma said Ryan that the client was happy.",
+              "correct_option": "D",
+              "explanation": "Use 'told Ryan' or 'said that...'."
+            }
+          ],
+          "content_text": "Ryan couldn't attend the morning meeting, so his colleague Emma called him afterward. She said the client was happy with the first design but wanted a few changes. She told Ryan that the colors needed to be simpler and that the home page should include less text. Emma also said the client would send new photographs later that afternoon. Ryan thanked her and said he would update the design before the next meeting."
+        },
+        {
+          "code": "B1_T11_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Phone Message",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T11_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Why did Ben call?",
+              "option_a": "To confirm attendance",
+              "option_b": "To say he couldn't attend",
+              "option_c": "To cancel all training",
+              "option_d": "To request money",
+              "correct_option": "B",
+              "explanation": "He said he couldn't attend."
+            },
+            {
+              "code": "B1_T11_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What did Ben say he would do later?",
+              "option_a": "Call the trainer",
+              "option_b": "Email",
+              "option_c": "Visit the office",
+              "option_d": "Send a package",
+              "correct_option": "B",
+              "explanation": "He said he would email later."
+            }
+          ],
+          "audio_text": "Ben called while you were out. He said he couldn't attend tomorrow's training session and told me he would email you later. He also said he was sorry for the short notice.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T12",
+      "order": 12,
+      "title": "Future Forms: Will, Going To, and Present Continuous",
+      "objective": "Choose among common future forms for predictions, intentions, spontaneous decisions, and arrangements.",
+      "theory": "Use going to for prior intentions and evidence-based predictions, present continuous for fixed arrangements, and will for spontaneous decisions, promises, offers, and some predictions.",
+      "examples": [
+        "I'm meeting Sara at six.",
+        "We're going to repaint the kitchen.",
+        "I'll answer the phone.",
+        "I think prices will rise."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I'm going to meeting them at six.",
+          "correct": "I'm meeting them at six. / I'm going to meet them at six."
+        },
+        {
+          "wrong": "I will going to call him.",
+          "correct": "I'll call him. / I'm going to call him."
+        }
+      ],
+      "key_vocabulary": [
+        "arrangement",
+        "intention",
+        "prediction",
+        "offer",
+        "will",
+        "going to",
+        "present continuous"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T12_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "You arranged dinner yesterday. Choose the best sentence.",
+          "option_a": "I'm meeting Ana for dinner tonight.",
+          "option_b": "I'll meet Ana perhaps now decision.",
+          "option_c": "I meet Ana yesterday.",
+          "option_d": "I have met Ana tomorrow.",
+          "correct_option": "A",
+          "explanation": "Present continuous is common for fixed arrangements."
+        },
+        {
+          "code": "B1_T12_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "You decide now to answer the phone.",
+          "option_a": "I'm going to answer it next year.",
+          "option_b": "I'll answer it.",
+          "option_c": "I answered it tomorrow.",
+          "option_d": "I'm answer it.",
+          "correct_option": "B",
+          "explanation": "Will is common for spontaneous decisions."
+        },
+        {
+          "code": "B1_T12_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Look at those clouds! It ___ rain.",
+          "option_a": "is going to",
+          "option_b": "was going to yesterday",
+          "option_c": "has rain",
+          "option_d": "meets",
+          "correct_option": "A",
+          "explanation": "Present evidence supports a going-to prediction."
+        },
+        {
+          "code": "B1_T12_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: We ___ the dentist at 3 p.m. tomorrow; the appointment is booked.",
+          "option_a": "are seeing",
+          "option_b": "will see maybe",
+          "option_c": "saw",
+          "option_d": "have seen yesterday",
+          "correct_option": "A",
+          "explanation": "Present continuous expresses a fixed arrangement."
+        },
+        {
+          "code": "B1_T12_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the best sentence for an intention already decided.",
+          "option_a": "I'm going to start a course next month.",
+          "option_b": "I'll start a course, decision made months ago is impossible.",
+          "option_c": "I started next month.",
+          "option_d": "I start yesterday.",
+          "correct_option": "A",
+          "explanation": "Going to fits a prior intention."
+        },
+        {
+          "code": "B1_T12_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'I forgot my wallet.' 'Don't worry, I'll pay.' Why is will used?",
+          "option_a": "Fixed arrangement",
+          "option_b": "Spontaneous offer",
+          "option_c": "Past habit",
+          "option_d": "Completed action",
+          "correct_option": "B",
+          "explanation": "The decision is made at the moment."
+        },
+        {
+          "code": "B1_T12_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I'm meeting the doctor tomorrow.",
+          "option_b": "I'll help you.",
+          "option_c": "We're going to move next year.",
+          "option_d": "I'm going to meeting my manager.",
+          "correct_option": "D",
+          "explanation": "Use 'going to meet'."
+        },
+        {
+          "code": "B1_T12_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: They ___ us at the station at 8. Everything is arranged.",
+          "option_a": "are meeting",
+          "option_b": "will meeting",
+          "option_c": "met tomorrow",
+          "option_d": "have met next week",
+          "correct_option": "A",
+          "explanation": "Present continuous is natural for arrangements."
+        },
+        {
+          "code": "B1_T12_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What arrangement has been made?",
+          "option_a": "A meeting at ten",
+          "option_b": "A holiday next year",
+          "option_c": "A spontaneous taxi ride",
+          "option_d": "A canceled appointment",
+          "correct_option": "A",
+          "explanation": "The speaker has arranged a meeting.",
+          "audio_text": "I'm meeting the project team at ten tomorrow morning. The room is already booked.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T12_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What does the speaker decide at the moment?",
+          "option_a": "To make coffee",
+          "option_b": "To move house",
+          "option_c": "To book a flight next year",
+          "option_d": "To study abroad",
+          "correct_option": "A",
+          "explanation": "The decision is spontaneous.",
+          "audio_text": "You look tired. I'll make some coffee for both of us.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T12_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Busy Week Ahead",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T12_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Which event is a fixed arrangement?",
+              "option_a": "Meeting the client",
+              "option_b": "Probably working late",
+              "option_c": "Helping at some unknown time only",
+              "option_d": "Thinking about photography",
+              "correct_option": "A",
+              "explanation": "The client meeting is already arranged."
+            },
+            {
+              "code": "B1_T12_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Why is Martin going to start a photography course?",
+              "option_a": "A spontaneous decision this second",
+              "option_b": "An existing intention to improve",
+              "option_c": "A past habit",
+              "option_d": "A client ordered him",
+              "correct_option": "B",
+              "explanation": "It is a planned intention."
+            },
+            {
+              "code": "B1_T12_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "He's meeting a client Monday.",
+              "option_b": "He's going to start a course.",
+              "option_c": "He thinks he'll work late.",
+              "option_d": "He's going to helping his sister.",
+              "correct_option": "D",
+              "explanation": "Use 'going to help'."
+            }
+          ],
+          "content_text": "Martin has several plans for next week. On Monday, he's meeting a new client at the office. The meeting was arranged two weeks ago. On Tuesday evening, he's going to start a photography course because he wants to improve his skills. He hasn't booked anything for Wednesday, but he thinks he'll probably work late because a project deadline is close. On Thursday, he's having dinner with his sister. When she called yesterday, she mentioned she was moving apartment, so Martin said, 'I'll help you this weekend.'"
+        },
+        {
+          "code": "B1_T12_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Changing Plans",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T12_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Why will the speaker wait in the café?",
+              "option_a": "The film is canceled",
+              "option_b": "Leo will be late",
+              "option_c": "The café is closing",
+              "option_d": "The speaker is hungry only",
+              "correct_option": "B",
+              "explanation": "Leo has said he will be late."
+            },
+            {
+              "code": "B1_T12_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What fixed arrangement do they have?",
+              "option_a": "A film at 7:30",
+              "option_b": "A meeting tomorrow",
+              "option_c": "A train at six",
+              "option_d": "Dinner next week",
+              "correct_option": "A",
+              "explanation": "They are seeing a film at 7:30."
+            }
+          ],
+          "audio_text": "I'm supposed to meet Leo at six, but he just texted me. He's going to be late, so I'll wait in the café. We're seeing a film at seven thirty, so we still have plenty of time.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T13",
+      "order": 13,
+      "title": "Common Phrasal Verbs",
+      "objective": "Understand and use common phrasal verbs in everyday contexts.",
+      "theory": "Phrasal verbs combine a verb with a particle. Their meaning may be literal or idiomatic. Common B1 examples include find out, look after, give up, turn on, turn off, pick up, run out of, and look for.",
+      "examples": [
+        "I found out the truth.",
+        "Can you look after my dog?",
+        "We ran out of milk.",
+        "I'll pick you up at six."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "We ran milk out of.",
+          "correct": "We ran out of milk."
+        },
+        {
+          "wrong": "I look my keys for.",
+          "correct": "I'm looking for my keys."
+        }
+      ],
+      "key_vocabulary": [
+        "find out",
+        "look after",
+        "give up",
+        "pick up",
+        "run out of",
+        "look for",
+        "turn on",
+        "turn off"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T13_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "What does 'look after' mean?",
+          "option_a": "search for",
+          "option_b": "take care of",
+          "option_c": "discover",
+          "option_d": "stop trying",
+          "correct_option": "B",
+          "explanation": "Look after means take care of."
+        },
+        {
+          "code": "B1_T13_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "What does 'run out of' mean?",
+          "option_a": "have none left",
+          "option_b": "buy more",
+          "option_c": "turn on",
+          "option_d": "collect",
+          "correct_option": "A",
+          "explanation": "It means there is no more of something."
+        },
+        {
+          "code": "B1_T13_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: I'll ___ you ___ at the station.",
+          "option_a": "pick / up",
+          "option_b": "look / after",
+          "option_c": "run / out",
+          "option_d": "give / up",
+          "correct_option": "A",
+          "explanation": "Pick someone up means collect them."
+        },
+        {
+          "code": "B1_T13_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "What does 'find out' mean?",
+          "option_a": "forget",
+          "option_b": "discover information",
+          "option_c": "take care of",
+          "option_d": "switch off",
+          "correct_option": "B",
+          "explanation": "Find out means discover."
+        },
+        {
+          "code": "B1_T13_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "If you 'give up' a difficult task, you...",
+          "option_a": "continue forever",
+          "option_b": "stop trying",
+          "option_c": "turn it on",
+          "option_d": "collect someone",
+          "correct_option": "B",
+          "explanation": "Give up means stop trying."
+        },
+        {
+          "code": "B1_T13_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'We ran out of printer paper, so I went to buy more.' What happened?",
+          "option_a": "The printer broke",
+          "option_b": "There was no paper left",
+          "option_c": "They found paper",
+          "option_d": "They turned off the printer",
+          "correct_option": "B",
+          "explanation": "They had no paper left."
+        },
+        {
+          "code": "B1_T13_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which meaning is incorrect?",
+          "option_a": "look for = search",
+          "option_b": "pick up = collect",
+          "option_c": "turn off = switch off",
+          "option_d": "look after = discover information",
+          "correct_option": "D",
+          "explanation": "Look after means take care of."
+        },
+        {
+          "code": "B1_T13_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: Can you ___ the lights before you leave?",
+          "option_a": "turn off",
+          "option_b": "find out",
+          "option_c": "run out of",
+          "option_d": "look after",
+          "correct_option": "A",
+          "explanation": "Turn off means switch off."
+        },
+        {
+          "code": "B1_T13_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What did the speaker run out of?",
+          "option_a": "Coffee",
+          "option_b": "Printer paper",
+          "option_c": "Time",
+          "option_d": "Money",
+          "correct_option": "B",
+          "explanation": "Printer paper ran out.",
+          "audio_text": "We ran out of printer paper this morning, so I ordered two new boxes.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T13_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Who will the speaker pick up?",
+          "option_a": "A colleague",
+          "option_b": "A dog",
+          "option_c": "A parcel",
+          "option_d": "A teacher",
+          "correct_option": "A",
+          "explanation": "The speaker will collect a colleague.",
+          "audio_text": "I'll pick up my colleague from the station at half past six.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T13_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Day of Small Problems",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T13_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What did the writer run out of?",
+              "option_a": "Coffee",
+              "option_b": "Email",
+              "option_c": "Dog food",
+              "option_d": "Money",
+              "correct_option": "A",
+              "explanation": "The writer ran out of coffee."
+            },
+            {
+              "code": "B1_T13_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What did the manager ask the writer to find out?",
+              "option_a": "Where the dog was",
+              "option_b": "Why a client hadn't received an email",
+              "option_c": "Where the café was",
+              "option_d": "Who took the access card",
+              "correct_option": "B",
+              "explanation": "The manager wanted the email problem investigated."
+            },
+            {
+              "code": "B1_T13_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which meaning is incorrect in context?",
+              "option_a": "run out of = have none left",
+              "option_b": "find out = discover",
+              "option_c": "look after = care for",
+              "option_d": "pick up = stop trying",
+              "correct_option": "D",
+              "explanation": "Pick up does not mean stop trying."
+            }
+          ],
+          "content_text": "Yesterday seemed to be full of small problems. First, I ran out of coffee before breakfast, so I had to stop at a café on the way to work. At the office, I couldn't find my access card and spent ten minutes looking for it. Then my manager asked me to find out why a client hadn't received an email. During lunch, my sister called and asked if I could look after her dog this weekend. By the afternoon, I felt like giving up, but things improved. I found my access card inside my notebook, solved the email problem, and remembered to pick up coffee on the way home."
+        },
+        {
+          "code": "B1_T13_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Weekend Help",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T13_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What is the speaker being asked to do?",
+              "option_a": "Look after a cat",
+              "option_b": "Buy a cat",
+              "option_c": "Find a new neighbor",
+              "option_d": "Turn off a computer",
+              "correct_option": "A",
+              "explanation": "The speaker is asked to care for the cat."
+            },
+            {
+              "code": "B1_T13_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Where will the keys be?",
+              "option_a": "At work",
+              "option_b": "With the neighbor",
+              "option_c": "Under the cat",
+              "option_d": "At the station",
+              "correct_option": "B",
+              "explanation": "The keys will be with the neighbor."
+            }
+          ],
+          "audio_text": "Could you look after my cat on Saturday? Of course. What time should I pick up the keys? I'll leave them with the neighbor. I'll text you the details later.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T14",
+      "order": 14,
+      "title": "Expressing Opinions and Linking Ideas",
+      "objective": "Organize spoken and written ideas using common linking words and opinion expressions.",
+      "theory": "Use expressions such as in my opinion, I think, I agree, I disagree, because, although, however, so, therefore, and for example to organize ideas and show relationships.",
+      "examples": [
+        "In my opinion, public transport should be cheaper.",
+        "I agree because it would reduce traffic.",
+        "Although the job is demanding, I enjoy it.",
+        "The bus was late, so I took a taxi."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Although it was raining, but we went out.",
+          "correct": "Although it was raining, we went out."
+        },
+        {
+          "wrong": "I was tired however I finished.",
+          "correct": "I was tired; however, I finished."
+        }
+      ],
+      "key_vocabulary": [
+        "in my opinion",
+        "however",
+        "although",
+        "because",
+        "so",
+        "therefore",
+        "for example",
+        "agree",
+        "disagree"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T14_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which phrase introduces a personal view?",
+          "option_a": "In my opinion",
+          "option_b": "As a result of yesterday",
+          "option_c": "At the station",
+          "option_d": "Since 2010",
+          "correct_option": "A",
+          "explanation": "In my opinion introduces a viewpoint."
+        },
+        {
+          "code": "B1_T14_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I stayed home ___ I was feeling sick.",
+          "option_a": "because",
+          "option_b": "although but",
+          "option_c": "however because",
+          "option_d": "therefore of",
+          "correct_option": "A",
+          "explanation": "Because gives the reason."
+        },
+        {
+          "code": "B1_T14_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "Although it was expensive, I bought it.",
+          "option_b": "Although it was expensive, but I bought it.",
+          "option_c": "Although because it was expensive, I bought it.",
+          "option_d": "However it was expensive because.",
+          "correct_option": "A",
+          "explanation": "Do not normally combine although and but in the same structure."
+        },
+        {
+          "code": "B1_T14_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which linker shows contrast?",
+          "option_a": "therefore",
+          "option_b": "however",
+          "option_c": "because",
+          "option_d": "so",
+          "correct_option": "B",
+          "explanation": "However signals contrast."
+        },
+        {
+          "code": "B1_T14_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: The train was canceled, ___ we took a bus.",
+          "option_a": "so",
+          "option_b": "although",
+          "option_c": "because of why",
+          "option_d": "however because",
+          "correct_option": "A",
+          "explanation": "So expresses a result."
+        },
+        {
+          "code": "B1_T14_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'I enjoy remote work. However, I sometimes miss seeing colleagues.' What relationship does 'however' show?",
+          "option_a": "Cause",
+          "option_b": "Contrast",
+          "option_c": "Example",
+          "option_d": "Time",
+          "correct_option": "B",
+          "explanation": "The second idea contrasts with the first."
+        },
+        {
+          "code": "B1_T14_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I agree because the plan is practical.",
+          "option_b": "Although it was late, we continued.",
+          "option_c": "It was raining, so we stayed inside.",
+          "option_d": "Although I was tired, but I finished.",
+          "correct_option": "D",
+          "explanation": "Do not use both although and but in this pattern."
+        },
+        {
+          "code": "B1_T14_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which phrase introduces an example?",
+          "option_a": "for example",
+          "option_b": "therefore",
+          "option_c": "although",
+          "option_d": "in conclusion only",
+          "correct_option": "A",
+          "explanation": "For example introduces an illustration."
+        },
+        {
+          "code": "B1_T14_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What is the speaker's opinion?",
+          "option_a": "Public transport should be cheaper",
+          "option_b": "Cars should be banned completely",
+          "option_c": "Buses should stop",
+          "option_d": "Tickets should be more expensive",
+          "correct_option": "A",
+          "explanation": "The speaker states this opinion.",
+          "audio_text": "In my opinion, public transport should be cheaper because it would encourage more people to leave their cars at home.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T14_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Why does the second speaker disagree?",
+          "option_a": "The proposal is too expensive",
+          "option_b": "They dislike transport",
+          "option_c": "They want fewer buses",
+          "option_d": "They missed the question",
+          "correct_option": "A",
+          "explanation": "Cost is the reason.",
+          "audio_text": "I understand the idea; however, I disagree because the proposal would be too expensive for the city.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T14_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Should Offices Be Fully Remote?",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T14_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What is one advantage of remote work mentioned?",
+              "option_a": "Longer commutes",
+              "option_b": "Saving commuting time",
+              "option_c": "More office noise",
+              "option_d": "Fewer tasks",
+              "correct_option": "B",
+              "explanation": "Employees save commuting time."
+            },
+            {
+              "code": "B1_T14_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "What solution does the writer suggest?",
+              "option_a": "Fully remote only",
+              "option_b": "Fully office only",
+              "option_c": "A mixed system",
+              "option_d": "No meetings",
+              "correct_option": "C",
+              "explanation": "The writer proposes a hybrid approach."
+            },
+            {
+              "code": "B1_T14_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "However, offices have advantages.",
+              "option_b": "Although meetings are useful, they differ.",
+              "option_c": "Therefore, a mixed system may work.",
+              "option_d": "Although remote work is useful, but offices matter.",
+              "correct_option": "D",
+              "explanation": "Do not pair although with but."
+            }
+          ],
+          "content_text": "Some employees prefer working from home because they save commuting time and can organize their day more independently. In my opinion, remote work can be very effective for tasks that require concentration. However, offices still have advantages. For example, new employees may learn faster when they can ask colleagues questions in person. Although online meetings are useful, they do not always create the same sense of connection. Therefore, a mixed system may be a practical solution for many companies. Employees could work from home on some days and meet in the office when collaboration is important."
+        },
+        {
+          "code": "B1_T14_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Team Discussion",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T14_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Why does the first speaker want to move the deadline?",
+              "option_a": "The client asked",
+              "option_b": "Testing took longer",
+              "option_c": "The team is on holiday",
+              "option_d": "The project is complete",
+              "correct_option": "B",
+              "explanation": "Testing took longer than expected."
+            },
+            {
+              "code": "B1_T14_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "What does the second speaker recommend?",
+              "option_a": "Say nothing",
+              "option_b": "Tell the client today",
+              "option_c": "Cancel the project",
+              "option_d": "Reduce testing",
+              "correct_option": "B",
+              "explanation": "The client should be informed today."
+            }
+          ],
+          "audio_text": "I think we should move the deadline by two days because the testing phase took longer than expected. I agree that we need more time; however, we should tell the client today. That's true. If we explain the reason clearly, they may accept the change.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B1_T15",
+      "order": 15,
+      "title": "Narrating Events and Everyday Communication",
+      "objective": "Tell clear stories about past events using sequencing, appropriate tense choices, and practical communication.",
+      "theory": "A clear narrative often combines past simple, past continuous, sequencing expressions, and descriptive details. Useful sequencing words include first, then, while, suddenly, after that, eventually, and finally.",
+      "examples": [
+        "First, we checked the map.",
+        "While we were walking, it started to rain.",
+        "Suddenly, the lights went out.",
+        "Eventually, we found the hotel."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Suddenly, we were found the station.",
+          "correct": "Suddenly, we found the station."
+        },
+        {
+          "wrong": "While we walked for hours, the phone rang once.",
+          "correct": "While we were walking, the phone rang."
+        }
+      ],
+      "key_vocabulary": [
+        "first",
+        "then",
+        "while",
+        "suddenly",
+        "after that",
+        "eventually",
+        "finally",
+        "narrative"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B1_T15_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which word often introduces an unexpected event?",
+          "option_a": "suddenly",
+          "option_b": "usually",
+          "option_c": "since",
+          "option_d": "for",
+          "correct_option": "A",
+          "explanation": "Suddenly introduces an abrupt event."
+        },
+        {
+          "code": "B1_T15_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which word can introduce the last step?",
+          "option_a": "finally",
+          "option_b": "while",
+          "option_c": "because",
+          "option_d": "ever",
+          "correct_option": "A",
+          "explanation": "Finally commonly marks the last event."
+        },
+        {
+          "code": "B1_T15_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: While we ___ for the hotel, it started to rain.",
+          "option_a": "looked once",
+          "option_b": "were looking",
+          "option_c": "have looked tomorrow",
+          "option_d": "are look",
+          "correct_option": "B",
+          "explanation": "The search was in progress."
+        },
+        {
+          "code": "B1_T15_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the best sequence.",
+          "option_a": "First... then... finally...",
+          "option_b": "Since... ever... yet...",
+          "option_c": "Must... can... should...",
+          "option_d": "Who... which... that...",
+          "correct_option": "A",
+          "explanation": "These words organize a narrative."
+        },
+        {
+          "code": "B1_T15_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: Suddenly, the bus ___ and everyone got off.",
+          "option_a": "stopped",
+          "option_b": "was stopping for hours",
+          "option_c": "has stopped tomorrow",
+          "option_d": "stop",
+          "correct_option": "A",
+          "explanation": "The sudden completed event uses past simple."
+        },
+        {
+          "code": "B1_T15_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 3,
+          "prompt": "Read: 'While we were waiting, a taxi finally arrived.' Which event was in progress?",
+          "option_a": "The taxi arrival",
+          "option_b": "The waiting",
+          "option_c": "Both completed instantly",
+          "option_d": "Neither",
+          "correct_option": "B",
+          "explanation": "Waiting was ongoing."
+        },
+        {
+          "code": "B1_T15_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 3,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "First, we checked the address.",
+          "option_b": "Then we walked downtown.",
+          "option_c": "While we were walking, it started raining.",
+          "option_d": "Finally, we were found the hotel.",
+          "correct_option": "D",
+          "explanation": "Use 'we found the hotel'."
+        },
+        {
+          "code": "B1_T15_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which word means 'after some time or difficulty'?",
+          "option_a": "eventually",
+          "option_b": "usually",
+          "option_c": "already",
+          "option_d": "unless",
+          "correct_option": "A",
+          "explanation": "Eventually often signals the final result after delay or difficulty."
+        },
+        {
+          "code": "B1_T15_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "What happened suddenly?",
+          "option_a": "The train stopped",
+          "option_b": "The speaker arrived home",
+          "option_c": "A friend called next week",
+          "option_d": "The hotel opened",
+          "correct_option": "A",
+          "explanation": "The train stopped unexpectedly.",
+          "audio_text": "We were traveling through the countryside when the train suddenly stopped between stations.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B1_T15_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 3,
+          "prompt": "How did the story end?",
+          "option_a": "They found the hotel",
+          "option_b": "They missed the city",
+          "option_c": "They returned home immediately",
+          "option_d": "They canceled the trip",
+          "correct_option": "A",
+          "explanation": "The speaker says they eventually found it.",
+          "audio_text": "After walking in the wrong direction for twenty minutes, we eventually found the hotel near the river.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B1_T15_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Difficult Journey",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T15_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Why did they stop at the service station?",
+              "option_a": "They needed food only",
+              "option_b": "Heavy snow made the road difficult to see",
+              "option_c": "Their car broke down",
+              "option_d": "They wanted to return home",
+              "correct_option": "B",
+              "explanation": "Snow reduced visibility."
+            },
+            {
+              "code": "B1_T15_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 3,
+              "prompt": "Who showed them another route?",
+              "option_a": "A police officer",
+              "option_b": "A local driver",
+              "option_c": "A hotel manager",
+              "option_d": "A friend",
+              "correct_option": "B",
+              "explanation": "A local driver helped them."
+            },
+            {
+              "code": "B1_T15_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 3,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "They left early.",
+              "option_b": "Snow began to fall.",
+              "option_c": "They were waiting at a service station.",
+              "option_d": "They eventually were reached the village.",
+              "correct_option": "D",
+              "explanation": "Use 'They eventually reached the village.'"
+            }
+          ],
+          "content_text": "Last winter, three friends decided to spend a weekend in a mountain village. They left the city early on Saturday morning. At first, the journey went smoothly, but while they were driving through the hills, heavy snow began to fall. The road became difficult to see, so they stopped at a small service station. While they were waiting there, a local driver explained that the main road had been closed. He showed them another route on a map. After that, they drove more slowly and carefully. Eventually, they reached the village two hours later than planned. Although the journey had been stressful, they were relieved to arrive safely and enjoyed the rest of the weekend."
+        },
+        {
+          "code": "B1_T15_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Lost Wallet",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B1_T15_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "When did the speaker notice the wallet was missing?",
+              "option_a": "Before boarding",
+              "option_b": "While getting off the bus",
+              "option_c": "At home next day",
+              "option_d": "At work",
+              "correct_option": "B",
+              "explanation": "The speaker noticed while getting off."
+            },
+            {
+              "code": "B1_T15_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 3,
+              "prompt": "Who had found the wallet?",
+              "option_a": "The driver",
+              "option_b": "A passenger",
+              "option_c": "A police officer",
+              "option_d": "A colleague",
+              "correct_option": "B",
+              "explanation": "A passenger found it and gave it to the driver."
+            }
+          ],
+          "audio_text": "I was getting off the bus when I realized my wallet wasn't in my pocket. First, I checked my bag. Then I called the bus company. Luckily, a passenger had found it and given it to the driver. I picked it up later that afternoon.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.0,
+          "max_audio_plays": 2
+        }
+      ]
+    }
+  ]
+}

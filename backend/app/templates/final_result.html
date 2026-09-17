@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block title %}Final Report · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section final-result-page">
+  <div class="final-result-hero">
+    <div class="final-level-result">
+      <span>Estimated final level</span>
+      <strong>{{ attempt.estimated_level }}</strong>
+      <small>CEFR-aligned platform estimate</small>
+    </div>
+    <div>
+      <span class="eyebrow light">FINAL COMPREHENSIVE ASSESSMENT COMPLETED</span>
+      <h1>Your final learning report</h1>
+      <p>You answered <strong>{{ attempt.score }}</strong> of <strong>{{ attempt.total }}</strong> questions correctly across A1–C2.</p>
+      <div class="final-result-disclaimer"><i class="bi bi-info-circle-fill"></i><span>This is a platform estimate, not an official CEFR certificate. Speaking and extended writing are not directly scored.</span></div>
+    </div>
+  </div>
+
+  <section class="content-card final-level-profile">
+    <div class="content-card-header"><div><span class="eyebrow">LEVEL PROFILE</span><h2>Performance from A1 through C2</h2></div></div>
+    <div class="final-level-grid">
+      {% for stat in profile.level_stats %}
+      <div class="final-level-card {{ 'estimated' if stat.code == attempt.estimated_level else '' }}">
+        <div><strong>{{ stat.code }}</strong><span>{{ stat.correct }}/{{ stat.total }}</span></div>
+        <b>{{ stat.percentage }}%</b>
+        <div class="skill-progress"><span style="width: {{ stat.percentage }}%"></span></div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="final-method-note">Level estimation uses a transparent platform heuristic: the estimated level must reach the target threshold while lower-level foundations remain above the minimum foundation threshold. A1 is the floor and C2 the ceiling.</p>
+  </section>
+
+  <section class="content-card assessment-breakdown-card">
+    <div class="content-card-header"><div><span class="eyebrow">FINAL SKILL PROFILE</span><h2>Grammar, vocabulary, reading, and listening</h2></div></div>
+    <div class="skill-result-grid">
+      {% for stat in profile.skill_stats %}
+      <div class="skill-result-card">
+        <div><strong>{{ stat.label }}</strong><span>{{ stat.correct }}/{{ stat.total }} correct</span></div>
+        <b>{{ stat.percentage }}%</b>
+        <div class="skill-progress"><span style="width: {{ stat.percentage }}%"></span></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if profile.growth %}
+  <section class="content-card final-growth-card">
+    <div class="content-card-header"><div><span class="eyebrow">INITIAL → FINAL</span><h2>Platform growth indicators</h2></div></div>
+    <div class="growth-level-row">
+      <div><span>Initial diagnostic</span><strong>{{ profile.growth.initial_level }}</strong></div>
+      <i class="bi bi-arrow-right"></i>
+      <div><span>Final estimate</span><strong>{{ profile.growth.final_level }}</strong></div>
+    </div>
+    <div class="growth-skill-grid">
+      {% for row in profile.growth.skills %}
+      <div class="growth-skill-row">
+        <strong>{{ row.label }}</strong>
+        <span>{{ row.initial }}%</span>
+        <i class="bi bi-arrow-right"></i>
+        <span>{{ row.final }}%</span>
+        <b class="{{ 'positive' if row.delta > 0 else ('negative' if row.delta < 0 else 'neutral') }}">
+          {{ '+' if row.delta > 0 else '' }}{{ row.delta }} pp
+        </b>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="final-method-note">These percentage changes are descriptive platform indicators, not psychometrically standardized gain scores. The initial diagnostic is adaptive and uses a different item set from the final assessment.</p>
+  </section>
+  {% else %}
+  <section class="content-card final-growth-card">
+    <div class="content-card-header"><div><span class="eyebrow">INITIAL → FINAL</span><h2>No initial diagnostic comparison available</h2></div></div>
+    <p class="assessment-empty-copy">You can still use the final skill and level profiles above. A growth comparison appears when a completed initial diagnostic exists.</p>
+  </section>
+  {% endif %}
+
+  <div class="assessment-insight-grid final-insight-grid">
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">STRONG RESPONSES</span><h2>Areas that held up well</h2></div></div>
+      {% if profile.strengths %}
+      <div class="recommendation-list success">
+        {% for item in profile.strengths %}
+        <div><i class="bi bi-check-circle-fill"></i><span><strong>{{ item.topic.level.code }} · {{ item.topic.title }}</strong><small>{{ item.percentage }}% on linked final items</small></span></div>
+        {% endfor %}
+      </div>
+      {% else %}<p class="assessment-empty-copy">No topic-level strength signal met the current display threshold.</p>{% endif %}
+    </section>
+
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">REVIEW SIGNALS</span><h2>Topics worth revisiting</h2></div></div>
+      {% if profile.recommendations %}
+      <div class="recommendation-list review">
+        {% for item in profile.recommendations %}
+        <div>
+          <i class="bi bi-arrow-repeat"></i>
+          <span><strong>{{ item.topic.level.code }} · {{ item.topic.title }}</strong><small>{{ item.correct }}/{{ item.total }} final item(s) correct</small></span>
+          <a href="{{ url_for('main.topic', topic_id=item.topic.id) }}">Review</a>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="final-method-note px-4">Items above your estimated level are not labeled as weaknesses simply because they were missed.</p>
+      {% else %}<p class="assessment-empty-copy">No clear review signal was identified at or below your estimated level.</p>{% endif %}
+    </section>
+  </div>
+
+  <section class="content-card final-journey-card">
+    <div class="content-card-header"><div><span class="eyebrow">LEARNING JOURNEY</span><h2>Course completion summary</h2></div></div>
+    <div class="journey-summary-grid">
+      <div><strong>{{ profile.journey.completed_lessons }}/{{ profile.journey.total_lessons }}</strong><span>Lessons completed</span></div>
+      <div><strong>{{ profile.journey.level_assessments|length }}/6</strong><span>Level assessments completed</span></div>
+      <div><strong>{{ attempt.percentage }}%</strong><span>Final overall score</span></div>
+      <div><strong>{{ attempt.estimated_level }}</strong><span>Final platform estimate</span></div>
+    </div>
+    {% if profile.journey.level_assessments %}
+    <div class="journey-level-assessments">
+      {% for row in profile.journey.level_assessments %}
+      <span><b>{{ row.code }}</b>{{ row.percentage }}%</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+
+  {% if profile.suggested_topic %}
+  <section class="final-next-card">
+    <div class="final-next-icon"><i class="bi bi-compass-fill"></i></div>
+    <div>
+      <span class="eyebrow">NEXT REVIEW POINT</span>
+      <h2>{{ profile.suggested_topic.level.code }} · {{ profile.suggested_topic.title }}</h2>
+      <p>Use this lesson as a focused review point based on the final assessment signals.</p>
+    </div>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('main.topic', topic_id=profile.suggested_topic.id) }}">Review lesson <i class="bi bi-arrow-right"></i></a>
+  </section>
+  {% endif %}
+
+  <div class="after-review-actions">
+    <div><span class="eyebrow">COMPLETE</span><h2>Your A1–C2 learning cycle now has a final checkpoint</h2><p>Use the report as a study guide and retake the final assessment later if you want a new platform estimate.</p></div>
+    <a class="btn btn-outline-primary btn-modern" href="{{ url_for('main.dashboard') }}">Go to Home</a>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('assessment.intro', code=assessment.code) }}">Final overview <i class="bi bi-arrow-right"></i></a>
+  </div>
+</section>
+{% endblock %}

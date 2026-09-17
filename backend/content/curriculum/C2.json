@@ -1,0 +1,4007 @@
+{
+  "level": {
+    "code": "C2",
+    "order": 6,
+    "name": "Proficiency",
+    "description": "Develop highly precise, flexible English for nuanced, abstract, academic, professional, and critical communication."
+  },
+  "topics": [
+    {
+      "code": "C2_T01",
+      "order": 1,
+      "title": "Nuanced Aspect and Viewpoint",
+      "objective": "Interpret and produce subtle contrasts in tense and aspect that change perspective, emphasis, or discourse focus.",
+      "theory": "At C2, tense and aspect are not only about time. They shape viewpoint. Progressive forms can foreground temporary or evolving situations; perfect forms can connect states across time; simple forms can present events as complete wholes. Native-like control often depends on why a speaker chooses one viewpoint rather than another.",
+      "examples": [
+        "I've been meaning to contact you.",
+        "I was wondering whether you had a moment.",
+        "She had been hoping for a different outcome.",
+        "The market has stabilized, though confidence remains fragile."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Treating all progressive forms as simply 'actions happening now'.",
+          "correct": "Interpret aspect as viewpoint, duration, temporariness, or discourse framing."
+        },
+        {
+          "wrong": "Choosing tense only from time expressions.",
+          "correct": "Consider speaker perspective and discourse purpose."
+        }
+      ],
+      "key_vocabulary": [
+        "aspect",
+        "viewpoint",
+        "progressive",
+        "perfective",
+        "foregrounding",
+        "temporariness",
+        "discourse perspective"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T01_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What nuance does 'I've been meaning to call you' usually add?",
+          "option_a": "A repeated failure or delayed intention",
+          "option_b": "A completed call",
+          "option_c": "A future legal obligation",
+          "option_d": "A permanent state",
+          "correct_option": "A",
+          "explanation": "The progressive perfect presents an intention extending over time without completion."
+        },
+        {
+          "code": "C2_T01_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which sentence sounds most tactful as an opening?",
+          "option_a": "I was wondering whether you could help.",
+          "option_b": "I wonder whether you help me now.",
+          "option_c": "I have wondered you help.",
+          "option_d": "I wondered yesterday you help.",
+          "correct_option": "A",
+          "explanation": "Past progressive can soften a present request."
+        },
+        {
+          "code": "C2_T01_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Choose the sentence that best foregrounds duration before a past event.",
+          "option_a": "She worked there before resigning.",
+          "option_b": "She had been working there for years before resigning.",
+          "option_c": "She has worked there yesterday.",
+          "option_d": "She was work there before resigning.",
+          "correct_option": "B",
+          "explanation": "Past perfect continuous highlights duration leading up to a past point."
+        },
+        {
+          "code": "C2_T01_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which sentence presents the change as a completed development with present relevance?",
+          "option_a": "The market has stabilized.",
+          "option_b": "The market was stabilizing tomorrow.",
+          "option_c": "The market stabilizes yesterday.",
+          "option_d": "The market had stabilize now.",
+          "correct_option": "A",
+          "explanation": "Present perfect links the completed development to the present."
+        },
+        {
+          "code": "C2_T01_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why might a speaker say 'I was hoping you could...' instead of 'I hope you can...'?",
+          "option_a": "To create interpersonal distance and politeness",
+          "option_b": "To move the request into the past literally",
+          "option_c": "To express certainty",
+          "option_d": "To indicate refusal",
+          "correct_option": "A",
+          "explanation": "The past progressive can soften the request."
+        },
+        {
+          "code": "C2_T01_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The team had been expecting resistance, but the response was more positive than anticipated.' What does the aspect emphasize?",
+          "option_a": "A prior ongoing expectation",
+          "option_b": "A future prediction",
+          "option_c": "A single completed expectation",
+          "option_d": "No temporal relationship",
+          "correct_option": "A",
+          "explanation": "The expectation extended over a period before the response."
+        },
+        {
+          "code": "C2_T01_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which interpretation is weakest?",
+          "option_a": "Progressive aspect can signal temporariness.",
+          "option_b": "Perfect aspect can connect different time points.",
+          "option_c": "Past forms can soften present requests.",
+          "option_d": "Every progressive form literally means an action is physically happening at that moment.",
+          "correct_option": "D",
+          "explanation": "Progressive aspect has broader discourse functions."
+        },
+        {
+          "code": "C2_T01_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Choose the most natural sentence for a temporary trend.",
+          "option_a": "More firms are relying on hybrid teams.",
+          "option_b": "More firms rely yesterday on hybrid teams.",
+          "option_c": "More firms have rely temporary.",
+          "option_d": "More firms were rely now.",
+          "correct_option": "A",
+          "explanation": "Present progressive can frame an evolving current trend."
+        },
+        {
+          "code": "C2_T01_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does the speaker imply about contacting the client?",
+          "option_a": "It has been intended for some time but delayed",
+          "option_b": "It happened yesterday",
+          "option_c": "It is unnecessary",
+          "option_d": "It is prohibited",
+          "correct_option": "A",
+          "explanation": "The perfect progressive frames an unfulfilled ongoing intention.",
+          "audio_text": "I've been meaning to contact the client all week, but other issues have kept getting in the way.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T01_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is emphasized about the project team?",
+          "option_a": "Their expectations had developed over time",
+          "option_b": "They made one instant prediction",
+          "option_c": "They had no expectations",
+          "option_d": "They expected success next year",
+          "correct_option": "A",
+          "explanation": "The aspect highlights a sustained expectation.",
+          "audio_text": "The team had been expecting some resistance to the change, so the relatively smooth rollout came as a surprise.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T01_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Shift in Perspective",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T01_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What does 'were adjusting' emphasize?",
+              "option_a": "An ongoing transitional process",
+              "option_b": "A single completed act",
+              "option_c": "A future plan",
+              "option_d": "A permanent state",
+              "correct_option": "A",
+              "explanation": "The progressive frames adjustment as ongoing."
+            },
+            {
+              "code": "C2_T01_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What changed besides the policy itself?",
+              "option_a": "The discourse around it",
+              "option_b": "The company name",
+              "option_c": "The legal system",
+              "option_d": "The building",
+              "correct_option": "A",
+              "explanation": "The passage explicitly notes a change in how people discuss it."
+            },
+            {
+              "code": "C2_T01_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Managers were trying to understand measurement.",
+              "option_b": "The organization had collected evidence by year-end.",
+              "option_c": "Attitudes have continued to evolve.",
+              "option_d": "Managers have been resisted the change.",
+              "correct_option": "D",
+              "explanation": "Use 'have resisted' or 'have been resisting'."
+            }
+          ],
+          "content_text": "When the company first introduced flexible working, managers described the policy as an experiment. For several months, employees were adjusting their routines while supervisors were trying to understand how productivity should be measured. By the end of the first year, the organization had collected enough evidence to make the policy permanent. Since then, attitudes have continued to evolve. Some managers who had initially resisted the change have become strong supporters, while others have been arguing for clearer limits on remote work. What is striking is not simply that the policy changed, but that the way people have been talking about it has changed as well. Early discussions focused on whether remote work could function at all; more recent ones have been concerned with how to make it sustainable."
+        },
+        {
+          "code": "C2_T01_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Delayed Conversation",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T01_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Why does the speaker use 'I've been wanting'?",
+              "option_a": "To show an ongoing intention",
+              "option_b": "To report a completed action",
+              "option_c": "To deny concern",
+              "option_d": "To express a legal rule",
+              "correct_option": "A",
+              "explanation": "It presents the intention as extending over time."
+            },
+            {
+              "code": "C2_T01_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What has been happening since the restructuring?",
+              "option_a": "People have taken on extra tasks",
+              "option_b": "Work has disappeared",
+              "option_c": "The team has been reduced to zero",
+              "option_d": "No one is working",
+              "correct_option": "A",
+              "explanation": "The speaker describes an ongoing workload increase."
+            }
+          ],
+          "audio_text": "I've been wanting to raise this for a while. I was hoping we could revisit the workload issue because several people have been taking on additional tasks since the restructuring.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T02",
+      "order": 2,
+      "title": "Fine-Grained Modality and Epistemic Meaning",
+      "objective": "Distinguish subtle degrees of certainty, obligation, inference, concession, and speaker commitment.",
+      "theory": "At C2, modal choice often signals stance rather than simple possibility or obligation. Compare 'must', 'should', 'would', 'may well', 'might conceivably', 'can't possibly', and 'need not'. These choices reveal confidence, distance, expectation, or rhetorical positioning.",
+      "examples": [
+        "That must be the explanation.",
+        "The results should be available tomorrow.",
+        "She may well have misunderstood.",
+        "That can't possibly account for the whole difference.",
+        "The change need not be permanent."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Treating 'should' only as advice.",
+          "correct": "At advanced levels, 'should' can express expectation or probability."
+        },
+        {
+          "wrong": "Treating all possibility modals as equivalent.",
+          "correct": "Modal choices differ in strength and stance."
+        }
+      ],
+      "key_vocabulary": [
+        "epistemic modality",
+        "deontic modality",
+        "may well",
+        "should",
+        "must",
+        "can't possibly",
+        "need not",
+        "speaker commitment"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T02_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "In 'The figures should be available tomorrow,' 'should' expresses...",
+          "option_a": "Expectation",
+          "option_b": "Moral criticism only",
+          "option_c": "Past regret",
+          "option_d": "Prohibition",
+          "correct_option": "A",
+          "explanation": "Here should means expected to."
+        },
+        {
+          "code": "C2_T02_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which phrase conveys fairly strong possibility?",
+          "option_a": "may well",
+          "option_b": "might conceivably",
+          "option_c": "can't possibly",
+          "option_d": "must not",
+          "correct_option": "A",
+          "explanation": "May well suggests a substantial possibility."
+        },
+        {
+          "code": "C2_T02_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which phrase expresses strong negative inference?",
+          "option_a": "can't possibly",
+          "option_b": "may well",
+          "option_c": "should probably",
+          "option_d": "need not",
+          "correct_option": "A",
+          "explanation": "It signals the speaker sees the proposition as virtually impossible."
+        },
+        {
+          "code": "C2_T02_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'The arrangement need not be permanent' imply?",
+          "option_a": "It is not necessary for it to be permanent",
+          "option_b": "It is prohibited from changing",
+          "option_c": "It must remain permanent",
+          "option_d": "It ended yesterday",
+          "correct_option": "A",
+          "explanation": "Need not expresses lack of necessity."
+        },
+        {
+          "code": "C2_T02_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Choose the most cautious possibility.",
+          "option_a": "might conceivably",
+          "option_b": "must",
+          "option_c": "certainly",
+          "option_d": "can't possibly",
+          "correct_option": "A",
+          "explanation": "Might conceivably strongly hedges the possibility."
+        },
+        {
+          "code": "C2_T02_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The discrepancy may well reflect differences in sampling.' How committed is the writer?",
+          "option_a": "Moderately confident but not certain",
+          "option_b": "Absolutely certain",
+          "option_c": "Certain it is false",
+          "option_d": "Not making an inference",
+          "correct_option": "A",
+          "explanation": "May well expresses a plausible interpretation."
+        },
+        {
+          "code": "C2_T02_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which interpretation is incorrect?",
+          "option_a": "'Should' can express expectation.",
+          "option_b": "'Must' can express strong inference.",
+          "option_c": "'Need not' can mean absence of necessity.",
+          "option_d": "'May well' always means legal permission.",
+          "correct_option": "D",
+          "explanation": "May well is epistemic here."
+        },
+        {
+          "code": "C2_T02_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "The delay ___ be caused by the database alone; several other systems are affected.",
+          "option_a": "can't possibly",
+          "option_b": "may well",
+          "option_c": "should definitely",
+          "option_d": "need not to",
+          "correct_option": "A",
+          "explanation": "The speaker rejects that explanation strongly."
+        },
+        {
+          "code": "C2_T02_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "How likely does the speaker think misunderstanding is?",
+          "option_a": "Quite plausible",
+          "option_b": "Impossible",
+          "option_c": "Certain",
+          "option_d": "Irrelevant",
+          "correct_option": "A",
+          "explanation": "May well signals a fairly plausible possibility.",
+          "audio_text": "She may well have misunderstood the original instruction, especially given how ambiguous the wording was.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T02_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does the speaker expect?",
+          "option_a": "Results by tomorrow afternoon",
+          "option_b": "No results ever",
+          "option_c": "A legal dispute",
+          "option_d": "A canceled meeting",
+          "correct_option": "A",
+          "explanation": "Should expresses expectation.",
+          "audio_text": "The final results should be available by tomorrow afternoon, assuming the validation checks are completed on time.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T02_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Reading Between Modal Lines",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T02_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Which explanation does the writer reject as complete?",
+              "option_a": "Purchases brought forward",
+              "option_b": "Improving confidence",
+              "option_c": "Large orders",
+              "option_d": "Quarterly reporting",
+              "correct_option": "A",
+              "explanation": "It cannot possibly explain all of the change."
+            },
+            {
+              "code": "C2_T02_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What does the writer expect if confidence is the cause?",
+              "option_a": "Demand should remain relatively strong",
+              "option_b": "Demand must collapse immediately",
+              "option_c": "Prices will certainly fall",
+              "option_d": "No change is possible",
+              "correct_option": "A",
+              "explanation": "Should expresses expectation."
+            },
+            {
+              "code": "C2_T02_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which sentence is semantically inappropriate?",
+              "option_a": "Confidence may well be improving.",
+              "option_b": "One factor can't possibly explain everything.",
+              "option_c": "The trend need not continue forever.",
+              "option_d": "The figures must possibly be uncertain.",
+              "correct_option": "D",
+              "explanation": "Must possibly is an awkward contradiction of modal force."
+            }
+          ],
+          "content_text": "Analysts reviewing the latest figures have offered several explanations for the unexpected increase in demand. One possibility is that consumers may have brought purchases forward in anticipation of higher prices. That could account for part of the change, but it can't possibly explain all of it because the increase was also visible in sectors unaffected by the expected price rise. Another factor may well be improving consumer confidence. If that is the case, demand should remain relatively strong into the next quarter. Even so, the current trend need not continue indefinitely. A small number of unusually large orders may also have influenced the total, so the figures should be interpreted with some caution."
+        },
+        {
+          "code": "C2_T02_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Forecast Discussion",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T02_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What stance does the speaker take?",
+              "option_a": "Cautious and non-committal",
+              "option_b": "Completely certain",
+              "option_c": "Entirely dismissive",
+              "option_d": "Legally prescriptive",
+              "correct_option": "A",
+              "explanation": "Two possibilities are entertained without commitment."
+            },
+            {
+              "code": "C2_T02_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What should not be done yet?",
+              "option_a": "Assume one explanation is correct",
+              "option_b": "Collect more data",
+              "option_c": "Review sales",
+              "option_d": "Wait for next month",
+              "correct_option": "A",
+              "explanation": "The speaker explicitly advises against premature certainty."
+            }
+          ],
+          "audio_text": "The stronger sales figures may well reflect temporary factors, but they could also indicate a broader recovery. We shouldn't assume either explanation is correct until next month's data are available.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T03",
+      "order": 3,
+      "title": "Ellipsis, Substitution, and Economy",
+      "objective": "Use advanced ellipsis and substitution to avoid repetition while maintaining clarity and cohesion.",
+      "theory": "Natural advanced English frequently omits predictable material. Substitution with do so, so, neither, nor, one/ones, and auxiliary verbs can make discourse more economical. Ellipsis requires careful control because omitted content must remain recoverable.",
+      "examples": [
+        "I expected the results to improve, and they did.",
+        "Some teams adopted the policy; others didn't.",
+        "If you can attend, please do.",
+        "She said the system would fail, and so it did.",
+        "Neither did we."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Omitting information when the reference is unclear.",
+          "correct": "Use ellipsis only when the missing material is recoverable."
+        },
+        {
+          "wrong": "Repeating full verb phrases unnecessarily.",
+          "correct": "Use auxiliaries or substitution when appropriate."
+        }
+      ],
+      "key_vocabulary": [
+        "ellipsis",
+        "substitution",
+        "do so",
+        "so did",
+        "neither/nor",
+        "auxiliary substitution",
+        "recoverability"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T03_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Complete: I thought the plan would work, and it ___.",
+          "option_a": "did",
+          "option_b": "did so it",
+          "option_c": "worked did",
+          "option_d": "so work",
+          "correct_option": "A",
+          "explanation": "Auxiliary substitution avoids repeating 'worked'."
+        },
+        {
+          "code": "C2_T03_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "She said the system would fail, and ___ it did.",
+          "option_a": "so",
+          "option_b": "neither",
+          "option_c": "one",
+          "option_d": "do",
+          "correct_option": "A",
+          "explanation": "So it did confirms the prediction emphatically."
+        },
+        {
+          "code": "C2_T03_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "I didn't expect the delay, and neither ___ my colleagues.",
+          "option_a": "did",
+          "option_b": "do",
+          "option_c": "were",
+          "option_d": "had expected",
+          "correct_option": "A",
+          "explanation": "Neither + auxiliary + subject."
+        },
+        {
+          "code": "C2_T03_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "If you need to revise the section, please ___.",
+          "option_a": "do so",
+          "option_b": "do it so section",
+          "option_c": "so do revise",
+          "option_d": "doing",
+          "correct_option": "A",
+          "explanation": "Do so substitutes for the verb phrase."
+        },
+        {
+          "code": "C2_T03_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Some departments accepted the proposal; others ___.",
+          "option_a": "didn't",
+          "option_b": "weren't accept",
+          "option_c": "not did",
+          "option_d": "didn't accepted",
+          "correct_option": "A",
+          "explanation": "Didn't substitutes for 'didn't accept the proposal'."
+        },
+        {
+          "code": "C2_T03_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The first model underestimated demand, and the second did too.' What does 'did' replace?",
+          "option_a": "underestimated demand",
+          "option_b": "was second",
+          "option_c": "modeled",
+          "option_d": "demand itself",
+          "correct_option": "A",
+          "explanation": "The auxiliary substitutes for the repeated verb phrase."
+        },
+        {
+          "code": "C2_T03_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which sentence is incorrect?",
+          "option_a": "I thought she'd agree, and she did.",
+          "option_b": "If you can help, please do.",
+          "option_c": "He didn't object, and nor did I.",
+          "option_d": "She said the project would fail, and so did it.",
+          "correct_option": "D",
+          "explanation": "Use 'and so it did' for emphatic confirmation."
+        },
+        {
+          "code": "C2_T03_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "They haven't completed the audit, and we haven't ___.",
+          "option_a": "either",
+          "option_b": "too",
+          "option_c": "so",
+          "option_d": "one",
+          "correct_option": "A",
+          "explanation": "Either follows a negative auxiliary pattern."
+        },
+        {
+          "code": "C2_T03_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'and they did' refer to?",
+          "option_a": "The team meeting the deadline",
+          "option_b": "The team missing the deadline",
+          "option_c": "A policy change",
+          "option_d": "A canceled report",
+          "correct_option": "A",
+          "explanation": "The auxiliary substitutes for the full phrase.",
+          "audio_text": "We expected the team to meet the revised deadline, and they did, despite the additional testing requirements.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T03_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does the second speaker mean by 'Neither did we'?",
+          "option_a": "Their team also did not anticipate the issue",
+          "option_b": "Their team anticipated it",
+          "option_c": "They solved it",
+          "option_d": "They caused it",
+          "correct_option": "A",
+          "explanation": "Neither did we echoes the negative statement.",
+          "audio_text": "We didn't anticipate that the change would affect the reporting system. Neither did we.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T03_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Efficient Professional Writing",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T03_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Why is substitution useful?",
+              "option_a": "It reduces unnecessary repetition",
+              "option_b": "It makes every sentence longer",
+              "option_c": "It removes meaning",
+              "option_d": "It changes tense automatically",
+              "correct_option": "A",
+              "explanation": "The passage emphasizes economy."
+            },
+            {
+              "code": "C2_T03_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "When can ellipsis become problematic?",
+              "option_a": "When the omitted meaning is ambiguous",
+              "option_b": "When the sentence is short",
+              "option_c": "When auxiliaries exist",
+              "option_d": "When speakers agree",
+              "correct_option": "A",
+              "explanation": "Recoverability is essential."
+            },
+            {
+              "code": "C2_T03_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "The second model did too.",
+              "option_b": "Neither do I.",
+              "option_c": "If you can attend, please do.",
+              "option_d": "The first model failed, and so did it.",
+              "correct_option": "D",
+              "explanation": "For emphatic confirmation use 'so it did', not 'so did it'."
+            }
+          ],
+          "content_text": "Inexperienced writers often repeat entire clauses when a shorter form would be clearer. An analyst might write, 'The first model underestimated demand, and the second model underestimated demand as well.' A more natural version is, 'The first model underestimated demand, and the second did too.' The meaning is unchanged, but the repetition disappears. Similar economy is common in conversation. If one speaker says, 'I don't think the plan is realistic,' another may reply, 'Neither do I.' However, ellipsis only works when the omitted information is easy to recover. If several possible meanings are available, shortening the sentence can create ambiguity rather than elegance."
+        },
+        {
+          "code": "C2_T03_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Meeting Follow-Up",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T03_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Did the finance team object?",
+              "option_a": "No",
+              "option_b": "Yes",
+              "option_c": "Only partly",
+              "option_d": "The speaker does not say",
+              "correct_option": "A",
+              "explanation": "They didn't substitutes for 'didn't object'."
+            },
+            {
+              "code": "C2_T03_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What about the legal team?",
+              "option_a": "They also did not object",
+              "option_b": "They strongly objected",
+              "option_c": "They left",
+              "option_d": "They approved a budget",
+              "correct_option": "A",
+              "explanation": "Didn't either echoes the negative."
+            }
+          ],
+          "audio_text": "I thought the finance team would object, but they didn't. The legal team didn't either. If either group wants to raise concerns later, they still can.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T04",
+      "order": 4,
+      "title": "Register Shifts and Stylistic Control",
+      "objective": "Reformulate the same message across formal, neutral, and informal registers without changing core meaning.",
+      "theory": "C2 users can adapt register deliberately. This involves vocabulary, grammar, directness, sentence length, idiomaticity, and politeness. The challenge is not simply choosing 'formal words' but matching purpose, audience, and context.",
+      "examples": [
+        "Formal: We would appreciate confirmation at your earliest convenience.",
+        "Neutral: Please confirm when you can.",
+        "Informal: Let me know when you get a chance.",
+        "Formal report: The results indicate a modest improvement.",
+        "Informal: Things seem a bit better."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Using slang in a formal legal response.",
+          "correct": "Match language to audience and institutional context."
+        },
+        {
+          "wrong": "Making formal writing artificially obscure.",
+          "correct": "Formal language should still be clear."
+        }
+      ],
+      "key_vocabulary": [
+        "register",
+        "formal",
+        "neutral",
+        "informal",
+        "audience",
+        "tone",
+        "style-shifting",
+        "appropriacy"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T04_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which is most appropriate in a formal client email?",
+          "option_a": "We would appreciate confirmation at your earliest convenience.",
+          "option_b": "Just ping me when you're free.",
+          "option_c": "Yo, let me know.",
+          "option_d": "Get back to me ASAP, cheers.",
+          "correct_option": "A",
+          "explanation": "The register is formal and polite."
+        },
+        {
+          "code": "C2_T04_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which is neutral rather than highly formal?",
+          "option_a": "Please confirm when convenient.",
+          "option_b": "We hereby request confirmation forthwith.",
+          "option_c": "Ping me later.",
+          "option_d": "Yo, confirm this.",
+          "correct_option": "A",
+          "explanation": "The wording is professional but not excessively formal."
+        },
+        {
+          "code": "C2_T04_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which version best suits an informal colleague chat?",
+          "option_a": "Can you send me the updated file when you get a chance?",
+          "option_b": "We hereby request transmission of the revised document.",
+          "option_c": "Please be advised that said file is required.",
+          "option_d": "The undersigned requests the file.",
+          "correct_option": "A",
+          "explanation": "It is natural and appropriately informal."
+        },
+        {
+          "code": "C2_T04_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which reformulation preserves meaning but changes register appropriately?",
+          "option_a": "Formal: The results indicate a decline. Informal: Looks like things have dropped.",
+          "option_b": "Formal: The results indicate a decline. Informal: The data hereby decline.",
+          "option_c": "Formal: Decline results. Informal: Data stuff.",
+          "option_d": "Formal: It declines legally. Informal: Whatever.",
+          "correct_option": "A",
+          "explanation": "The first pair preserves meaning while shifting style."
+        },
+        {
+          "code": "C2_T04_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why can overly formal wording be ineffective?",
+          "option_a": "It can obscure meaning and sound unnatural",
+          "option_b": "It is always grammatically wrong",
+          "option_c": "It is never used in institutions",
+          "option_d": "It makes meaning more precise automatically",
+          "correct_option": "A",
+          "explanation": "Formality does not justify unnecessary complexity."
+        },
+        {
+          "code": "C2_T04_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'We regret to inform you that your application has been unsuccessful.' Which context best fits?",
+          "option_a": "Formal institutional communication",
+          "option_b": "Casual text to a friend",
+          "option_c": "Sports commentary",
+          "option_d": "Private joke",
+          "correct_option": "A",
+          "explanation": "The wording is conventionally formal."
+        },
+        {
+          "code": "C2_T04_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which phrase is least appropriate in a formal executive report?",
+          "option_a": "The findings indicate...",
+          "option_b": "The evidence suggests...",
+          "option_c": "The results remain inconclusive.",
+          "option_d": "The numbers are kinda all over the place.",
+          "correct_option": "D",
+          "explanation": "The final phrase is too informal."
+        },
+        {
+          "code": "C2_T04_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which phrase best softens a formal disagreement?",
+          "option_a": "We take a different view on this point.",
+          "option_b": "You're completely wrong.",
+          "option_c": "No way.",
+          "option_d": "That's nonsense.",
+          "correct_option": "A",
+          "explanation": "It preserves professional tone."
+        },
+        {
+          "code": "C2_T04_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What register is the speaker using?",
+          "option_a": "Formal professional",
+          "option_b": "Highly casual",
+          "option_c": "Comic",
+          "option_d": "Child-directed",
+          "correct_option": "A",
+          "explanation": "The phrasing is institutional and polite.",
+          "audio_text": "We would appreciate it if you could provide the revised documentation by close of business on Thursday.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T04_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "How could the same message be expressed informally?",
+          "option_a": "Can you send the revised docs by Thursday?",
+          "option_b": "Documentation shall be furnished forthwith.",
+          "option_c": "Pursuant to our prior communication...",
+          "option_d": "The aforesaid documents are requested.",
+          "correct_option": "A",
+          "explanation": "It preserves the core request in a casual register.",
+          "audio_text": "We would appreciate it if you could provide the revised documentation by close of business on Thursday.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T04_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "One Message, Three Audiences",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T04_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What remains the same across the three messages?",
+              "option_a": "Core factual content",
+              "option_b": "Vocabulary",
+              "option_c": "Sentence structure",
+              "option_d": "Relationship",
+              "correct_option": "A",
+              "explanation": "The deadline change is constant."
+            },
+            {
+              "code": "C2_T04_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What changes according to audience?",
+              "option_a": "Directness, vocabulary, and assumed context",
+              "option_b": "The date itself",
+              "option_c": "The project",
+              "option_d": "The facts",
+              "correct_option": "A",
+              "explanation": "These stylistic features shift."
+            },
+            {
+              "code": "C2_T04_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which statement is unsupported?",
+              "option_a": "Formal writing can be concise.",
+              "option_b": "Register depends on relationship.",
+              "option_c": "All formal messages should be as long as possible.",
+              "option_d": "Shared context affects wording.",
+              "correct_option": "C",
+              "explanation": "The text explicitly rejects unnecessary length."
+            }
+          ],
+          "content_text": "A project manager needs to tell three audiences that a deadline has changed. In a formal message to a client, she writes: 'We wish to inform you that the delivery date has been revised to 18 October.' In an internal team email, she writes: 'Please note that the delivery date is now 18 October.' In a chat message to a close colleague, she writes: 'Quick update — delivery's moved to the 18th.' The factual content is essentially the same, but the language changes because the relationships and expectations are different. Effective register control does not mean making every formal message longer. In fact, the best professional writing is often concise. What changes most is the level of directness, the choice of vocabulary, and the amount of shared context assumed."
+        },
+        {
+          "code": "C2_T04_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Changing Tone",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T04_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What changes between the two versions?",
+              "option_a": "Register and directness",
+              "option_b": "Deadline",
+              "option_c": "Meaning completely",
+              "option_d": "Topic",
+              "correct_option": "A",
+              "explanation": "The request is the same but style differs."
+            },
+            {
+              "code": "C2_T04_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Which version is more formal?",
+              "option_a": "The client version",
+              "option_b": "The teammate version",
+              "option_c": "Both equally slangy",
+              "option_d": "Neither",
+              "correct_option": "A",
+              "explanation": "The client version uses more formal politeness."
+            }
+          ],
+          "audio_text": "To a client I'd say, 'We would appreciate confirmation by Friday.' To a teammate I'd probably just say, 'Can you confirm by Friday?' Same request, different relationship.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T05",
+      "order": 5,
+      "title": "Lexical Precision and Semantic Nuance",
+      "objective": "Choose words that differ subtly in connotation, strength, collocation, and discourse effect.",
+      "theory": "C2 vocabulary is not about rare words for their own sake. It is about choosing precisely among near-synonyms. 'Claim', 'argue', 'suggest', 'assert', and 'contend' differ in stance. 'Problem', 'issue', 'obstacle', 'constraint', and 'drawback' differ in meaning and tone.",
+      "examples": [
+        "The report suggests a link.",
+        "The author argues that regulation is necessary.",
+        "The company acknowledged the problem.",
+        "Budget constraints limited the options.",
+        "A drawback of the method is its cost."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Using near-synonyms as if they were interchangeable in every context.",
+          "correct": "Consider collocation, connotation, register, and stance."
+        },
+        {
+          "wrong": "Choosing rare vocabulary when a common precise word is better.",
+          "correct": "Precision matters more than obscurity."
+        }
+      ],
+      "key_vocabulary": [
+        "connotation",
+        "near-synonym",
+        "collocation",
+        "stance verb",
+        "constraint",
+        "drawback",
+        "acknowledge",
+        "assert"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T05_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which verb is most cautious?",
+          "option_a": "suggests",
+          "option_b": "proves",
+          "option_c": "demonstrates beyond doubt",
+          "option_d": "establishes absolutely",
+          "correct_option": "A",
+          "explanation": "Suggests is less committal."
+        },
+        {
+          "code": "C2_T05_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which word best describes a limitation imposed by resources?",
+          "option_a": "constraint",
+          "option_b": "celebration",
+          "option_c": "advantage",
+          "option_d": "claim",
+          "correct_option": "A",
+          "explanation": "Constraint is a limiting condition."
+        },
+        {
+          "code": "C2_T05_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which noun best describes a negative feature of an otherwise useful method?",
+          "option_a": "drawback",
+          "option_b": "disaster",
+          "option_c": "certainty",
+          "option_d": "achievement",
+          "correct_option": "A",
+          "explanation": "Drawback means disadvantage."
+        },
+        {
+          "code": "C2_T05_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which verb best fits: 'The company finally ___ that the rollout had caused disruption.'",
+          "option_a": "acknowledged",
+          "option_b": "imagined",
+          "option_c": "celebrated",
+          "option_d": "predicted",
+          "correct_option": "A",
+          "explanation": "Acknowledge means admit or recognize."
+        },
+        {
+          "code": "C2_T05_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which reporting verb suggests a strong explicit position?",
+          "option_a": "asserts",
+          "option_b": "hints",
+          "option_c": "suggests",
+          "option_d": "seems",
+          "correct_option": "A",
+          "explanation": "Assert is stronger."
+        },
+        {
+          "code": "C2_T05_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The author contends that the apparent improvement is largely statistical.' What does 'contends' signal?",
+          "option_a": "A reasoned argumentative claim",
+          "option_b": "A casual guess",
+          "option_c": "A command",
+          "option_d": "A direct observation only",
+          "correct_option": "A",
+          "explanation": "Contend is a formal argumentative verb."
+        },
+        {
+          "code": "C2_T05_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which collocation is least natural?",
+          "option_a": "budget constraint",
+          "option_b": "major drawback",
+          "option_c": "acknowledge a problem",
+          "option_d": "perform a drawback",
+          "correct_option": "D",
+          "explanation": "Drawback is not used with perform."
+        },
+        {
+          "code": "C2_T05_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which term best fits an external factor preventing progress?",
+          "option_a": "obstacle",
+          "option_b": "benefit",
+          "option_c": "claim",
+          "option_d": "implication",
+          "correct_option": "A",
+          "explanation": "Obstacle is something that blocks progress."
+        },
+        {
+          "code": "C2_T05_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does the speaker identify as the main constraint?",
+          "option_a": "Limited specialist staff",
+          "option_b": "Lack of interest",
+          "option_c": "Too much funding",
+          "option_d": "No deadline",
+          "correct_option": "A",
+          "explanation": "Constraint refers to a limiting resource.",
+          "audio_text": "The main constraint is not funding but the limited number of specialist staff available to support implementation.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T05_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What drawback is mentioned?",
+          "option_a": "High maintenance cost",
+          "option_b": "Strong performance",
+          "option_c": "Fast implementation",
+          "option_d": "Clear documentation",
+          "correct_option": "A",
+          "explanation": "The method works but has a cost disadvantage.",
+          "audio_text": "The approach is technically reliable; its main drawback is the relatively high maintenance cost.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T05_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Choosing the Right Word",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T05_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What term is suggested for insufficient staff limiting implementation?",
+              "option_a": "Resource constraint",
+              "option_b": "Benefit",
+              "option_c": "Assertion",
+              "option_d": "Conclusion",
+              "correct_option": "A",
+              "explanation": "The text gives that example."
+            },
+            {
+              "code": "C2_T05_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Which verb signals active disagreement?",
+              "option_a": "contests",
+              "option_b": "acknowledges",
+              "option_c": "suggests",
+              "option_d": "notes",
+              "correct_option": "A",
+              "explanation": "Contest means dispute."
+            },
+            {
+              "code": "C2_T05_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which interpretation is incorrect?",
+              "option_a": "A drawback is a disadvantage.",
+              "option_b": "A constraint limits options.",
+              "option_c": "To acknowledge is to recognize.",
+              "option_d": "To assert is always weaker than to suggest.",
+              "correct_option": "D",
+              "explanation": "Assert is generally stronger."
+            }
+          ],
+          "content_text": "A policy review may identify a 'problem', but that word is often too broad to be useful. If implementation is slowed by insufficient staff, the more precise term may be 'resource constraint'. If a rule prevents action entirely, 'barrier' or 'obstacle' may be more appropriate. If a proposal works but has one negative characteristic, that feature may be described as a 'drawback'. Precision also matters when reporting views. A researcher who 'suggests' a relationship sounds less committed than one who 'asserts' it. An author who 'acknowledges' a limitation accepts that it exists, while one who 'contests' a claim actively disputes it. These distinctions allow advanced users to represent evidence and argument more faithfully."
+        },
+        {
+          "code": "C2_T05_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Word Choice in a Review",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T05_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Why does the speaker prefer 'constraint'?",
+              "option_a": "It more precisely describes a limit",
+              "option_b": "The project is impossible",
+              "option_c": "The budget is irrelevant",
+              "option_d": "The word problem is ungrammatical",
+              "correct_option": "A",
+              "explanation": "The issue limits scale rather than prevents action."
+            },
+            {
+              "code": "C2_T05_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Can the project still proceed?",
+              "option_a": "Yes, at a reduced scale",
+              "option_b": "No",
+              "option_c": "Only next decade",
+              "option_d": "The speaker doesn't know",
+              "correct_option": "A",
+              "explanation": "The constraint does not make it impossible."
+            }
+          ],
+          "audio_text": "I wouldn't call the budget a 'problem' exactly. It's more of a constraint: we can still proceed, but not at the scale originally proposed.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T06",
+      "order": 6,
+      "title": "Metaphor and Idiomatic Discourse",
+      "objective": "Interpret metaphorical framing and idiomatic language in sophisticated spoken and written discourse.",
+      "theory": "Metaphor structures how complex issues are framed: policies can 'gain traction', projects can 'lose momentum', arguments can 'rest on assumptions', and organizations can 'weather a crisis'. C2 comprehension requires understanding both literal and rhetorical effects.",
+      "examples": [
+        "The proposal gained traction.",
+        "The project lost momentum.",
+        "The argument rests on a questionable assumption.",
+        "The company weathered the crisis.",
+        "We need to draw a line under the issue."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Interpreting every metaphor literally.",
+          "correct": "Use context to identify figurative meaning."
+        },
+        {
+          "wrong": "Using idioms without regard to register.",
+          "correct": "Check whether the expression suits the context."
+        }
+      ],
+      "key_vocabulary": [
+        "metaphor",
+        "gain traction",
+        "lose momentum",
+        "rest on",
+        "weather a crisis",
+        "draw a line under",
+        "frame"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T06_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "If an idea 'gains traction', it...",
+          "option_a": "starts receiving support or acceptance",
+          "option_b": "becomes physically heavier",
+          "option_c": "is forgotten",
+          "option_d": "loses evidence",
+          "correct_option": "A",
+          "explanation": "The metaphor means growing acceptance."
+        },
+        {
+          "code": "C2_T06_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "If a project 'loses momentum', it...",
+          "option_a": "slows or loses progress",
+          "option_b": "moves faster",
+          "option_c": "becomes cheaper",
+          "option_d": "is legally protected",
+          "correct_option": "A",
+          "explanation": "Momentum metaphorically represents continuing progress."
+        },
+        {
+          "code": "C2_T06_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "If an argument 'rests on an assumption', it...",
+          "option_a": "depends on that assumption",
+          "option_b": "physically sits on it",
+          "option_c": "rejects it",
+          "option_d": "ignores logic",
+          "correct_option": "A",
+          "explanation": "Rest on means depend on."
+        },
+        {
+          "code": "C2_T06_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'weather a crisis' mean?",
+          "option_a": "Survive or manage through it",
+          "option_b": "Predict rain",
+          "option_c": "Cause a crisis",
+          "option_d": "Cancel operations immediately",
+          "correct_option": "A",
+          "explanation": "The metaphor means endure successfully."
+        },
+        {
+          "code": "C2_T06_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'draw a line under the issue' usually mean?",
+          "option_a": "Treat it as concluded and move on",
+          "option_b": "Underline a sentence",
+          "option_c": "Expand the issue",
+          "option_d": "Hide evidence",
+          "correct_option": "A",
+          "explanation": "The idiom means bring closure."
+        },
+        {
+          "code": "C2_T06_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The reform initially gained traction, but public support later lost momentum.' What changed?",
+          "option_a": "Support first grew, then weakened",
+          "option_b": "The law became heavier",
+          "option_c": "Nothing changed",
+          "option_d": "The policy was literally moving",
+          "correct_option": "A",
+          "explanation": "The metaphors describe changing support."
+        },
+        {
+          "code": "C2_T06_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which interpretation is incorrect?",
+          "option_a": "gain traction = gain support",
+          "option_b": "lose momentum = slow down",
+          "option_c": "weather a crisis = survive difficulty",
+          "option_d": "rest on evidence = physically sleep on documents",
+          "correct_option": "D",
+          "explanation": "It means depend on evidence."
+        },
+        {
+          "code": "C2_T06_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "The entire strategy ___ the assumption that demand will remain stable.",
+          "option_a": "rests on",
+          "option_b": "weathers",
+          "option_c": "draws under",
+          "option_d": "gains traction on",
+          "correct_option": "A",
+          "explanation": "Rest on means depend on."
+        },
+        {
+          "code": "C2_T06_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What has happened to the initiative?",
+          "option_a": "It has started gaining support",
+          "option_b": "It has been canceled",
+          "option_c": "It has lost all funding",
+          "option_d": "It has become literal transport",
+          "correct_option": "A",
+          "explanation": "Gain traction signals growing acceptance.",
+          "audio_text": "The initiative was controversial at first, but it has gradually gained traction among local businesses.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T06_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does the speaker want to do with the dispute?",
+          "option_a": "Resolve it and move on",
+          "option_b": "Expand it indefinitely",
+          "option_c": "Ignore all evidence",
+          "option_d": "Start a new dispute",
+          "correct_option": "A",
+          "explanation": "Draw a line under means conclude.",
+          "audio_text": "We've discussed the disagreement at length. I think it's time to draw a line under it and focus on implementation.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T06_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Framing Economic Recovery",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T06_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Why are movement metaphors useful?",
+              "option_a": "They compress complex processes into familiar images",
+              "option_b": "They provide precise equations",
+              "option_c": "They remove all interpretation",
+              "option_d": "They are legally required",
+              "correct_option": "A",
+              "explanation": "The passage explicitly says this."
+            },
+            {
+              "code": "C2_T06_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What risk do metaphors create?",
+              "option_a": "They can shape interpretation beyond the evidence",
+              "option_b": "They always make texts shorter only",
+              "option_c": "They eliminate stance",
+              "option_d": "They are impossible to understand",
+              "correct_option": "A",
+              "explanation": "Framing can imply causality or closure."
+            },
+            {
+              "code": "C2_T06_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which statement is unsupported?",
+              "option_a": "Metaphors can influence perspective.",
+              "option_b": "'Driving growth' can imply causality.",
+              "option_c": "'Weathered the storm' can suggest resilience.",
+              "option_d": "Metaphors are always neutral descriptions.",
+              "correct_option": "D",
+              "explanation": "The passage argues the opposite."
+            }
+          ],
+          "content_text": "Commentators frequently describe economic recovery through movement metaphors. Growth may 'gain momentum', investment can 'stall', and confidence may 'pick up'. These expressions are useful because they compress complex processes into familiar images. However, metaphors can also shape interpretation. Describing a policy as 'driving growth' implies a more direct causal role than the evidence may justify. Similarly, saying an economy has 'weathered the storm' suggests resilience and perhaps closure, even if structural problems remain. Advanced readers therefore need to understand not only what a metaphor means, but what perspective it encourages."
+        },
+        {
+          "code": "C2_T06_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Project Language",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T06_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What happened after staff left?",
+              "option_a": "Progress slowed",
+              "option_b": "The project finished",
+              "option_c": "Funding doubled",
+              "option_d": "The office moved",
+              "correct_option": "A",
+              "explanation": "Lost momentum means progress weakened."
+            },
+            {
+              "code": "C2_T06_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What did the new manager do?",
+              "option_a": "Restored progress",
+              "option_b": "Canceled the project",
+              "option_c": "Reduced staff further",
+              "option_d": "Changed the topic",
+              "correct_option": "A",
+              "explanation": "Back on track means progress was restored."
+            }
+          ],
+          "audio_text": "The project had lost momentum after two senior staff left, but the new manager has managed to get it back on track.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T07",
+      "order": 7,
+      "title": "Rhetoric and Persuasive Technique",
+      "objective": "Identify rhetorical devices, framing, concession, repetition, and persuasive structure in sophisticated discourse.",
+      "theory": "Persuasion often depends on more than facts. Writers and speakers use framing, rhetorical questions, parallelism, concession, contrast, repetition, and strategic examples. Critical readers distinguish persuasive effect from evidential strength.",
+      "examples": [
+        "If not now, when?",
+        "We need a system that is faster, fairer, and more transparent.",
+        "Of course the transition will be difficult; the question is whether delay would be worse.",
+        "This is not merely a technical issue; it is a question of trust."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Assuming persuasive language is evidence.",
+          "correct": "Separate rhetorical effectiveness from factual support."
+        },
+        {
+          "wrong": "Treating rhetorical questions as requests for information.",
+          "correct": "Identify their persuasive function."
+        }
+      ],
+      "key_vocabulary": [
+        "rhetoric",
+        "framing",
+        "parallelism",
+        "rhetorical question",
+        "concession",
+        "contrast",
+        "persuasion"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T07_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is the function of 'If not now, when?'",
+          "option_a": "Rhetorical pressure for action",
+          "option_b": "A literal request for a calendar date",
+          "option_c": "A past narrative",
+          "option_d": "A definition",
+          "correct_option": "A",
+          "explanation": "The question pushes the audience toward action."
+        },
+        {
+          "code": "C2_T07_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What device appears in 'faster, fairer, and more transparent'?",
+          "option_a": "Parallelism",
+          "option_b": "Passive reporting",
+          "option_c": "Ellipsis only",
+          "option_d": "Nominalisation only",
+          "correct_option": "A",
+          "explanation": "The coordinated structure creates rhythmic emphasis."
+        },
+        {
+          "code": "C2_T07_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why might a speaker concede 'The transition will be difficult' before supporting a policy?",
+          "option_a": "To acknowledge a weakness and strengthen credibility",
+          "option_b": "To abandon the argument",
+          "option_c": "To provide no stance",
+          "option_d": "To change subject",
+          "correct_option": "A",
+          "explanation": "Concession anticipates an objection."
+        },
+        {
+          "code": "C2_T07_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which phrase reframes an issue?",
+          "option_a": "This is not merely a cost issue; it is a question of resilience.",
+          "option_b": "Costs exist.",
+          "option_c": "The meeting is Tuesday.",
+          "option_d": "Data were collected.",
+          "correct_option": "A",
+          "explanation": "It changes the conceptual frame."
+        },
+        {
+          "code": "C2_T07_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which is evidence rather than rhetoric?",
+          "option_a": "A measured 18% reduction in processing time",
+          "option_b": "A powerful slogan",
+          "option_c": "A rhetorical question",
+          "option_d": "A repeated phrase",
+          "correct_option": "A",
+          "explanation": "Quantified empirical information is evidence."
+        },
+        {
+          "code": "C2_T07_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'We can delay reform, but delay has a cost too.' What rhetorical strategy is used?",
+          "option_a": "Counter-framing",
+          "option_b": "Definition",
+          "option_c": "Chronology only",
+          "option_d": "Reported speech",
+          "correct_option": "A",
+          "explanation": "It reframes delay as an active costly choice."
+        },
+        {
+          "code": "C2_T07_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which statement is incorrect?",
+          "option_a": "Rhetoric can influence perception.",
+          "option_b": "Concession can increase credibility.",
+          "option_c": "Parallelism can create emphasis.",
+          "option_d": "A rhetorical device automatically proves a claim.",
+          "correct_option": "D",
+          "explanation": "Persuasion is not evidence."
+        },
+        {
+          "code": "C2_T07_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why repeat a phrase at the start of successive clauses?",
+          "option_a": "To create emphasis and rhythm",
+          "option_b": "To reduce cohesion",
+          "option_c": "To indicate past tense",
+          "option_d": "To avoid a conclusion",
+          "correct_option": "A",
+          "explanation": "Anaphoric repetition can persuade."
+        },
+        {
+          "code": "C2_T07_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What rhetorical move does the speaker make?",
+          "option_a": "Acknowledges cost, then reframes the choice",
+          "option_b": "Gives only a date",
+          "option_c": "Rejects all evidence",
+          "option_d": "Changes topic",
+          "correct_option": "A",
+          "explanation": "The speaker concedes and reframes.",
+          "audio_text": "Yes, modernization will be expensive. But maintaining an inefficient system is not free either.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T07_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is emphasized by repetition?",
+          "option_a": "The need for clarity, consistency, and accountability",
+          "option_b": "A travel schedule",
+          "option_c": "A personal story",
+          "option_d": "A technical error",
+          "correct_option": "A",
+          "explanation": "The parallel structure builds emphasis.",
+          "audio_text": "We need clear rules, clear responsibilities, and clear consequences when those responsibilities are ignored.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T07_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "The Case for Reform",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T07_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What rhetorical device is used through repeated questions?",
+              "option_a": "Rhetorical questioning",
+              "option_b": "Passive voice only",
+              "option_c": "Ellipsis",
+              "option_d": "Reported commands",
+              "correct_option": "A",
+              "explanation": "The questions pressure the audience to reconsider costs."
+            },
+            {
+              "code": "C2_T07_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What does the writer concede?",
+              "option_a": "Change will not be simple and benefits are not guaranteed",
+              "option_b": "Reform has no benefits",
+              "option_c": "Maintenance is free",
+              "option_d": "No investment is needed",
+              "correct_option": "A",
+              "explanation": "The concession acknowledges uncertainty."
+            },
+            {
+              "code": "C2_T07_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which interpretation is unsupported?",
+              "option_a": "The writer reframes inaction as costly.",
+              "option_b": "The writer uses questions persuasively.",
+              "option_c": "The writer admits uncertainty.",
+              "option_d": "The writer proves mathematically that reform must succeed.",
+              "correct_option": "D",
+              "explanation": "The argument is rhetorical and evaluative, not mathematical proof."
+            }
+          ],
+          "content_text": "Opponents of the proposed reform frequently ask whether the organization can afford such a large investment. It is a reasonable question, but it is not the only one. Can the organization afford another decade of rising maintenance costs? Can it afford systems that staff increasingly struggle to support? Can it afford to postpone decisions until failure removes the luxury of choice? The argument for reform is not that change will be simple. It will not. Nor is it that every benefit can be guaranteed. It cannot. The argument is that the cost of inaction is real, growing, and too often excluded from comparison."
+        },
+        {
+          "code": "C2_T07_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Presentation Excerpt",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T07_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "How is the issue reframed?",
+              "option_a": "From software replacement to organizational capability",
+              "option_b": "From work to weather",
+              "option_c": "From cost to travel only",
+              "option_d": "From systems to staffing only",
+              "correct_option": "A",
+              "explanation": "The speaker broadens the frame."
+            },
+            {
+              "code": "C2_T07_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What persuasive effect does the contrast create?",
+              "option_a": "It makes the issue seem more consequential",
+              "option_b": "It removes all stance",
+              "option_c": "It makes it purely technical",
+              "option_d": "It denies history",
+              "correct_option": "A",
+              "explanation": "The frame elevates the stakes."
+            }
+          ],
+          "audio_text": "This is not simply about replacing software. It is about whether we want to keep designing our work around the limitations of systems built fifteen years ago.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T08",
+      "order": 8,
+      "title": "Irony, Understatement, and Humour",
+      "objective": "Recognize non-literal meaning created through irony, understatement, exaggeration, and contextual contrast.",
+      "theory": "C2 listeners and readers must often infer meaning that conflicts with literal wording. Irony may depend on tone, context, shared knowledge, or deliberate mismatch. Understatement can soften criticism; hyperbole can intensify humour or frustration.",
+      "examples": [
+        "Well, that went brilliantly. [after a failure]",
+        "The meeting was not exactly short.",
+        "I've told you a million times.",
+        "That was mildly inconvenient. [after a major disruption]"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Assuming every positive word is positive literally.",
+          "correct": "Check contextual mismatch."
+        },
+        {
+          "wrong": "Treating all exaggeration as factual.",
+          "correct": "Recognize hyperbole."
+        }
+      ],
+      "key_vocabulary": [
+        "irony",
+        "understatement",
+        "hyperbole",
+        "sarcasm",
+        "context",
+        "non-literal meaning"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T08_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "After a failed presentation, 'Well, that went brilliantly' is likely...",
+          "option_a": "Ironic",
+          "option_b": "Literal praise",
+          "option_c": "A legal statement",
+          "option_d": "A neutral fact",
+          "correct_option": "A",
+          "explanation": "The mismatch creates irony."
+        },
+        {
+          "code": "C2_T08_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "'The meeting was not exactly short' implies it was...",
+          "option_a": "Quite long",
+          "option_b": "Very short",
+          "option_c": "Canceled",
+          "option_d": "Informal",
+          "correct_option": "A",
+          "explanation": "The understatement suggests notable length."
+        },
+        {
+          "code": "C2_T08_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "'I've told you a million times' is usually...",
+          "option_a": "Hyperbole",
+          "option_b": "Exact numerical reporting",
+          "option_c": "Passive reporting",
+          "option_d": "A conditional",
+          "correct_option": "A",
+          "explanation": "The number is deliberately exaggerated."
+        },
+        {
+          "code": "C2_T08_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is essential for identifying irony?",
+          "option_a": "Context",
+          "option_b": "Only dictionary meaning",
+          "option_c": "Verb tense alone",
+          "option_d": "Article choice",
+          "correct_option": "A",
+          "explanation": "Irony depends heavily on context."
+        },
+        {
+          "code": "C2_T08_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which expression is understatement?",
+          "option_a": "That was mildly inconvenient after a six-hour outage.",
+          "option_b": "It was an outage.",
+          "option_c": "The system failed at noon.",
+          "option_d": "We restarted twice.",
+          "correct_option": "A",
+          "explanation": "The language minimizes a serious problem."
+        },
+        {
+          "code": "C2_T08_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The software update helpfully removed everyone's saved settings.' What does 'helpfully' imply?",
+          "option_a": "Ironic criticism",
+          "option_b": "Genuine gratitude",
+          "option_c": "No stance",
+          "option_d": "A legal requirement",
+          "correct_option": "A",
+          "explanation": "The adverb is used ironically."
+        },
+        {
+          "code": "C2_T08_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which interpretation is weakest?",
+          "option_a": "Irony can reverse apparent evaluation.",
+          "option_b": "Understatement can intensify criticism indirectly.",
+          "option_c": "Hyperbole can be non-literal.",
+          "option_d": "Every exaggeration is intended to deceive.",
+          "correct_option": "D",
+          "explanation": "Exaggeration often serves rhetorical or humorous functions."
+        },
+        {
+          "code": "C2_T08_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "If someone says 'That could have gone better' after a major disaster, the phrase is...",
+          "option_a": "Understatement",
+          "option_b": "Literal celebration",
+          "option_c": "A command",
+          "option_d": "Reported speech",
+          "correct_option": "A",
+          "explanation": "The severity is deliberately minimized."
+        },
+        {
+          "code": "C2_T08_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does the speaker really mean?",
+          "option_a": "The rollout went badly",
+          "option_b": "The rollout was excellent",
+          "option_c": "Nothing happened",
+          "option_d": "They are discussing weather",
+          "correct_option": "A",
+          "explanation": "The positive wording is ironic.",
+          "audio_text": "Well, that rollout went brilliantly — three outages before lunch and a queue of angry users.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T08_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'not exactly ideal' imply?",
+          "option_a": "The situation is problematic",
+          "option_b": "The situation is perfect",
+          "option_c": "The situation is irrelevant",
+          "option_d": "The speaker is uncertain whether anything happened",
+          "correct_option": "A",
+          "explanation": "The phrase understates criticism.",
+          "audio_text": "Having the main server fail during the demonstration was not exactly ideal.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T08_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Literal Words, Non-Literal Meaning",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T08_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What does 'not exactly concise' imply?",
+              "option_a": "The presentation was too long",
+              "option_b": "The presentation was perfect",
+              "option_c": "The review is positive",
+              "option_d": "No evaluation is made",
+              "correct_option": "A",
+              "explanation": "The understatement communicates criticism."
+            },
+            {
+              "code": "C2_T08_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Why is 'Excellent timing' ironic in the example?",
+              "option_a": "The internet fails at the worst moment",
+              "option_b": "The timing is ideal",
+              "option_c": "There is no demonstration",
+              "option_d": "The colleague is praising the internet",
+              "correct_option": "A",
+              "explanation": "Context reverses the literal positive meaning."
+            },
+            {
+              "code": "C2_T08_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which statement is incorrect?",
+              "option_a": "Context can reverse literal evaluation.",
+              "option_b": "Intonation may help signal irony.",
+              "option_c": "Understatement can soften criticism.",
+              "option_d": "Literal dictionary meaning is always enough.",
+              "correct_option": "D",
+              "explanation": "Advanced pragmatic interpretation requires context."
+            }
+          ],
+          "content_text": "Advanced readers cannot assume that evaluation is always expressed directly. A reviewer who writes that a three-hour presentation was 'not exactly concise' is not merely describing length neutrally. The understatement communicates criticism while avoiding a more aggressive formulation. Similarly, a colleague who says 'Excellent timing' when the internet fails seconds before a live demonstration is unlikely to be praising the timing. The literal words are positive, but the context reverses the interpretation. These forms are difficult because the listener must combine language with situational knowledge and, in speech, often with intonation."
+        },
+        {
+          "code": "C2_T08_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "After a Failed Demo",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T08_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Is 'Fantastic' literal?",
+              "option_a": "No, it is ironic",
+              "option_b": "Yes, the speaker is pleased",
+              "option_c": "It is a technical term",
+              "option_d": "It expresses uncertainty",
+              "correct_option": "A",
+              "explanation": "The context is clearly negative."
+            },
+            {
+              "code": "C2_T08_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Why is the timing problematic?",
+              "option_a": "The client arrives in five minutes",
+              "option_b": "The feature was never needed",
+              "option_c": "The demo is next month",
+              "option_d": "The client canceled",
+              "correct_option": "A",
+              "explanation": "The failure occurs immediately before the client arrives."
+            }
+          ],
+          "audio_text": "Fantastic. The one feature we absolutely needed has stopped working five minutes before the client arrives.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T09",
+      "order": 9,
+      "title": "Ambiguity and Structural Interpretation",
+      "objective": "Identify lexical, syntactic, and referential ambiguity and reformulate language to remove it.",
+      "theory": "Advanced users must notice when a sentence allows more than one interpretation. Ambiguity may arise from pronouns, modifier placement, coordination, or lexical meaning. Skilled writing resolves ambiguity when precision matters.",
+      "examples": [
+        "I saw the man with the telescope.",
+        "When Anna spoke to Maria, she was upset.",
+        "We discussed the new policy with the manager.",
+        "Old men and women attended the event."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Assuming the intended meaning is always obvious.",
+          "correct": "Check whether structure permits alternatives."
+        },
+        {
+          "wrong": "Removing ambiguity by making the sentence less precise.",
+          "correct": "Reformulate explicitly."
+        }
+      ],
+      "key_vocabulary": [
+        "ambiguity",
+        "attachment",
+        "reference",
+        "modifier",
+        "pronoun",
+        "scope",
+        "disambiguation"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T09_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why is 'I saw the man with the telescope' ambiguous?",
+          "option_a": "The telescope may belong to the observer or the man",
+          "option_b": "The verb is wrong",
+          "option_c": "There is no subject",
+          "option_d": "Telescope has no meaning",
+          "correct_option": "A",
+          "explanation": "The prepositional phrase has two possible attachments."
+        },
+        {
+          "code": "C2_T09_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why can 'When Anna spoke to Maria, she was upset' be unclear?",
+          "option_a": "'She' may refer to Anna or Maria",
+          "option_b": "Past tense is impossible",
+          "option_c": "Maria is plural",
+          "option_d": "The verb has two objects",
+          "correct_option": "A",
+          "explanation": "Pronoun reference is ambiguous."
+        },
+        {
+          "code": "C2_T09_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which revision removes ambiguity if Anna was upset?",
+          "option_a": "Anna was upset when she spoke to Maria.",
+          "option_b": "When Anna spoke to Maria, she was upset.",
+          "option_c": "She was upset talking.",
+          "option_d": "Maria spoke to Anna upset.",
+          "correct_option": "A",
+          "explanation": "The named subject makes reference clear."
+        },
+        {
+          "code": "C2_T09_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What kind of ambiguity appears in 'old men and women'?",
+          "option_a": "Scope of 'old'",
+          "option_b": "Verb tense",
+          "option_c": "Article choice",
+          "option_d": "Modal force",
+          "correct_option": "A",
+          "explanation": "Old may modify men only or both groups."
+        },
+        {
+          "code": "C2_T09_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which context most requires disambiguation?",
+          "option_a": "A legal or technical instruction",
+          "option_b": "A joke among close friends",
+          "option_c": "Poetry where ambiguity is intentional",
+          "option_d": "A casual story where both meanings are harmless",
+          "correct_option": "A",
+          "explanation": "Precision is essential in legal/technical contexts."
+        },
+        {
+          "code": "C2_T09_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The supervisor discussed the complaint with the employee from the regional office.' What may be ambiguous?",
+          "option_a": "Whether the employee or complaint is linked to the regional office",
+          "option_b": "Who the supervisor is",
+          "option_c": "Whether discussion happened",
+          "option_d": "The tense",
+          "correct_option": "A",
+          "explanation": "Modifier attachment is unclear."
+        },
+        {
+          "code": "C2_T09_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which statement is incorrect?",
+          "option_a": "Pronouns can create ambiguity.",
+          "option_b": "Modifier placement can create ambiguity.",
+          "option_c": "Ambiguity can sometimes be intentional.",
+          "option_d": "All ambiguity is grammatical error.",
+          "correct_option": "D",
+          "explanation": "Some ambiguity is stylistic or deliberate."
+        },
+        {
+          "code": "C2_T09_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which rewrite is clearest?",
+          "option_a": "The regional-office employee discussed the complaint with the supervisor.",
+          "option_b": "The supervisor discussed with the employee the complaint regional.",
+          "option_c": "The complaint from the regional office employee was discussed maybe.",
+          "option_d": "Discussing, the supervisor employee regional complaint.",
+          "correct_option": "A",
+          "explanation": "It clearly identifies the employee."
+        },
+        {
+          "code": "C2_T09_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What was ambiguous in the original instruction?",
+          "option_a": "Which file should be deleted",
+          "option_b": "Who should attend",
+          "option_c": "The meeting date",
+          "option_d": "The office location",
+          "correct_option": "A",
+          "explanation": "The reference was unclear.",
+          "audio_text": "The instruction said, 'Delete the old file in the archive,' but it wasn't clear whether 'old' described the file or the archive copy.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T09_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What clarification is proposed?",
+          "option_a": "Name the exact file",
+          "option_b": "Use more pronouns",
+          "option_c": "Shorten the sentence further",
+          "option_d": "Remove the verb",
+          "correct_option": "A",
+          "explanation": "Explicit naming removes ambiguity.",
+          "audio_text": "Let's avoid the ambiguity and name the exact file that should be deleted.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T09_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Ambiguity in Policy Writing",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T09_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What creates ambiguity in the example?",
+              "option_a": "Placement of 'with legal advisers'",
+              "option_b": "The word managers",
+              "option_c": "Present tense",
+              "option_d": "Plural nouns",
+              "correct_option": "A",
+              "explanation": "The phrase can attach in two ways."
+            },
+            {
+              "code": "C2_T09_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Why is ambiguity especially risky in policy writing?",
+              "option_a": "Different readers may act on different interpretations",
+              "option_b": "Long sentences are illegal",
+              "option_c": "Policies cannot contain prepositions",
+              "option_d": "Context never exists",
+              "correct_option": "A",
+              "explanation": "Operational consequences make precision important."
+            },
+            {
+              "code": "C2_T09_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which claim is unsupported?",
+              "option_a": "A sentence can be grammatical but ambiguous.",
+              "option_b": "Longer wording can sometimes be clearer.",
+              "option_c": "Context may resolve ambiguity in conversation.",
+              "option_d": "Shorter wording is always more precise.",
+              "correct_option": "D",
+              "explanation": "The passage explicitly rejects that assumption."
+            }
+          ],
+          "content_text": "A sentence can be grammatically correct and still be dangerously unclear. Consider the instruction: 'Managers should review applications from external contractors with legal advisers.' Does 'with legal advisers' describe how managers should review the applications, or does it identify contractors who have legal advisers? In ordinary conversation, context may solve the problem. In policy writing, however, relying on context is risky. A clearer version might be: 'Managers should review, together with legal advisers, all applications submitted by external contractors.' Precision sometimes requires a longer sentence."
+        },
+        {
+          "code": "C2_T09_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Clarifying a Request",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T09_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What was ambiguous?",
+              "option_a": "What 'with the revised figures' modified",
+              "option_b": "Who the manager was",
+              "option_c": "Whether a report existed",
+              "option_d": "The date",
+              "correct_option": "A",
+              "explanation": "The phrase could attach differently."
+            },
+            {
+              "code": "C2_T09_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What was the intended meaning?",
+              "option_a": "The report contains the revised figures",
+              "option_b": "The manager contains the figures",
+              "option_c": "No figures should be sent",
+              "option_d": "The report is old",
+              "correct_option": "A",
+              "explanation": "The speaker clarifies the modifier."
+            }
+          ],
+          "audio_text": "When I said 'send the report to the manager with the revised figures,' I meant the report that contains the revised figures, not that the manager has them already.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T10",
+      "order": 10,
+      "title": "Decoding Dense Academic Prose",
+      "objective": "Unpack complex academic sentences by identifying clause relationships, nominal groups, stance, and logical structure.",
+      "theory": "C2 reading often requires decomposing long sentences rather than merely knowing vocabulary. Identify the main clause, subordinate clauses, nominalizations, embedded modifiers, and discourse markers before interpreting the whole.",
+      "examples": [
+        "Although the findings remain contested, the evidence accumulated over the last decade suggests that...",
+        "The assumption underlying the model, which was originally developed for smaller systems, may not hold at scale."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Reading long academic sentences word by word without identifying structure.",
+          "correct": "Locate the main clause and logical relations first."
+        },
+        {
+          "wrong": "Assuming length equals complexity of meaning.",
+          "correct": "Break the sentence into functional units."
+        }
+      ],
+      "key_vocabulary": [
+        "main clause",
+        "embedding",
+        "nominal group",
+        "subordination",
+        "logical relation",
+        "academic prose"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T10_Q01",
+          "skill": "reading",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "In 'Although the evidence is limited, the findings suggest a pattern,' what is the main clause?",
+          "option_a": "the findings suggest a pattern",
+          "option_b": "although the evidence is limited",
+          "option_c": "the evidence",
+          "option_d": "a pattern",
+          "correct_option": "A",
+          "explanation": "The although-clause is subordinate."
+        },
+        {
+          "code": "C2_T10_Q02",
+          "skill": "reading",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'the assumption underlying the model' refer to?",
+          "option_a": "An assumption that supports the model",
+          "option_b": "A conclusion after the model",
+          "option_c": "A data table",
+          "option_d": "A person",
+          "correct_option": "A",
+          "explanation": "Underlying functions as a participial modifier."
+        },
+        {
+          "code": "C2_T10_Q03",
+          "skill": "reading",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which strategy best helps with dense prose?",
+          "option_a": "Identify the main clause first",
+          "option_b": "Translate every word in isolation",
+          "option_c": "Ignore punctuation",
+          "option_d": "Read only the first noun",
+          "correct_option": "A",
+          "explanation": "Structural parsing helps interpretation."
+        },
+        {
+          "code": "C2_T10_Q04",
+          "skill": "reading",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What role does 'although' usually signal?",
+          "option_a": "Concession",
+          "option_b": "Cause only",
+          "option_c": "Result",
+          "option_d": "Definition",
+          "correct_option": "A",
+          "explanation": "Although introduces concession."
+        },
+        {
+          "code": "C2_T10_Q05",
+          "skill": "reading",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which phrase is a nominal group?",
+          "option_a": "the rapid expansion of platform-based services",
+          "option_b": "although services expanded",
+          "option_c": "because they expanded",
+          "option_d": "they expand rapidly",
+          "correct_option": "A",
+          "explanation": "It is a noun phrase built around expansion."
+        },
+        {
+          "code": "C2_T10_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The decline in participation observed after the policy change may reflect factors unrelated to the policy itself.' What is being hedged?",
+          "option_a": "The causal interpretation",
+          "option_b": "The existence of participation",
+          "option_c": "The grammar",
+          "option_d": "The date",
+          "correct_option": "A",
+          "explanation": "May reflect weakens the causal claim."
+        },
+        {
+          "code": "C2_T10_Q07",
+          "skill": "reading",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which approach is least useful?",
+          "option_a": "Identify clause boundaries.",
+          "option_b": "Find the head noun.",
+          "option_c": "Track connectors.",
+          "option_d": "Assume the first interpretation without checking structure.",
+          "correct_option": "D",
+          "explanation": "Dense prose requires deliberate parsing."
+        },
+        {
+          "code": "C2_T10_Q08",
+          "skill": "reading",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "In 'Evidence collected across three regions indicates...', what does 'collected across three regions' modify?",
+          "option_a": "Evidence",
+          "option_b": "Indicates",
+          "option_c": "Regions only",
+          "option_d": "The reader",
+          "correct_option": "A",
+          "explanation": "It is a reduced relative/participle modifier."
+        },
+        {
+          "code": "C2_T10_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is the main claim?",
+          "option_a": "The model may not scale reliably",
+          "option_b": "The model definitely fails",
+          "option_c": "The data are irrelevant",
+          "option_d": "The project is finished",
+          "correct_option": "A",
+          "explanation": "The speaker qualifies the model's scalability.",
+          "audio_text": "Although the model performs well in small environments, the assumptions on which it relies may not hold reliably at larger scales.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T10_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What should the listener separate first?",
+          "option_a": "Main claim from qualifications",
+          "option_b": "Every individual adjective",
+          "option_c": "Only dates",
+          "option_d": "Only names",
+          "correct_option": "A",
+          "explanation": "The speaker recommends structural parsing.",
+          "audio_text": "With a sentence like this, first separate the main claim from the qualifications and embedded explanations.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T10_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "An Academic Passage",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T10_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What central distinction does the passage make?",
+              "option_a": "Flexibility is not identical to autonomy",
+              "option_b": "All platform work is exploitative",
+              "option_c": "All workers gain control",
+              "option_d": "Pricing is irrelevant",
+              "correct_option": "A",
+              "explanation": "The passage separates scheduling flexibility from broader control."
+            },
+            {
+              "code": "C2_T10_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What does the writer reject?",
+              "option_a": "Simple binary descriptions",
+              "option_b": "Sector comparison",
+              "option_c": "Evidence collection",
+              "option_d": "Questions about autonomy",
+              "correct_option": "A",
+              "explanation": "The passage criticizes simplistic labels."
+            },
+            {
+              "code": "C2_T10_Q13",
+              "skill": "reading",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which interpretation is unsupported?",
+              "option_a": "Workers may gain scheduling control.",
+              "option_b": "Workers may lose control over allocation.",
+              "option_c": "Autonomy has multiple dimensions.",
+              "option_d": "The passage proves all platform work is beneficial.",
+              "correct_option": "D",
+              "explanation": "The passage is explicitly nuanced."
+            }
+          ],
+          "content_text": "Although the rapid expansion of platform-based work has been widely associated with increased flexibility, the extent to which such flexibility translates into greater worker autonomy remains contested. Evidence collected across several sectors suggests that workers may gain control over when they work while simultaneously losing control over how tasks are allocated, evaluated, or priced. This tension complicates simple claims that platform work is either liberating or exploitative. The more useful question may therefore be which dimensions of autonomy increase, which decline, and for whom."
+        },
+        {
+          "code": "C2_T10_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Lecture Excerpt",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T10_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What is the main point?",
+              "option_a": "Different dimensions can move in opposite directions",
+              "option_b": "Flexibility has no value",
+              "option_c": "Control always increases",
+              "option_d": "The topic is unrelated",
+              "correct_option": "A",
+              "explanation": "The speaker distinguishes dimensions."
+            },
+            {
+              "code": "C2_T10_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "Does the speaker reject flexibility entirely?",
+              "option_a": "No",
+              "option_b": "Yes",
+              "option_c": "Only legally",
+              "option_d": "The speaker does not mention it",
+              "correct_option": "A",
+              "explanation": "The sentence explicitly says that is not the point."
+            }
+          ],
+          "audio_text": "The key point is not that flexibility has no value, but that flexibility in one dimension may coexist with reduced control in another.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T11",
+      "order": 11,
+      "title": "Advanced Spoken Discourse",
+      "objective": "Interpret hesitation, repair, turn management, discourse markers, and stance in natural spoken interaction.",
+      "theory": "Natural speech is not written language read aloud. Speakers pause, reformulate, hedge, interrupt themselves, and use markers such as actually, I mean, you know, well, anyway, right, and sort of. These features organize interaction and stance.",
+      "examples": [
+        "Well, I mean, that's one way of looking at it.",
+        "Actually, let me rephrase that.",
+        "Right, so where were we?",
+        "It's sort of difficult to quantify.",
+        "You know, the issue isn't really the cost."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Treating every filler as meaningless noise.",
+          "correct": "Many discourse markers have interactional functions."
+        },
+        {
+          "wrong": "Expecting spontaneous speech to be grammatically polished like formal writing.",
+          "correct": "Account for repair and reformulation."
+        }
+      ],
+      "key_vocabulary": [
+        "discourse marker",
+        "repair",
+        "hesitation",
+        "turn-taking",
+        "stance marker",
+        "actually",
+        "I mean",
+        "sort of"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T11_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'I mean' often signal?",
+          "option_a": "Reformulation or clarification",
+          "option_b": "Past tense",
+          "option_c": "Legal obligation",
+          "option_d": "A topic ending always",
+          "correct_option": "A",
+          "explanation": "It often repairs or refines what was said."
+        },
+        {
+          "code": "C2_T11_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What can 'actually' signal in conversation?",
+          "option_a": "Correction or contrast",
+          "option_b": "Only factual truth",
+          "option_c": "Future time",
+          "option_d": "A question",
+          "correct_option": "A",
+          "explanation": "It often marks correction or contrast."
+        },
+        {
+          "code": "C2_T11_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does 'sort of' often do?",
+          "option_a": "Hedge or soften a description",
+          "option_b": "Make it mathematically exact",
+          "option_c": "Create a command",
+          "option_d": "Mark past perfect",
+          "correct_option": "A",
+          "explanation": "It reduces precision or commitment."
+        },
+        {
+          "code": "C2_T11_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is a repair?",
+          "option_a": "A speaker correcting or reformulating their own speech",
+          "option_b": "Fixing a machine only",
+          "option_c": "Ending a conversation",
+          "option_d": "Giving a definition",
+          "correct_option": "A",
+          "explanation": "Conversation analysis uses repair for self-correction/reformulation."
+        },
+        {
+          "code": "C2_T11_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why are pauses not always signs of poor language ability?",
+          "option_a": "They can help speakers plan complex discourse",
+          "option_b": "Fluent speakers never pause",
+          "option_c": "Pauses are grammatical errors",
+          "option_d": "They always signal uncertainty",
+          "correct_option": "A",
+          "explanation": "Planning is normal in spontaneous speech."
+        },
+        {
+          "code": "C2_T11_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'Well, I mean, it's not that I disagree; I just think the timing is difficult.' What does the speaker do?",
+          "option_a": "Softens disagreement",
+          "option_b": "Fully agrees",
+          "option_c": "Changes to past tense",
+          "option_d": "Ends discussion",
+          "correct_option": "A",
+          "explanation": "The markers frame a nuanced stance."
+        },
+        {
+          "code": "C2_T11_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which statement is incorrect?",
+          "option_a": "Actually can mark correction.",
+          "option_b": "I mean can reformulate.",
+          "option_c": "Sort of can hedge.",
+          "option_d": "Every discourse marker can be deleted with zero effect on meaning or interaction.",
+          "correct_option": "D",
+          "explanation": "Markers often carry pragmatic function."
+        },
+        {
+          "code": "C2_T11_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which phrase helps resume a previous topic?",
+          "option_a": "Anyway, as I was saying...",
+          "option_b": "By the way, entirely new topic...",
+          "option_c": "Never have I...",
+          "option_d": "If only...",
+          "correct_option": "A",
+          "explanation": "It manages discourse flow."
+        },
+        {
+          "code": "C2_T11_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is the speaker doing with 'let me rephrase that'?",
+          "option_a": "Repairing/reformulating",
+          "option_b": "Ending the meeting",
+          "option_c": "Giving a command",
+          "option_d": "Changing subject entirely",
+          "correct_option": "A",
+          "explanation": "The phrase explicitly signals repair.",
+          "audio_text": "Actually, let me rephrase that. The issue isn't that the system is unreliable; it's that reliability varies too much between sites.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T11_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What stance does 'sort of' create?",
+          "option_a": "Approximation or hedging",
+          "option_b": "Absolute certainty",
+          "option_c": "Legal obligation",
+          "option_d": "Strong prohibition",
+          "correct_option": "A",
+          "explanation": "It softens the description.",
+          "audio_text": "The current arrangement is sort of workable, but I wouldn't describe it as sustainable.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T11_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Realistic Meeting Exchange",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T11_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What does the second speaker do repeatedly?",
+              "option_a": "Refines and qualifies claims",
+              "option_b": "Reads a prepared statement",
+              "option_c": "Refuses to answer",
+              "option_d": "Changes language entirely",
+              "correct_option": "A",
+              "explanation": "The speech contains self-repair and qualification."
+            },
+            {
+              "code": "C2_T11_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What was the bigger issue?",
+              "option_a": "Training",
+              "option_b": "Technical failure only",
+              "option_c": "Budget",
+              "option_d": "Office space",
+              "correct_option": "A",
+              "explanation": "Training is explicitly identified."
+            },
+            {
+              "code": "C2_T11_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which claim is unsupported?",
+              "option_a": "The speaker repairs an earlier claim.",
+              "option_b": "'Sort of' hedges the description.",
+              "option_c": "Spontaneous speech can contain reformulation.",
+              "option_d": "The speaker's pauses prove poor proficiency.",
+              "correct_option": "D",
+              "explanation": "Reformulation is normal in spontaneous discourse."
+            }
+          ],
+          "content_text": "'So, do we think the pilot worked?' 'Well, I mean, worked in what sense? The technical side was fine. Actually, that's not quite true — there were two outages, but neither was serious. What I mean is, users could complete the main tasks. The bigger issue was training. People were sort of figuring things out as they went along.' The exchange is typical of spontaneous professional speech. Speakers refine claims as they talk rather than presenting perfectly finished sentences from the start."
+        },
+        {
+          "code": "C2_T11_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Discussion Excerpt",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T11_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What is the speaker's stance?",
+              "option_a": "The pilot was useful despite problems",
+              "option_b": "The pilot was a total failure",
+              "option_c": "There were no problems",
+              "option_d": "The speaker is uncertain what a pilot is",
+              "correct_option": "A",
+              "explanation": "The problems are reframed as useful learning."
+            },
+            {
+              "code": "C2_T11_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What function does 'I mean' serve?",
+              "option_a": "Clarification/reformulation",
+              "option_b": "Past reference",
+              "option_c": "A command",
+              "option_d": "A greeting",
+              "correct_option": "A",
+              "explanation": "It refines the speaker's point."
+            }
+          ],
+          "audio_text": "Well, actually, I wouldn't say the pilot failed. I mean, it exposed problems we hadn't anticipated, which is partly what a pilot is for.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T12",
+      "order": 12,
+      "title": "Critical Source Evaluation",
+      "objective": "Evaluate claims by examining evidence quality, source limitations, methodology, and rhetorical framing.",
+      "theory": "C2 reading includes critical evaluation. Consider sample size, representativeness, incentives, causal inference, missing comparison groups, conflicts of interest, and whether conclusions exceed the evidence.",
+      "examples": [
+        "The sample may not be representative.",
+        "Correlation does not establish causation.",
+        "The report was funded by an interested party.",
+        "The conclusion extends beyond the population studied.",
+        "No control group was used."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Rejecting a source solely because of funding.",
+          "correct": "Treat funding as one factor requiring scrutiny, not automatic disqualification."
+        },
+        {
+          "wrong": "Equating correlation with causation.",
+          "correct": "Assess design and alternative explanations."
+        }
+      ],
+      "key_vocabulary": [
+        "source evaluation",
+        "representativeness",
+        "causation",
+        "correlation",
+        "conflict of interest",
+        "sample",
+        "methodology",
+        "generalization"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T12_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why does representativeness matter?",
+          "option_a": "It affects whether findings generalize",
+          "option_b": "It determines grammar",
+          "option_c": "It guarantees causation",
+          "option_d": "It changes the title",
+          "correct_option": "A",
+          "explanation": "An unrepresentative sample limits generalization."
+        },
+        {
+          "code": "C2_T12_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is wrong with assuming correlation proves causation?",
+          "option_a": "Other explanations may exist",
+          "option_b": "Correlation is always false",
+          "option_c": "Causation never exists",
+          "option_d": "Statistics cannot compare variables",
+          "correct_option": "A",
+          "explanation": "Association alone does not establish cause."
+        },
+        {
+          "code": "C2_T12_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "A conflict of interest should usually lead readers to...",
+          "option_a": "Scrutinize methods and interpretation more carefully",
+          "option_b": "Automatically discard all data",
+          "option_c": "Assume fraud",
+          "option_d": "Ignore the issue",
+          "correct_option": "A",
+          "explanation": "It is relevant but not automatically disqualifying."
+        },
+        {
+          "code": "C2_T12_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does a control group help with?",
+          "option_a": "Comparison and causal inference",
+          "option_b": "Spelling",
+          "option_c": "Register choice",
+          "option_d": "Article use",
+          "correct_option": "A",
+          "explanation": "It provides a comparison condition."
+        },
+        {
+          "code": "C2_T12_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which conclusion overgeneralizes?",
+          "option_a": "A study of one industry proves the policy works in every sector.",
+          "option_b": "The study suggests an effect in the sampled industry.",
+          "option_c": "Further research is needed elsewhere.",
+          "option_d": "The sample limits generalization.",
+          "correct_option": "A",
+          "explanation": "The conclusion exceeds the studied population."
+        },
+        {
+          "code": "C2_T12_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The survey included only users who voluntarily responded.' What potential issue arises?",
+          "option_a": "Self-selection bias",
+          "option_b": "Past perfect",
+          "option_c": "Passive reporting",
+          "option_d": "No issue at all",
+          "correct_option": "A",
+          "explanation": "Voluntary response may produce a biased sample."
+        },
+        {
+          "code": "C2_T12_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which statement is incorrect?",
+          "option_a": "Funding may create incentives worth examining.",
+          "option_b": "Small samples can increase uncertainty.",
+          "option_c": "Correlation alone establishes causation.",
+          "option_d": "Generalization depends on sampling.",
+          "correct_option": "C",
+          "explanation": "Correlation alone is insufficient."
+        },
+        {
+          "code": "C2_T12_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which question best evaluates methodology?",
+          "option_a": "How were participants selected?",
+          "option_b": "Is the title attractive?",
+          "option_c": "Is the font modern?",
+          "option_d": "Does the author use long words?",
+          "correct_option": "A",
+          "explanation": "Sampling is methodologically relevant."
+        },
+        {
+          "code": "C2_T12_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What limitation does the speaker identify?",
+          "option_a": "Only satisfied customers responded",
+          "option_b": "No data were collected",
+          "option_c": "The study had too many control groups",
+          "option_d": "The report had no title",
+          "correct_option": "A",
+          "explanation": "The sample may be biased.",
+          "audio_text": "The satisfaction figure looks impressive, but remember that the survey was voluntary and dissatisfied users may have been less likely to respond.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T12_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why is the causal claim questioned?",
+          "option_a": "There was no comparison group",
+          "option_b": "The sample was too large",
+          "option_c": "The language was formal",
+          "option_d": "The result was positive",
+          "correct_option": "A",
+          "explanation": "Without comparison, causality is harder to establish.",
+          "audio_text": "The program participants improved, but without a comparison group we can't tell how much of that improvement was caused by the program itself.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T12_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Evaluating a Corporate Study",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T12_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What sampling concern is raised?",
+              "option_a": "Volunteers may be unusually enthusiastic users",
+              "option_b": "No participants existed",
+              "option_c": "All users were random",
+              "option_d": "Customers were too old",
+              "correct_option": "A",
+              "explanation": "Volunteer customers may not represent typical users."
+            },
+            {
+              "code": "C2_T12_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Why is causality difficult to isolate?",
+              "option_a": "No appropriate comparison group",
+              "option_b": "The report is too short",
+              "option_c": "The software has a logo",
+              "option_d": "Training never occurred",
+              "correct_option": "A",
+              "explanation": "Training and software effects are confounded."
+            },
+            {
+              "code": "C2_T12_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which conclusion is too strong?",
+              "option_a": "The methodology limits causal inference.",
+              "option_b": "The 25% estimate should be treated cautiously.",
+              "option_c": "The findings may still contain useful information.",
+              "option_d": "The study proves the software has no effect.",
+              "correct_option": "D",
+              "explanation": "Methodological weakness does not prove zero effect."
+            }
+          ],
+          "content_text": "A technology company published a report claiming that users of its productivity software completed tasks 25% faster. The headline attracted attention, but the methodology deserves closer examination. Participants were existing customers who volunteered to join the study, which may mean they were more enthusiastic about the product than typical users. The company compared participants' performance before and after a training session but did not include a group that received training without using the software. As a result, it is difficult to separate the effect of the software from the effect of training or repeated practice. None of this proves that the company's conclusion is false. It does, however, mean that the reported 25% improvement should not be treated as a precise estimate of the software's causal effect."
+        },
+        {
+          "code": "C2_T12_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Research Discussion",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T12_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What limitation is emphasized?",
+              "option_a": "Sample representativeness",
+              "option_b": "Grammar",
+              "option_c": "Data absence",
+              "option_d": "No result",
+              "correct_option": "A",
+              "explanation": "The sample is narrow and self-selected."
+            },
+            {
+              "code": "C2_T12_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What does the speaker advise?",
+              "option_a": "Cautious generalization",
+              "option_b": "Immediate universal adoption",
+              "option_c": "Ignoring the study",
+              "option_d": "Assuming fraud",
+              "correct_option": "A",
+              "explanation": "The conclusion should remain limited."
+            }
+          ],
+          "audio_text": "The result is interesting, but the participants were all volunteers from the same organization. I'd be cautious about generalizing it too widely.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T13",
+      "order": 13,
+      "title": "Reformulation and Style Transformation",
+      "objective": "Rephrase complex ideas while preserving meaning, stance, emphasis, and register.",
+      "theory": "High-level reformulation is not simple synonym replacement. It requires preserving logical relationships and degree of certainty while changing structure, register, or information packaging.",
+      "examples": [
+        "Despite limited evidence, the proposal was approved. → The proposal was approved even though the evidence was limited.",
+        "The findings suggest a modest effect. → The evidence points to a relatively small effect.",
+        "Only after the review did the issue become clear. → The issue became clear only after the review."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Changing a hedge into certainty during paraphrase.",
+          "correct": "Preserve stance and evidential strength."
+        },
+        {
+          "wrong": "Changing causal relationships while changing vocabulary.",
+          "correct": "Preserve logic."
+        }
+      ],
+      "key_vocabulary": [
+        "paraphrase",
+        "reformulation",
+        "stance preservation",
+        "semantic equivalence",
+        "register shift",
+        "information structure"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T13_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which paraphrase preserves 'may'?",
+          "option_a": "It is possible that...",
+          "option_b": "It definitely...",
+          "option_c": "It always...",
+          "option_d": "It cannot...",
+          "correct_option": "A",
+          "explanation": "Possibility must remain possibility."
+        },
+        {
+          "code": "C2_T13_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Paraphrase: 'Despite the delay, we finished on time.'",
+          "option_a": "Although we were delayed, we finished on time.",
+          "option_b": "Because we were delayed, we finished on time.",
+          "option_c": "We finished late.",
+          "option_d": "The delay caused failure.",
+          "correct_option": "A",
+          "explanation": "The concessive relationship is preserved."
+        },
+        {
+          "code": "C2_T13_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Paraphrase: 'Only after the audit did the scale become clear.'",
+          "option_a": "The scale became clear only after the audit.",
+          "option_b": "The scale was clear before the audit.",
+          "option_c": "The audit caused no insight.",
+          "option_d": "Only the scale audited clearly.",
+          "correct_option": "A",
+          "explanation": "Meaning and focus are preserved."
+        },
+        {
+          "code": "C2_T13_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which paraphrase keeps the hedge in 'The findings suggest a modest improvement'?",
+          "option_a": "The findings point to a relatively small improvement.",
+          "option_b": "The findings prove a major improvement.",
+          "option_c": "The findings show no change.",
+          "option_d": "The findings guarantee success.",
+          "correct_option": "A",
+          "explanation": "Both stance and degree are preserved."
+        },
+        {
+          "code": "C2_T13_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What should paraphrasing avoid?",
+          "option_a": "Changing certainty or causality",
+          "option_b": "Changing syntax",
+          "option_c": "Changing vocabulary",
+          "option_d": "Reordering information",
+          "correct_option": "A",
+          "explanation": "Meaning relations must remain stable."
+        },
+        {
+          "code": "C2_T13_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The policy appears to have reduced delays.' Which paraphrase is equivalent?",
+          "option_a": "There are indications that the policy reduced delays.",
+          "option_b": "The policy definitely eliminated delays.",
+          "option_c": "The policy increased delays.",
+          "option_d": "No effect is suggested.",
+          "correct_option": "A",
+          "explanation": "The cautious stance is preserved."
+        },
+        {
+          "code": "C2_T13_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which paraphrase changes meaning?",
+          "option_a": "may help → might be beneficial",
+          "option_b": "despite the cost → although it is expensive",
+          "option_c": "suggests → proves conclusively",
+          "option_d": "not until Friday → only on Friday did...",
+          "correct_option": "C",
+          "explanation": "Suggests and proves have different evidential force."
+        },
+        {
+          "code": "C2_T13_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Reformulate formally: 'We don't know yet if this will work.'",
+          "option_a": "It remains unclear whether the approach will be effective.",
+          "option_b": "No clue if this works.",
+          "option_c": "This definitely fails.",
+          "option_d": "We know it works.",
+          "correct_option": "A",
+          "explanation": "The formal version preserves uncertainty."
+        },
+        {
+          "code": "C2_T13_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which reformulation preserves the speaker's caution?",
+          "option_a": "The evidence points to a possible benefit",
+          "option_b": "The evidence proves success",
+          "option_c": "Success is guaranteed",
+          "option_d": "There is no benefit",
+          "correct_option": "A",
+          "explanation": "Possible benefit preserves hedging.",
+          "audio_text": "The results don't prove the policy works, but they do point to a possible benefit.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T13_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What must be preserved when paraphrasing?",
+          "option_a": "The degree of certainty",
+          "option_b": "The exact word order",
+          "option_c": "Every original word",
+          "option_d": "The same sentence length",
+          "correct_option": "A",
+          "explanation": "Stance is part of meaning.",
+          "audio_text": "When you paraphrase this, keep the uncertainty. Don't turn 'may improve' into 'will improve'.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T13_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Paraphrasing Without Distortion",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T13_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What is lost when 'may reduce' becomes 'reduces'?",
+              "option_a": "Uncertainty",
+              "option_b": "Grammar only",
+              "option_c": "The topic",
+              "option_d": "The subject",
+              "correct_option": "A",
+              "explanation": "The modal hedge disappears."
+            },
+            {
+              "code": "C2_T13_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Why is changing 'after' to 'because of' problematic?",
+              "option_a": "It adds causation",
+              "option_b": "It removes time",
+              "option_c": "It changes plural to singular",
+              "option_d": "It changes register only",
+              "correct_option": "A",
+              "explanation": "Temporal sequence is not the same as cause."
+            },
+            {
+              "code": "C2_T13_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which change is acceptable?",
+              "option_a": "may help → might help",
+              "option_b": "after → because of",
+              "option_c": "suggests → proves",
+              "option_d": "some → all",
+              "correct_option": "A",
+              "explanation": "The degree of uncertainty remains similar."
+            }
+          ],
+          "content_text": "Poor paraphrasing often changes more than wording. If a source says that a treatment 'may reduce symptoms', writing that it 'reduces symptoms' removes uncertainty. If a report states that costs fell 'after' a policy was introduced, rewriting this as costs fell 'because of' the policy introduces a causal claim that the original did not make. Good paraphrasing therefore requires close attention to modality, causation, quantity, and scope. A sophisticated paraphrase may look very different from the original sentence, but its evidential force should remain the same."
+        },
+        {
+          "code": "C2_T13_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Editing Advice",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T13_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What is wrong with the paraphrase?",
+              "option_a": "It overstates causality",
+              "option_b": "It is too short",
+              "option_c": "It uses the same vocabulary",
+              "option_d": "It lacks a subject",
+              "correct_option": "A",
+              "explanation": "The original only suggests contribution."
+            },
+            {
+              "code": "C2_T13_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What should be preserved?",
+              "option_a": "The weaker causal claim",
+              "option_b": "Absolute certainty",
+              "option_c": "The same exact words",
+              "option_d": "A longer sentence",
+              "correct_option": "A",
+              "explanation": "The evidential strength must remain."
+            }
+          ],
+          "audio_text": "Your paraphrase is fluent, but you've made the conclusion stronger than the original. The source says the policy 'may contribute' to the improvement, not that it caused it.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T14",
+      "order": 14,
+      "title": "Multi-Source Synthesis",
+      "objective": "Integrate information from multiple sources while preserving agreements, differences, limitations, and evidential strength.",
+      "theory": "C2 synthesis requires comparing sources rather than summarizing them separately. Identify where they agree, where they differ, why they may differ, and which conclusions are jointly supported.",
+      "examples": [
+        "Both studies report lower processing times, although only one finds lower costs.",
+        "Taken together, the evidence supports a limited conclusion.",
+        "The discrepancy may reflect differences in sample design.",
+        "Source A emphasizes efficiency, whereas Source B focuses on user experience."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Writing one paragraph per source with no comparison.",
+          "correct": "Organize synthesis around themes or points of agreement/disagreement."
+        },
+        {
+          "wrong": "Treating conflicting findings as if they were identical.",
+          "correct": "Represent disagreement accurately."
+        }
+      ],
+      "key_vocabulary": [
+        "synthesis",
+        "agreement",
+        "disagreement",
+        "triangulation",
+        "source comparison",
+        "methodological difference",
+        "joint conclusion"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T14_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What makes synthesis different from separate summaries?",
+          "option_a": "It explicitly relates sources to each other",
+          "option_b": "It is always shorter",
+          "option_c": "It uses more adjectives",
+          "option_d": "It avoids conclusions",
+          "correct_option": "A",
+          "explanation": "Synthesis compares and integrates."
+        },
+        {
+          "code": "C2_T14_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which phrase signals partial agreement?",
+          "option_a": "Both sources agree on X, although they differ on Y.",
+          "option_b": "Source A exists. Source B exists.",
+          "option_c": "Everything is identical.",
+          "option_d": "One source cancels the other.",
+          "correct_option": "A",
+          "explanation": "It captures agreement and difference."
+        },
+        {
+          "code": "C2_T14_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What can explain conflicting results?",
+          "option_a": "Different samples or methods",
+          "option_b": "Grammar only",
+          "option_c": "Article choice",
+          "option_d": "Font size",
+          "correct_option": "A",
+          "explanation": "Methodological differences can produce different findings."
+        },
+        {
+          "code": "C2_T14_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is triangulation?",
+          "option_a": "Using multiple sources or methods to strengthen interpretation",
+          "option_b": "Repeating one source",
+          "option_c": "Ignoring contradictions",
+          "option_d": "Choosing the longest study",
+          "correct_option": "A",
+          "explanation": "Triangulation compares evidence across sources/methods."
+        },
+        {
+          "code": "C2_T14_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which conclusion is strongest when evidence is mixed?",
+          "option_a": "A limited conclusion acknowledging uncertainty",
+          "option_b": "A universal claim",
+          "option_c": "No conclusion can ever be made",
+          "option_d": "Choose whichever source you prefer",
+          "correct_option": "A",
+          "explanation": "Mixed evidence supports cautious synthesis."
+        },
+        {
+          "code": "C2_T14_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'Study A found lower costs; Study B found no cost change but did find faster processing.' What is jointly supported?",
+          "option_a": "Processing may improve, while cost effects remain uncertain",
+          "option_b": "Costs definitely fall",
+          "option_c": "Nothing changes",
+          "option_d": "Both studies are identical",
+          "correct_option": "A",
+          "explanation": "The overlapping support concerns process improvement."
+        },
+        {
+          "code": "C2_T14_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which synthesis is inaccurate?",
+          "option_a": "Both studies identify faster processing.",
+          "option_b": "Only one study reports lower costs.",
+          "option_c": "Cost effects remain uncertain.",
+          "option_d": "Both studies prove substantial cost savings.",
+          "correct_option": "D",
+          "explanation": "That overstates agreement."
+        },
+        {
+          "code": "C2_T14_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which organization is best for a synthesis paragraph?",
+          "option_a": "Theme → compare sources → explain difference → conclude",
+          "option_b": "Source A summary → unrelated story → Source B title",
+          "option_c": "Alphabetical order only",
+          "option_d": "Longest source first always",
+          "correct_option": "A",
+          "explanation": "Thematic organization supports synthesis."
+        },
+        {
+          "code": "C2_T14_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What do the two reviews agree on?",
+          "option_a": "The current process is too slow",
+          "option_b": "Costs will definitely fall",
+          "option_c": "Users love the system",
+          "option_d": "No change is required",
+          "correct_option": "A",
+          "explanation": "Both identify slowness.",
+          "audio_text": "Both reviews agree that the current process is too slow. Where they differ is on whether automation will reduce costs.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T14_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Why might the findings differ?",
+          "option_a": "Different assumptions and time horizons",
+          "option_b": "One report has a title",
+          "option_c": "The authors use English",
+          "option_d": "The meeting was late",
+          "correct_option": "A",
+          "explanation": "Methodological framing differs.",
+          "audio_text": "The discrepancy may reflect different assumptions about implementation costs and different time horizons.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T14_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Three Views on Hybrid Work",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T14_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What do the reports collectively suggest?",
+              "option_a": "Hybrid work can bring benefits with trade-offs",
+              "option_b": "Hybrid work is always superior",
+              "option_c": "Hybrid work always fails",
+              "option_d": "Only cost matters",
+              "correct_option": "A",
+              "explanation": "The synthesis is balanced."
+            },
+            {
+              "code": "C2_T14_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "What limits a universal conclusion?",
+              "option_a": "Benefits vary by context and dimension",
+              "option_b": "No data exist",
+              "option_c": "All sources agree perfectly",
+              "option_d": "There are no trade-offs",
+              "correct_option": "A",
+              "explanation": "Context dependence is central."
+            },
+            {
+              "code": "C2_T14_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which synthesis misrepresents the passage?",
+              "option_a": "Productivity gains are modest.",
+              "option_b": "Satisfaction may improve.",
+              "option_c": "Some costs are offset by digital investment.",
+              "option_d": "All three reports prove hybrid work is best in every job.",
+              "correct_option": "D",
+              "explanation": "The passage rejects that universal claim."
+            }
+          ],
+          "content_text": "Three recent reports examined hybrid work from different perspectives. A productivity study found small gains in individual output, particularly for tasks requiring concentration. An employee survey reported higher satisfaction but also concerns about weaker informal communication. A financial review found modest savings in office costs, though these were partly offset by investment in digital tools. Taken together, the reports suggest that hybrid work can produce benefits, but those benefits occur in different areas and involve trade-offs. None of the sources supports the claim that hybrid work is universally superior. The more defensible conclusion is that outcomes depend on job type, management practice, and how deliberately the model is designed."
+        },
+        {
+          "code": "C2_T14_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Reviewing Evidence",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T14_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What differs between the sources?",
+              "option_a": "Their main focus",
+              "option_b": "Their language",
+              "option_c": "Their publication date only",
+              "option_d": "Their existence",
+              "correct_option": "A",
+              "explanation": "One focuses efficiency, one satisfaction."
+            },
+            {
+              "code": "C2_T14_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What joint conclusion is avoided?",
+              "option_a": "Universal superiority",
+              "option_b": "Some benefits",
+              "option_c": "Positive findings",
+              "option_d": "Different emphases",
+              "correct_option": "A",
+              "explanation": "Neither supports superiority in every respect."
+            }
+          ],
+          "audio_text": "Source A emphasizes efficiency, while Source B focuses on user satisfaction. Both are positive overall, but neither shows that the new system is superior in every respect.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "C2_T15",
+      "order": 15,
+      "title": "Integrated Proficiency: Meaning, Style, and Critical Interpretation",
+      "objective": "Integrate grammar, vocabulary, inference, register, rhetoric, source evaluation, and synthesis in complex communication.",
+      "theory": "C2 proficiency is the ability to manage complexity flexibly. The same passage may require grammatical parsing, pragmatic inference, source evaluation, lexical precision, and awareness of rhetorical strategy. Mastery lies in coordinating these skills rather than applying them separately.",
+      "examples": [
+        "The wording is cautious, but the recommendation is clear.",
+        "The data support part of the claim, though not its strongest version.",
+        "The speaker's polite phrasing masks substantial disagreement.",
+        "The argument is persuasive rhetorically but methodologically limited."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Treating grammar, vocabulary, and interpretation as separate in real communication.",
+          "correct": "Integrate form, meaning, context, and evidence."
+        },
+        {
+          "wrong": "Equating sophisticated language with a strong argument.",
+          "correct": "Evaluate reasoning separately from style."
+        }
+      ],
+      "key_vocabulary": [
+        "integrated proficiency",
+        "critical interpretation",
+        "rhetoric",
+        "stance",
+        "register",
+        "evidence",
+        "inference",
+        "synthesis"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "C2_T15_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "A text can be rhetorically persuasive but...",
+          "option_a": "methodologically weak",
+          "option_b": "therefore automatically true",
+          "option_c": "grammatically impossible",
+          "option_d": "always informal",
+          "correct_option": "A",
+          "explanation": "Persuasion and evidence quality are separate."
+        },
+        {
+          "code": "C2_T15_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Polite wording can sometimes conceal...",
+          "option_a": "Strong disagreement",
+          "option_b": "No meaning",
+          "option_c": "Only agreement",
+          "option_d": "Past tense",
+          "correct_option": "A",
+          "explanation": "Pragmatic meaning may be stronger than literal form."
+        },
+        {
+          "code": "C2_T15_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which is the strongest C2 reading strategy?",
+          "option_a": "Integrate language form, context, stance, and evidence",
+          "option_b": "Translate every word only",
+          "option_c": "Focus only on grammar",
+          "option_d": "Ignore source limitations",
+          "correct_option": "A",
+          "explanation": "Advanced interpretation coordinates multiple dimensions."
+        },
+        {
+          "code": "C2_T15_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "If data support only a limited version of a claim, the best response is to...",
+          "option_a": "Qualify the claim",
+          "option_b": "Strengthen it anyway",
+          "option_c": "Ignore the data",
+          "option_d": "Replace it with opinion",
+          "correct_option": "A",
+          "explanation": "The claim should match evidential strength."
+        },
+        {
+          "code": "C2_T15_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which sentence best combines stance and evidence?",
+          "option_a": "The findings are promising, but the limited sample makes broad conclusions premature.",
+          "option_b": "This proves everything.",
+          "option_c": "The study is useless.",
+          "option_d": "The writer sounds smart, so the argument is true.",
+          "correct_option": "A",
+          "explanation": "It evaluates evidence and limits."
+        },
+        {
+          "code": "C2_T15_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 5,
+          "prompt": "Read: 'The proposal is elegantly argued, though the causal evidence remains weak.' What distinction is made?",
+          "option_a": "Rhetorical quality vs evidential strength",
+          "option_b": "Past vs future",
+          "option_c": "Formal vs informal only",
+          "option_d": "Grammar vs spelling",
+          "correct_option": "A",
+          "explanation": "The evaluation separates persuasion from evidence."
+        },
+        {
+          "code": "C2_T15_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 5,
+          "prompt": "Which principle is incorrect?",
+          "option_a": "Strong style does not guarantee strong evidence.",
+          "option_b": "Context matters for implication.",
+          "option_c": "Hedges affect meaning.",
+          "option_d": "Complex vocabulary automatically makes an argument valid.",
+          "correct_option": "D",
+          "explanation": "Lexical sophistication does not determine validity."
+        },
+        {
+          "code": "C2_T15_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "prompt": "Which summary shows integrated evaluation?",
+          "option_a": "The author makes a persuasive case, but the evidence supports only a narrower conclusion.",
+          "option_b": "The author uses long words, so the case is correct.",
+          "option_c": "The text is formal, therefore true.",
+          "option_d": "I liked the style.",
+          "correct_option": "A",
+          "explanation": "It combines rhetorical and evidential judgment."
+        },
+        {
+          "code": "C2_T15_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What is the speaker's overall evaluation?",
+          "option_a": "Persuasive presentation, incomplete evidence",
+          "option_b": "Complete proof",
+          "option_c": "No useful content",
+          "option_d": "Purely grammatical concern",
+          "correct_option": "A",
+          "explanation": "The speaker separates delivery from evidence.",
+          "audio_text": "The presentation was extremely persuasive, but I don't think the evidence yet supports the strongest version of the recommendation.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "C2_T15_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 5,
+          "prompt": "What does the speaker recommend?",
+          "option_a": "Narrow the claim rather than discard the argument",
+          "option_b": "Ignore evidence",
+          "option_c": "Make the claim stronger",
+          "option_d": "Change the topic",
+          "correct_option": "A",
+          "explanation": "The speaker seeks alignment between claim and evidence.",
+          "audio_text": "I wouldn't abandon the argument. I'd narrow the claim so that it matches what the data can actually support.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "C2_T15_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Complex Recommendation",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T15_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "Why did the panel avoid recommending full rollout?",
+              "option_a": "Evidence and governance concerns remained",
+              "option_b": "The pilot showed no benefits",
+              "option_c": "Automation was illegal",
+              "option_d": "Processing became slower",
+              "correct_option": "A",
+              "explanation": "The evidence was limited and accountability concerns remained."
+            },
+            {
+              "code": "C2_T15_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 5,
+              "prompt": "How would you characterize the panel's stance?",
+              "option_a": "Cautiously supportive",
+              "option_b": "Completely opposed",
+              "option_c": "Uncritically enthusiastic",
+              "option_d": "Indifferent",
+              "correct_option": "A",
+              "explanation": "It supports limited expansion with safeguards."
+            },
+            {
+              "code": "C2_T15_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 5,
+              "prompt": "Which interpretation is unsupported?",
+              "option_a": "Efficiency gains were promising.",
+              "option_b": "The sample excluded complex cases.",
+              "option_c": "Appeal procedures were considered important.",
+              "option_d": "The panel concluded automation should never be used.",
+              "correct_option": "D",
+              "explanation": "The panel recommended limited expansion, not rejection."
+            }
+          ],
+          "content_text": "A government advisory panel reviewed a proposal to introduce automated eligibility checks for a public-benefits program. The proposal was presented as a way to reduce processing times and detect inconsistent applications more quickly. The technical case was persuasive: pilot tests showed faster screening and fewer manual checks. However, the evaluation sample was small and excluded several categories of complex cases. Civil-society groups also raised concerns about transparency and the difficulty applicants might face if an automated decision were wrong. The panel therefore stopped short of recommending a full rollout. Instead, it proposed a limited expansion with independent monitoring, clear appeal procedures, and publication of error rates. The recommendation was cautious but not hostile to automation. Its underlying position was that efficiency gains were promising, but that the evidence did not yet justify transferring too much decision-making authority to an inadequately tested system."
+        },
+        {
+          "code": "C2_T15_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Final Evaluation",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "C2_T15_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What is the speaker's main reservation?",
+              "option_a": "The causal claim is too strong",
+              "option_b": "The presentation is poor",
+              "option_c": "There is no data",
+              "option_d": "The topic is irrelevant",
+              "correct_option": "A",
+              "explanation": "The speaker questions causality."
+            },
+            {
+              "code": "C2_T15_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 5,
+              "prompt": "What do the data establish more safely?",
+              "option_a": "Association",
+              "option_b": "Certain causation",
+              "option_c": "No relationship",
+              "option_d": "A legal rule",
+              "correct_option": "A",
+              "explanation": "Association is supported; causality remains uncertain."
+            }
+          ],
+          "audio_text": "The argument is strong in presentation and broadly consistent with the available evidence. Where I would be more cautious is the final causal claim. The data show association, but not enough to exclude alternative explanations.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.06,
+          "max_audio_plays": 2
+        }
+      ]
+    }
+  ]
+}

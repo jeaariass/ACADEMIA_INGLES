@@ -1,0 +1,64 @@
+{
+  "curriculum": {
+    "expected_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "expected_topics_per_level": 15,
+    "expected_direct_questions_per_topic": 10,
+    "expected_passages_per_topic": 2,
+    "expected_passage_questions_per_topic": 5,
+    "expected_total_questions_per_topic": 15,
+    "expected_reading_passages_per_topic": 1,
+    "expected_listening_passages_per_topic": 1
+  },
+  "level_assessments": {
+    "expected_question_count": 40,
+    "expected_passage_count": 4,
+    "expected_sections": {
+      "grammar": 12,
+      "vocabulary": 8,
+      "reading": 8,
+      "listening": 8,
+      "integrated": 4
+    }
+  },
+  "diagnostic": {
+    "assessment_code": "INITIAL_DIAGNOSTIC_A1_C2",
+    "expected_question_count": 108,
+    "expected_passage_count": 12,
+    "expected_questions_per_level": 18
+  },
+  "final": {
+    "assessment_code": "FINAL_COMPREHENSIVE_A1_C2",
+    "expected_question_count": 72,
+    "expected_passage_count": 12,
+    "expected_questions_per_level": 12
+  },
+  "question_quality": {
+    "valid_correct_options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "valid_skills": [
+      "grammar",
+      "vocabulary",
+      "reading",
+      "listening",
+      "integrated"
+    ],
+    "valid_passage_types": [
+      "reading",
+      "listening"
+    ],
+    "minimum_prompt_length": 8,
+    "minimum_explanation_length": 8,
+    "duplicate_similarity_threshold": 0.94
+  }
+}

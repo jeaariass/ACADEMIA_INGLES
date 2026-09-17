@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}{{ assessment.title }} Result · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section narrow-page">
+  <div class="assessment-result-hero">
+    <div class="assessment-score-circle"><strong>{{ attempt.percentage }}%</strong><span>Overall</span></div>
+    <div>
+      <span class="eyebrow light">ASSESSMENT COMPLETED</span>
+      <h1>{{ assessment.title }}</h1>
+      <p>You answered <strong>{{ attempt.score }}</strong> of <strong>{{ attempt.total }}</strong> questions correctly.</p>
+      {% if threshold is not none %}
+      <div class="threshold-status {{ 'met' if attempt.percentage >= threshold else 'review' }}">
+        <i class="bi {{ 'bi-check-circle-fill' if attempt.percentage >= threshold else 'bi-arrow-repeat' }}"></i>
+        {% if attempt.percentage >= threshold %}
+          Reference threshold met for {{ assessment.level.code if assessment.level else assessment.title }}.
+        {% else %}
+          More review is recommended before considering this level consolidated.
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <section class="content-card assessment-breakdown-card">
+    <div class="content-card-header"><div><span class="eyebrow">SKILL PROFILE</span><h2>Performance by section</h2></div></div>
+    <div class="skill-result-grid">
+      {% for key, stat in section_stats.items() %}
+      <div class="skill-result-card">
+        <div><strong>{{ stat.label }}</strong><span>{{ stat.correct }}/{{ stat.total }} correct</span></div>
+        <b>{{ stat.percentage }}%</b>
+        <div class="skill-progress"><span style="width: {{ stat.percentage }}%"></span></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="assessment-insight-grid">
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">STRENGTHS</span><h2>Strong areas</h2></div></div>
+      {% if strengths %}
+      <div class="recommendation-list success">
+        {% for item in strengths %}
+        <div><i class="bi bi-check-circle-fill"></i><span><strong>{{ item.topic.title }}</strong><small>{{ item.percentage }}% across linked assessment questions</small></span></div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="assessment-empty-copy">No clear strengths were identified yet.</p>
+      {% endif %}
+    </section>
+
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">RECOMMENDED REVIEW</span><h2>Topics to improve</h2></div></div>
+      {% if recommendations %}
+      <div class="recommendation-list review">
+        {% for item in recommendations %}
+        <div>
+          <i class="bi bi-arrow-repeat"></i>
+          <span><strong>{{ item.topic.title }}</strong><small>{{ item.percentage }}% · {{ item.correct }}/{{ item.total }} correct</small></span>
+          <a href="{{ url_for('main.topic', topic_id=item.topic.id) }}">Review lesson</a>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="assessment-empty-copy">No topic fell below the current review threshold.</p>
+      {% endif %}
+    </section>
+  </div>
+
+  <section class="content-card mt-4">
+    <div class="content-card-header"><div><span class="eyebrow">TOPIC ANALYSIS</span><h2>Detailed topic performance</h2></div></div>
+    <div class="table-responsive modern-table-wrap">
+      <table class="table modern-table align-middle mb-0">
+        <thead><tr><th>Topic</th><th>Correct</th><th>Performance</th><th></th></tr></thead>
+        <tbody>
+          {% for item in topic_stats %}
+          <tr>
+            <td><strong>{{ item.topic.title }}</strong></td>
+            <td>{{ item.correct }}/{{ item.total }}</td>
+            <td><span class="score-pill">{{ item.percentage }}%</span></td>
+            <td><a class="text-link" href="{{ url_for('main.topic', topic_id=item.topic.id) }}">Review</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="after-review-actions">
+    <div><span class="eyebrow">NEXT STEP</span><h2>Use the result to guide your review</h2><p>Review weaker topics and take the assessment again when you are ready.</p></div>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('assessment.intro', code=assessment.code) }}">Assessment overview <i class="bi bi-arrow-right"></i></a>
+  </div>
+</section>
+{% endblock %}

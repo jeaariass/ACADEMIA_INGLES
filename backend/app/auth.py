@@ -13,7 +13,7 @@ def login():
         if user and user.check_password(password):
             login_user(user)
             return redirect(url_for("main.dashboard"))
-        flash("Usuario o contraseña incorrectos.", "danger")
+        flash("Incorrect username or password.", "danger")
     return render_template("login.html")
 
 @auth_bp.route("/logout")

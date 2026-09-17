@@ -1,17 +1,39 @@
 {% extends 'base.html' %}
+{% block title %}Sign in · English Practice Hub{% endblock %}
 {% block content %}
-<div class="row justify-content-center">
-  <div class="col-md-5">
-    <div class="card p-4 shadow rounded-4">
-      <h2 class="fw-bold text-center mb-3">Ingreso</h2>
-      <form method="post">
-        <label class="form-label">Usuario</label>
-        <input class="form-control mb-3" name="username" required>
-        <label class="form-label">Contraseña</label>
-        <input class="form-control mb-3" name="password" type="password" required>
-        <button class="btn btn-primary w-100">Entrar</button>
-      </form>
+<section class="login-page">
+  <div class="login-shell">
+    <div class="login-visual">
+      <div class="login-visual-inner">
+        <div class="login-brand">
+          <span class="login-brand-icon"><i class="bi bi-translate"></i></span>
+          <div><strong>English Practice</strong><span>Hub</span></div>
+        </div>
+        <div class="login-copy">
+          <span class="eyebrow light">LEARN • PRACTICE • IMPROVE</span>
+          <h1>Your space to improve your English, step by step.</h1>
+          <p>Study clear explanations, practise every topic, and track your progress from one place.</p>
+        </div>
+        <div class="login-feature-list">
+          <div class="login-feature"><span><i class="bi bi-book"></i></span><div><strong>Learn at your own pace</strong><small>Content organised by CEFR level and topic.</small></div></div>
+          <div class="login-feature"><span><i class="bi bi-check2-circle"></i></span><div><strong>Check your progress</strong><small>Practice tests with immediate feedback.</small></div></div>
+          <div class="login-feature"><span><i class="bi bi-bar-chart"></i></span><div><strong>Review your results</strong><small>Use your history to identify areas to improve.</small></div></div>
+        </div>
+      </div>
+      <div class="visual-orb orb-one"></div><div class="visual-orb orb-two"></div><div class="visual-grid"></div>
+    </div>
+    <div class="login-form-panel">
+      <div class="login-form-wrap">
+        <div class="mobile-brand"><span class="brand-mark"><i class="bi bi-translate"></i></span><strong>English Practice Hub</strong></div>
+        <div class="login-heading"><span class="eyebrow">WELCOME BACK</span><h2>Sign in</h2><p>Enter your details to continue learning.</p></div>
+        <form method="post" class="login-form">
+          <div class="form-group-modern"><label for="username">Username</label><div class="input-shell"><i class="bi bi-person"></i><input id="username" class="form-control" name="username" autocomplete="username" placeholder="Enter your username" required></div></div>
+          <div class="form-group-modern"><label for="password">Password</label><div class="input-shell"><i class="bi bi-lock"></i><input id="password" class="form-control" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required></div></div>
+          <button class="btn btn-primary btn-modern btn-login" type="submit"><span>Sign in</span><i class="bi bi-arrow-right"></i></button>
+        </form>
+        <p class="login-help">If you cannot sign in, contact the platform administrator.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 {% endblock %}

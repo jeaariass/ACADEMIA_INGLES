@@ -1,0 +1,3992 @@
+{
+  "level": {
+    "code": "A1",
+    "order": 1,
+    "name": "Beginner",
+    "description": "Build the foundations needed to understand and use very common everyday English."
+  },
+  "topics": [
+    {
+      "code": "A1_T01",
+      "order": 1,
+      "title": "Greetings and Introductions",
+      "objective": "Use common greetings, introduce yourself, and respond appropriately when meeting someone.",
+      "theory": "Greetings are expressions we use when we meet or leave people. Common greetings include Hello, Hi, Good morning, Good afternoon, and Good evening. When introducing yourself, you can say 'My name is Emma' or 'I'm Emma'. To ask another person's name, use 'What's your name?'. A common response when meeting someone for the first time is 'Nice to meet you.'",
+      "examples": [
+        "Hello, my name is Daniel.",
+        "Hi, I'm Laura.",
+        "Good morning. How are you?",
+        "What's your name?",
+        "Nice to meet you."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I name is Peter.",
+          "correct": "My name is Peter."
+        },
+        {
+          "wrong": "How you are?",
+          "correct": "How are you?"
+        }
+      ],
+      "key_vocabulary": [
+        "hello",
+        "hi",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "goodbye",
+        "name",
+        "meet"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T01_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which greeting is best at 9:00 a.m.?",
+          "option_a": "Good night",
+          "option_b": "Good morning",
+          "option_c": "Good evening",
+          "option_d": "Goodbye",
+          "correct_option": "B",
+          "explanation": "Use 'Good morning' in the morning."
+        },
+        {
+          "code": "A1_T01_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct introduction.",
+          "option_a": "My name is Anna.",
+          "option_b": "My name are Anna.",
+          "option_c": "I name is Anna.",
+          "option_d": "My name am Anna.",
+          "correct_option": "A",
+          "explanation": "Use 'My name is + name'."
+        },
+        {
+          "code": "A1_T01_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "What do you usually say when you meet someone for the first time?",
+          "option_a": "Nice to meet you.",
+          "option_b": "See you yesterday.",
+          "option_c": "Good night.",
+          "option_d": "You're welcome.",
+          "correct_option": "A",
+          "explanation": "'Nice to meet you' is a common first-meeting expression."
+        },
+        {
+          "code": "A1_T01_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: ___ your name?",
+          "option_a": "What",
+          "option_b": "What's",
+          "option_c": "Where",
+          "option_d": "Who's are",
+          "correct_option": "B",
+          "explanation": "The standard question is 'What's your name?'."
+        },
+        {
+          "code": "A1_T01_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which expression is used when leaving?",
+          "option_a": "Goodbye",
+          "option_b": "Good morning",
+          "option_c": "Nice to meet you",
+          "option_d": "Welcome",
+          "correct_option": "A",
+          "explanation": "'Goodbye' is used when leaving."
+        },
+        {
+          "code": "A1_T01_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Hi, I'm Sofia. Nice to meet you.' What is Sofia doing?",
+          "option_a": "Asking for directions",
+          "option_b": "Introducing herself",
+          "option_c": "Ordering food",
+          "option_d": "Saying goodbye",
+          "correct_option": "B",
+          "explanation": "She gives her name and greets the other person."
+        },
+        {
+          "code": "A1_T01_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "I'm Carlos.",
+          "option_b": "I Carlos.",
+          "option_c": "I'm name Carlos.",
+          "option_d": "I are Carlos.",
+          "correct_option": "A",
+          "explanation": "'I'm Carlos' is correct."
+        },
+        {
+          "code": "A1_T01_Q08",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'A: Hi, I'm Alex. B: Hello, Alex. I'm Maya.' What are they doing?",
+          "option_a": "Talking about work",
+          "option_b": "Introducing themselves",
+          "option_c": "Talking about food",
+          "option_d": "Asking about weather",
+          "correct_option": "B",
+          "explanation": "Both speakers give their names."
+        },
+        {
+          "code": "A1_T01_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 1,
+          "prompt": "What is the speaker's name?",
+          "option_a": "Michael",
+          "option_b": "Daniel",
+          "option_c": "David",
+          "option_d": "Matthew",
+          "correct_option": "A",
+          "explanation": "The speaker says his name is Michael.",
+          "audio_text": "Hello. My name is Michael. Nice to meet you.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T01_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 1,
+          "prompt": "What time of day does the greeting suggest?",
+          "option_a": "Morning",
+          "option_b": "Afternoon",
+          "option_c": "Evening",
+          "option_d": "Night",
+          "correct_option": "A",
+          "explanation": "The speaker says 'Good morning'.",
+          "audio_text": "Good morning, Sarah. How are you today?",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T01_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Greetings and Introductions: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T01_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is Emma?",
+              "option_a": "At a language school",
+              "option_b": "At a restaurant",
+              "option_c": "At a station",
+              "option_d": "At home",
+              "correct_option": "A",
+              "explanation": "She is at Greenhill Language School."
+            },
+            {
+              "code": "A1_T01_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Who does Emma meet?",
+              "option_a": "Her brother",
+              "option_b": "Leo",
+              "option_c": "A doctor",
+              "option_d": "Her neighbor",
+              "correct_option": "B",
+              "explanation": "She meets Leo."
+            },
+            {
+              "code": "A1_T01_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "I'm Emma.",
+              "option_b": "What's your name?",
+              "option_c": "Nice to meet you.",
+              "option_d": "I name is Emma.",
+              "correct_option": "D",
+              "explanation": "Use 'My name is Emma' or 'I'm Emma'."
+            }
+          ],
+          "content_text": "Emma is a new student at Greenhill Language School. On her first morning, she walks into the classroom and sees another student near the window. Emma smiles and says, “Good morning. I’m Emma. What’s your name?” The student answers, “Hi, Emma. I’m Leo. Nice to meet you.” Emma says, “Nice to meet you too.” Their teacher arrives a minute later and welcomes everyone to the class."
+        },
+        {
+          "code": "A1_T01_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Greetings and Introductions: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T01_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who is starting a new job?",
+              "option_a": "James",
+              "option_b": "Olivia",
+              "option_c": "Emma",
+              "option_d": "Leo",
+              "correct_option": "B",
+              "explanation": "Olivia says it is her first day."
+            },
+            {
+              "code": "A1_T01_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What does James offer to show Olivia?",
+              "option_a": "Her desk",
+              "option_b": "The menu",
+              "option_c": "A bus stop",
+              "option_d": "His house",
+              "correct_option": "A",
+              "explanation": "He offers to show her desk."
+            }
+          ],
+          "audio_text": "Good morning. I’m Olivia. Today is my first day here. A man at the front desk says, Hello, Olivia. My name is James. Welcome to the office. Olivia smiles and says, Thank you, James. Nice to meet you. James answers, Nice to meet you too. Let me show you where your desk is.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T02",
+      "order": 2,
+      "title": "The Verb 'To Be'",
+      "objective": "Use am, is, and are correctly in affirmative, negative, and question forms.",
+      "theory": "Use 'am' with I, 'is' with he, she, and it, and 'are' with you, we, and they. Negative forms include am not, isn't, and aren't. In questions, place the verb before the subject: 'Are you ready?' and 'Is she a student?'.",
+      "examples": [
+        "I am a student.",
+        "She is happy.",
+        "They are at home.",
+        "He isn't tired.",
+        "Are you ready?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I is happy.",
+          "correct": "I am happy."
+        },
+        {
+          "wrong": "She are a teacher.",
+          "correct": "She is a teacher."
+        }
+      ],
+      "key_vocabulary": [
+        "am",
+        "is",
+        "are",
+        "isn't",
+        "aren't",
+        "student",
+        "teacher",
+        "ready"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T02_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: I ___ a student.",
+          "option_a": "is",
+          "option_b": "are",
+          "option_c": "am",
+          "option_d": "be",
+          "correct_option": "C",
+          "explanation": "Use 'am' with I."
+        },
+        {
+          "code": "A1_T02_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: She ___ my friend.",
+          "option_a": "am",
+          "option_b": "is",
+          "option_c": "are",
+          "option_d": "be",
+          "correct_option": "B",
+          "explanation": "Use 'is' with she."
+        },
+        {
+          "code": "A1_T02_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: They ___ at home.",
+          "option_a": "is",
+          "option_b": "am",
+          "option_c": "are",
+          "option_d": "be",
+          "correct_option": "C",
+          "explanation": "Use 'are' with they."
+        },
+        {
+          "code": "A1_T02_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct negative.",
+          "option_a": "He not is tired.",
+          "option_b": "He isn't tired.",
+          "option_c": "He aren't tired.",
+          "option_d": "He am not tired.",
+          "correct_option": "B",
+          "explanation": "Use 'isn't' with he."
+        },
+        {
+          "code": "A1_T02_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct question.",
+          "option_a": "You are ready?",
+          "option_b": "Are you ready?",
+          "option_c": "Is you ready?",
+          "option_d": "Am you ready?",
+          "correct_option": "B",
+          "explanation": "Put 'are' before 'you'."
+        },
+        {
+          "code": "A1_T02_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Tom is a doctor. His sisters are teachers.' Which is true?",
+          "option_a": "Tom is a teacher.",
+          "option_b": "His sisters are doctors.",
+          "option_c": "Tom is a doctor.",
+          "option_d": "They are students.",
+          "correct_option": "C",
+          "explanation": "The text says Tom is a doctor."
+        },
+        {
+          "code": "A1_T02_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: We ___ not late.",
+          "option_a": "is",
+          "option_b": "are",
+          "option_c": "am",
+          "option_d": "be",
+          "correct_option": "B",
+          "explanation": "Use 'are' with we."
+        },
+        {
+          "code": "A1_T02_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: ___ she your sister?",
+          "option_a": "Am",
+          "option_b": "Are",
+          "option_c": "Is",
+          "option_d": "Be",
+          "correct_option": "C",
+          "explanation": "Use 'is' with she."
+        },
+        {
+          "code": "A1_T02_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 1,
+          "prompt": "What is the speaker's brother?",
+          "option_a": "A doctor",
+          "option_b": "A teacher",
+          "option_c": "A student",
+          "option_d": "A driver",
+          "correct_option": "B",
+          "explanation": "He is a teacher.",
+          "audio_text": "I am a student, and my brother is a teacher.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T02_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Where are Maria and John?",
+          "option_a": "At home",
+          "option_b": "At school",
+          "option_c": "At the library",
+          "option_d": "At a restaurant",
+          "correct_option": "C",
+          "explanation": "They are at the library.",
+          "audio_text": "Maria and John are at the library. They are ready for class.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T02_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "The Verb 'To Be': Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T02_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What are Mia's parents?",
+              "option_a": "Doctors",
+              "option_b": "Teachers",
+              "option_c": "Students",
+              "option_d": "Drivers",
+              "correct_option": "B",
+              "explanation": "Both parents are teachers."
+            },
+            {
+              "code": "A1_T02_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is the family this month?",
+              "option_a": "Canada",
+              "option_b": "New York",
+              "option_c": "London",
+              "option_d": "Paris",
+              "correct_option": "C",
+              "explanation": "They are in London."
+            },
+            {
+              "code": "A1_T02_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "My parents are teachers.",
+              "option_b": "My brother is twelve.",
+              "option_c": "We are from Canada.",
+              "option_d": "My mother are a teacher.",
+              "correct_option": "D",
+              "explanation": "Use 'My mother is a teacher.'"
+            }
+          ],
+          "content_text": "My name is Mia, and I am sixteen years old. My parents are both teachers. My mother is an English teacher, and my father is a science teacher. I have one brother. His name is Noah, and he is twelve. We are from Canada, but we are in London this month because my parents are working at a summer school."
+        },
+        {
+          "code": "A1_T02_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "The Verb 'To Be': Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T02_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is Ben?",
+              "option_a": "At home",
+              "option_b": "At the library",
+              "option_c": "At school",
+              "option_d": "At a café",
+              "correct_option": "B",
+              "explanation": "Ben is at the library."
+            },
+            {
+              "code": "A1_T02_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Is the library busy?",
+              "option_a": "Yes, it is.",
+              "option_b": "No, it isn't.",
+              "option_c": "They don't know.",
+              "option_d": "It is closed.",
+              "correct_option": "B",
+              "explanation": "It is very quiet."
+            }
+          ],
+          "audio_text": "Hi, Ben. Are you at home? No, I’m not. I’m at the library with Sara. Is Sara your classmate? Yes, she is. We are ready for our English test tomorrow. Is the library busy? No, it isn’t. It is very quiet today.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T03",
+      "order": 3,
+      "title": "Personal Information",
+      "objective": "Ask for and give basic personal information such as age, nationality, address, and contact details.",
+      "theory": "Use simple questions such as 'What's your name?', 'How old are you?', 'Where are you from?', 'What's your address?', and 'What's your phone number?'. English uses the verb 'to be' for age: 'I am 24 years old.'",
+      "examples": [
+        "I'm 24 years old.",
+        "I'm from Colombia.",
+        "My phone number is 555-0123.",
+        "What's your email address?",
+        "Where do you live?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I have 24 years.",
+          "correct": "I am 24 years old."
+        },
+        {
+          "wrong": "Where you are from?",
+          "correct": "Where are you from?"
+        }
+      ],
+      "key_vocabulary": [
+        "age",
+        "address",
+        "phone number",
+        "email",
+        "nationality",
+        "country",
+        "city",
+        "surname"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T03_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which question asks about age?",
+          "option_a": "Where are you from?",
+          "option_b": "How old are you?",
+          "option_c": "What's your job?",
+          "option_d": "What's your address?",
+          "correct_option": "B",
+          "explanation": "'How old are you?' asks about age."
+        },
+        {
+          "code": "A1_T03_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: I ___ 24 years old.",
+          "option_a": "have",
+          "option_b": "am",
+          "option_c": "is",
+          "option_d": "are",
+          "correct_option": "B",
+          "explanation": "Use 'am' for age."
+        },
+        {
+          "code": "A1_T03_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which question asks about nationality?",
+          "option_a": "What nationality are you?",
+          "option_b": "How are you?",
+          "option_c": "What time is it?",
+          "option_d": "Who is she?",
+          "correct_option": "A",
+          "explanation": "It asks about nationality."
+        },
+        {
+          "code": "A1_T03_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct answer to 'Where are you from?'",
+          "option_a": "I am from Colombia.",
+          "option_b": "I have Colombia.",
+          "option_c": "I from Colombia.",
+          "option_d": "I is Colombia.",
+          "correct_option": "A",
+          "explanation": "Use 'I am from + place'."
+        },
+        {
+          "code": "A1_T03_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which word means the place where you live?",
+          "option_a": "age",
+          "option_b": "address",
+          "option_c": "nationality",
+          "option_d": "surname",
+          "correct_option": "B",
+          "explanation": "An address tells where you live."
+        },
+        {
+          "code": "A1_T03_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'I'm Luis. I'm 22 and I'm from Mexico.' What is NOT given?",
+          "option_a": "Name",
+          "option_b": "Age",
+          "option_c": "Country",
+          "option_d": "Occupation",
+          "correct_option": "D",
+          "explanation": "Occupation is not mentioned."
+        },
+        {
+          "code": "A1_T03_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct question.",
+          "option_a": "Where you are from?",
+          "option_b": "Where are you from?",
+          "option_c": "From where you are?",
+          "option_d": "Where is you from?",
+          "correct_option": "B",
+          "explanation": "Correct order is 'Where are you from?'."
+        },
+        {
+          "code": "A1_T03_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which is usually personal information?",
+          "option_a": "Phone number",
+          "option_b": "Table size",
+          "option_c": "Weather forecast",
+          "option_d": "Wall color",
+          "correct_option": "A",
+          "explanation": "A phone number is personal information."
+        },
+        {
+          "code": "A1_T03_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 1,
+          "prompt": "How old is the speaker?",
+          "option_a": "18",
+          "option_b": "20",
+          "option_c": "28",
+          "option_d": "30",
+          "correct_option": "C",
+          "explanation": "She says she is twenty-eight.",
+          "audio_text": "My name is Rachel. I'm twenty-eight years old and I'm from Boston.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T03_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Where is Daniel from?",
+          "option_a": "Spain",
+          "option_b": "Brazil",
+          "option_c": "Chile",
+          "option_d": "Italy",
+          "correct_option": "B",
+          "explanation": "Daniel says he is from Brazil.",
+          "audio_text": "Hi, I'm Daniel. I'm from Brazil, but I live in Madrid now.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T03_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Personal Information: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T03_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where does Julia live?",
+              "option_a": "France",
+              "option_b": "Toronto",
+              "option_c": "London",
+              "option_d": "Madrid",
+              "correct_option": "B",
+              "explanation": "She lives in Toronto."
+            },
+            {
+              "code": "A1_T03_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where does Julia work?",
+              "option_a": "In a hotel",
+              "option_b": "In a school",
+              "option_c": "In a bank",
+              "option_d": "At home",
+              "correct_option": "A",
+              "explanation": "She works in a hotel."
+            },
+            {
+              "code": "A1_T03_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Julia is twenty-six.",
+              "option_b": "She lives in Toronto.",
+              "option_c": "She speaks French.",
+              "option_d": "She have twenty-six years.",
+              "correct_option": "D",
+              "explanation": "Use 'She is twenty-six.'"
+            }
+          ],
+          "content_text": "Julia Martin is twenty-six years old. She is from France, but she lives in Toronto, Canada. She works in a small hotel. Her phone number is 555-0184, and her email address is julia.martin@example.com. She speaks French and English. In her free time, she likes music and walking in the park."
+        },
+        {
+          "code": "A1_T03_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Personal Information: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T03_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How old is Kevin?",
+              "option_a": "21",
+              "option_b": "30",
+              "option_c": "31",
+              "option_d": "41",
+              "correct_option": "C",
+              "explanation": "Kevin is thirty-one."
+            },
+            {
+              "code": "A1_T03_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is Kevin from?",
+              "option_a": "Ireland",
+              "option_b": "Chicago",
+              "option_c": "Canada",
+              "option_d": "England",
+              "correct_option": "A",
+              "explanation": "He is from Ireland."
+            }
+          ],
+          "audio_text": "Hello. Can I have your name, please? Yes, I’m Kevin Brown. How old are you, Kevin? I’m thirty-one. And where are you from? I’m from Ireland. Do you live here in Chicago now? Yes, I do. My address is 24 Pine Street.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T04",
+      "order": 4,
+      "title": "Subject Pronouns and Possessive Adjectives",
+      "objective": "Use subject pronouns and possessive adjectives to avoid repetition and show ownership.",
+      "theory": "Subject pronouns are I, you, he, she, it, we, and they. Possessive adjectives are my, your, his, her, its, our, and their. Use them before nouns: 'my book', 'her car', 'their house'.",
+      "examples": [
+        "Maria is my friend. She is kind.",
+        "This is John. His car is red.",
+        "We are students. Our teacher is Mr Lee.",
+        "They live here. Their house is large."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She name is Ana.",
+          "correct": "Her name is Ana."
+        },
+        {
+          "wrong": "He is my sister.",
+          "correct": "She is my sister."
+        }
+      ],
+      "key_vocabulary": [
+        "I",
+        "you",
+        "he",
+        "she",
+        "it",
+        "we",
+        "they",
+        "my",
+        "your",
+        "his",
+        "her",
+        "our",
+        "their"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T04_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Replace 'Maria' with a pronoun.",
+          "option_a": "he",
+          "option_b": "she",
+          "option_c": "it",
+          "option_d": "they",
+          "correct_option": "B",
+          "explanation": "Use 'she' for Maria."
+        },
+        {
+          "code": "A1_T04_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: John is my friend. ___ is from Canada.",
+          "option_a": "She",
+          "option_b": "It",
+          "option_c": "He",
+          "option_d": "They",
+          "correct_option": "C",
+          "explanation": "Use 'he' for John."
+        },
+        {
+          "code": "A1_T04_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: I have a car. ___ car is blue.",
+          "option_a": "My",
+          "option_b": "Your",
+          "option_c": "His",
+          "option_d": "Their",
+          "correct_option": "A",
+          "explanation": "Use 'my'."
+        },
+        {
+          "code": "A1_T04_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Anna has a dog. ___ dog is small.",
+          "option_a": "Her",
+          "option_b": "His",
+          "option_c": "Their",
+          "option_d": "Our",
+          "correct_option": "A",
+          "explanation": "Use 'her'."
+        },
+        {
+          "code": "A1_T04_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Tom and I are students. ___ school is near here.",
+          "option_a": "Their",
+          "option_b": "Our",
+          "option_c": "His",
+          "option_d": "My",
+          "correct_option": "B",
+          "explanation": "Use 'our'."
+        },
+        {
+          "code": "A1_T04_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "'Ben and Lucy are siblings. Their parents are doctors.' Who are doctors?",
+          "option_a": "Ben and Lucy",
+          "option_b": "Their parents",
+          "option_c": "Only Ben",
+          "option_d": "Only Lucy",
+          "correct_option": "B",
+          "explanation": "'Their' refers to Ben and Lucy."
+        },
+        {
+          "code": "A1_T04_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "He name is Mark.",
+          "option_b": "His name is Mark.",
+          "option_c": "Her name is Mark.",
+          "option_d": "Him name is Mark.",
+          "correct_option": "B",
+          "explanation": "Use 'his name'."
+        },
+        {
+          "code": "A1_T04_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "You are my teacher. ___ class is interesting.",
+          "option_a": "My",
+          "option_b": "Their",
+          "option_c": "Your",
+          "option_d": "Our",
+          "correct_option": "C",
+          "explanation": "Use 'your'."
+        },
+        {
+          "code": "A1_T04_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 1,
+          "prompt": "Who is a nurse?",
+          "option_a": "The speaker",
+          "option_b": "The speaker's mother",
+          "option_c": "The speaker's father",
+          "option_d": "A friend",
+          "correct_option": "B",
+          "explanation": "The mother is a nurse.",
+          "audio_text": "My name is Paul. My mother is a nurse, and my father is a driver.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T04_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Whose apartment is small?",
+          "option_a": "Emma's",
+          "option_b": "Tom's",
+          "option_c": "The teacher's",
+          "option_d": "The parents'",
+          "correct_option": "A",
+          "explanation": "Emma's apartment is small.",
+          "audio_text": "This is my friend Emma. She lives downtown. Her apartment is small but comfortable.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T04_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Subject Pronouns and Possessive Adjectives: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T04_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is Sara from?",
+              "option_a": "Italy",
+              "option_b": "Australia",
+              "option_c": "Canada",
+              "option_d": "Spain",
+              "correct_option": "A",
+              "explanation": "Sara is from Italy."
+            },
+            {
+              "code": "A1_T04_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where are Ben's parents?",
+              "option_a": "Rome",
+              "option_b": "Sydney",
+              "option_c": "Near the apartment",
+              "option_d": "At university",
+              "correct_option": "B",
+              "explanation": "They are in Sydney."
+            },
+            {
+              "code": "A1_T04_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Her family lives in Rome.",
+              "option_b": "His parents are in Sydney.",
+              "option_c": "Their university is near.",
+              "option_d": "She family lives in Rome.",
+              "correct_option": "D",
+              "explanation": "Use 'Her family'."
+            }
+          ],
+          "content_text": "My friends Sara and Ben are students. Sara is from Italy. Her family lives in Rome. Ben is from Australia. His parents live in Sydney. Their university is near my apartment, so we often study together."
+        },
+        {
+          "code": "A1_T04_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Subject Pronouns and Possessive Adjectives: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T04_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What is Nina's job?",
+              "option_a": "Teacher",
+              "option_b": "Doctor",
+              "option_c": "Student",
+              "option_d": "Driver",
+              "correct_option": "B",
+              "explanation": "Nina is a doctor."
+            },
+            {
+              "code": "A1_T04_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who are Mia and Lucas?",
+              "option_a": "Nina's children",
+              "option_b": "Alex's students",
+              "option_c": "The speaker's parents",
+              "option_d": "Doctors",
+              "correct_option": "A",
+              "explanation": "They are Nina and Alex's children."
+            }
+          ],
+          "audio_text": "Look at this photo. This is my sister Nina. She is a doctor. Her husband is Alex. He is a teacher. Their children are Mia and Lucas. Their house is near the city center.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T05",
+      "order": 5,
+      "title": "Articles: A, An, and The",
+      "objective": "Use a, an, and the correctly with common singular nouns.",
+      "theory": "Use 'a' before a consonant sound, 'an' before a vowel sound, and 'the' when the listener knows which specific person or thing you mean.",
+      "examples": [
+        "a book",
+        "an apple",
+        "the door",
+        "a university",
+        "an hour"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "an student",
+          "correct": "a student"
+        },
+        {
+          "wrong": "a apple",
+          "correct": "an apple"
+        }
+      ],
+      "key_vocabulary": [
+        "a",
+        "an",
+        "the",
+        "book",
+        "apple",
+        "door",
+        "umbrella",
+        "hour"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T05_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "I have ___ apple.",
+          "option_a": "a",
+          "option_b": "an",
+          "option_c": "the",
+          "option_d": "some",
+          "correct_option": "B",
+          "explanation": "Use 'an' before a vowel sound."
+        },
+        {
+          "code": "A1_T05_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "She is ___ teacher.",
+          "option_a": "a",
+          "option_b": "an",
+          "option_c": "the",
+          "option_d": "some",
+          "correct_option": "A",
+          "explanation": "Use 'a' before teacher."
+        },
+        {
+          "code": "A1_T05_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Please close ___ door.",
+          "option_a": "a",
+          "option_b": "an",
+          "option_c": "the",
+          "option_d": "any",
+          "correct_option": "C",
+          "explanation": "The specific door is known."
+        },
+        {
+          "code": "A1_T05_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "He has ___ umbrella.",
+          "option_a": "a",
+          "option_b": "an",
+          "option_c": "the",
+          "option_d": "one the",
+          "correct_option": "B",
+          "explanation": "Use 'an'."
+        },
+        {
+          "code": "A1_T05_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "I am an student.",
+          "option_b": "I am a student.",
+          "option_c": "I am the student always.",
+          "option_d": "I am student a.",
+          "correct_option": "B",
+          "explanation": "Use 'a student'."
+        },
+        {
+          "code": "A1_T05_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "'There is a cat in the garden. The cat is black.' Why use 'the' the second time?",
+          "option_a": "New information",
+          "option_b": "Already known",
+          "option_c": "All cats are black",
+          "option_d": "The garden is unknown",
+          "correct_option": "B",
+          "explanation": "The cat was already introduced."
+        },
+        {
+          "code": "A1_T05_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "I see ___ moon at night.",
+          "option_a": "a",
+          "option_b": "an",
+          "option_c": "the",
+          "option_d": "some",
+          "correct_option": "C",
+          "explanation": "Use 'the moon'."
+        },
+        {
+          "code": "A1_T05_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "We live in ___ small apartment.",
+          "option_a": "a",
+          "option_b": "an",
+          "option_c": "the",
+          "option_d": "any",
+          "correct_option": "A",
+          "explanation": "Use 'a'."
+        },
+        {
+          "code": "A1_T05_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 1,
+          "prompt": "What does the speaker need?",
+          "option_a": "A pen",
+          "option_b": "An umbrella",
+          "option_c": "A book",
+          "option_d": "A car",
+          "correct_option": "B",
+          "explanation": "The speaker needs an umbrella.",
+          "audio_text": "It's raining. I need an umbrella before I go outside.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T05_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What is on the table?",
+          "option_a": "A cup and an orange",
+          "option_b": "An apple and a book",
+          "option_c": "A phone and a pen",
+          "option_d": "Keys only",
+          "correct_option": "A",
+          "explanation": "A cup and an orange are on the table.",
+          "audio_text": "There is a cup and an orange on the table. The orange is for you.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T05_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Articles: A, An, and The: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T05_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What does the writer order?",
+              "option_a": "Tea and cake",
+              "option_b": "Coffee and an egg sandwich",
+              "option_c": "Juice and soup",
+              "option_d": "Only coffee",
+              "correct_option": "B",
+              "explanation": "The writer orders coffee and a sandwich."
+            },
+            {
+              "code": "A1_T05_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What is in the corner?",
+              "option_a": "A piano",
+              "option_b": "An umbrella",
+              "option_c": "A table",
+              "option_d": "A garden",
+              "correct_option": "A",
+              "explanation": "There is an old piano."
+            },
+            {
+              "code": "A1_T05_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "a small café",
+              "option_b": "an egg sandwich",
+              "option_c": "an old piano",
+              "option_d": "a orange",
+              "correct_option": "D",
+              "explanation": "Use 'an orange'."
+            }
+          ],
+          "content_text": "There is a small café near my office. The café has a quiet garden. I usually order a coffee and an egg sandwich. The coffee is strong, and the sandwich is fresh. There is also an old piano in the corner."
+        },
+        {
+          "code": "A1_T05_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Articles: A, An, and The: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T05_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What fruit should be bought?",
+              "option_a": "An apple",
+              "option_b": "An orange",
+              "option_c": "Bananas",
+              "option_d": "Grapes",
+              "correct_option": "A",
+              "explanation": "The speaker needs an apple."
+            },
+            {
+              "code": "A1_T05_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Which milk should be bought?",
+              "option_a": "Any milk",
+              "option_b": "The milk in the blue carton",
+              "option_c": "A small milk",
+              "option_d": "An old milk",
+              "correct_option": "B",
+              "explanation": "The blue-carton milk is specified."
+            }
+          ],
+          "audio_text": "I need a few things from the supermarket. I need a loaf of bread, an apple, and a bottle of water. Please also buy the milk in the blue carton. We already have an orange and some bananas at home.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T06",
+      "order": 6,
+      "title": "Singular and Plural Nouns",
+      "objective": "Form regular and common irregular plurals.",
+      "theory": "Most plural nouns add -s. Nouns ending in -s, -sh, -ch, -x, or -z often add -es. A consonant plus y often changes to -ies. Some plurals are irregular: child/children, man/men, woman/women, person/people.",
+      "examples": [
+        "one book / two books",
+        "one box / two boxes",
+        "one baby / two babies",
+        "one child / two children"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "two childs",
+          "correct": "two children"
+        },
+        {
+          "wrong": "three boxs",
+          "correct": "three boxes"
+        }
+      ],
+      "key_vocabulary": [
+        "singular",
+        "plural",
+        "books",
+        "boxes",
+        "babies",
+        "children",
+        "men",
+        "women",
+        "people"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T06_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: book.",
+          "option_a": "books",
+          "option_b": "boxes",
+          "option_c": "babies",
+          "option_d": "children",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'books'."
+        },
+        {
+          "code": "A1_T06_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: box.",
+          "option_a": "books",
+          "option_b": "babies",
+          "option_c": "children",
+          "option_d": "boxes",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'boxes'."
+        },
+        {
+          "code": "A1_T06_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: baby.",
+          "option_a": "boxes",
+          "option_b": "children",
+          "option_c": "babies",
+          "option_d": "books",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'babies'."
+        },
+        {
+          "code": "A1_T06_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: child.",
+          "option_a": "babies",
+          "option_b": "children",
+          "option_c": "books",
+          "option_d": "boxes",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'children'."
+        },
+        {
+          "code": "A1_T06_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: man.",
+          "option_a": "men",
+          "option_b": "books",
+          "option_c": "boxes",
+          "option_d": "babies",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'men'."
+        },
+        {
+          "code": "A1_T06_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: woman.",
+          "option_a": "books",
+          "option_b": "boxes",
+          "option_c": "babies",
+          "option_d": "women",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'women'."
+        },
+        {
+          "code": "A1_T06_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: watch.",
+          "option_a": "boxes",
+          "option_b": "babies",
+          "option_c": "watches",
+          "option_d": "books",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'watches'."
+        },
+        {
+          "code": "A1_T06_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: person.",
+          "option_a": "babies",
+          "option_b": "people",
+          "option_c": "books",
+          "option_d": "boxes",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'people'."
+        },
+        {
+          "code": "A1_T06_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Singular and Plural Nouns?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Singular and Plural Nouns. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T06_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Singular and Plural Nouns?",
+          "option_a": "Form regular and common irregular plurals.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T06_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Singular and Plural Nouns: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T06_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How many windows are there?",
+              "option_a": "Two",
+              "option_b": "Three",
+              "option_c": "Four",
+              "option_d": "Twenty",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T06_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What is near the wall?",
+              "option_a": "Four boxes",
+              "option_b": "Three buses",
+              "option_c": "Two babies",
+              "option_d": "One watch",
+              "correct_option": "A",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T06_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which plural is incorrect?",
+              "option_a": "books",
+              "option_b": "pencils",
+              "option_c": "dictionarys",
+              "option_d": "boxes",
+              "correct_option": "C",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "Our classroom has twenty desks and twenty chairs. There are three large windows and two doors. The teacher has many books, pencils, and markers. Two students have small dictionaries. There are also four boxes near the wall."
+        },
+        {
+          "code": "A1_T06_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Singular and Plural Nouns: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T06_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How many apples does the speaker buy?",
+              "option_a": "Two",
+              "option_b": "Three",
+              "option_c": "Four",
+              "option_d": "Six",
+              "correct_option": "A",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T06_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How many boxes of tea?",
+              "option_a": "One",
+              "option_b": "Two",
+              "option_c": "Three",
+              "option_d": "Four",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "At the market, I buy six tomatoes, four potatoes, two apples, and three oranges. I also buy two boxes of tea and one bag of rice.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T07",
+      "order": 7,
+      "title": "This, That, These, and Those",
+      "objective": "Use demonstratives for things that are near or far.",
+      "theory": "Use 'this' for one thing near you, 'that' for one thing farther away, 'these' for several things near you, and 'those' for several things farther away.",
+      "examples": [
+        "This book is mine.",
+        "That building is tall.",
+        "These shoes are new.",
+        "Those mountains are beautiful."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "These is my bag.",
+          "correct": "This is my bag."
+        },
+        {
+          "wrong": "That are my shoes.",
+          "correct": "Those are my shoes."
+        }
+      ],
+      "key_vocabulary": [
+        "this",
+        "that",
+        "these",
+        "those",
+        "near",
+        "far",
+        "here",
+        "there"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T07_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: one thing near.",
+          "option_a": "this",
+          "option_b": "that",
+          "option_c": "these",
+          "option_d": "those",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'this'."
+        },
+        {
+          "code": "A1_T07_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: one thing far.",
+          "option_a": "this",
+          "option_b": "these",
+          "option_c": "those",
+          "option_d": "that",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'that'."
+        },
+        {
+          "code": "A1_T07_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: several things near.",
+          "option_a": "that",
+          "option_b": "those",
+          "option_c": "these",
+          "option_d": "this",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'these'."
+        },
+        {
+          "code": "A1_T07_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: several things far.",
+          "option_a": "these",
+          "option_b": "those",
+          "option_c": "this",
+          "option_d": "that",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'those'."
+        },
+        {
+          "code": "A1_T07_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: one thing near.",
+          "option_a": "this",
+          "option_b": "that",
+          "option_c": "these",
+          "option_d": "those",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'this'."
+        },
+        {
+          "code": "A1_T07_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: one thing far.",
+          "option_a": "this",
+          "option_b": "these",
+          "option_c": "those",
+          "option_d": "that",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'that'."
+        },
+        {
+          "code": "A1_T07_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: several things near.",
+          "option_a": "that",
+          "option_b": "those",
+          "option_c": "these",
+          "option_d": "this",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'these'."
+        },
+        {
+          "code": "A1_T07_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: several things far.",
+          "option_a": "these",
+          "option_b": "those",
+          "option_c": "this",
+          "option_d": "that",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'those'."
+        },
+        {
+          "code": "A1_T07_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in This, That, These, and Those?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices This, That, These, and Those. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T07_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to This, That, These, and Those?",
+          "option_a": "Use demonstratives for things that are near or far.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T07_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "This, That, These, and Those: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T07_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which painting is beside the guide?",
+              "option_a": "This painting",
+              "option_b": "That painting",
+              "option_c": "Both",
+              "option_d": "None",
+              "correct_option": "A",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T07_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where are the Greek statues?",
+              "option_a": "Beside the guide",
+              "option_b": "Near the entrance",
+              "option_c": "Outside",
+              "option_d": "In Italy",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T07_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "This painting is old.",
+              "option_b": "Those statues are large.",
+              "option_c": "These statues are small.",
+              "option_d": "That paintings are old.",
+              "correct_option": "D",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "At the museum, our guide says, “This painting beside me is from 1880. That painting across the room is older. These small statues here are from Italy, and those large statues near the entrance are from Greece.”"
+        },
+        {
+          "code": "A1_T07_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "This, That, These, and Those: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T07_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Which jacket is near the window?",
+              "option_a": "This jacket",
+              "option_b": "That jacket",
+              "option_c": "Both",
+              "option_d": "None",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T07_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How much are the boots?",
+              "option_a": "16 dollars",
+              "option_b": "60 dollars",
+              "option_c": "50 dollars",
+              "option_d": "70 dollars",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "I like this jacket here, but I also like that jacket near the window. These shoes are nice too. How much are those boots on the top shelf? They are sixty dollars.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T08",
+      "order": 8,
+      "title": "There Is and There Are",
+      "objective": "Describe what exists in a place.",
+      "theory": "Use 'there is' with singular nouns and 'there are' with plural nouns. Negative forms are 'there isn't' and 'there aren't'. Questions are 'Is there...?' and 'Are there...?'.",
+      "examples": [
+        "There is a bank nearby.",
+        "There are three parks.",
+        "There isn't a pharmacy.",
+        "Are there any cafés?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "There is two chairs.",
+          "correct": "There are two chairs."
+        },
+        {
+          "wrong": "There are a school.",
+          "correct": "There is a school."
+        }
+      ],
+      "key_vocabulary": [
+        "there is",
+        "there are",
+        "there isn't",
+        "there aren't",
+        "nearby",
+        "park",
+        "bank",
+        "restaurant"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T08_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: a book.",
+          "option_a": "there is",
+          "option_b": "there are",
+          "option_c": "there isn't",
+          "option_d": "there aren't",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'there is'."
+        },
+        {
+          "code": "A1_T08_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: two chairs.",
+          "option_a": "there is",
+          "option_b": "there isn't",
+          "option_c": "there aren't",
+          "option_d": "there are",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'there are'."
+        },
+        {
+          "code": "A1_T08_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: a bank, negative.",
+          "option_a": "there are",
+          "option_b": "there aren't",
+          "option_c": "there isn't",
+          "option_d": "there is",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'there isn't'."
+        },
+        {
+          "code": "A1_T08_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: buses, negative.",
+          "option_a": "there isn't",
+          "option_b": "there aren't",
+          "option_c": "there is",
+          "option_d": "there are",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'there aren't'."
+        },
+        {
+          "code": "A1_T08_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: a book.",
+          "option_a": "there is",
+          "option_b": "there are",
+          "option_c": "there isn't",
+          "option_d": "there aren't",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'there is'."
+        },
+        {
+          "code": "A1_T08_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: two chairs.",
+          "option_a": "there is",
+          "option_b": "there isn't",
+          "option_c": "there aren't",
+          "option_d": "there are",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'there are'."
+        },
+        {
+          "code": "A1_T08_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: a bank, negative.",
+          "option_a": "there are",
+          "option_b": "there aren't",
+          "option_c": "there isn't",
+          "option_d": "there is",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'there isn't'."
+        },
+        {
+          "code": "A1_T08_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: buses, negative.",
+          "option_a": "there isn't",
+          "option_b": "there aren't",
+          "option_c": "there is",
+          "option_d": "there are",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'there aren't'."
+        },
+        {
+          "code": "A1_T08_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in There Is and There Are?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices There Is and There Are. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T08_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to There Is and There Are?",
+          "option_a": "Describe what exists in a place.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T08_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "There Is and There Are: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T08_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How many restaurants are there?",
+              "option_a": "One",
+              "option_b": "Two",
+              "option_c": "Three",
+              "option_d": "None",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T08_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Is there a hospital?",
+              "option_a": "Yes",
+              "option_b": "No",
+              "option_c": "Only at night",
+              "option_d": "Not stated",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T08_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "There is a supermarket.",
+              "option_b": "There are two restaurants.",
+              "option_c": "There isn't a hospital.",
+              "option_d": "There is many trees.",
+              "correct_option": "D",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "I live in a quiet neighborhood. There is a supermarket near my house, and there are two small restaurants on the same street. There is also a park behind the library. There isn't a hospital, but there is a medical center near the station."
+        },
+        {
+          "code": "A1_T08_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "There Is and There Are: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T08_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How many lamps are there?",
+              "option_a": "One",
+              "option_b": "Two",
+              "option_c": "Three",
+              "option_d": "Four",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T08_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What is NOT in the room?",
+              "option_a": "A bed",
+              "option_b": "A desk",
+              "option_c": "A television",
+              "option_d": "Wi-Fi",
+              "correct_option": "C",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "Welcome to room 405. There is a large bed near the window. There are two lamps beside the bed. There is a desk and a chair near the door. There isn't a television, but there is free Wi-Fi.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T09",
+      "order": 9,
+      "title": "Present Simple",
+      "objective": "Talk about habits, routines, facts, and repeated actions.",
+      "theory": "Use the base verb with I, you, we, and they. Add -s or -es with he, she, and it. Use do/does for questions and don't/doesn't for negatives. After does/doesn't, use the base verb.",
+      "examples": [
+        "I work every day.",
+        "She works in a bank.",
+        "They don't eat meat.",
+        "Does he live here?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She work here.",
+          "correct": "She works here."
+        },
+        {
+          "wrong": "He doesn't likes coffee.",
+          "correct": "He doesn't like coffee."
+        }
+      ],
+      "key_vocabulary": [
+        "work",
+        "study",
+        "live",
+        "eat",
+        "drink",
+        "start",
+        "finish",
+        "do",
+        "does"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T09_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: I / study.",
+          "option_a": "study",
+          "option_b": "works",
+          "option_c": "doesn't like",
+          "option_d": "Do you work?",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'study'."
+        },
+        {
+          "code": "A1_T09_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: she / work.",
+          "option_a": "study",
+          "option_b": "doesn't like",
+          "option_c": "Do you work?",
+          "option_d": "works",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'works'."
+        },
+        {
+          "code": "A1_T09_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: he / not like.",
+          "option_a": "works",
+          "option_b": "Do you work?",
+          "option_c": "doesn't like",
+          "option_d": "study",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'doesn't like'."
+        },
+        {
+          "code": "A1_T09_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: you / question work.",
+          "option_a": "doesn't like",
+          "option_b": "Do you work?",
+          "option_c": "study",
+          "option_d": "works",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'Do you work?'."
+        },
+        {
+          "code": "A1_T09_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: she / question live.",
+          "option_a": "Does she live?",
+          "option_b": "study",
+          "option_c": "works",
+          "option_d": "doesn't like",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'Does she live?'."
+        },
+        {
+          "code": "A1_T09_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: I / study.",
+          "option_a": "works",
+          "option_b": "doesn't like",
+          "option_c": "Do you work?",
+          "option_d": "study",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'study'."
+        },
+        {
+          "code": "A1_T09_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: she / work.",
+          "option_a": "doesn't like",
+          "option_b": "Do you work?",
+          "option_c": "works",
+          "option_d": "study",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'works'."
+        },
+        {
+          "code": "A1_T09_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: he / not like.",
+          "option_a": "Do you work?",
+          "option_b": "doesn't like",
+          "option_c": "study",
+          "option_d": "works",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'doesn't like'."
+        },
+        {
+          "code": "A1_T09_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Present Simple?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Present Simple. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T09_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Present Simple?",
+          "option_a": "Talk about habits, routines, facts, and repeated actions.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T09_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Present Simple: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T09_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where does Daniel work?",
+              "option_a": "A bookstore",
+              "option_b": "A bank",
+              "option_c": "A school",
+              "option_d": "At home",
+              "correct_option": "A",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T09_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What does he do in the evening?",
+              "option_a": "Works",
+              "option_b": "Studies English",
+              "option_c": "Visits parents",
+              "option_d": "Sleeps",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T09_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "He starts at nine.",
+              "option_b": "He walks to work.",
+              "option_c": "He study English.",
+              "option_d": "He eats lunch.",
+              "correct_option": "C",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "Daniel works in a bookstore from Monday to Friday. He starts work at nine and finishes at five. He usually walks to work because he lives nearby. At lunchtime, he eats with coworkers. In the evening, he studies English online."
+        },
+        {
+          "code": "A1_T09_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Present Simple: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T09_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How does Nora go to work?",
+              "option_a": "By car",
+              "option_b": "By bus",
+              "option_c": "On foot",
+              "option_d": "By train",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T09_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What time does she finish?",
+              "option_a": "4:30",
+              "option_b": "5:00",
+              "option_c": "6:30",
+              "option_d": "7:30",
+              "correct_option": "A",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "Every weekday, Nora gets up at six thirty. She drinks coffee and eats toast. She leaves home at seven thirty and takes the bus to work. She finishes work at four thirty.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T10",
+      "order": 10,
+      "title": "Daily Routines",
+      "objective": "Describe common daily activities and sequence a typical day.",
+      "theory": "Daily routine vocabulary includes wake up, get up, take a shower, get dressed, have breakfast, go to work or school, have lunch, finish work, go home, have dinner, and go to bed.",
+      "examples": [
+        "I wake up at seven.",
+        "She has breakfast at home.",
+        "We go to work by bus.",
+        "He goes to bed at eleven."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She have breakfast.",
+          "correct": "She has breakfast."
+        },
+        {
+          "wrong": "He go home at five.",
+          "correct": "He goes home at five."
+        }
+      ],
+      "key_vocabulary": [
+        "wake up",
+        "get dressed",
+        "have breakfast",
+        "go to work",
+        "have lunch",
+        "go home",
+        "have dinner",
+        "go to bed"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T10_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: first in the morning.",
+          "option_a": "wake up",
+          "option_b": "have breakfast",
+          "option_c": "go home",
+          "option_d": "go to bed",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'wake up'."
+        },
+        {
+          "code": "A1_T10_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: morning meal.",
+          "option_a": "wake up",
+          "option_b": "go home",
+          "option_c": "go to bed",
+          "option_d": "have breakfast",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'have breakfast'."
+        },
+        {
+          "code": "A1_T10_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: return to your house.",
+          "option_a": "have breakfast",
+          "option_b": "go to bed",
+          "option_c": "go home",
+          "option_d": "wake up",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'go home'."
+        },
+        {
+          "code": "A1_T10_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: sleep at night.",
+          "option_a": "go home",
+          "option_b": "go to bed",
+          "option_c": "wake up",
+          "option_d": "have breakfast",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'go to bed'."
+        },
+        {
+          "code": "A1_T10_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: first in the morning.",
+          "option_a": "wake up",
+          "option_b": "have breakfast",
+          "option_c": "go home",
+          "option_d": "go to bed",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'wake up'."
+        },
+        {
+          "code": "A1_T10_Q06",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: morning meal.",
+          "option_a": "wake up",
+          "option_b": "go home",
+          "option_c": "go to bed",
+          "option_d": "have breakfast",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'have breakfast'."
+        },
+        {
+          "code": "A1_T10_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: return to your house.",
+          "option_a": "have breakfast",
+          "option_b": "go to bed",
+          "option_c": "go home",
+          "option_d": "wake up",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'go home'."
+        },
+        {
+          "code": "A1_T10_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: sleep at night.",
+          "option_a": "go home",
+          "option_b": "go to bed",
+          "option_c": "wake up",
+          "option_d": "have breakfast",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'go to bed'."
+        },
+        {
+          "code": "A1_T10_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Daily Routines?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Daily Routines. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T10_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Daily Routines?",
+          "option_a": "Describe common daily activities and sequence a typical day.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T10_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Daily Routines: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T10_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What time does Sam start work?",
+              "option_a": "6:15",
+              "option_b": "7:20",
+              "option_c": "8:00",
+              "option_d": "12:00",
+              "correct_option": "C",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T10_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How does he go to work?",
+              "option_a": "Walks",
+              "option_b": "Drives",
+              "option_c": "Bus",
+              "option_d": "Train",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T10_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "He wakes up early.",
+              "option_b": "He drives to work.",
+              "option_c": "He cook dinner.",
+              "option_d": "He watches TV.",
+              "correct_option": "C",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "Sam wakes up at 6:15 every weekday. He gets dressed and has breakfast with his family. At 7:20, he leaves home and drives to work. He starts work at eight. He finishes at five, goes home, cooks dinner, and watches television."
+        },
+        {
+          "code": "A1_T10_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Daily Routines: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T10_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How does the speaker go to university?",
+              "option_a": "Bus",
+              "option_b": "Car",
+              "option_c": "On foot",
+              "option_d": "Train",
+              "correct_option": "C",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T10_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What happens after class?",
+              "option_a": "Goes home immediately",
+              "option_b": "Studies in the library",
+              "option_c": "Works",
+              "option_d": "Sleeps",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "My classes start at nine, so I get up at seven. I have breakfast, get dressed, and walk to university. I have classes until three. After class, I study in the library for an hour.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T11",
+      "order": 11,
+      "title": "Adverbs of Frequency",
+      "objective": "Talk about how often activities happen.",
+      "theory": "Common adverbs are always, usually, often, sometimes, rarely, and never. They usually come before a main verb. With the verb 'to be', they usually come after the verb.",
+      "examples": [
+        "I always eat breakfast.",
+        "He usually walks to work.",
+        "We sometimes watch movies.",
+        "She is never late."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I go always by bus.",
+          "correct": "I always go by bus."
+        },
+        {
+          "wrong": "She always is tired.",
+          "correct": "She is always tired."
+        }
+      ],
+      "key_vocabulary": [
+        "always",
+        "usually",
+        "often",
+        "sometimes",
+        "rarely",
+        "never",
+        "every day",
+        "once a week"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T11_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: 100 percent.",
+          "option_a": "always",
+          "option_b": "never",
+          "option_c": "often",
+          "option_d": "sometimes",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'always'."
+        },
+        {
+          "code": "A1_T11_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: 0 percent.",
+          "option_a": "always",
+          "option_b": "often",
+          "option_c": "sometimes",
+          "option_d": "never",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'never'."
+        },
+        {
+          "code": "A1_T11_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: many times.",
+          "option_a": "never",
+          "option_b": "sometimes",
+          "option_c": "often",
+          "option_d": "always",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'often'."
+        },
+        {
+          "code": "A1_T11_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: some occasions.",
+          "option_a": "often",
+          "option_b": "sometimes",
+          "option_c": "always",
+          "option_d": "never",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'sometimes'."
+        },
+        {
+          "code": "A1_T11_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: 100 percent.",
+          "option_a": "always",
+          "option_b": "never",
+          "option_c": "often",
+          "option_d": "sometimes",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'always'."
+        },
+        {
+          "code": "A1_T11_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: 0 percent.",
+          "option_a": "always",
+          "option_b": "often",
+          "option_c": "sometimes",
+          "option_d": "never",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'never'."
+        },
+        {
+          "code": "A1_T11_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: many times.",
+          "option_a": "never",
+          "option_b": "sometimes",
+          "option_c": "often",
+          "option_d": "always",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'often'."
+        },
+        {
+          "code": "A1_T11_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: some occasions.",
+          "option_a": "often",
+          "option_b": "sometimes",
+          "option_c": "always",
+          "option_d": "never",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'sometimes'."
+        },
+        {
+          "code": "A1_T11_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Adverbs of Frequency?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Adverbs of Frequency. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T11_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Adverbs of Frequency?",
+          "option_a": "Talk about how often activities happen.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T11_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Adverbs of Frequency: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T11_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What does Carla often do?",
+              "option_a": "Works",
+              "option_b": "Has breakfast at a café",
+              "option_c": "Calls grandparents",
+              "option_d": "Goes to school",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T11_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "When does she never work?",
+              "option_a": "Saturday",
+              "option_b": "Sunday",
+              "option_c": "Monday",
+              "option_d": "Friday",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T11_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "She usually gets up late.",
+              "option_b": "She often eats out.",
+              "option_c": "She never works Sundays.",
+              "option_d": "She goes always shopping.",
+              "correct_option": "D",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "On weekends, Carla usually gets up later. She often has breakfast at a café with her sister. They sometimes go shopping. Carla rarely works on Saturdays, and she never works on Sundays. On Sunday afternoons, she always calls her grandparents."
+        },
+        {
+          "code": "A1_T11_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Adverbs of Frequency: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T11_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What does the speaker always do?",
+              "option_a": "Swim",
+              "option_b": "Walk to work",
+              "option_c": "Ride a bike",
+              "option_d": "Run",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T11_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What does the speaker never do?",
+              "option_a": "Run",
+              "option_b": "Walk",
+              "option_c": "Swim",
+              "option_d": "Cycle",
+              "correct_option": "A",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "I always walk to work because my office is close. I usually go swimming on Tuesday evenings. I sometimes ride my bike on weekends, but I never go running.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T12",
+      "order": 12,
+      "title": "Can and Can't",
+      "objective": "Express ability and ask what people are able to do.",
+      "theory": "Use 'can' for ability and 'can't' or 'cannot' for inability. Use the base form after can. Questions begin with can: 'Can you drive?'.",
+      "examples": [
+        "I can cook.",
+        "She can't drive.",
+        "Can you swim?",
+        "They can speak English."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "He can swims.",
+          "correct": "He can swim."
+        },
+        {
+          "wrong": "Do you can drive?",
+          "correct": "Can you drive?"
+        }
+      ],
+      "key_vocabulary": [
+        "can",
+        "can't",
+        "cannot",
+        "swim",
+        "drive",
+        "cook",
+        "sing",
+        "dance",
+        "speak"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T12_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: positive ability.",
+          "option_a": "can",
+          "option_b": "can't",
+          "option_c": "Can you...?",
+          "option_d": "base verb",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'can'."
+        },
+        {
+          "code": "A1_T12_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: negative ability.",
+          "option_a": "can",
+          "option_b": "Can you...?",
+          "option_c": "base verb",
+          "option_d": "can't",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'can't'."
+        },
+        {
+          "code": "A1_T12_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: question ability.",
+          "option_a": "can't",
+          "option_b": "base verb",
+          "option_c": "Can you...?",
+          "option_d": "can",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'Can you...?'."
+        },
+        {
+          "code": "A1_T12_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: after can.",
+          "option_a": "Can you...?",
+          "option_b": "base verb",
+          "option_c": "can",
+          "option_d": "can't",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'base verb'."
+        },
+        {
+          "code": "A1_T12_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: positive ability.",
+          "option_a": "can",
+          "option_b": "can't",
+          "option_c": "Can you...?",
+          "option_d": "base verb",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'can'."
+        },
+        {
+          "code": "A1_T12_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: negative ability.",
+          "option_a": "can",
+          "option_b": "Can you...?",
+          "option_c": "base verb",
+          "option_d": "can't",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'can't'."
+        },
+        {
+          "code": "A1_T12_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: question ability.",
+          "option_a": "can't",
+          "option_b": "base verb",
+          "option_c": "Can you...?",
+          "option_d": "can",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'Can you...?'."
+        },
+        {
+          "code": "A1_T12_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: after can.",
+          "option_a": "Can you...?",
+          "option_b": "base verb",
+          "option_c": "can",
+          "option_d": "can't",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'base verb'."
+        },
+        {
+          "code": "A1_T12_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Can and Can't?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Can and Can't. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T12_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Can and Can't?",
+          "option_a": "Express ability and ask what people are able to do.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T12_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Can and Can't: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T12_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which languages can Maria speak?",
+              "option_a": "English only",
+              "option_b": "Spanish only",
+              "option_c": "English and Spanish",
+              "option_d": "French",
+              "correct_option": "C",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T12_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What can't Maria do?",
+              "option_a": "Use a computer",
+              "option_b": "Work weekends",
+              "option_c": "Drive",
+              "option_d": "Speak English",
+              "correct_option": "C",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T12_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "She can speak English.",
+              "option_b": "She can use a computer.",
+              "option_c": "She can to work weekends.",
+              "option_d": "She can't drive.",
+              "correct_option": "C",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "Maria wants a job at a small hotel. She can speak English and Spanish, and she can use a computer well. She can also work on weekends. She can't drive, but the hotel does not require a driver's license."
+        },
+        {
+          "code": "A1_T12_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Can and Can't: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T12_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who can play the guitar?",
+              "option_a": "Ben",
+              "option_b": "Lucy",
+              "option_c": "Omar",
+              "option_d": "Nina",
+              "correct_option": "A",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T12_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What can't Omar do?",
+              "option_a": "Dance",
+              "option_b": "Sing",
+              "option_c": "Play piano",
+              "option_d": "Choose a talent",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "Ben can play the guitar, and Lucy can sing very well. Omar can dance, but he can't sing. Nina can play the piano and the violin.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T13",
+      "order": 13,
+      "title": "Present Continuous",
+      "objective": "Describe actions happening now or around the present moment.",
+      "theory": "Form the present continuous with am/is/are + verb-ing. Use it for actions happening now. Negative: 'She isn't working.' Question: 'Are they studying?'.",
+      "examples": [
+        "I am studying now.",
+        "She is cooking.",
+        "They are playing outside.",
+        "Are you listening?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "He is play football.",
+          "correct": "He is playing football."
+        },
+        {
+          "wrong": "They is working.",
+          "correct": "They are working."
+        }
+      ],
+      "key_vocabulary": [
+        "now",
+        "at the moment",
+        "am",
+        "is",
+        "are",
+        "working",
+        "studying",
+        "playing",
+        "sleeping"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T13_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: I / read now.",
+          "option_a": "I am reading",
+          "option_b": "She is cooking",
+          "option_c": "They are playing",
+          "option_d": "He isn't sleeping",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'I am reading'."
+        },
+        {
+          "code": "A1_T13_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: she / cook now.",
+          "option_a": "I am reading",
+          "option_b": "They are playing",
+          "option_c": "He isn't sleeping",
+          "option_d": "She is cooking",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'She is cooking'."
+        },
+        {
+          "code": "A1_T13_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: they / play now.",
+          "option_a": "She is cooking",
+          "option_b": "He isn't sleeping",
+          "option_c": "They are playing",
+          "option_d": "I am reading",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'They are playing'."
+        },
+        {
+          "code": "A1_T13_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: he / negative sleep.",
+          "option_a": "They are playing",
+          "option_b": "He isn't sleeping",
+          "option_c": "I am reading",
+          "option_d": "She is cooking",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'He isn't sleeping'."
+        },
+        {
+          "code": "A1_T13_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: I / read now.",
+          "option_a": "I am reading",
+          "option_b": "She is cooking",
+          "option_c": "They are playing",
+          "option_d": "He isn't sleeping",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'I am reading'."
+        },
+        {
+          "code": "A1_T13_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: she / cook now.",
+          "option_a": "I am reading",
+          "option_b": "They are playing",
+          "option_c": "He isn't sleeping",
+          "option_d": "She is cooking",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'She is cooking'."
+        },
+        {
+          "code": "A1_T13_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: they / play now.",
+          "option_a": "She is cooking",
+          "option_b": "He isn't sleeping",
+          "option_c": "They are playing",
+          "option_d": "I am reading",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'They are playing'."
+        },
+        {
+          "code": "A1_T13_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: he / negative sleep.",
+          "option_a": "They are playing",
+          "option_b": "He isn't sleeping",
+          "option_c": "I am reading",
+          "option_d": "She is cooking",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'He isn't sleeping'."
+        },
+        {
+          "code": "A1_T13_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Present Continuous?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Present Continuous. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T13_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Present Continuous?",
+          "option_a": "Describe actions happening now or around the present moment.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T13_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Present Continuous: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T13_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What is the man doing?",
+              "option_a": "Playing",
+              "option_b": "Reading",
+              "option_c": "Sleeping",
+              "option_d": "Eating",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T13_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is the dog?",
+              "option_a": "Near the lake",
+              "option_b": "Under the table",
+              "option_c": "On a bench",
+              "option_d": "By the trees",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T13_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Children are playing.",
+              "option_b": "A man is reading.",
+              "option_c": "Women are talking.",
+              "option_d": "The dog sleeping.",
+              "correct_option": "D",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "It is Saturday afternoon, and the park is busy. Some children are playing near the trees. A man is reading a newspaper. Two women are talking beside the lake. A family is having a picnic, and their dog is sleeping under the table."
+        },
+        {
+          "code": "A1_T13_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Present Continuous: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T13_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who is making dinner?",
+              "option_a": "The speaker",
+              "option_b": "The mother",
+              "option_c": "The father",
+              "option_d": "The sister",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T13_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What is the sister doing?",
+              "option_a": "Talking",
+              "option_b": "Sleeping",
+              "option_c": "Doing homework",
+              "option_d": "Setting the table",
+              "correct_option": "C",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "It's seven in the evening. My mother is making dinner. My father is talking on the phone. My sister is doing her homework, and I am setting the table. Our cat is sleeping on the sofa.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T14",
+      "order": 14,
+      "title": "Prepositions of Time and Place",
+      "objective": "Use common prepositions to describe when events happen and where things are located.",
+      "theory": "Use 'at' with exact times, 'on' with days and dates, and 'in' with months, years, and parts of the day. Common place prepositions include in, on, under, next to, between, behind, in front of, and across from.",
+      "examples": [
+        "at 7:00",
+        "on Monday",
+        "in July",
+        "on the table",
+        "under the chair",
+        "between the bank and the café"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "at Monday",
+          "correct": "on Monday"
+        },
+        {
+          "wrong": "in 7:00",
+          "correct": "at 7:00"
+        }
+      ],
+      "key_vocabulary": [
+        "at",
+        "on",
+        "in",
+        "under",
+        "next to",
+        "between",
+        "behind",
+        "in front of",
+        "across from"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T14_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: Monday.",
+          "option_a": "on",
+          "option_b": "at",
+          "option_c": "in",
+          "option_d": "under",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'on'."
+        },
+        {
+          "code": "A1_T14_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: 7:00.",
+          "option_a": "on",
+          "option_b": "in",
+          "option_c": "from",
+          "option_d": "at",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'at'."
+        },
+        {
+          "code": "A1_T14_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: July.",
+          "option_a": "at",
+          "option_b": "on",
+          "option_c": "in",
+          "option_d": "from",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'in'."
+        },
+        {
+          "code": "A1_T14_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: surface.",
+          "option_a": "under",
+          "option_b": "on",
+          "option_c": "at",
+          "option_d": "in",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'on'."
+        },
+        {
+          "code": "A1_T14_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: below.",
+          "option_a": "under",
+          "option_b": "on",
+          "option_c": "at",
+          "option_d": "in",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'under'."
+        },
+        {
+          "code": "A1_T14_Q06",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: Monday.",
+          "option_a": "at",
+          "option_b": "in",
+          "option_c": "under",
+          "option_d": "on",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'on'."
+        },
+        {
+          "code": "A1_T14_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: 7:00.",
+          "option_a": "in",
+          "option_b": "on",
+          "option_c": "at",
+          "option_d": "from",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'at'."
+        },
+        {
+          "code": "A1_T14_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: July.",
+          "option_a": "on",
+          "option_b": "in",
+          "option_c": "from",
+          "option_d": "at",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'in'."
+        },
+        {
+          "code": "A1_T14_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Prepositions of Time and Place?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Prepositions of Time and Place. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T14_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Prepositions of Time and Place?",
+          "option_a": "Use common prepositions to describe when events happen and where things are located.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T14_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Prepositions of Time and Place: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T14_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What is next to the clinic?",
+              "option_a": "A bank",
+              "option_b": "A school",
+              "option_c": "A park",
+              "option_d": "A station",
+              "correct_option": "A",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T14_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "When does it open?",
+              "option_a": "At 6",
+              "option_b": "At 8",
+              "option_c": "At 10",
+              "option_d": "At noon",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T14_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "on King Street",
+              "option_b": "at eight",
+              "option_c": "in the morning",
+              "option_d": "at Sunday",
+              "correct_option": "D",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "The medical clinic is on King Street. It is next to a small bank and across from a supermarket. There is a bus stop in front of the clinic. The clinic opens at eight in the morning and closes at six in the evening. It is closed on Sundays."
+        },
+        {
+          "code": "A1_T14_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Prepositions of Time and Place: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T14_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is the café?",
+              "option_a": "Between bookstore and pharmacy",
+              "option_b": "Inside pharmacy",
+              "option_c": "Behind bus stop",
+              "option_d": "Near hospital",
+              "correct_option": "A",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T14_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "When are they meeting?",
+              "option_a": "Friday 6:30",
+              "option_b": "Saturday 6:30",
+              "option_c": "Friday 5:30",
+              "option_d": "Monday 6",
+              "correct_option": "A",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "The café is on Market Street. It is between the bookstore and the pharmacy. There is a bus stop across from the café. We are meeting there on Friday at six thirty in the evening.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A1_T15",
+      "order": 15,
+      "title": "Basic Everyday Communication",
+      "objective": "Handle simple everyday interactions politely.",
+      "theory": "Useful expressions include 'Excuse me', 'Please', 'Thank you', 'You're welcome', 'I'm sorry', 'Can you help me?', 'Can I have...?', and 'Can you repeat that, please?'.",
+      "examples": [
+        "Excuse me. Can you help me?",
+        "Can I have a coffee, please?",
+        "Thank you very much.",
+        "You're welcome.",
+        "I'm sorry. That's okay."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Give me coffee.",
+          "correct": "Can I have a coffee, please?"
+        },
+        {
+          "wrong": "Repeat!",
+          "correct": "Can you repeat that, please?"
+        }
+      ],
+      "key_vocabulary": [
+        "excuse me",
+        "please",
+        "thank you",
+        "you're welcome",
+        "I'm sorry",
+        "can you help me",
+        "can I have",
+        "how much"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A1_T15_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: after help.",
+          "option_a": "Thank you",
+          "option_b": "Excuse me",
+          "option_c": "You're welcome",
+          "option_d": "I'm sorry",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'Thank you'."
+        },
+        {
+          "code": "A1_T15_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: get attention.",
+          "option_a": "Thank you",
+          "option_b": "You're welcome",
+          "option_c": "I'm sorry",
+          "option_d": "Excuse me",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'Excuse me'."
+        },
+        {
+          "code": "A1_T15_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: reply to thanks.",
+          "option_a": "Excuse me",
+          "option_b": "I'm sorry",
+          "option_c": "You're welcome",
+          "option_d": "Thank you",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'You're welcome'."
+        },
+        {
+          "code": "A1_T15_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct option for: apologize.",
+          "option_a": "You're welcome",
+          "option_b": "I'm sorry",
+          "option_c": "Thank you",
+          "option_d": "Excuse me",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'I'm sorry'."
+        },
+        {
+          "code": "A1_T15_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: after help.",
+          "option_a": "Thank you",
+          "option_b": "Excuse me",
+          "option_c": "You're welcome",
+          "option_d": "I'm sorry",
+          "correct_option": "A",
+          "explanation": "The correct answer is 'Thank you'."
+        },
+        {
+          "code": "A1_T15_Q06",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: get attention.",
+          "option_a": "Thank you",
+          "option_b": "You're welcome",
+          "option_c": "I'm sorry",
+          "option_d": "Excuse me",
+          "correct_option": "D",
+          "explanation": "The correct answer is 'Excuse me'."
+        },
+        {
+          "code": "A1_T15_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: reply to thanks.",
+          "option_a": "Excuse me",
+          "option_b": "I'm sorry",
+          "option_c": "You're welcome",
+          "option_d": "Thank you",
+          "correct_option": "C",
+          "explanation": "The correct answer is 'You're welcome'."
+        },
+        {
+          "code": "A1_T15_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct option for: apologize.",
+          "option_a": "You're welcome",
+          "option_b": "I'm sorry",
+          "option_c": "Thank you",
+          "option_d": "Excuse me",
+          "correct_option": "B",
+          "explanation": "The correct answer is 'I'm sorry'."
+        },
+        {
+          "code": "A1_T15_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which expression or form best matches the audio in Basic Everyday Communication?",
+          "option_a": "Option A",
+          "option_b": "Option B",
+          "option_c": "Option C",
+          "option_d": "Option D",
+          "correct_option": "A",
+          "explanation": "The first option matches the audio context.",
+          "audio_text": "This short example practices Basic Everyday Communication. Listen carefully to the key expression.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A1_T15_Q10",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which idea is central to Basic Everyday Communication?",
+          "option_a": "Handle simple everyday interactions politely.",
+          "option_b": "Past perfect narration",
+          "option_c": "Advanced academic writing",
+          "option_d": "Complex legal vocabulary",
+          "correct_option": "A",
+          "explanation": "This is the main learning objective of the lesson."
+        }
+      ],
+      "passages": [
+        {
+          "code": "A1_T15_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Basic Everyday Communication: Reading",
+          "instructions": "Read the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T15_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where does the visitor want to go?",
+              "option_a": "Brighton",
+              "option_b": "London",
+              "option_c": "A hotel",
+              "option_d": "Home",
+              "correct_option": "A",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T15_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which platform?",
+              "option_a": "Four",
+              "option_b": "Six",
+              "option_c": "Ten",
+              "option_d": "Twenty",
+              "correct_option": "B",
+              "explanation": "The answer is supported by the passage."
+            },
+            {
+              "code": "A1_T15_Q13",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which expression is impolite?",
+              "option_a": "Excuse me.",
+              "option_b": "Can you help me?",
+              "option_c": "Can you repeat that, please?",
+              "option_d": "Tell me now!",
+              "correct_option": "D",
+              "explanation": "The answer is supported by the passage."
+            }
+          ],
+          "content_text": "A visitor walks to the information desk at a train station. “Excuse me,” she says. “Can you help me? I need the train to Brighton.” The assistant says, “The next train leaves from platform six at 10:20.” The visitor asks, “Can you repeat the platform number, please?”"
+        },
+        {
+          "code": "A1_T15_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Basic Everyday Communication: Listening",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A1_T15_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What does the customer order?",
+              "option_a": "Chicken sandwich and water",
+              "option_b": "Coffee and cake",
+              "option_c": "Soup and juice",
+              "option_d": "Only water",
+              "correct_option": "A",
+              "explanation": "The answer is stated in the audio."
+            },
+            {
+              "code": "A1_T15_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How much is the order?",
+              "option_a": "5.80",
+              "option_b": "8.50",
+              "option_c": "8.15",
+              "option_d": "10.00",
+              "correct_option": "B",
+              "explanation": "The answer is stated in the audio."
+            }
+          ],
+          "audio_text": "Good afternoon. Can I help you? Yes, please. Can I have a chicken sandwich and a glass of water? Of course. Anything else? No, thank you. How much is it? It's eight dollars fifty.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.95,
+          "max_audio_plays": 2
+        }
+      ]
+    }
+  ]
+}

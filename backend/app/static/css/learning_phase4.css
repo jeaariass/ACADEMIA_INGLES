@@ -1,0 +1,11 @@
+/* Phase 4 additions: comprehension passages and navigation */
+.comprehension-heading{margin:28px 0 4px;padding:24px 4px 8px}.comprehension-heading h2{margin:0;font-size:1.55rem;font-weight:850;letter-spacing:-.04em}.comprehension-heading p{margin:7px 0 0;color:var(--text-soft)}
+.passage-block{overflow:hidden;margin-top:14px;background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-sm)}
+.passage-header{padding:22px 24px 16px;border-bottom:1px solid var(--border)}.passage-header h2{margin:8px 0 0;font-size:1.3rem;font-weight:830;letter-spacing:-.035em}.passage-header p{margin:6px 0 0;color:var(--text-soft);font-size:.86rem}
+.passage-type-badge{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.passage-reading .passage-type-badge{color:#0369a1;background:#eff6ff}.passage-listening .passage-type-badge{color:#9d174d;background:#fdf2f8}
+.reading-passage-text{margin:20px 24px;padding:22px;color:#344054;background:#fafbfc;border:1px solid #edf0f4;border-left:4px solid #0ea5e9;border-radius:14px;font-size:1rem;line-height:1.9;white-space:pre-line}
+.passage-player{margin:20px 24px}.passage-question-list{display:grid;gap:12px;padding:0 24px 24px}.passage-question-card{box-shadow:none;background:#fbfcfe}.passage-question-card:last-child{margin-bottom:0}
+.result-main-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.btn-ghost-light{color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}.btn-ghost-light:hover{color:#fff;background:rgba(255,255,255,.18)}
+.after-review-actions{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:22px;padding:22px 24px;background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow-sm)}.after-review-actions h2{margin:0;font-size:1.25rem;font-weight:820;letter-spacing:-.035em}.after-review-actions p{margin:6px 0 0;color:var(--text-soft);font-size:.86rem}
+@media(max-width:767.98px){.reading-passage-text,.passage-player{margin:16px}.passage-question-list{padding:0 16px 16px}.after-review-actions{align-items:stretch;flex-direction:column}.after-review-actions .btn{width:100%}.result-main-actions{align-items:stretch;flex-direction:column}.result-main-actions .btn{width:100%}}

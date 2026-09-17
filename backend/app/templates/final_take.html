@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block title %}Final Assessment · {{ level_code }} Stage · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section assessment-page final-take-page">
+  <div class="assessment-sticky-header final-stage-header">
+    <div>
+      <span class="eyebrow">FINAL ASSESSMENT · STAGE {{ stage_number }} OF 6</span>
+      <h1>{{ level_code }} comprehensive checkpoint</h1>
+      <p>{{ current_stage_questions }} questions · {{ completed_questions }} of {{ assessment.question_links|length }} completed previously</p>
+    </div>
+    <div class="final-stage-tools">
+      <div class="final-path-mini">
+        {% for code in all_levels %}
+          {% if code in path %}<span class="done">{{ code }} <i class="bi bi-check-lg"></i></span>
+          {% elif code == level_code %}<span class="current">{{ code }}</span>
+          {% else %}<span class="future">{{ code }}</span>{% endif %}
+        {% endfor %}
+      </div>
+      {% if assessment.duration_minutes %}
+      <div class="assessment-timer" data-started-at="{{ attempt.started_at.isoformat() }}" data-duration-minutes="{{ assessment.duration_minutes }}">
+        <i class="bi bi-clock-fill"></i><span id="assessmentTimer">--:--</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="final-stage-notice">
+    <i class="bi bi-shield-check"></i>
+    <div>
+      <strong>Stage scores remain hidden until the complete final report.</strong>
+      <span>Answer all {{ current_stage_questions }} questions before continuing to the next CEFR level.</span>
+    </div>
+  </div>
+
+  <form method="post" id="assessmentForm">
+    {% set ns = namespace(number=0, passages=[]) %}
+    {% for section in sections %}
+    <section class="assessment-section-block">
+      <header class="assessment-section-header">
+        <span>{{ level_code }} · SECTION {{ loop.index }}</span>
+        <h2>{{ section.label }}</h2>
+        <p>{{ section.links|length }} questions</p>
+      </header>
+
+      {% for link in section.links %}
+        {% set q = link.question %}
+        {% if q.passage and q.passage.id not in ns.passages %}
+          {% set ns.passages = ns.passages + [q.passage.id] %}
+          <article class="assessment-passage {{ q.passage.passage_type }}">
+            <div class="assessment-passage-header">
+              <span class="passage-type-badge">
+                {% if q.passage.passage_type == 'listening' %}<i class="bi bi-headphones"></i> Listening passage{% else %}<i class="bi bi-book-half"></i> Reading passage{% endif %}
+              </span>
+              <h3>{{ q.passage.title }}</h3>
+              <p>{{ q.passage.instructions }}</p>
+            </div>
+            {% if q.passage.passage_type == 'reading' %}
+              <div class="reading-passage-text">{{ q.passage.content_text }}</div>
+            {% else %}
+              <div class="listening-player passage-player">
+                <div class="listening-player-icon"><i class="bi bi-headphones"></i></div>
+                <div class="listening-player-copy">
+                  <strong>Listen to the complete passage</strong>
+                  <small>You may play this passage up to {{ q.passage.max_audio_plays or 2 }} times.</small>
+                </div>
+                <button type="button" class="btn btn-primary btn-modern listening-play-button"
+                        data-audio-text="{{ q.passage.audio_text|e }}"
+                        data-lang="{{ q.passage.audio_accent or 'en-US' }}"
+                        data-rate="{{ q.passage.audio_rate or 1.0 }}"
+                        data-endpoint="{{ url_for('assessment.register_audio_play', attempt_id=attempt.id, question_id=q.id) }}"
+                        onclick="playAssessmentAudio(this)">
+                  <i class="bi bi-play-fill"></i><span class="play-label">Play passage</span>
+                </button>
+              </div>
+            {% endif %}
+          </article>
+        {% endif %}
+
+        {% set ns.number = ns.number + 1 %}
+        <article class="question-card assessment-question-card">
+          <div class="question-number">{{ ns.number }}</div>
+          <div class="question-content">
+            <div class="question-meta-row">
+              <span class="skill-badge skill-{{ q.skill }}">{{ q.skill|title }}</span>
+              <span class="difficulty-label">{{ level_code }} final item</span>
+            </div>
+            <h2>{{ q.prompt }}</h2>
+            <div class="answer-grid">
+              {% for key, txt in [('A',q.option_a),('B',q.option_b),('C',q.option_c),('D',q.option_d)] %}
+              <label class="answer-option">
+                <input class="form-check-input" type="radio" name="q_{{ q.id }}" value="{{ key }}" required>
+                <span class="answer-key">{{ key }}</span>
+                <span class="answer-text">{{ txt }}</span>
+                <span class="answer-check"><i class="bi bi-check-lg"></i></span>
+              </label>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+    {% endfor %}
+
+    <div class="test-submit-bar final-submit-bar">
+      <div class="test-submit-note"><i class="bi bi-shield-check"></i> Your answers are saved when this stage is submitted.</div>
+      <button class="btn btn-primary btn-modern btn-submit-test" type="submit">
+        {% if level_code == 'C2' %}Finish final assessment <i class="bi bi-flag-fill"></i>
+        {% else %}Continue to next level <i class="bi bi-arrow-right"></i>{% endif %}
+      </button>
+    </div>
+  </form>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/assessment.js') }}"></script>{% endblock %}

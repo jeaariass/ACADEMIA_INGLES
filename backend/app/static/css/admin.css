@@ -1,0 +1,37 @@
+.admin-page,.admin-edit-page{padding-bottom:3rem}
+.admin-title-row{margin-bottom:1rem}
+.admin-users-card,.admin-academic-section,.admin-attempts-card,.admin-edit-card,.admin-account-summary{background:#fff;border:1px solid #e2e8f0;border-radius:22px;box-shadow:0 10px 30px rgba(15,23,42,.05)}
+.admin-users-card,.admin-academic-section,.admin-attempts-card{padding:1.35rem;margin-bottom:1rem}
+.admin-section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.admin-section-heading h2,.admin-edit-heading h1,.admin-account-summary h2{font-weight:900;letter-spacing:-.03em;margin:.15rem 0 .3rem}
+.admin-section-heading p,.admin-edit-heading p{margin:0;color:#64748b}
+.admin-create-collapse{border-top:1px solid #e2e8f0;margin-top:.9rem;padding-top:1rem}
+.admin-create-user-form{display:grid;grid-template-columns:1fr 1.3fr 1fr .8fr auto;gap:.8rem;align-items:end}
+.admin-create-user-action{padding-bottom:1px}
+.admin-user-list{display:grid;gap:.65rem}
+.admin-user-row{display:grid;grid-template-columns:auto 1fr auto auto;gap:1rem;align-items:center;padding:1rem;border:1px solid #e2e8f0;border-radius:17px;background:#fff;transition:.18s ease}
+.admin-user-row:hover{border-color:#c7d2fe;box-shadow:0 8px 24px rgba(79,70,229,.08);transform:translateY(-1px)}
+.admin-user-avatar,.admin-edit-avatar{display:grid;place-items:center;font-weight:900;color:#4338ca;background:#eef2ff}
+.admin-user-avatar{width:44px;height:44px;border-radius:14px}
+.admin-edit-avatar{width:64px;height:64px;border-radius:19px;font-size:1.4rem;flex:none}
+.admin-user-main{min-width:0}
+.admin-user-name-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.admin-user-name-row>strong{font-size:1rem}
+.admin-username{display:block;color:#64748b;font-size:.82rem;margin-top:.08rem}
+.admin-role-chip,.admin-you-chip{display:inline-flex;align-items:center;border-radius:999px;padding:.24rem .48rem;font-size:.66rem;font-weight:850}
+.admin-role-chip.is-admin{background:#fee2e2;color:#b91c1c}.admin-role-chip.is-student{background:#e0f2fe;color:#0369a1}.admin-you-chip{background:#ecfdf5;color:#047857}
+.admin-user-metrics{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.45rem;color:#64748b;font-size:.72rem}
+.admin-user-metrics span{display:inline-flex;align-items:center;gap:.28rem}
+.admin-user-created{display:flex;flex-direction:column;text-align:right}.admin-user-created span{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8}.admin-user-created strong{font-size:.78rem}
+.admin-user-actions{display:flex;gap:.4rem;align-items:center}.admin-user-actions form{margin:0}
+.admin-tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.admin-tool-card{padding:1rem;border:1px solid #e2e8f0;border-radius:17px;background:#f8fafc}.admin-tool-card h3{font-size:1rem;font-weight:850}.admin-tool-icon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:#eef2ff;color:#4f46e5;margin-bottom:.65rem}
+.admin-attempt-table{margin:0}.admin-attempt-table thead th{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:#64748b;border-bottom-color:#e2e8f0}
+.admin-edit-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:1rem;margin-top:1rem}.admin-edit-card{padding:1.5rem}.admin-edit-heading{display:flex;gap:1rem;align-items:center;padding-bottom:1.2rem;border-bottom:1px solid #e2e8f0}.admin-edit-form{padding-top:1.2rem}.admin-edit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.admin-edit-grid small{display:block;color:#94a3b8;font-size:.72rem;margin-top:.35rem;line-height:1.4}
+.admin-readonly-value{min-height:38px;display:flex;align-items:center;padding:.375rem .75rem;border:1px dashed #cbd5e1;border-radius:.375rem;background:#f8fafc;color:#475569;font-weight:700}
+.admin-password-reset{margin-top:1.4rem;padding:1.15rem;border-radius:17px;background:#f8fafc;border:1px solid #e2e8f0}.admin-password-reset h2{font-size:1.05rem;font-weight:850;margin:.1rem 0 .25rem}.admin-password-reset p{color:#64748b;font-size:.82rem;margin-bottom:1rem}
+.admin-edit-actions{display:flex;justify-content:flex-end;gap:.6rem;margin-top:1.3rem}
+.admin-account-summary{padding:1.25rem;height:max-content;position:sticky;top:92px}.admin-summary-role{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .65rem;border-radius:999px;font-size:.75rem;font-weight:850;margin:.35rem 0 1rem}.admin-summary-role.is-admin{background:#fee2e2;color:#b91c1c}.admin-summary-role.is-student{background:#e0f2fe;color:#0369a1}
+.admin-summary-stats{display:grid;gap:.55rem}.admin-summary-stats>div{display:flex;justify-content:space-between;align-items:center;padding:.75rem .8rem;border-radius:12px;background:#f8fafc}.admin-summary-stats strong{font-size:1.1rem}.admin-summary-stats span{font-size:.72rem;color:#64748b}
+.admin-edit-note{display:flex;gap:.7rem;margin-top:1rem;padding:.85rem;border-radius:13px;background:#ecfdf5;color:#065f46}.admin-edit-note>i{font-size:1.2rem}.admin-edit-note div{display:flex;flex-direction:column}.admin-edit-note span{font-size:.72rem;line-height:1.4;margin-top:.15rem}
+@media(max-width:1000px){.admin-create-user-form{grid-template-columns:1fr 1fr}.admin-create-user-action{grid-column:1/-1}.admin-tools-grid{grid-template-columns:1fr}.admin-edit-layout{grid-template-columns:1fr}.admin-account-summary{position:static}.admin-user-row{grid-template-columns:auto 1fr}.admin-user-created,.admin-user-actions{grid-column:2}.admin-user-created{text-align:left}}
+@media(max-width:600px){.admin-section-heading{flex-direction:column}.admin-create-user-form,.admin-edit-grid{grid-template-columns:1fr}.admin-user-row{grid-template-columns:1fr}.admin-user-avatar{display:none}.admin-user-created,.admin-user-actions{grid-column:1}.admin-user-actions{flex-wrap:wrap}.admin-edit-heading{align-items:flex-start}.admin-edit-actions{flex-direction:column-reverse}.admin-edit-actions .btn{width:100%}}

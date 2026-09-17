@@ -1,10 +1,113 @@
 {% extends 'base.html' %}
+{% block title %}{{ topic.title }} · English Practice Hub{% endblock %}
 {% block content %}
-<div class="card p-4 shadow-sm rounded-4">
-  <h2>{{ topic.title }}</h2>
-  <p class="text-muted">Nivel {{ topic.level.code }}</p>
-  <div class="theory">{{ topic.theory }}</div>
-  <button class="btn btn-secondary mt-3" onclick="speakText(`{{ topic.theory|replace('`','') }}`)">Escuchar teoría</button>
-  <a class="btn btn-primary mt-3" href="{{ url_for('main.test', topic_id=topic.id) }}">Iniciar test</a>
-</div>
+<section class="page-section narrow-page">
+  <nav class="breadcrumb-modern" aria-label="breadcrumb">
+    <a href="{{ url_for('main.dashboard') }}"><i class="bi bi-house-door"></i> Home</a>
+    <i class="bi bi-chevron-right"></i><span>{{ topic.level.code }}</span>
+    <i class="bi bi-chevron-right"></i><strong>{{ topic.title }}</strong>
+  </nav>
+
+  <article class="lesson-card rich-lesson-card">
+    <header class="lesson-header">
+      <div>
+        <span class="lesson-level-badge">{{ topic.level.code }}</span>
+        <span class="eyebrow">LESSON</span>
+        <h1>{{ topic.title }}</h1>
+        {% if topic.objective %}<p>{{ topic.objective }}</p>{% endif %}
+      </div>
+      <div class="lesson-header-icon"><i class="bi bi-book-half"></i></div>
+    </header>
+
+    {% if topic.objective %}
+    <section class="lesson-section objective-section">
+      <div class="lesson-section-heading">
+        <span class="lesson-section-icon"><i class="bi bi-bullseye"></i></span>
+        <div><span class="eyebrow">LEARNING OBJECTIVE</span><h2>What you will learn</h2></div>
+      </div>
+      <p class="objective-text">{{ topic.objective }}</p>
+    </section>
+    {% endif %}
+
+    <section class="lesson-section">
+      <div class="lesson-section-heading">
+        <span class="lesson-section-icon"><i class="bi bi-journal-richtext"></i></span>
+        <div><span class="eyebrow">THEORY</span><h2>Explanation</h2></div>
+      </div>
+      <div class="theory">{{ topic.theory }}</div>
+      <button
+        class="btn btn-soft btn-modern mt-3"
+        type="button"
+        onclick='speakLongText({{ topic.theory|tojson }}, {lang:"en-US", rate:1.03})'>
+        <i class="bi bi-volume-up-fill"></i>
+        Listen to the explanation
+      </button>
+    </section>
+
+    {% if topic.examples %}
+    <section class="lesson-section">
+      <div class="lesson-section-heading">
+        <span class="lesson-section-icon icon-example"><i class="bi bi-chat-quote"></i></span>
+        <div><span class="eyebrow">EXAMPLES</span><h2>Examples in context</h2></div>
+      </div>
+      <div class="example-list">
+        {% for example in topic.examples %}
+        <div class="example-item"><span>{{ loop.index }}</span><p>{{ example }}</p></div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if topic.common_mistakes %}
+    <section class="lesson-section">
+      <div class="lesson-section-heading">
+        <span class="lesson-section-icon icon-mistake"><i class="bi bi-exclamation-triangle"></i></span>
+        <div><span class="eyebrow">COMMON MISTAKES</span><h2>Avoid these errors</h2></div>
+      </div>
+      <div class="mistake-list">
+        {% for item in topic.common_mistakes %}
+        <div class="mistake-card">
+          <div class="wrong-example"><span><i class="bi bi-x-circle-fill"></i> Incorrect</span><p>{{ item.wrong }}</p></div>
+          <div class="correct-example"><span><i class="bi bi-check-circle-fill"></i> Correct</span><p>{{ item.correct }}</p></div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if topic.key_vocabulary %}
+    <section class="lesson-section">
+      <div class="lesson-section-heading">
+        <span class="lesson-section-icon icon-vocab"><i class="bi bi-alphabet-uppercase"></i></span>
+        <div><span class="eyebrow">KEY VOCABULARY</span><h2>Words and expressions</h2></div>
+      </div>
+      <div class="vocabulary-cloud">
+        {% for word in topic.key_vocabulary %}<span class="vocabulary-chip">{{ word }}</span>{% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if topic.youtube_video_id %}
+    <section class="lesson-section">
+      <div class="lesson-section-heading">
+        <span class="lesson-section-icon icon-video"><i class="bi bi-youtube"></i></span>
+        <div><span class="eyebrow">VIDEO LESSON</span><h2>Watch and reinforce</h2></div>
+      </div>
+      <div class="video-frame-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ topic.youtube_video_id }}"
+                title="{{ topic.title }} video lesson" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+    {% endif %}
+
+    <footer class="lesson-actions">
+      <a class="btn btn-primary btn-modern" href="{{ url_for('main.test', topic_id=topic.id) }}">
+        Start practice <i class="bi bi-arrow-right"></i>
+      </a>
+    </footer>
+  </article>
+</section>
 {% endblock %}

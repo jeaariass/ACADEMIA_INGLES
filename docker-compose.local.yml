@@ -8,6 +8,8 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
+    volumes:
+      - english_postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d english_db"]
       interval: 3s
@@ -25,10 +27,15 @@ services:
       FLASK_SECRET_KEY: dev-local-secret-key
       ADMIN_USERNAME: admin
       ADMIN_PASSWORD: Admin123*
-      STUDENT1_USERNAME: estudiante1
-      STUDENT1_PASSWORD: Estudiante123*
-      STUDENT2_USERNAME: estudiante2
-      STUDENT2_PASSWORD: Estudiante123*
+      STUDENT1_USERNAME: student1
+      STUDENT1_PASSWORD: Student123*
+      STUDENT2_USERNAME: student2
+      STUDENT2_PASSWORD: Student123*
+    volumes:
+      - ./backend/migrations:/app/migrations
     depends_on:
       postgres:
         condition: service_healthy
+
+volumes:
+  english_postgres_data:

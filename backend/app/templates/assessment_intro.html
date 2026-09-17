@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}{{ assessment.title }} · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section narrow-page">
+  <a class="back-link" href="{{ url_for('assessment.index') }}"><i class="bi bi-arrow-left"></i> All assessments</a>
+
+  <article class="assessment-intro-card">
+    <div class="assessment-intro-hero">
+      <div>
+        <span class="assessment-type light">{{ assessment.assessment_type|upper }}</span>
+        <h1>{{ assessment.title }}</h1>
+        <p>{{ assessment.description }}</p>
+      </div>
+      {% if assessment.level %}<div class="assessment-big-level">{{ assessment.level.code }}</div>{% endif %}
+    </div>
+
+    <div class="assessment-info-grid">
+      <div><i class="bi bi-ui-checks-grid"></i><strong>{{ question_count }}</strong><span>Questions</span></div>
+      <div><i class="bi bi-clock"></i><strong>{{ assessment.duration_minutes or '—' }}</strong><span>Minutes</span></div>
+      <div><i class="bi bi-bullseye"></i><strong>{{ assessment.passing_score|int if assessment.passing_score is not none else '—' }}%</strong><span>Reference threshold</span></div>
+    </div>
+
+    <div class="assessment-instructions">
+      <h2>Instructions</h2>
+      <p>{{ assessment.instructions }}</p>
+      <div class="assessment-section-list">
+        {% for section in sections %}
+        <div><span>{{ loop.index }}</span><strong>{{ section.label }}</strong><small>{{ section.links|length }} questions</small></div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="assessment-start-box">
+      <div>
+        <strong>Ready to begin?</strong>
+        <span>Your answers are submitted when you finish the complete assessment.</span>
+      </div>
+      <form method="post" action="{{ url_for('assessment.start', code=assessment.code) }}">
+        <button class="btn btn-primary btn-modern" type="submit">Start assessment <i class="bi bi-arrow-right"></i></button>
+      </form>
+    </div>
+
+    {% if latest_attempt %}
+    <div class="previous-attempt">
+      <span><i class="bi bi-clock-history"></i> Latest completed attempt</span>
+      <strong>{{ latest_attempt.percentage }}%</strong>
+      <a href="{{ url_for('assessment.result', attempt_id=latest_attempt.id) }}">View result</a>
+    </div>
+    {% endif %}
+  </article>
+</section>
+{% endblock %}

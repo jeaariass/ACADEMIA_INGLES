@@ -1,0 +1,31 @@
+/* Phase 7: course progress */
+.progress-level-grid{align-items:start}
+.progress-level-card{overflow:hidden}
+.level-complete-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;color:#166534;background:#ecfdf3;border:1px solid #d1fae5;border-radius:999px;font-size:.7rem;font-weight:850}
+.level-progress-summary{margin:18px 0;padding:15px;background:#f8fafc;border:1px solid #edf0f4;border-radius:14px}
+.level-progress-summary>div:first-child{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.level-progress-summary span{color:#475467;font-size:.78rem;font-weight:750}
+.level-progress-summary strong{color:#101828;font-size:1rem}
+.level-progress-summary small{display:block;margin-top:7px;color:#667085;font-size:.7rem}
+.level-progress-track{overflow:hidden;height:8px;margin-top:10px;background:#e5e7eb;border-radius:999px}
+.level-progress-track>span{display:block;height:100%;background:linear-gradient(90deg,#4f46e5,#818cf8);border-radius:999px;transition:width .3s ease}
+.continue-learning-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;margin-bottom:17px;padding:13px 14px;color:#312e81;background:#eef2ff;border:1px solid #dfe3ff;border-radius:14px;text-decoration:none;transition:.2s ease}
+.continue-learning-card:hover{color:#312e81;transform:translateY(-1px);box-shadow:0 8px 24px rgba(79,70,229,.10)}
+.continue-learning-card.assessment-ready{color:#166534;background:#ecfdf3;border-color:#d1fae5}
+.continue-icon{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#fff;border-radius:11px;box-shadow:0 4px 12px rgba(15,23,42,.06)}
+.continue-learning-card>span:nth-child(2){display:flex;min-width:0;flex-direction:column}
+.continue-learning-card small{font-size:.62rem;font-weight:850;letter-spacing:.06em}
+.continue-learning-card strong{overflow:hidden;margin-top:2px;font-size:.84rem;text-overflow:ellipsis;white-space:nowrap}
+.progress-topic-list .topic-link{align-items:center}
+.topic-progress-title{display:flex;min-width:0;flex:1;flex-direction:column}
+.topic-progress-title strong{overflow:hidden;color:#344054;font-size:.82rem;font-weight:750;text-overflow:ellipsis;white-space:nowrap}
+.topic-progress-title small{margin-top:2px;color:#98a2b3;font-size:.66rem}
+.topic-link.topic-completed{background:#f7fef9;border-color:#dcfae6}
+.topic-link.topic-completed .topic-link-icon{color:#15803d;background:#dcfce7}
+.topic-link.topic-completed .topic-progress-title small{color:#15803d}
+.assessment-unlock-progress{margin:16px 0}
+.assessment-unlock-progress>div:first-child{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;color:#667085;font-size:.74rem}
+.assessment-unlock-progress strong{color:#101828}
+.assessment-card.assessment-locked{opacity:.88}
+.assessment-lock-reason{margin:9px 0 0!important;color:#b54708!important;font-size:.72rem!important}
+@media(max-width:767.98px){.continue-learning-card{grid-template-columns:auto minmax(0,1fr) auto}.topic-progress-title strong{white-space:normal}}

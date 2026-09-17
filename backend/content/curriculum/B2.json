@@ -1,0 +1,4010 @@
+{
+  "level": {
+    "code": "B2",
+    "order": 4,
+    "name": "Upper-Intermediate",
+    "description": "Develop confident, detailed English for complex everyday, academic, professional, and abstract situations."
+  },
+  "topics": [
+    {
+      "code": "B2_T01",
+      "order": 1,
+      "title": "Narrative Tenses",
+      "objective": "Combine past simple, past continuous, and past perfect to tell clear and detailed stories.",
+      "theory": "Use the past simple for main completed events, the past continuous for background actions in progress, and the past perfect for an earlier past action. A well-structured narrative often moves between these forms to show sequence and cause.",
+      "examples": [
+        "I was driving when I noticed the warning light.",
+        "By the time we arrived, the film had started.",
+        "She had never seen snow before she moved to Canada.",
+        "While they were waiting, the lights went out."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "When I arrived, he already left.",
+          "correct": "When I arrived, he had already left."
+        },
+        {
+          "wrong": "While I walked home, it started to rain.",
+          "correct": "While I was walking home, it started to rain."
+        }
+      ],
+      "key_vocabulary": [
+        "past simple",
+        "past continuous",
+        "past perfect",
+        "background",
+        "sequence",
+        "earlier event",
+        "by the time",
+        "while"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T01_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "By the time we reached the airport, the plane ___.",
+          "option_a": "left",
+          "option_b": "had left",
+          "option_c": "was leaving tomorrow",
+          "option_d": "has left yesterday",
+          "correct_option": "B",
+          "explanation": "The departure happened before another past event."
+        },
+        {
+          "code": "B2_T01_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "While I ___ dinner, the doorbell rang.",
+          "option_a": "made",
+          "option_b": "was making",
+          "option_c": "had made always",
+          "option_d": "have made",
+          "correct_option": "B",
+          "explanation": "The cooking was in progress when the bell rang."
+        },
+        {
+          "code": "B2_T01_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the best sentence.",
+          "option_a": "She was tired because she worked all night before.",
+          "option_b": "She was tired because she had worked all night.",
+          "option_c": "She had tired because she worked.",
+          "option_d": "She was tiring because she had work.",
+          "correct_option": "B",
+          "explanation": "Past perfect shows the earlier cause."
+        },
+        {
+          "code": "B2_T01_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "When the police arrived, the driver ___.",
+          "option_a": "had already gone",
+          "option_b": "already goes",
+          "option_c": "was gone tomorrow",
+          "option_d": "has already gone last night",
+          "correct_option": "A",
+          "explanation": "The driver left before the police arrived."
+        },
+        {
+          "code": "B2_T01_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which tense normally sets the background in a story?",
+          "option_a": "Past continuous",
+          "option_b": "Future perfect",
+          "option_c": "Present perfect only",
+          "option_d": "Imperative",
+          "correct_option": "A",
+          "explanation": "Past continuous commonly describes background actions."
+        },
+        {
+          "code": "B2_T01_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'Marta had saved the document before the computer crashed.' Which event happened first?",
+          "option_a": "The computer crashed",
+          "option_b": "Marta saved the document",
+          "option_c": "Both at exactly the same time",
+          "option_d": "The text does not show sequence",
+          "correct_option": "B",
+          "explanation": "Past perfect marks the earlier event."
+        },
+        {
+          "code": "B2_T01_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I was sleeping when you called.",
+          "option_b": "They had left before noon.",
+          "option_c": "While we were talking, he arrived.",
+          "option_d": "By the time I arrived, they already left.",
+          "correct_option": "D",
+          "explanation": "Use 'had already left'."
+        },
+        {
+          "code": "B2_T01_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Complete: He ___ down the street when he suddenly ___ his name.",
+          "option_a": "walked / was hearing",
+          "option_b": "was walking / heard",
+          "option_c": "had walked / hears",
+          "option_d": "was walked / heard",
+          "correct_option": "B",
+          "explanation": "Ongoing background + short completed event."
+        },
+        {
+          "code": "B2_T01_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What had happened before the speaker arrived?",
+          "option_a": "The meeting had started",
+          "option_b": "The office had closed forever",
+          "option_c": "The client had left the country",
+          "option_d": "Nothing",
+          "correct_option": "A",
+          "explanation": "The meeting was already in progress.",
+          "audio_text": "By the time I got to the office, the meeting had already started, so I entered quietly and sat at the back.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T01_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What was the speaker doing when the power failed?",
+          "option_a": "Giving a presentation",
+          "option_b": "Driving",
+          "option_c": "Cooking",
+          "option_d": "Sleeping",
+          "correct_option": "A",
+          "explanation": "The presentation was in progress.",
+          "audio_text": "I was giving a presentation when the power suddenly went out. Fortunately, I had saved the slides beforehand.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T01_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Delayed Journey",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T01_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Why had Lena left work early?",
+              "option_a": "To meet a friend",
+              "option_b": "To avoid rush-hour traffic",
+              "option_c": "Because the train was canceled",
+              "option_d": "Because she had no taxi",
+              "correct_option": "B",
+              "explanation": "She wanted to avoid the rush-hour traffic."
+            },
+            {
+              "code": "B2_T01_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Why did she miss the original train?",
+              "option_a": "The taxi broke down",
+              "option_b": "Boarding had already finished",
+              "option_c": "She went to the wrong city",
+              "option_d": "She forgot her ticket",
+              "correct_option": "B",
+              "explanation": "By the time she reached the new platform, boarding was over."
+            },
+            {
+              "code": "B2_T01_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "A technical problem had caused delays.",
+              "option_b": "Passengers were waiting.",
+              "option_c": "Boarding had already finished.",
+              "option_d": "Lena was arrived at eleven.",
+              "correct_option": "D",
+              "explanation": "Use 'Lena arrived' or 'Lena was arriving', depending on meaning."
+            }
+          ],
+          "content_text": "By the time Lena reached the station on Friday evening, the departure board had already changed three times. She had left work early because she wanted to avoid the rush-hour traffic, but a minor accident had blocked the main road. While her taxi was moving slowly through the city center, she checked the rail app and saw that her train was still listed as on time. When she finally arrived, however, dozens of passengers were standing near the information desk. A technical problem had caused several delays. Lena was trying to decide whether to wait when an announcement said her train would leave from a different platform. She ran across the station, but when she got there, boarding had already finished. Fortunately, a member of staff explained that another service was leaving forty minutes later. Lena had expected to arrive home before nine, but she eventually walked through her front door just after eleven. Although the journey had been frustrating, she was relieved that she had not had to spend the night in the city."
+        },
+        {
+          "code": "B2_T01_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Surprising Discovery",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T01_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What was the speaker doing when the envelope was found?",
+              "option_a": "Cleaning a cupboard",
+              "option_b": "Reading a book",
+              "option_c": "Taking photographs",
+              "option_d": "Visiting grandparents",
+              "correct_option": "A",
+              "explanation": "The speaker was cleaning a cupboard."
+            },
+            {
+              "code": "B2_T01_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Why was the photograph surprising?",
+              "option_a": "It was taken before the grandparents married",
+              "option_b": "It was from the future",
+              "option_c": "It showed strangers",
+              "option_d": "It was damaged",
+              "correct_option": "A",
+              "explanation": "It came from a period the speaker had only heard about."
+            }
+          ],
+          "audio_text": "I was cleaning out an old cupboard last weekend when I found a small envelope behind some books. I had never noticed it before. Inside, there was a photograph of my grandparents that had been taken before they got married. My mother had told me stories about that period, but I had never seen a picture from it.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T02",
+      "order": 2,
+      "title": "Present Perfect Simple vs Continuous",
+      "objective": "Distinguish between completed results and ongoing or repeated activity using the two present perfect forms.",
+      "theory": "Use the present perfect simple to focus on result, completion, or quantity. Use the present perfect continuous to focus on duration, repeated activity, or an action that may still be continuing. Some state verbs are not normally used in continuous forms.",
+      "examples": [
+        "I've written three reports today.",
+        "I've been writing reports all morning.",
+        "She's known him for years.",
+        "They've been waiting since eight."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I've been knowing her for years.",
+          "correct": "I've known her for years."
+        },
+        {
+          "wrong": "I've written for three hours.",
+          "correct": "I've been writing for three hours."
+        }
+      ],
+      "key_vocabulary": [
+        "result",
+        "duration",
+        "quantity",
+        "ongoing activity",
+        "repeated action",
+        "state verb"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T02_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "I ___ three emails so far this morning.",
+          "option_a": "have written",
+          "option_b": "have been writing three emails completed",
+          "option_c": "wrote since eight",
+          "option_d": "am writing yesterday",
+          "correct_option": "A",
+          "explanation": "The focus is on completed quantity."
+        },
+        {
+          "code": "B2_T02_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "I ___ emails all morning.",
+          "option_a": "have written three",
+          "option_b": "have been writing",
+          "option_c": "wrote for all morning",
+          "option_d": "am writing yesterday",
+          "correct_option": "B",
+          "explanation": "The focus is on duration/activity."
+        },
+        {
+          "code": "B2_T02_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the best sentence.",
+          "option_a": "I've been knowing him since 2020.",
+          "option_b": "I've known him since 2020.",
+          "option_c": "I know him since 2020.",
+          "option_d": "I've been known him since 2020.",
+          "correct_option": "B",
+          "explanation": "Know is a state verb and normally takes the simple form."
+        },
+        {
+          "code": "B2_T02_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Her hands are dirty because she ___.",
+          "option_a": "has painted two walls",
+          "option_b": "has been painting",
+          "option_c": "painted tomorrow",
+          "option_d": "has been paint",
+          "correct_option": "B",
+          "explanation": "The present evidence points to recent ongoing activity."
+        },
+        {
+          "code": "B2_T02_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Complete: They ___ five customer complaints today.",
+          "option_a": "have dealt with",
+          "option_b": "have been dealing with five completed complaints only",
+          "option_c": "dealt since",
+          "option_d": "are dealt",
+          "correct_option": "A",
+          "explanation": "The focus is completed quantity."
+        },
+        {
+          "code": "B2_T02_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'We've been working on the redesign for six weeks, and we've completed four sections.' Which form emphasizes duration?",
+          "option_a": "We've completed",
+          "option_b": "We've been working",
+          "option_c": "Both equally",
+          "option_d": "Neither",
+          "correct_option": "B",
+          "explanation": "The continuous form emphasizes duration."
+        },
+        {
+          "code": "B2_T02_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I've been studying for two hours.",
+          "option_b": "She's known him for years.",
+          "option_c": "They've completed three tasks.",
+          "option_d": "I've been owning this laptop since May.",
+          "correct_option": "D",
+          "explanation": "Use 'I've owned'."
+        },
+        {
+          "code": "B2_T02_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "How long ___ you ___ for a new apartment?",
+          "option_a": "have / been looking",
+          "option_b": "did / looked",
+          "option_c": "have / looked three apartments completed",
+          "option_d": "are / look",
+          "correct_option": "A",
+          "explanation": "The focus is an ongoing search."
+        },
+        {
+          "code": "B2_T02_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "How long has the speaker been preparing the report?",
+          "option_a": "All morning",
+          "option_b": "Three days completed",
+          "option_c": "Since last year",
+          "option_d": "One hour only",
+          "correct_option": "A",
+          "explanation": "The speaker emphasizes duration.",
+          "audio_text": "I've been preparing the quarterly report all morning, but I've only completed the financial section so far.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T02_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "How many applications has the speaker submitted?",
+          "option_a": "Two",
+          "option_b": "Five",
+          "option_c": "Ten",
+          "option_d": "None",
+          "correct_option": "B",
+          "explanation": "Five applications are complete.",
+          "audio_text": "I've been looking for a new job for a month, and I've submitted five applications so far.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T02_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Productive Week",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T02_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "How many slides has Amira created?",
+              "option_a": "Ten",
+              "option_b": "Twenty",
+              "option_c": "Most of them but no number",
+              "option_d": "Forty",
+              "correct_option": "B",
+              "explanation": "The text states twenty slides."
+            },
+            {
+              "code": "B2_T02_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What has she been doing every afternoon?",
+              "option_a": "Practicing with a colleague",
+              "option_b": "Meeting clients",
+              "option_c": "Traveling",
+              "option_d": "Writing emails only",
+              "correct_option": "A",
+              "explanation": "She has been practicing the presentation."
+            },
+            {
+              "code": "B2_T02_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "She has created twenty slides.",
+              "option_b": "She has been practicing regularly.",
+              "option_c": "Her manager has reviewed part of it.",
+              "option_d": "She has been knowing the results are good.",
+              "correct_option": "D",
+              "explanation": "Use 'She has known' only if the meaning is a state; here a different wording is preferable."
+            }
+          ],
+          "content_text": "Amira has been working on a major research presentation all week. She has spent several hours each day reviewing data, checking sources, and preparing visual material. So far, she has created twenty slides and has written most of the speaker notes. She has also been practicing the presentation with a colleague every afternoon. The repeated practice has helped her identify sections that are too long or unclear. Although she has made good progress, she has not finished the final conclusion yet. She has been thinking about how to summarize the main findings without repeating too much information. Her manager has already reviewed the first half of the presentation and has suggested a few changes. Amira is tired because she has been working late, but she is pleased with the results she has achieved."
+        },
+        {
+          "code": "B2_T02_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Renovating an Apartment",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T02_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "How long have they been renovating?",
+              "option_a": "Since the beginning of the month",
+              "option_b": "For one day",
+              "option_c": "Since last year",
+              "option_d": "Only today",
+              "correct_option": "A",
+              "explanation": "The renovation began at the start of the month."
+            },
+            {
+              "code": "B2_T02_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Why have they been sleeping in the living room?",
+              "option_a": "The kitchen is closed",
+              "option_b": "The bedroom floor is being repaired",
+              "option_c": "They prefer it",
+              "option_d": "Guests are staying",
+              "correct_option": "B",
+              "explanation": "The bedroom floor is still under repair."
+            }
+          ],
+          "audio_text": "We've been renovating our apartment since the beginning of the month. We've painted two rooms, replaced the kitchen lights, and installed new shelves. We've been sleeping in the living room for a week because the bedroom floor is still being repaired.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T03",
+      "order": 3,
+      "title": "Future Perfect and Future Continuous",
+      "objective": "Use advanced future forms to talk about actions in progress or completed by a future time.",
+      "theory": "Use will be + verb-ing for an action that will be in progress at a future time. Use will have + past participle for an action that will be completed before a future deadline.",
+      "examples": [
+        "This time tomorrow, I'll be flying to Madrid.",
+        "By Friday, we'll have finished the report.",
+        "At eight, she'll be meeting the client.",
+        "By 2030, the city will have built two new lines."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "By Friday, we'll be finish the report.",
+          "correct": "By Friday, we'll have finished the report."
+        },
+        {
+          "wrong": "At eight tomorrow, I will have work.",
+          "correct": "At eight tomorrow, I will be working."
+        }
+      ],
+      "key_vocabulary": [
+        "future continuous",
+        "future perfect",
+        "by",
+        "this time tomorrow",
+        "in progress",
+        "completed by"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T03_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "This time tomorrow, I ___ to the airport.",
+          "option_a": "will be driving",
+          "option_b": "will have driven by now",
+          "option_c": "drive yesterday",
+          "option_d": "have driven tomorrow",
+          "correct_option": "A",
+          "explanation": "The action will be in progress at that future time."
+        },
+        {
+          "code": "B2_T03_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "By next Monday, we ___ the first draft.",
+          "option_a": "will finish in progress",
+          "option_b": "will have finished",
+          "option_c": "are finishing yesterday",
+          "option_d": "have finish",
+          "correct_option": "B",
+          "explanation": "The draft will be completed before Monday."
+        },
+        {
+          "code": "B2_T03_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "At 10 a.m. tomorrow, she ___ a client meeting.",
+          "option_a": "will be attending",
+          "option_b": "will have attended by noon yesterday",
+          "option_c": "attended",
+          "option_d": "has attended",
+          "correct_option": "A",
+          "explanation": "The meeting will be in progress."
+        },
+        {
+          "code": "B2_T03_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "By the end of the year, they ___ the new office.",
+          "option_a": "will be opening all year",
+          "option_b": "will have opened",
+          "option_c": "opened tomorrow",
+          "option_d": "will open yesterday",
+          "correct_option": "B",
+          "explanation": "The opening will be completed by the deadline."
+        },
+        {
+          "code": "B2_T03_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which phrase strongly suggests future perfect?",
+          "option_a": "by the time",
+          "option_b": "while yesterday",
+          "option_c": "ever since",
+          "option_d": "right now",
+          "correct_option": "A",
+          "explanation": "By + future point commonly triggers future perfect."
+        },
+        {
+          "code": "B2_T03_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'By 6 p.m., the technicians will have completed the installation.' What is emphasized?",
+          "option_a": "Duration only",
+          "option_b": "Completion before 6 p.m.",
+          "option_c": "A past habit",
+          "option_d": "A current state",
+          "correct_option": "B",
+          "explanation": "The installation will be complete by then."
+        },
+        {
+          "code": "B2_T03_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "At noon, I'll be working.",
+          "option_b": "By noon, I'll have finished.",
+          "option_c": "This time tomorrow, we'll be traveling.",
+          "option_d": "By Friday, we'll have finish the report.",
+          "correct_option": "D",
+          "explanation": "Use 'will have finished'."
+        },
+        {
+          "code": "B2_T03_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Don't call at nine; we ___ the final interview then.",
+          "option_a": "will be conducting",
+          "option_b": "will have conducted yesterday",
+          "option_c": "conducted",
+          "option_d": "have conduct",
+          "correct_option": "A",
+          "explanation": "The interview will be in progress at nine."
+        },
+        {
+          "code": "B2_T03_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What will the team have completed by Friday?",
+          "option_a": "The first prototype",
+          "option_b": "The entire company",
+          "option_c": "A vacation",
+          "option_d": "Nothing",
+          "correct_option": "A",
+          "explanation": "The prototype will be complete by Friday.",
+          "audio_text": "By Friday afternoon, we'll have completed the first prototype, and we'll be testing it throughout the following week.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T03_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What will the speaker be doing at this time tomorrow?",
+          "option_a": "Flying to Singapore",
+          "option_b": "Finishing a report",
+          "option_c": "Sleeping at home",
+          "option_d": "Driving to work",
+          "correct_option": "A",
+          "explanation": "The flight will be in progress.",
+          "audio_text": "This time tomorrow, I'll be flying to Singapore, so I won't be able to answer messages for several hours.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T03_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Planning a Conference",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T03_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What will be completed by the end of this week?",
+              "option_a": "Speaker confirmation and program",
+              "option_b": "All ticket sales",
+              "option_c": "The conference itself",
+              "option_d": "Volunteer training only",
+              "correct_option": "A",
+              "explanation": "Speakers and program will be finalized."
+            },
+            {
+              "code": "B2_T03_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What will staff be doing during the final week?",
+              "option_a": "Checking registrations and preparing materials",
+              "option_b": "Taking holidays",
+              "option_c": "Canceling tickets",
+              "option_d": "Building a new venue",
+              "correct_option": "A",
+              "explanation": "Those tasks will be in progress."
+            },
+            {
+              "code": "B2_T03_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "They will have confirmed the speakers.",
+              "option_b": "They will be meeting suppliers.",
+              "option_c": "Staff will be checking registrations.",
+              "option_d": "They will have finalize the program.",
+              "correct_option": "D",
+              "explanation": "Use 'will have finalized'."
+            }
+          ],
+          "content_text": "Organizing the annual conference requires months of preparation. By the end of this week, the team will have confirmed all the main speakers and will have finalized the program. Next Monday, they will be meeting suppliers to discuss catering and technical equipment. By the middle of the month, they expect to have sold at least seventy percent of the available tickets. During the final week before the event, staff will be checking registrations, preparing name badges, and answering last-minute questions from participants. On the morning of the conference, volunteers will be welcoming guests while technicians test microphones and presentation equipment. By the time the first speaker begins, the organizers will have been working for several hours. The project manager says the busiest period is still ahead, but she is confident that most major decisions will have been made well before the event."
+        },
+        {
+          "code": "B2_T03_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Project Schedule",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T03_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What will be happening next week?",
+              "option_a": "User testing",
+              "option_b": "Initial planning",
+              "option_c": "Hiring",
+              "option_d": "Server removal",
+              "correct_option": "A",
+              "explanation": "They will be testing the website."
+            },
+            {
+              "code": "B2_T03_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What will developers have fixed by then?",
+              "option_a": "All design preferences",
+              "option_b": "Major technical issues",
+              "option_c": "Every possible bug",
+              "option_d": "The office",
+              "correct_option": "B",
+              "explanation": "Major technical issues will have been fixed."
+            }
+          ],
+          "audio_text": "At this time next week, we'll be testing the new website with a small group of users. By then, the developers will have fixed the major technical issues, but they may still be making smaller design changes.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T04",
+      "order": 4,
+      "title": "Third Conditional",
+      "objective": "Talk about unreal past situations and imagine different past results.",
+      "theory": "Use if + past perfect, would have + past participle to describe past situations that did not happen and their hypothetical consequences.",
+      "examples": [
+        "If I had left earlier, I would have caught the train.",
+        "She would have passed if she had studied more.",
+        "If they hadn't missed the exit, they wouldn't have been late."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "If I would have known, I would have called.",
+          "correct": "If I had known, I would have called."
+        },
+        {
+          "wrong": "If she had studied, she would passed.",
+          "correct": "If she had studied, she would have passed."
+        }
+      ],
+      "key_vocabulary": [
+        "third conditional",
+        "past perfect",
+        "would have",
+        "regret",
+        "alternative past",
+        "unreal past"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T04_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "If I ___ earlier, I would have caught the bus.",
+          "option_a": "left",
+          "option_b": "had left",
+          "option_c": "would leave",
+          "option_d": "have left",
+          "correct_option": "B",
+          "explanation": "Use past perfect in the if-clause."
+        },
+        {
+          "code": "B2_T04_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "She would have passed if she ___ more.",
+          "option_a": "studied yesterday",
+          "option_b": "had studied",
+          "option_c": "would have studied",
+          "option_d": "has studied",
+          "correct_option": "B",
+          "explanation": "Use past perfect after if."
+        },
+        {
+          "code": "B2_T04_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "If we'd known, we'd have helped.",
+          "option_b": "If we would know, we helped.",
+          "option_c": "If we had knew, we would helped.",
+          "option_d": "If we know, we'd have helped yesterday.",
+          "correct_option": "A",
+          "explanation": "This is the correct third conditional form."
+        },
+        {
+          "code": "B2_T04_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Complete: If they hadn't taken the wrong road, they ___ late.",
+          "option_a": "wouldn't have been",
+          "option_b": "won't be",
+          "option_c": "weren't",
+          "option_d": "hadn't be",
+          "correct_option": "A",
+          "explanation": "Use would have + participle in the result."
+        },
+        {
+          "code": "B2_T04_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "What does the third conditional normally refer to?",
+          "option_a": "A real future plan",
+          "option_b": "An unreal past alternative",
+          "option_c": "A general truth",
+          "option_d": "A current habit",
+          "correct_option": "B",
+          "explanation": "It imagines a different past."
+        },
+        {
+          "code": "B2_T04_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'If Maya had checked the weather, she would have taken an umbrella.' What actually happened?",
+          "option_a": "She checked the weather",
+          "option_b": "She probably did not take an umbrella",
+          "option_c": "It definitely did not rain",
+          "option_d": "She bought a new umbrella",
+          "correct_option": "B",
+          "explanation": "The sentence implies she did not check and did not take one."
+        },
+        {
+          "code": "B2_T04_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "If I'd known, I'd have called.",
+          "option_b": "He would have come if he had been free.",
+          "option_c": "If she would have studied, she would have passed.",
+          "option_d": "If they hadn't left late, they'd have arrived on time.",
+          "correct_option": "C",
+          "explanation": "Use 'If she had studied'."
+        },
+        {
+          "code": "B2_T04_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "If we ___ the map, we wouldn't have got lost.",
+          "option_a": "had downloaded",
+          "option_b": "downloaded tomorrow",
+          "option_c": "would download",
+          "option_d": "have downloaded now",
+          "correct_option": "A",
+          "explanation": "Past perfect expresses the unreal past condition."
+        },
+        {
+          "code": "B2_T04_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Why does the speaker regret leaving late?",
+          "option_a": "They missed the train",
+          "option_b": "They lost a phone",
+          "option_c": "They forgot a meeting",
+          "option_d": "They arrived early",
+          "correct_option": "A",
+          "explanation": "Leaving earlier could have prevented missing the train.",
+          "audio_text": "If we'd left home ten minutes earlier, we would have caught the train instead of waiting an hour for the next one.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T04_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What would have happened if the speaker had backed up the files?",
+          "option_a": "The files would not have been lost",
+          "option_b": "The computer would be faster",
+          "option_c": "The project would be canceled",
+          "option_d": "Nothing",
+          "correct_option": "A",
+          "explanation": "A backup would have prevented the loss.",
+          "audio_text": "If I had backed up the files before the laptop crashed, I wouldn't have lost two days of work.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T04_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Costly Mistake",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T04_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What caused the main problem?",
+              "option_a": "A warehouse fire",
+              "option_b": "Insufficient testing of the payment system",
+              "option_c": "Too many employees",
+              "option_d": "A marketing error only",
+              "correct_option": "B",
+              "explanation": "The updated payment system had not been tested thoroughly."
+            },
+            {
+              "code": "B2_T04_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What do managers think would have prevented most disruption?",
+              "option_a": "Canceling online sales forever",
+              "option_b": "Delaying the promotion",
+              "option_c": "Reducing prices",
+              "option_d": "Hiring more designers",
+              "correct_option": "B",
+              "explanation": "They said a one-week delay would have helped."
+            },
+            {
+              "code": "B2_T04_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "If they had tested more, they might have found the issue.",
+              "option_b": "If they had delayed the promotion, disruption would have been lower.",
+              "option_c": "If customers had waited, some might have completed purchases.",
+              "option_d": "If the company would have tested more, it would have found the issue.",
+              "correct_option": "D",
+              "explanation": "Use 'If the company had tested more'."
+            }
+          ],
+          "content_text": "Last year, a small online retailer experienced a serious problem during its busiest sales period. The company had recently updated its website but had not tested the new payment system thoroughly. On the first day of a major promotion, hundreds of customers tried to place orders, and many payments failed. If the company had carried out more realistic testing, it would probably have discovered the problem earlier. The technical team worked through the night, but by then many customers had already abandoned their purchases. The company later offered discount codes to people who had experienced difficulties. Managers admitted that if they had delayed the promotion by even one week, they would have avoided most of the disruption. Since then, the company has changed its testing procedures and now runs large-scale simulations before important campaigns."
+        },
+        {
+          "code": "B2_T04_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Missed Opportunity",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T04_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Why didn't the speaker apply?",
+              "option_a": "The role was unsuitable",
+              "option_b": "The deadline had passed",
+              "option_c": "The salary was too low",
+              "option_d": "The website was closed permanently",
+              "correct_option": "B",
+              "explanation": "The advertisement was seen too late."
+            },
+            {
+              "code": "B2_T04_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What would the speaker have done if they had seen it earlier?",
+              "option_a": "Applied",
+              "option_b": "Ignored it",
+              "option_c": "Called a friend",
+              "option_d": "Changed career immediately",
+              "correct_option": "A",
+              "explanation": "The speaker says they would have applied."
+            }
+          ],
+          "audio_text": "I saw the job advertisement only after the deadline had passed. If I'd checked the website earlier, I would have applied because the position matched my experience perfectly.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T05",
+      "order": 5,
+      "title": "Mixed Conditionals",
+      "objective": "Connect unreal past causes with present results, or present conditions with past consequences.",
+      "theory": "Mixed conditionals combine time references. A common pattern is if + past perfect, would + base verb for a past cause with a present result: 'If I had studied medicine, I would be a doctor now.'",
+      "examples": [
+        "If I'd accepted the job, I'd be living abroad now.",
+        "If she were more organized, she wouldn't have missed the deadline.",
+        "If we hadn't moved, our commute would still be terrible."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "If I had taken the course, I would have more skills yesterday now.",
+          "correct": "If I had taken the course, I would have more skills now."
+        },
+        {
+          "wrong": "If he was more careful, he wouldn't have broke it.",
+          "correct": "If he were more careful, he wouldn't have broken it."
+        }
+      ],
+      "key_vocabulary": [
+        "mixed conditional",
+        "past cause",
+        "present result",
+        "present condition",
+        "past result",
+        "unreal"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T05_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "If I'd taken that job, I ___ in Berlin now.",
+          "option_a": "would live",
+          "option_b": "would be living",
+          "option_c": "would have lived only yesterday",
+          "option_d": "will live",
+          "correct_option": "B",
+          "explanation": "A past unreal choice has a present hypothetical result."
+        },
+        {
+          "code": "B2_T05_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "If she were more careful, she ___ the file yesterday.",
+          "option_a": "wouldn't delete",
+          "option_b": "wouldn't have deleted",
+          "option_c": "didn't delete",
+          "option_d": "won't delete",
+          "correct_option": "B",
+          "explanation": "A present characteristic is linked to a past consequence."
+        },
+        {
+          "code": "B2_T05_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "If I'd learned to drive, I could drive to work now.",
+          "option_b": "If I learned to drive yesterday, I could have drive now.",
+          "option_c": "If I'd learned to drive, I could have driven now every day.",
+          "option_d": "If I would have learned, I drive now.",
+          "correct_option": "A",
+          "explanation": "Past unreal condition + present ability."
+        },
+        {
+          "code": "B2_T05_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which sentence shows a past cause and present result?",
+          "option_a": "If I had saved more, I'd have more money now.",
+          "option_b": "If it rains, we'll stay home.",
+          "option_c": "If I were rich, I'd travel.",
+          "option_d": "If I'd left earlier, I'd have arrived on time.",
+          "correct_option": "A",
+          "explanation": "The saving is past; the money situation is present."
+        },
+        {
+          "code": "B2_T05_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Complete: If he weren't so disorganized, he ___ yesterday's meeting.",
+          "option_a": "wouldn't have missed",
+          "option_b": "won't miss",
+          "option_c": "wouldn't miss now only",
+          "option_d": "hadn't miss",
+          "correct_option": "A",
+          "explanation": "Present trait, past consequence."
+        },
+        {
+          "code": "B2_T05_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'If Lena had accepted the scholarship, she'd be studying in Canada now.' What is true?",
+          "option_a": "She accepted it",
+          "option_b": "She is definitely in Canada",
+          "option_c": "She did not accept it",
+          "option_d": "She has finished the course",
+          "correct_option": "C",
+          "explanation": "The conditional implies she did not accept the scholarship."
+        },
+        {
+          "code": "B2_T05_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "If I'd taken the offer, I'd be abroad now.",
+          "option_b": "If he were more patient, he wouldn't have argued yesterday.",
+          "option_c": "If we hadn't moved, we'd still live far away.",
+          "option_d": "If she had studied harder, she would be passed now.",
+          "correct_option": "D",
+          "explanation": "The result clause is malformed."
+        },
+        {
+          "code": "B2_T05_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "If we ___ earlier, we wouldn't be dealing with this problem now.",
+          "option_a": "had acted",
+          "option_b": "would act",
+          "option_c": "acted tomorrow",
+          "option_d": "have acted now",
+          "correct_option": "A",
+          "explanation": "Past action, present result."
+        },
+        {
+          "code": "B2_T05_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What present result does the speaker imagine?",
+          "option_a": "Living closer to family",
+          "option_b": "Having more money now",
+          "option_c": "Working fewer hours yesterday",
+          "option_d": "Traveling next week",
+          "correct_option": "B",
+          "explanation": "The past choice affects current finances.",
+          "audio_text": "If I hadn't bought such an expensive car last year, I'd have a lot more money now.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T05_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What past event is linked to a present personality trait?",
+          "option_a": "Missing a deadline",
+          "option_b": "Buying a house",
+          "option_c": "Traveling abroad",
+          "option_d": "Starting a course",
+          "correct_option": "A",
+          "explanation": "The speaker links disorganization with the missed deadline.",
+          "audio_text": "If I were better organized, I wouldn't have missed that important deadline last month.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T05_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Career Decision",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T05_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Why did Nathan stay in London?",
+              "option_a": "He disliked Singapore",
+              "option_b": "His family needed support",
+              "option_c": "The job was canceled",
+              "option_d": "He had no passport",
+              "correct_option": "B",
+              "explanation": "Family responsibilities influenced the decision."
+            },
+            {
+              "code": "B2_T05_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What present situation does he imagine?",
+              "option_a": "Managing a larger international team",
+              "option_b": "Being unemployed",
+              "option_c": "Living with no family",
+              "option_d": "Studying full time",
+              "correct_option": "A",
+              "explanation": "He imagines a present career result."
+            },
+            {
+              "code": "B2_T05_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "If he'd moved, he might be managing a larger team now.",
+              "option_b": "If he were less attached, he might have chosen differently.",
+              "option_c": "If the offer had never appeared, he might think less about working abroad.",
+              "option_d": "If he would have moved, he manages a team now.",
+              "correct_option": "D",
+              "explanation": "Use a past perfect condition and a conditional result."
+            }
+          ],
+          "content_text": "Five years ago, Nathan was offered a job in Singapore. At the time, he decided to stay in London because his family needed support. Sometimes he wonders how different his life would be if he had accepted the offer. If he had moved, he might be managing a larger international team now. On the other hand, if he were less attached to his family, he might have made a different decision at the time. Nathan does not regret staying, but he recognizes that one decision can influence many later opportunities. He has since changed companies and is happy with his current role. Still, if the Singapore offer had never appeared, he probably would not think so often about working abroad."
+        },
+        {
+          "code": "B2_T05_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Missed Course",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T05_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What present result does the speaker imagine?",
+              "option_a": "Being more confident with automation",
+              "option_b": "Having less work",
+              "option_c": "Moving abroad",
+              "option_d": "Teaching full time",
+              "correct_option": "A",
+              "explanation": "The speaker imagines greater current confidence."
+            },
+            {
+              "code": "B2_T05_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Why wasn't the course taken?",
+              "option_a": "It was canceled",
+              "option_b": "The speaker kept postponing it",
+              "option_c": "It was too easy",
+              "option_d": "The teacher left",
+              "correct_option": "B",
+              "explanation": "The speaker postponed it because of being busy."
+            }
+          ],
+          "audio_text": "If I'd taken that programming course two years ago, I'd probably be more confident with automation now. I kept postponing it because I was busy, and I regret that decision.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T06",
+      "order": 6,
+      "title": "Modals of Deduction and Speculation",
+      "objective": "Use modal verbs to express different degrees of certainty about present and past situations.",
+      "theory": "Use must for strong logical conclusions, might/may/could for possibility, and can't for strong negative conclusions. For past deduction, use modal + have + past participle.",
+      "examples": [
+        "She must be at work.",
+        "They might be delayed.",
+        "He can't be serious.",
+        "She must have forgotten.",
+        "They might have taken the wrong train."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "He must to be tired.",
+          "correct": "He must be tired."
+        },
+        {
+          "wrong": "She might forgot.",
+          "correct": "She might have forgotten."
+        }
+      ],
+      "key_vocabulary": [
+        "must",
+        "might",
+        "may",
+        "could",
+        "can't",
+        "must have",
+        "might have",
+        "can't have"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T06_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Her car is outside, so she ___ be home.",
+          "option_a": "must",
+          "option_b": "can't",
+          "option_c": "must have yesterday",
+          "option_d": "should have",
+          "correct_option": "A",
+          "explanation": "The evidence supports a strong conclusion."
+        },
+        {
+          "code": "B2_T06_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "I'm not sure, but they ___ be in the meeting room.",
+          "option_a": "must definitely",
+          "option_b": "might",
+          "option_c": "can't certainly",
+          "option_d": "had to",
+          "correct_option": "B",
+          "explanation": "Might expresses possibility."
+        },
+        {
+          "code": "B2_T06_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "He ___ be the new manager; he's only visiting for one day.",
+          "option_a": "must",
+          "option_b": "can't",
+          "option_c": "might have been tomorrow",
+          "option_d": "should",
+          "correct_option": "B",
+          "explanation": "The evidence strongly suggests he is not the manager."
+        },
+        {
+          "code": "B2_T06_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "The lights are off. They ___ already.",
+          "option_a": "must leave",
+          "option_b": "must have left",
+          "option_c": "must left",
+          "option_d": "have must left",
+          "correct_option": "B",
+          "explanation": "Past deduction uses must have + participle."
+        },
+        {
+          "code": "B2_T06_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "She isn't answering. She ___ her phone at home.",
+          "option_a": "might have left",
+          "option_b": "might left",
+          "option_c": "must to leave",
+          "option_d": "could leaving",
+          "correct_option": "A",
+          "explanation": "Past possibility uses might have + participle."
+        },
+        {
+          "code": "B2_T06_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'The ground is wet, but the sky is clear now.' Which is reasonable?",
+          "option_a": "It must have rained earlier.",
+          "option_b": "It can't have rained.",
+          "option_c": "It must rain tomorrow.",
+          "option_d": "It might to rain yesterday.",
+          "correct_option": "A",
+          "explanation": "Wet ground is evidence of earlier rain."
+        },
+        {
+          "code": "B2_T06_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "He must be tired.",
+          "option_b": "She might have missed the bus.",
+          "option_c": "They can't have finished already.",
+          "option_d": "He must have forgot the key.",
+          "correct_option": "D",
+          "explanation": "Use 'must have forgotten'."
+        },
+        {
+          "code": "B2_T06_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "The office is empty and the computers are off. Everyone ___ home.",
+          "option_a": "must have gone",
+          "option_b": "must go yesterday",
+          "option_c": "can't have go",
+          "option_d": "might went",
+          "correct_option": "A",
+          "explanation": "The evidence strongly supports a past conclusion."
+        },
+        {
+          "code": "B2_T06_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What does the speaker think probably happened?",
+          "option_a": "The train was missed",
+          "option_b": "The meeting moved",
+          "option_c": "The phone broke",
+          "option_d": "The office closed",
+          "correct_option": "A",
+          "explanation": "The speaker makes a strong deduction.",
+          "audio_text": "Sam isn't here yet, and his train arrived twenty minutes ago. He must have missed the connection.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T06_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "How certain is the speaker about the cause?",
+          "option_a": "Completely certain",
+          "option_b": "Only considering a possibility",
+          "option_c": "Certain it is impossible",
+          "option_d": "Talking about a rule",
+          "correct_option": "B",
+          "explanation": "The speaker uses might.",
+          "audio_text": "The server is responding slowly. It might be receiving too many requests, but we need to check the logs.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T06_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Where Is Daniel?",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T06_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What did colleagues first know for certain?",
+              "option_a": "Daniel had left home",
+              "option_b": "Daniel was sick",
+              "option_c": "The train was canceled",
+              "option_d": "His phone was broken",
+              "correct_option": "A",
+              "explanation": "He had sent a message from the station."
+            },
+            {
+              "code": "B2_T06_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What actually happened?",
+              "option_a": "He lost his phone",
+              "option_b": "He took the wrong train",
+              "option_c": "The train was canceled",
+              "option_d": "He forgot work",
+              "correct_option": "B",
+              "explanation": "Daniel took the wrong train."
+            },
+            {
+              "code": "B2_T06_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "His train might have been delayed.",
+              "option_b": "He could have lost his phone.",
+              "option_c": "He must have left home.",
+              "option_d": "He might have took the wrong train.",
+              "correct_option": "D",
+              "explanation": "Use 'might have taken'."
+            }
+          ],
+          "content_text": "Daniel was supposed to arrive at the office by nine, but at 9:30 his desk was still empty. His colleagues knew that he had left home because he had sent a message from the train station. His phone was now going directly to voicemail. One colleague suggested that his train might have been delayed. Another thought he could have lost his phone. However, the travel website showed no major delays on his route. At ten, the receptionist received a call from Daniel. He explained that he had taken the wrong train after changing platforms at the last minute. His colleagues laughed and said they should have guessed that he might have made a simple travel mistake rather than imagining a serious problem."
+        },
+        {
+          "code": "B2_T06_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Missing File",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T06_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What does the speaker strongly suspect?",
+              "option_a": "Marta moved the file",
+              "option_b": "The file never existed",
+              "option_c": "The server deleted everything",
+              "option_d": "A client took it",
+              "correct_option": "A",
+              "explanation": "The speaker says Marta must have moved it."
+            },
+            {
+              "code": "B2_T06_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What is another possibility?",
+              "option_a": "It was saved under a new name",
+              "option_b": "It was printed",
+              "option_c": "It was emailed to everyone",
+              "option_d": "It was destroyed",
+              "correct_option": "A",
+              "explanation": "The speaker says it might have a new name."
+            }
+          ],
+          "audio_text": "The report isn't in the shared folder. Marta must have moved it, because she reorganized the project files yesterday. But she might have saved it under a new name, so let's search before we contact her.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T07",
+      "order": 7,
+      "title": "Advanced Passive and Causative Structures",
+      "objective": "Use passive structures across tenses and use have/get something done for services arranged by someone else.",
+      "theory": "The passive is formed with be + past participle and can appear in many tenses. The causative have/get + object + past participle describes arranging for another person to do something.",
+      "examples": [
+        "The system is being updated.",
+        "The report has been approved.",
+        "The road will be repaired next month.",
+        "I had my laptop repaired.",
+        "We're getting the office painted."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "The system is being update.",
+          "correct": "The system is being updated."
+        },
+        {
+          "wrong": "I repaired my laptop by a technician.",
+          "correct": "I had my laptop repaired by a technician."
+        }
+      ],
+      "key_vocabulary": [
+        "is being done",
+        "has been done",
+        "will be done",
+        "had something done",
+        "get something done",
+        "service"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T07_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "The website ___ at the moment.",
+          "option_a": "is being updated",
+          "option_b": "is updating by itself only",
+          "option_c": "has update",
+          "option_d": "was update",
+          "correct_option": "A",
+          "explanation": "Present continuous passive: is being + participle."
+        },
+        {
+          "code": "B2_T07_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "The final report ___ already.",
+          "option_a": "has approved",
+          "option_b": "has been approved",
+          "option_c": "was approve",
+          "option_d": "is approving",
+          "correct_option": "B",
+          "explanation": "Present perfect passive: has been + participle."
+        },
+        {
+          "code": "B2_T07_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "The bridge ___ next year.",
+          "option_a": "will repair",
+          "option_b": "will be repaired",
+          "option_c": "is repair",
+          "option_d": "has repairing",
+          "correct_option": "B",
+          "explanation": "Future passive uses will be + participle."
+        },
+        {
+          "code": "B2_T07_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "I ___ my phone screen replaced yesterday.",
+          "option_a": "had",
+          "option_b": "did",
+          "option_c": "made",
+          "option_d": "was",
+          "correct_option": "A",
+          "explanation": "Have + object + past participle is the causative."
+        },
+        {
+          "code": "B2_T07_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "We're ___ the office painted next week.",
+          "option_a": "getting",
+          "option_b": "being paint",
+          "option_c": "have paint",
+          "option_d": "get to paint ourselves necessarily",
+          "correct_option": "A",
+          "explanation": "Get something done is a causative structure."
+        },
+        {
+          "code": "B2_T07_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'The security system has been upgraded.' What is emphasized?",
+          "option_a": "Who did it",
+          "option_b": "The completed upgrade",
+          "option_c": "A future plan",
+          "option_d": "A habit",
+          "correct_option": "B",
+          "explanation": "The result of the upgrade is emphasized."
+        },
+        {
+          "code": "B2_T07_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "The room is being cleaned.",
+          "option_b": "The forms have been signed.",
+          "option_c": "I had my car serviced.",
+          "option_d": "The software has been update.",
+          "correct_option": "D",
+          "explanation": "Use 'has been updated'."
+        },
+        {
+          "code": "B2_T07_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "We need to ___ before the inspection.",
+          "option_a": "have the windows cleaned",
+          "option_b": "cleaned the windows have",
+          "option_c": "be have windows clean",
+          "option_d": "have cleaned by ourselves only",
+          "correct_option": "A",
+          "explanation": "This means arranging the service."
+        },
+        {
+          "code": "B2_T07_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What is being replaced?",
+          "option_a": "The office windows",
+          "option_b": "The computers",
+          "option_c": "The desks",
+          "option_d": "The roof",
+          "correct_option": "A",
+          "explanation": "The windows are currently being replaced.",
+          "audio_text": "The office windows are being replaced this week, so some meeting rooms are temporarily unavailable.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T07_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What service did the speaker arrange?",
+          "option_a": "Laptop repair",
+          "option_b": "Car rental",
+          "option_c": "Haircut",
+          "option_d": "Flight booking",
+          "correct_option": "A",
+          "explanation": "The speaker had the laptop repaired.",
+          "audio_text": "I had my laptop repaired yesterday because the battery had stopped charging properly.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T07_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Renovating a Historic Building",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T07_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What has already been repaired?",
+              "option_a": "The roof",
+              "option_b": "The seating",
+              "option_c": "The ventilation",
+              "option_d": "The temporary venue",
+              "correct_option": "A",
+              "explanation": "The roof has already been repaired."
+            },
+            {
+              "code": "B2_T07_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Why are specialist workers involved?",
+              "option_a": "To sell tickets",
+              "option_b": "To restore protected decorative walls",
+              "option_c": "To design advertisements",
+              "option_d": "To move the theater",
+              "correct_option": "B",
+              "explanation": "Protected decorative features require specialists."
+            },
+            {
+              "code": "B2_T07_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "The windows are being restored.",
+              "option_b": "Electrical systems will be installed.",
+              "option_c": "A ventilation system has been designed.",
+              "option_d": "The theater is being renovate.",
+              "correct_option": "D",
+              "explanation": "Use 'being renovated'."
+            }
+          ],
+          "content_text": "The old theater in the town center is currently being renovated after years of limited maintenance. The roof has already been repaired, and the original windows are being restored rather than replaced. New electrical systems will be installed next month, and the seating area will be redesigned to improve accessibility. Because some of the decorative walls are protected, specialist workers have been hired to restore them carefully. The theater management has also had a modern ventilation system designed for the building. During the renovation, performances are being held in a temporary venue nearby. The project is expected to be completed by early spring, although managers admit that unexpected structural problems could cause delays. Once the work is finished, the theater will have been transformed without losing its historic character."
+        },
+        {
+          "code": "B2_T07_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Getting a Car Ready",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T07_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What is the speaker arranging tomorrow?",
+              "option_a": "A car service",
+              "option_b": "A flight",
+              "option_c": "A hotel",
+              "option_d": "A meeting",
+              "correct_option": "A",
+              "explanation": "The car will be serviced."
+            },
+            {
+              "code": "B2_T07_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What might also be replaced?",
+              "option_a": "The tires only",
+              "option_b": "The brakes",
+              "option_c": "The engine",
+              "option_d": "The seats",
+              "correct_option": "B",
+              "explanation": "The brakes may be replaced."
+            }
+          ],
+          "audio_text": "I'm getting my car serviced tomorrow because I'm driving across the country next week. I'm also having the tires checked, and if necessary, I'll get the brakes replaced before I leave.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T08",
+      "order": 8,
+      "title": "Reported Questions, Requests, and Commands",
+      "objective": "Report questions, requests, instructions, and commands using appropriate word order and verb patterns.",
+      "theory": "Reported questions use statement word order and no auxiliary do/does/did. Yes/no questions often use if/whether. Requests and commands commonly use ask/tell + object + to-infinitive.",
+      "examples": [
+        "She asked where I lived.",
+        "He asked if I was ready.",
+        "They told us to wait.",
+        "She asked me not to call after ten."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She asked where did I live.",
+          "correct": "She asked where I lived."
+        },
+        {
+          "wrong": "He told to me wait.",
+          "correct": "He told me to wait."
+        }
+      ],
+      "key_vocabulary": [
+        "asked if",
+        "asked whether",
+        "asked where",
+        "told me to",
+        "asked me to",
+        "reported question",
+        "command"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T08_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Report: 'Where do you live?'",
+          "option_a": "She asked where I lived.",
+          "option_b": "She asked where did I live.",
+          "option_c": "She said where I live?",
+          "option_d": "She asked where do I live.",
+          "correct_option": "A",
+          "explanation": "Reported questions use statement word order."
+        },
+        {
+          "code": "B2_T08_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Report: 'Are you ready?'",
+          "option_a": "He asked if I was ready.",
+          "option_b": "He asked was I ready.",
+          "option_c": "He said if am I ready.",
+          "option_d": "He asked do I ready.",
+          "correct_option": "A",
+          "explanation": "Use if/whether + statement order."
+        },
+        {
+          "code": "B2_T08_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Report: 'Please wait here.'",
+          "option_a": "She asked me to wait there.",
+          "option_b": "She asked that I waiting.",
+          "option_c": "She told to me wait.",
+          "option_d": "She said me to waiting.",
+          "correct_option": "A",
+          "explanation": "Ask + object + to-infinitive is standard."
+        },
+        {
+          "code": "B2_T08_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Report: 'Don't touch that.'",
+          "option_a": "He told me not to touch it.",
+          "option_b": "He told not touch it me.",
+          "option_c": "He asked did I touch it.",
+          "option_d": "He said me don't touch.",
+          "correct_option": "A",
+          "explanation": "Negative command: told + object + not to + verb."
+        },
+        {
+          "code": "B2_T08_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which sentence is correct?",
+          "option_a": "She asked me what I wanted.",
+          "option_b": "She asked me what did I want.",
+          "option_c": "She asked what wanted I.",
+          "option_d": "She asked me what do I want yesterday.",
+          "correct_option": "A",
+          "explanation": "Use statement order in reported questions."
+        },
+        {
+          "code": "B2_T08_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'The manager asked whether we could finish by Friday.' What was the original type of utterance?",
+          "option_a": "A yes/no question",
+          "option_b": "A command",
+          "option_c": "A statement",
+          "option_d": "A greeting",
+          "correct_option": "A",
+          "explanation": "Whether introduces a reported yes/no question."
+        },
+        {
+          "code": "B2_T08_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "He asked where I worked.",
+          "option_b": "She asked if I had finished.",
+          "option_c": "They told us to sit down.",
+          "option_d": "He asked me where was the station.",
+          "correct_option": "D",
+          "explanation": "Use 'where the station was'."
+        },
+        {
+          "code": "B2_T08_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Report: 'Could you send me the file?'",
+          "option_a": "She asked me to send her the file.",
+          "option_b": "She asked did I send file.",
+          "option_c": "She said me to send.",
+          "option_d": "She told if I send.",
+          "correct_option": "A",
+          "explanation": "A polite request can be reported with ask + object + to-infinitive."
+        },
+        {
+          "code": "B2_T08_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What did the manager ask the employee to do?",
+          "option_a": "Send the revised budget",
+          "option_b": "Cancel the project",
+          "option_c": "Call a taxi",
+          "option_d": "Leave early",
+          "correct_option": "A",
+          "explanation": "The request was to send the budget.",
+          "audio_text": "My manager asked me to send the revised budget before lunch and told me not to include the old figures.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T08_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What question was reported?",
+          "option_a": "Whether the client had approved the design",
+          "option_b": "Where the office was",
+          "option_c": "Why the train was late",
+          "option_d": "If lunch was ready",
+          "correct_option": "A",
+          "explanation": "The speaker reports a yes/no question.",
+          "audio_text": "She asked whether the client had approved the final design before the meeting.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T08_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Customer Complaint",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T08_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What did the representative ask Rosa to email?",
+              "option_a": "A receipt only",
+              "option_b": "Two photographs",
+              "option_c": "A new order",
+              "option_d": "Her passport",
+              "correct_option": "B",
+              "explanation": "She was asked to email two photographs."
+            },
+            {
+              "code": "B2_T08_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What did he tell her not to do?",
+              "option_a": "Request a replacement",
+              "option_b": "Throw away the packaging",
+              "option_c": "Keep the reference number",
+              "option_d": "Answer the courier",
+              "correct_option": "B",
+              "explanation": "She was told not to discard the packaging."
+            },
+            {
+              "code": "B2_T08_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which reported sentence is incorrect?",
+              "option_a": "He asked when the package had arrived.",
+              "option_b": "He asked whether she had taken photos.",
+              "option_c": "He told her not to throw away the packaging.",
+              "option_d": "He asked her did she want a refund.",
+              "correct_option": "D",
+              "explanation": "Use 'He asked whether she wanted a refund.'"
+            }
+          ],
+          "content_text": "After receiving a damaged package, Rosa contacted the retailer's customer service team. The representative first asked when the package had arrived and whether Rosa had taken photographs of the damage. Rosa explained that she had opened the box that morning and had immediately noticed a large crack in the product. The representative asked her to email two photographs and told her not to throw away the packaging. He also asked whether she preferred a replacement or a refund. Rosa said she wanted a replacement because the item had been intended as a birthday gift. Before ending the call, the representative told her to keep the reference number and said a courier would collect the damaged item within two working days."
+        },
+        {
+          "code": "B2_T08_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Instructions from a Colleague",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T08_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What was the speaker asked to check?",
+              "option_a": "Final figures",
+              "option_b": "Train times",
+              "option_c": "Hotel prices",
+              "option_d": "A contract date",
+              "correct_option": "A",
+              "explanation": "The colleague asked for a check of final figures."
+            },
+            {
+              "code": "B2_T08_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "When was the short call?",
+              "option_a": "At one",
+              "option_b": "At two",
+              "option_c": "At three",
+              "option_d": "At five",
+              "correct_option": "C",
+              "explanation": "The call was at three."
+            }
+          ],
+          "audio_text": "My colleague asked me to check the final figures and told me not to send the document until she had reviewed the summary. She also asked whether I could join a short call at three.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T09",
+      "order": 9,
+      "title": "Defining and Non-Defining Relative Clauses",
+      "objective": "Use relative clauses accurately and distinguish essential information from additional information.",
+      "theory": "Defining relative clauses identify the noun and do not use commas. Non-defining clauses add extra information and are separated by commas. 'That' is not normally used in non-defining clauses.",
+      "examples": [
+        "The employee who called me works in finance.",
+        "My manager, who joined last year, is leaving.",
+        "The software that we use is cloud-based.",
+        "Our office, which was renovated recently, is quieter."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "My brother, that lives in Canada, is visiting.",
+          "correct": "My brother, who lives in Canada, is visiting."
+        },
+        {
+          "wrong": "The woman, who called me is my doctor.",
+          "correct": "The woman who called me is my doctor."
+        }
+      ],
+      "key_vocabulary": [
+        "defining",
+        "non-defining",
+        "who",
+        "which",
+        "that",
+        "whose",
+        "commas",
+        "essential information"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T09_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the defining clause.",
+          "option_a": "The employee who handles payroll is away.",
+          "option_b": "Maya, who handles payroll, is away.",
+          "option_c": "London, which is large, is busy.",
+          "option_d": "My phone, which is new, works well.",
+          "correct_option": "A",
+          "explanation": "The clause identifies which employee."
+        },
+        {
+          "code": "B2_T09_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct non-defining sentence.",
+          "option_a": "My brother, who lives in Canada, is visiting.",
+          "option_b": "My brother that lives in Canada, is visiting.",
+          "option_c": "My brother who lives in Canada, is visiting, if he is my only brother.",
+          "option_d": "My brother, which lives in Canada, is visiting.",
+          "correct_option": "A",
+          "explanation": "Who is used and commas mark additional information."
+        },
+        {
+          "code": "B2_T09_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which relative pronoun is generally avoided in non-defining clauses?",
+          "option_a": "who",
+          "option_b": "which",
+          "option_c": "that",
+          "option_d": "whose",
+          "correct_option": "C",
+          "explanation": "That is not normally used in non-defining clauses."
+        },
+        {
+          "code": "B2_T09_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Complete: The company, ___ headquarters are in Berlin, employs 800 people.",
+          "option_a": "who",
+          "option_b": "whose",
+          "option_c": "which has whose",
+          "option_d": "that",
+          "correct_option": "B",
+          "explanation": "Whose shows possession."
+        },
+        {
+          "code": "B2_T09_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "The laptop that I bought is fast.",
+          "option_b": "The laptop, that I bought, is fast in all contexts.",
+          "option_c": "The laptop who I bought is fast.",
+          "option_d": "The laptop which I bought it is fast.",
+          "correct_option": "A",
+          "explanation": "This is a normal defining relative clause."
+        },
+        {
+          "code": "B2_T09_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'My cousin, who works in medicine, is moving abroad.' Is the job information essential to identify the cousin?",
+          "option_a": "Yes",
+          "option_b": "No",
+          "option_c": "Only in questions",
+          "option_d": "The grammar does not show",
+          "correct_option": "B",
+          "explanation": "Commas indicate additional information."
+        },
+        {
+          "code": "B2_T09_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "The book that you recommended was excellent.",
+          "option_b": "My manager, who joined last year, is leaving.",
+          "option_c": "The office, which was renovated, is brighter.",
+          "option_d": "My sister, that lives in Rome, is visiting.",
+          "correct_option": "D",
+          "explanation": "Use who in a non-defining clause."
+        },
+        {
+          "code": "B2_T09_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "The client ___ project we discussed has approved the budget.",
+          "option_a": "who",
+          "option_b": "whose",
+          "option_c": "which",
+          "option_d": "that has",
+          "correct_option": "B",
+          "explanation": "Whose expresses possession."
+        },
+        {
+          "code": "B2_T09_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What extra information is given about the speaker's manager?",
+          "option_a": "She joined last year",
+          "option_b": "She handles payroll",
+          "option_c": "She lives abroad",
+          "option_d": "She resigned yesterday",
+          "correct_option": "A",
+          "explanation": "The clause is additional information.",
+          "audio_text": "My manager, who joined the company last year, has just been promoted to regional director.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T09_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which object is being identified?",
+          "option_a": "The report that contains the sales figures",
+          "option_b": "All reports",
+          "option_c": "The office building",
+          "option_d": "A colleague",
+          "correct_option": "A",
+          "explanation": "The clause identifies a specific report.",
+          "audio_text": "Please send me the report that contains the updated sales figures, not the earlier draft.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T09_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Scientist and Her Work",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T09_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Which clause identifies specific sensors?",
+              "option_a": "which was funded...",
+              "option_b": "that the team installed",
+              "option_c": "whose previous work...",
+              "option_d": "which has received...",
+              "correct_option": "B",
+              "explanation": "It specifies which sensors."
+            },
+            {
+              "code": "B2_T09_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What was Dr. Chen's previous research area?",
+              "option_a": "Transport",
+              "option_b": "Air quality",
+              "option_c": "Tree planting",
+              "option_d": "Architecture",
+              "correct_option": "B",
+              "explanation": "Her previous work focused on air quality."
+            },
+            {
+              "code": "B2_T09_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Dr. Chen, who leads the team, published a study.",
+              "option_b": "The sensors that they installed collected data.",
+              "option_c": "Dr. Chen, whose work focused on air quality, led the study.",
+              "option_d": "The project, that was funded nationally, lasted six months.",
+              "correct_option": "D",
+              "explanation": "Use 'which' in a non-defining clause."
+            }
+          ],
+          "content_text": "Dr. Maya Chen, who leads a small research team at Northbridge University, has recently published a study on urban heat. The project, which was funded by a national research program, examined temperature differences across several neighborhoods. The sensors that the team installed collected data every fifteen minutes for six months. One district that had very little tree cover was consistently hotter than the others. Dr. Chen, whose previous work focused on air quality, says the results show how strongly urban design can influence local conditions. The city council, which has received a copy of the study, is considering whether to increase tree planting in the hottest areas. The researchers who worked on the project hope the findings will support practical changes rather than remain only in academic reports."
+        },
+        {
+          "code": "B2_T09_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A New Colleague",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T09_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Where did Leo work previously?",
+              "option_a": "Madrid office",
+              "option_b": "London office",
+              "option_c": "A university",
+              "option_d": "A client site",
+              "correct_option": "A",
+              "explanation": "He transferred from Madrid."
+            },
+            {
+              "code": "B2_T09_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Who gave Leo excellent feedback?",
+              "option_a": "His manager",
+              "option_b": "The client whose account he managed",
+              "option_c": "A colleague",
+              "option_d": "A recruiter",
+              "correct_option": "B",
+              "explanation": "The client gave the feedback."
+            }
+          ],
+          "audio_text": "Leo, who recently transferred from our Madrid office, is joining the project team. The client whose account he managed there has given him excellent feedback.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T10",
+      "order": 10,
+      "title": "Advanced Gerunds and Infinitives",
+      "objective": "Use verb patterns where gerund and infinitive forms can change meaning.",
+      "theory": "Some verbs can take both gerund and infinitive with a change in meaning. 'Remember doing' refers to a memory, while 'remember to do' means not forgetting a task. 'Stop doing' means end an activity; 'stop to do' means pause one activity in order to do another.",
+      "examples": [
+        "I remember meeting her.",
+        "Remember to lock the door.",
+        "He stopped smoking.",
+        "He stopped to answer the phone.",
+        "Try restarting the computer.",
+        "Try to finish by five."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I stopped to smoke = I quit smoking.",
+          "correct": "I stopped smoking = I quit smoking."
+        },
+        {
+          "wrong": "Remember calling him tonight.",
+          "correct": "Remember to call him tonight."
+        }
+      ],
+      "key_vocabulary": [
+        "remember doing",
+        "remember to do",
+        "stop doing",
+        "stop to do",
+        "try doing",
+        "try to do",
+        "regret"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T10_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "I remember ___ that museum years ago.",
+          "option_a": "to visit",
+          "option_b": "visiting",
+          "option_c": "visit to",
+          "option_d": "visited",
+          "correct_option": "B",
+          "explanation": "Remember doing refers to a memory of a past event."
+        },
+        {
+          "code": "B2_T10_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Remember ___ the document before you close the program.",
+          "option_a": "saving",
+          "option_b": "to save",
+          "option_c": "saved",
+          "option_d": "save to",
+          "correct_option": "B",
+          "explanation": "Remember to do means do not forget the task."
+        },
+        {
+          "code": "B2_T10_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "He stopped ___ because his doctor advised him to quit.",
+          "option_a": "to smoke",
+          "option_b": "smoking",
+          "option_c": "smoke to",
+          "option_d": "smoked",
+          "correct_option": "B",
+          "explanation": "Stop doing means end the activity."
+        },
+        {
+          "code": "B2_T10_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "We stopped ___ some coffee on the way home.",
+          "option_a": "having permanently",
+          "option_b": "to have",
+          "option_c": "have to",
+          "option_d": "had",
+          "correct_option": "B",
+          "explanation": "Stop to do means pause another activity in order to do this."
+        },
+        {
+          "code": "B2_T10_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "If the app freezes, try ___ it.",
+          "option_a": "restart",
+          "option_b": "restarting",
+          "option_c": "to restarted",
+          "option_d": "restarted",
+          "correct_option": "B",
+          "explanation": "Try doing means test a possible solution."
+        },
+        {
+          "code": "B2_T10_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'I tried to open the file, but it was corrupted.' What does 'tried to open' mean?",
+          "option_a": "Experimented with opening as a possible solution only",
+          "option_b": "Made an effort to open it",
+          "option_c": "Forgot to open it",
+          "option_d": "Remembered opening it",
+          "correct_option": "B",
+          "explanation": "Try to do emphasizes effort."
+        },
+        {
+          "code": "B2_T10_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "I remember meeting him.",
+          "option_b": "Remember to send the email.",
+          "option_c": "She stopped smoking.",
+          "option_d": "We stopped having lunch on the journey, meaning we paused to eat.",
+          "correct_option": "D",
+          "explanation": "If the meaning is 'paused in order to eat', use 'stopped to have lunch'."
+        },
+        {
+          "code": "B2_T10_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "I regret ___ you that your application was unsuccessful.",
+          "option_a": "informing yesterday memory",
+          "option_b": "to inform",
+          "option_c": "inform",
+          "option_d": "informed",
+          "correct_option": "B",
+          "explanation": "Regret to inform is a formal pattern used for bad news."
+        },
+        {
+          "code": "B2_T10_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What did the speaker forget to do?",
+          "option_a": "Lock the door",
+          "option_b": "Save the file",
+          "option_c": "Call a client",
+          "option_d": "Buy a ticket",
+          "correct_option": "B",
+          "explanation": "The speaker forgot a task.",
+          "audio_text": "I forgot to save the file before closing the program, so I lost the last few changes.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T10_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What solution does the speaker suggest trying?",
+          "option_a": "Restarting the router",
+          "option_b": "Buying a new computer",
+          "option_c": "Deleting all files",
+          "option_d": "Leaving work",
+          "correct_option": "A",
+          "explanation": "Try doing suggests a possible solution.",
+          "audio_text": "If the connection keeps dropping, try restarting the router before you contact technical support.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T10_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Change in Routine",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T10_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What activity did Ben stop doing?",
+              "option_a": "Walking",
+              "option_b": "Checking email immediately after waking",
+              "option_c": "Talking to colleagues",
+              "option_d": "Working entirely",
+              "correct_option": "B",
+              "explanation": "He stopped checking email first thing."
+            },
+            {
+              "code": "B2_T10_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What did he try doing during focused work periods?",
+              "option_a": "Turning off notifications",
+              "option_b": "Calling clients",
+              "option_c": "Changing jobs",
+              "option_d": "Using more apps",
+              "correct_option": "A",
+              "explanation": "He tried turning off notifications."
+            },
+            {
+              "code": "B2_T10_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "He stopped checking email.",
+              "option_b": "He remembered to leave his phone.",
+              "option_c": "He tried turning off notifications.",
+              "option_d": "He stopped talking to a colleague in order to greet him.",
+              "correct_option": "D",
+              "explanation": "If he paused walking in order to talk, use 'stopped to talk'."
+            }
+          ],
+          "content_text": "After several stressful months, Ben decided to change the way he worked. He stopped checking email immediately after waking up because it made him anxious before the day had even started. Instead, he began taking a short walk before breakfast. At first, he found it difficult to remember to leave his phone at home, but eventually it became part of the routine. He also tried turning off notifications during focused work periods and found that he could concentrate for longer. One day, while walking to work, he stopped to talk to a former colleague he had not seen for years. They remembered working together on a difficult project and laughed about how often they had stayed late. Ben says he does not regret changing his habits because he now feels more in control of his time."
+        },
+        {
+          "code": "B2_T10_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Difficult Call",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T10_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What bad news is being reported?",
+              "option_a": "The event is canceled",
+              "option_b": "The venue is larger",
+              "option_c": "Tickets are cheaper",
+              "option_d": "The event is earlier",
+              "correct_option": "A",
+              "explanation": "The event has been canceled."
+            },
+            {
+              "code": "B2_T10_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What did organizers try doing?",
+              "option_a": "Moving the event to another venue",
+              "option_b": "Canceling all future events",
+              "option_c": "Changing the speaker only",
+              "option_d": "Selling more tickets",
+              "correct_option": "A",
+              "explanation": "They tried moving it."
+            }
+          ],
+          "audio_text": "I regret to tell you that the event has been canceled. We tried moving it to another venue, but that wasn't possible. Please remember to contact anyone who had planned to attend.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T11",
+      "order": 11,
+      "title": "Phrasal Verbs in Context",
+      "objective": "Understand and use common B2 phrasal verbs with literal and idiomatic meanings.",
+      "theory": "Many phrasal verbs are idiomatic and must be learned in context. Common examples include carry out, come up with, put off, work out, bring up, look into, take over, and turn down.",
+      "examples": [
+        "They carried out a survey.",
+        "She came up with a solution.",
+        "We put off the meeting.",
+        "I'll look into the problem.",
+        "He turned down the offer."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "We carried the survey out it.",
+          "correct": "We carried out the survey."
+        },
+        {
+          "wrong": "She turned the offer down it.",
+          "correct": "She turned down the offer."
+        }
+      ],
+      "key_vocabulary": [
+        "carry out",
+        "come up with",
+        "put off",
+        "work out",
+        "bring up",
+        "look into",
+        "take over",
+        "turn down"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T11_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "What does 'carry out a study' mean?",
+          "option_a": "Cancel it",
+          "option_b": "Conduct it",
+          "option_c": "Forget it",
+          "option_d": "Pay for it only",
+          "correct_option": "B",
+          "explanation": "Carry out means conduct or perform."
+        },
+        {
+          "code": "B2_T11_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "What does 'come up with an idea' mean?",
+          "option_a": "Reject an idea",
+          "option_b": "Produce or think of an idea",
+          "option_c": "Repeat an idea",
+          "option_d": "Hide an idea",
+          "correct_option": "B",
+          "explanation": "It means create or think of something."
+        },
+        {
+          "code": "B2_T11_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "The meeting was ___ until Friday.",
+          "option_a": "put off",
+          "option_b": "taken over",
+          "option_c": "looked into",
+          "option_d": "carried out",
+          "correct_option": "A",
+          "explanation": "Put off means postpone."
+        },
+        {
+          "code": "B2_T11_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "We'll ___ the complaint and contact you tomorrow.",
+          "option_a": "look into",
+          "option_b": "turn down",
+          "option_c": "bring up randomly",
+          "option_d": "take over",
+          "correct_option": "A",
+          "explanation": "Look into means investigate."
+        },
+        {
+          "code": "B2_T11_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "She ___ the job offer because the salary was too low.",
+          "option_a": "turned down",
+          "option_b": "worked out",
+          "option_c": "carried out",
+          "option_d": "brought up",
+          "correct_option": "A",
+          "explanation": "Turn down means reject."
+        },
+        {
+          "code": "B2_T11_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'The team worked out a way to reduce delivery times.' What does 'worked out' mean?",
+          "option_a": "Exercised physically",
+          "option_b": "Found or developed a solution",
+          "option_c": "Postponed",
+          "option_d": "Rejected",
+          "correct_option": "B",
+          "explanation": "Here it means solved/developed."
+        },
+        {
+          "code": "B2_T11_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which meaning is incorrect?",
+          "option_a": "put off = postpone",
+          "option_b": "look into = investigate",
+          "option_c": "take over = assume control",
+          "option_d": "turn down = increase volume",
+          "correct_option": "D",
+          "explanation": "Turn down can reduce volume, but in the target idiomatic context it can mean reject; 'increase' is incorrect."
+        },
+        {
+          "code": "B2_T11_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "The manager ___ an important issue during the meeting.",
+          "option_a": "brought up",
+          "option_b": "put off",
+          "option_c": "turned down",
+          "option_d": "worked out",
+          "correct_option": "A",
+          "explanation": "Bring up means introduce a topic."
+        },
+        {
+          "code": "B2_T11_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What did the team come up with?",
+          "option_a": "A new scheduling system",
+          "option_b": "A complaint",
+          "option_c": "A canceled meeting",
+          "option_d": "A resignation",
+          "correct_option": "A",
+          "explanation": "They developed a new system.",
+          "audio_text": "After several discussions, the team came up with a new scheduling system that reduced delays.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T11_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What will the company look into?",
+          "option_a": "Customer complaints",
+          "option_b": "A holiday plan",
+          "option_c": "Office paint colors",
+          "option_d": "A restaurant",
+          "correct_option": "A",
+          "explanation": "The company will investigate complaints.",
+          "audio_text": "We've received several complaints about delivery times, so we'll look into the problem this week.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T11_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Solving a Workplace Problem",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T11_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What did managers carry out first?",
+              "option_a": "A support-process review",
+              "option_b": "A website redesign",
+              "option_c": "A recruitment campaign",
+              "option_d": "A customer refund",
+              "correct_option": "A",
+              "explanation": "They reviewed the support process."
+            },
+            {
+              "code": "B2_T11_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Why was the website redesign put off?",
+              "option_a": "Developers focused on the support tool",
+              "option_b": "The website was perfect",
+              "option_c": "Customers rejected it",
+              "option_d": "The company closed",
+              "correct_option": "A",
+              "explanation": "Resources were redirected."
+            },
+            {
+              "code": "B2_T11_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which interpretation is incorrect?",
+              "option_a": "carried out = conducted",
+              "option_b": "came up with = developed",
+              "option_c": "put off = postponed",
+              "option_d": "look into = ignore completely",
+              "correct_option": "D",
+              "explanation": "Look into means investigate."
+            }
+          ],
+          "content_text": "A software company recently noticed that customer support requests were taking longer to resolve. Managers first carried out a review of the support process. The review showed that employees were spending too much time searching for technical information in different systems. A small team was asked to come up with a practical solution. After testing several options, they worked out a way to combine the most frequently used information in one internal knowledge base. The company put off a planned website redesign so that developers could focus on the support tool. During the project, one team member brought up concerns about outdated documentation, so managers decided to look into that issue as well. After six weeks, the new system was introduced. Staff said it made common questions easier to answer, and customer waiting times began to fall."
+        },
+        {
+          "code": "B2_T11_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Rejected Offer",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T11_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Why was the role turned down?",
+              "option_a": "Low salary",
+              "option_b": "Required relocation",
+              "option_c": "No responsibilities",
+              "option_d": "Bad manager",
+              "correct_option": "B",
+              "explanation": "Relocation was the issue."
+            },
+            {
+              "code": "B2_T11_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What alternative was discussed?",
+              "option_a": "Remote arrangement",
+              "option_b": "Shorter holiday",
+              "option_c": "Different industry",
+              "option_d": "Night shifts",
+              "correct_option": "A",
+              "explanation": "A remote arrangement was considered."
+            }
+          ],
+          "audio_text": "I was offered a management role last month, but I turned it down because it would have required relocating. My director brought up the possibility of a remote arrangement, but we couldn't work out a practical solution.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T12",
+      "order": 12,
+      "title": "Discourse Markers and Cohesion",
+      "objective": "Use advanced linking expressions to organize arguments, contrast ideas, add information, and show cause and effect.",
+      "theory": "At B2, cohesive writing and speaking use a wider range of connectors such as nevertheless, whereas, in addition, consequently, on the other hand, despite, in spite of, and as a result.",
+      "examples": [
+        "The plan is expensive; nevertheless, it may be worthwhile.",
+        "Remote work saves time, whereas office work supports face-to-face contact.",
+        "Despite the delay, we finished on time.",
+        "Sales fell; consequently, the budget was reduced."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Despite it was raining, we left.",
+          "correct": "Despite the rain / Although it was raining, we left."
+        },
+        {
+          "wrong": "Although the cost, we agreed.",
+          "correct": "Despite the cost, we agreed."
+        }
+      ],
+      "key_vocabulary": [
+        "nevertheless",
+        "whereas",
+        "in addition",
+        "consequently",
+        "despite",
+        "in spite of",
+        "on the other hand",
+        "as a result"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T12_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which connector shows contrast similar to 'however'?",
+          "option_a": "nevertheless",
+          "option_b": "consequently",
+          "option_c": "in addition",
+          "option_d": "because",
+          "correct_option": "A",
+          "explanation": "Nevertheless signals contrast."
+        },
+        {
+          "code": "B2_T12_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: ___ the high cost, the project was approved.",
+          "option_a": "Despite",
+          "option_b": "Although of",
+          "option_c": "Because despite",
+          "option_d": "Whereas of",
+          "correct_option": "A",
+          "explanation": "Despite is followed by a noun phrase."
+        },
+        {
+          "code": "B2_T12_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "Although it was expensive, we bought it.",
+          "option_b": "Despite it was expensive, we bought it.",
+          "option_c": "Although the expense, we bought it.",
+          "option_d": "Despite of it was expensive, we bought it.",
+          "correct_option": "A",
+          "explanation": "Although introduces a clause."
+        },
+        {
+          "code": "B2_T12_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which connector adds information?",
+          "option_a": "in addition",
+          "option_b": "whereas",
+          "option_c": "nevertheless",
+          "option_d": "despite",
+          "correct_option": "A",
+          "explanation": "In addition adds another point."
+        },
+        {
+          "code": "B2_T12_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which connector shows result?",
+          "option_a": "consequently",
+          "option_b": "whereas",
+          "option_c": "although",
+          "option_d": "in spite of",
+          "correct_option": "A",
+          "explanation": "Consequently introduces a result."
+        },
+        {
+          "code": "B2_T12_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'The new system is faster, whereas the old one was easier to customize.' What relationship is shown?",
+          "option_a": "Contrast",
+          "option_b": "Cause",
+          "option_c": "Time",
+          "option_d": "Example",
+          "correct_option": "A",
+          "explanation": "Whereas contrasts two characteristics."
+        },
+        {
+          "code": "B2_T12_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "Despite the delay, we finished.",
+          "option_b": "Although we were delayed, we finished.",
+          "option_c": "In spite of the delay, we finished.",
+          "option_d": "Despite we were delayed, we finished.",
+          "correct_option": "D",
+          "explanation": "Use 'Although we were delayed' or 'Despite the delay'."
+        },
+        {
+          "code": "B2_T12_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the best connector: 'Costs increased. ___, the company reduced spending elsewhere.'",
+          "option_a": "Consequently",
+          "option_b": "Whereas",
+          "option_c": "Despite",
+          "option_d": "In addition only",
+          "correct_option": "A",
+          "explanation": "The second event is a result."
+        },
+        {
+          "code": "B2_T12_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What contrast does the speaker make?",
+          "option_a": "Remote work vs office collaboration",
+          "option_b": "Salary vs weather",
+          "option_c": "Travel vs food",
+          "option_d": "Past vs future only",
+          "correct_option": "A",
+          "explanation": "The speaker contrasts flexibility and collaboration.",
+          "audio_text": "Remote work offers flexibility; nevertheless, regular office contact can still be valuable for collaboration.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T12_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What was the result of lower sales?",
+          "option_a": "The budget was reduced",
+          "option_b": "The company hired more staff",
+          "option_c": "Prices disappeared",
+          "option_d": "The office moved",
+          "correct_option": "A",
+          "explanation": "The speaker states the consequence.",
+          "audio_text": "Sales fell sharply in the second quarter. Consequently, management reduced the marketing budget.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T12_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Should Cities Limit Cars?",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T12_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What additional benefit do supporters mention besides pollution reduction?",
+              "option_a": "More parking",
+              "option_b": "Safer streets and more public space",
+              "option_c": "Cheaper cars",
+              "option_d": "Longer journeys",
+              "correct_option": "B",
+              "explanation": "Safety and public-space benefits are mentioned."
+            },
+            {
+              "code": "B2_T12_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What concern do critics raise?",
+              "option_a": "Too much public transport",
+              "option_b": "Unequal access to reliable public transport",
+              "option_c": "Too many parks",
+              "option_d": "Too little pollution",
+              "correct_option": "B",
+              "explanation": "Some residents have fewer alternatives."
+            },
+            {
+              "code": "B2_T12_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Despite these concerns, some cities acted.",
+              "option_b": "Although some residents disagree, policies continue.",
+              "option_c": "In addition, public space could improve.",
+              "option_d": "Despite residents may disagree, policies continue.",
+              "correct_option": "D",
+              "explanation": "Despite should not directly introduce a finite clause."
+            }
+          ],
+          "content_text": "Many cities are considering stricter limits on private cars in central areas. Supporters argue that fewer cars would reduce air pollution and make streets safer for pedestrians and cyclists. In addition, public spaces currently used for parking could be converted into parks or outdoor seating. Critics, on the other hand, point out that not everyone has access to reliable public transport. Whereas residents in well-connected neighborhoods may find it easy to travel without a car, people living farther away could face longer journeys. Despite these concerns, several cities have introduced low-emission zones and reported improvements in air quality. Nevertheless, the success of such policies often depends on whether governments improve public transport at the same time. If restrictions are introduced without practical alternatives, public opposition may increase."
+        },
+        {
+          "code": "B2_T12_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Budget Decision",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T12_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What disadvantage is mentioned?",
+              "option_a": "Higher initial cost",
+              "option_b": "Weak security",
+              "option_c": "More manual work",
+              "option_d": "No support",
+              "correct_option": "A",
+              "explanation": "The software is more expensive."
+            },
+            {
+              "code": "B2_T12_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What is one advantage?",
+              "option_a": "Stronger security",
+              "option_b": "Less automation",
+              "option_c": "More paperwork",
+              "option_d": "Lower reliability",
+              "correct_option": "A",
+              "explanation": "Stronger security is specifically mentioned."
+            }
+          ],
+          "audio_text": "The new software is more expensive than our current system. Nevertheless, it could reduce manual work significantly. In addition, it includes stronger security features. Consequently, I think we should evaluate the long-term savings rather than focus only on the initial price.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T13",
+      "order": 13,
+      "title": "Articles and Determiners in Context",
+      "objective": "Use articles and determiners accurately in more complex contexts, including generalization, institutions, and reference.",
+      "theory": "Article choice depends on whether a noun is specific, general, countable, or already known. Zero article is common with plural and uncountable nouns used generally. 'The' is used for shared or specific reference.",
+      "examples": [
+        "Technology changes quickly.",
+        "The technology used in this device is new.",
+        "She goes to university.",
+        "She visited the university to meet a professor.",
+        "Most people agreed.",
+        "Most of the people in the room agreed."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "The technology is important in general.",
+          "correct": "Technology is important in general."
+        },
+        {
+          "wrong": "Most of people agreed.",
+          "correct": "Most people agreed. / Most of the people agreed."
+        }
+      ],
+      "key_vocabulary": [
+        "the",
+        "a/an",
+        "zero article",
+        "most",
+        "most of",
+        "each",
+        "every",
+        "specific reference",
+        "generalization"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T13_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the general statement.",
+          "option_a": "The technology changes society.",
+          "option_b": "Technology changes society.",
+          "option_c": "A technology changes the society always.",
+          "option_d": "Technology changes the society in all contexts.",
+          "correct_option": "B",
+          "explanation": "Zero article is common with uncountable nouns used generally."
+        },
+        {
+          "code": "B2_T13_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose: ___ technology used in this device is patented.",
+          "option_a": "A",
+          "option_b": "The",
+          "option_c": "No article always",
+          "option_d": "Some the",
+          "correct_option": "B",
+          "explanation": "The noun is specific and identified."
+        },
+        {
+          "code": "B2_T13_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the correct phrase.",
+          "option_a": "most people",
+          "option_b": "most of people",
+          "option_c": "the most people generally",
+          "option_d": "most the people",
+          "correct_option": "A",
+          "explanation": "Use 'most people' for a general group."
+        },
+        {
+          "code": "B2_T13_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the correct phrase for a specific group.",
+          "option_a": "most of the participants",
+          "option_b": "most participants of the",
+          "option_c": "the most of participants",
+          "option_d": "most of participants the",
+          "correct_option": "A",
+          "explanation": "Use most of the + specific plural noun."
+        },
+        {
+          "code": "B2_T13_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "She goes to ___ university in Manchester.",
+          "option_a": "a",
+          "option_b": "the always",
+          "option_c": "zero article always",
+          "option_d": "an",
+          "correct_option": "A",
+          "explanation": "A university is one unspecified institution."
+        },
+        {
+          "code": "B2_T13_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'Most employees work remotely, but most of the employees in the finance team work in the office.' What is the distinction?",
+          "option_a": "No distinction",
+          "option_b": "General group vs specific subgroup",
+          "option_c": "Past vs future",
+          "option_d": "Countable vs uncountable only",
+          "correct_option": "B",
+          "explanation": "The second phrase refers to a defined subgroup."
+        },
+        {
+          "code": "B2_T13_Q07",
+          "skill": "grammar",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which sentence contains an error?",
+          "option_a": "Information is useful.",
+          "option_b": "The information you sent was useful.",
+          "option_c": "Most people agreed.",
+          "option_d": "Most of people in the room agreed.",
+          "correct_option": "D",
+          "explanation": "Use 'most of the people'."
+        },
+        {
+          "code": "B2_T13_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "___ Earth moves around ___ Sun.",
+          "option_a": "The / the",
+          "option_b": "An / a",
+          "option_c": "No article / no article",
+          "option_d": "A / the",
+          "correct_option": "A",
+          "explanation": "Unique reference takes the definite article."
+        },
+        {
+          "code": "B2_T13_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which group is being referred to specifically?",
+          "option_a": "Most of the students in one class",
+          "option_b": "Students in general",
+          "option_c": "Technology in general",
+          "option_d": "Universities worldwide",
+          "correct_option": "A",
+          "explanation": "The speaker refers to a defined class group.",
+          "audio_text": "Most students enjoy group work, but most of the students in my evening class prefer individual assignments.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T13_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What generalization is made?",
+          "option_a": "Public transport reduces traffic",
+          "option_b": "One specific bus is late",
+          "option_c": "A particular train is expensive",
+          "option_d": "The station is closed",
+          "correct_option": "A",
+          "explanation": "No article is used for the general concept.",
+          "audio_text": "Public transport can reduce congestion when services are frequent and reliable.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T13_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Learning in Different Environments",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T13_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Why do many learners value online education?",
+              "option_a": "Flexibility",
+              "option_b": "Free equipment",
+              "option_c": "No teaching",
+              "option_d": "No assessment",
+              "correct_option": "A",
+              "explanation": "Flexibility is emphasized."
+            },
+            {
+              "code": "B2_T13_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Who still often needs physical facilities?",
+              "option_a": "Students in practical subjects",
+              "option_b": "All online learners equally",
+              "option_c": "Only teachers",
+              "option_d": "People who never study",
+              "correct_option": "A",
+              "explanation": "Practical subjects may need labs and equipment."
+            },
+            {
+              "code": "B2_T13_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "online education",
+              "option_b": "most learners",
+              "option_c": "most of the students in practical subjects",
+              "option_d": "the education is important in general",
+              "correct_option": "D",
+              "explanation": "General uncountable 'education' normally takes zero article."
+            }
+          ],
+          "content_text": "Education can take place in many different settings. Universities traditionally provide lectures, seminars, libraries, and opportunities for students to meet specialists in person. However, online education has expanded rapidly. Most learners value flexibility, especially people who work full time. At the same time, most of the students in highly practical subjects still need access to laboratories, workshops, or specialist equipment. The quality of an online course also depends on the support that students receive. A well-designed platform can provide useful materials, but the platform alone cannot replace effective teaching. For this reason, many institutions are experimenting with blended models that combine online study with face-to-face sessions."
+        },
+        {
+          "code": "B2_T13_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Training Survey",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T13_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What did most employees want?",
+              "option_a": "More flexible training",
+              "option_b": "Less training",
+              "option_c": "Only exams",
+              "option_d": "New offices",
+              "correct_option": "A",
+              "explanation": "They wanted flexibility."
+            },
+            {
+              "code": "B2_T13_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "Which specific group preferred classroom sessions?",
+              "option_a": "Technical department staff",
+              "option_b": "All employees",
+              "option_c": "Managers only",
+              "option_d": "Customers",
+              "correct_option": "A",
+              "explanation": "The technical department was the specific subgroup."
+            }
+          ],
+          "audio_text": "Most employees said they wanted more flexible training. However, most of the staff in the technical department preferred classroom sessions because they needed access to specialist equipment.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T14",
+      "order": 14,
+      "title": "Word Formation and Collocations",
+      "objective": "Build vocabulary by recognizing common prefixes, suffixes, word families, and natural word combinations.",
+      "theory": "Word formation helps transform nouns, verbs, adjectives, and adverbs. Collocations are combinations that sound natural to proficient speakers, such as 'make a decision', 'take responsibility', 'highly effective', and 'strongly recommend'.",
+      "examples": [
+        "decide → decision",
+        "rely → reliable",
+        "success → successful → successfully",
+        "make a decision",
+        "take responsibility",
+        "strongly recommend"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "do a decision",
+          "correct": "make a decision"
+        },
+        {
+          "wrong": "highly good",
+          "correct": "very good / highly effective"
+        }
+      ],
+      "key_vocabulary": [
+        "word family",
+        "prefix",
+        "suffix",
+        "collocation",
+        "make a decision",
+        "take responsibility",
+        "strongly recommend",
+        "highly effective"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T14_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Noun form of 'decide':",
+          "option_a": "decision",
+          "option_b": "decisive only adjective",
+          "option_c": "deciding noun always",
+          "option_d": "decidement",
+          "correct_option": "A",
+          "explanation": "Decision is the noun."
+        },
+        {
+          "code": "B2_T14_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Adjective form of 'rely':",
+          "option_a": "reliable",
+          "option_b": "reliance",
+          "option_c": "reliably",
+          "option_d": "relying noun",
+          "correct_option": "A",
+          "explanation": "Reliable is the adjective."
+        },
+        {
+          "code": "B2_T14_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the natural collocation.",
+          "option_a": "make a decision",
+          "option_b": "do a decision",
+          "option_c": "create a decision always",
+          "option_d": "perform a decision",
+          "correct_option": "A",
+          "explanation": "English normally uses 'make a decision'."
+        },
+        {
+          "code": "B2_T14_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the natural collocation.",
+          "option_a": "take responsibility",
+          "option_b": "make responsibility",
+          "option_c": "do responsibility",
+          "option_d": "carry responsibility always",
+          "correct_option": "A",
+          "explanation": "Take responsibility is standard."
+        },
+        {
+          "code": "B2_T14_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which phrase sounds most natural?",
+          "option_a": "highly effective",
+          "option_b": "highly good",
+          "option_c": "strongly beautiful",
+          "option_d": "deeply fast",
+          "correct_option": "A",
+          "explanation": "Highly effective is a common collocation."
+        },
+        {
+          "code": "B2_T14_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'The new system was implemented successfully.' Which word family is used?",
+          "option_a": "success → successfully",
+          "option_b": "system → systemic",
+          "option_c": "implement → implementation only",
+          "option_d": "new → newly only",
+          "correct_option": "A",
+          "explanation": "Successfully is the adverb from success."
+        },
+        {
+          "code": "B2_T14_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which collocation is unnatural?",
+          "option_a": "strongly recommend",
+          "option_b": "make progress",
+          "option_c": "take a risk",
+          "option_d": "do a decision",
+          "correct_option": "D",
+          "explanation": "Use 'make a decision'."
+        },
+        {
+          "code": "B2_T14_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Complete: The company has made significant ___.",
+          "option_a": "progress",
+          "option_b": "progresses many",
+          "option_c": "progressing noun",
+          "option_d": "progressful",
+          "correct_option": "A",
+          "explanation": "Make progress is the natural collocation."
+        },
+        {
+          "code": "B2_T14_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What does the speaker strongly recommend?",
+          "option_a": "Testing the backup system",
+          "option_b": "Canceling all backups",
+          "option_c": "Buying paper",
+          "option_d": "Moving office",
+          "correct_option": "A",
+          "explanation": "The collocation is 'strongly recommend'.",
+          "audio_text": "I strongly recommend testing the backup system before we depend on it during a real emergency.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T14_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What responsibility did the manager take?",
+          "option_a": "Responsibility for the delay",
+          "option_b": "Responsibility for weather",
+          "option_c": "Responsibility for a train route",
+          "option_d": "None",
+          "correct_option": "A",
+          "explanation": "The phrase is used naturally.",
+          "audio_text": "The manager took responsibility for the delay and promised to improve the approval process.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T14_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Improving Customer Support",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T14_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What problem was identified besides response time?",
+              "option_a": "Unreliable information",
+              "option_b": "Too much office space",
+              "option_c": "No customers",
+              "option_d": "Too many managers",
+              "correct_option": "A",
+              "explanation": "Employees did not always have reliable information."
+            },
+            {
+              "code": "B2_T14_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What did team leaders take responsibility for?",
+              "option_a": "Monitoring training participation",
+              "option_b": "Selling software",
+              "option_c": "Writing contracts",
+              "option_d": "Hiring customers",
+              "correct_option": "A",
+              "explanation": "They monitored participation and supported staff."
+            },
+            {
+              "code": "B2_T14_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which phrase is unnatural?",
+              "option_a": "made steady progress",
+              "option_b": "highly effective tool",
+              "option_c": "strongly recommended",
+              "option_d": "did a decision",
+              "correct_option": "D",
+              "explanation": "Use 'made a decision'."
+            }
+          ],
+          "content_text": "A company that sells business software recently reviewed its customer-support service. The review found that response times were inconsistent and that employees did not always have reliable information. Management decided to create a new internal knowledge base. The implementation was initially difficult because several departments used different documentation systems. However, the project team made steady progress and eventually produced a highly effective search tool. Training was also important. Managers strongly recommended that every support employee complete the new course. Team leaders took responsibility for monitoring participation and helping staff who had difficulty with the system. Three months later, customer satisfaction had improved significantly. The company now plans to make further improvements by adding automated suggestions to the support platform."
+        },
+        {
+          "code": "B2_T14_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Recommendation",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T14_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "How does the speaker evaluate the exercises?",
+              "option_a": "Highly effective",
+              "option_b": "Very confusing",
+              "option_c": "Too short",
+              "option_d": "Unnecessary",
+              "correct_option": "A",
+              "explanation": "The speaker says they are highly effective."
+            },
+            {
+              "code": "B2_T14_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What did the speaker make?",
+              "option_a": "Significant progress",
+              "option_b": "A complaint",
+              "option_c": "A mistake only",
+              "option_d": "A new company",
+              "correct_option": "A",
+              "explanation": "The collocation is 'make progress'."
+            }
+          ],
+          "audio_text": "I strongly recommend the new course. The content is practical, the instructor explains complex ideas clearly, and the exercises are highly effective. I made significant progress in only six weeks.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "B2_T15",
+      "order": 15,
+      "title": "Formal and Informal Communication",
+      "objective": "Adjust register, tone, and organization for professional, academic, and everyday communication.",
+      "theory": "Register depends on audience and purpose. Formal language often uses indirect requests, cautious claims, structured paragraphs, and neutral vocabulary. Informal language is more direct and conversational. B2 learners should recognize and produce both.",
+      "examples": [
+        "Could you please confirm receipt of the document?",
+        "I would appreciate it if you could respond by Friday.",
+        "Hey, can you send me that file?",
+        "The evidence suggests that the change may improve efficiency."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Send me the report ASAP! in a formal complaint.",
+          "correct": "Could you please send me the report as soon as possible?"
+        },
+        {
+          "wrong": "I totally think this is awesome in a formal report.",
+          "correct": "The results appear to be positive."
+        }
+      ],
+      "key_vocabulary": [
+        "formal register",
+        "informal register",
+        "hedging",
+        "polite request",
+        "neutral tone",
+        "audience",
+        "purpose"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "B2_T15_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which is the most formal request?",
+          "option_a": "Send me the file.",
+          "option_b": "Could you please send me the file?",
+          "option_c": "Hey, file please.",
+          "option_d": "Give me that file now.",
+          "correct_option": "B",
+          "explanation": "The indirect polite form is more formal."
+        },
+        {
+          "code": "B2_T15_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Which phrase is suitable in a formal email?",
+          "option_a": "I would appreciate it if...",
+          "option_b": "Hey, what's up?",
+          "option_c": "No worries, mate.",
+          "option_d": "That's super cool.",
+          "correct_option": "A",
+          "explanation": "This phrase is appropriately formal."
+        },
+        {
+          "code": "B2_T15_Q03",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which phrase uses hedging?",
+          "option_a": "The evidence proves this with absolute certainty.",
+          "option_b": "The evidence suggests that this may help.",
+          "option_c": "This definitely solves everything.",
+          "option_d": "There is no possible doubt.",
+          "correct_option": "B",
+          "explanation": "Suggests and may reduce certainty appropriately."
+        },
+        {
+          "code": "B2_T15_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the most appropriate formal opening.",
+          "option_a": "Dear Ms. Patel,",
+          "option_b": "Hey Patel!",
+          "option_c": "Yo!",
+          "option_d": "Hiya manager",
+          "correct_option": "A",
+          "explanation": "This is standard formal correspondence."
+        },
+        {
+          "code": "B2_T15_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Which sentence is most neutral for a report?",
+          "option_a": "The results were awesome.",
+          "option_b": "The results were absolutely terrible.",
+          "option_c": "The results indicate a moderate improvement.",
+          "option_d": "The results totally rocked.",
+          "correct_option": "C",
+          "explanation": "Neutral, evidence-based wording suits reports."
+        },
+        {
+          "code": "B2_T15_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 4,
+          "prompt": "Read: 'I would be grateful if you could confirm whether the meeting has been rescheduled.' What is the writer doing?",
+          "option_a": "Making a polite formal request",
+          "option_b": "Giving an order",
+          "option_c": "Telling a joke",
+          "option_d": "Making an informal complaint",
+          "correct_option": "A",
+          "explanation": "The wording is polite and formal."
+        },
+        {
+          "code": "B2_T15_Q07",
+          "skill": "vocabulary",
+          "question_type": "error_identification",
+          "difficulty": 4,
+          "prompt": "Which phrase is inappropriate in a formal report?",
+          "option_a": "The data indicate...",
+          "option_b": "It appears that...",
+          "option_c": "The results suggest...",
+          "option_d": "This is super amazing.",
+          "correct_option": "D",
+          "explanation": "The phrase is too informal."
+        },
+        {
+          "code": "B2_T15_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "prompt": "Choose the best closing for a formal request.",
+          "option_a": "Kind regards,",
+          "option_b": "See ya!",
+          "option_c": "Cheers mate!",
+          "option_d": "Bye for now, dude",
+          "correct_option": "A",
+          "explanation": "Kind regards is appropriate."
+        },
+        {
+          "code": "B2_T15_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "What is the speaker requesting?",
+          "option_a": "Confirmation of a revised deadline",
+          "option_b": "A train ticket",
+          "option_c": "A restaurant booking",
+          "option_d": "A holiday",
+          "correct_option": "A",
+          "explanation": "The speaker makes a formal request.",
+          "audio_text": "Could you please confirm whether the revised deadline of Friday the eighteenth is acceptable to your team?",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "B2_T15_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 4,
+          "prompt": "How would you describe the tone?",
+          "option_a": "Formal and cautious",
+          "option_b": "Aggressive",
+          "option_c": "Very casual",
+          "option_d": "Humorous",
+          "correct_option": "A",
+          "explanation": "The language uses cautious professional wording.",
+          "audio_text": "The available evidence suggests that the proposed change could improve efficiency, although further testing would be advisable.",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "B2_T15_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Formal Proposal",
+          "instructions": "Read the passage carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T15_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "What change is being proposed?",
+              "option_a": "A blended training system",
+              "option_b": "Canceling all training",
+              "option_c": "Only weekend training",
+              "option_d": "Hiring external staff",
+              "correct_option": "A",
+              "explanation": "The proposal combines online material and workshops."
+            },
+            {
+              "code": "B2_T15_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 4,
+              "prompt": "Why is a pilot recommended?",
+              "option_a": "To avoid all evaluation",
+              "option_b": "To test the approach before permanent adoption",
+              "option_c": "To reduce attendance",
+              "option_d": "To cancel workshops",
+              "correct_option": "B",
+              "explanation": "A temporary trial would provide evidence."
+            },
+            {
+              "code": "B2_T15_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 4,
+              "prompt": "Which phrase would be least appropriate in this formal message?",
+              "option_a": "I would like to propose...",
+              "option_b": "I suggest introducing...",
+              "option_c": "I would appreciate it if...",
+              "option_d": "This idea is super cool.",
+              "correct_option": "D",
+              "explanation": "It is too informal."
+            }
+          ],
+          "content_text": "To: Operations Manager\nSubject: Proposal for Flexible Training Sessions\n\nDear Ms. Ibrahim,\n\nFollowing feedback from staff, I would like to propose a more flexible approach to internal training. At present, all sessions are delivered in person during working hours. While this format supports discussion, several employees have reported difficulty attending because of client commitments. I suggest introducing a blended system in which core material is available online and practical workshops are offered twice each month. This arrangement could allow employees to review theoretical content at a convenient time while preserving opportunities for direct interaction.\n\nThe available feedback suggests that such a system may increase participation. However, I recommend a three-month pilot before any permanent change is made. During this period, attendance and participant satisfaction could be monitored.\n\nI would appreciate it if you could review this proposal before our meeting next Tuesday.\n\nKind regards,\nDaniel Reed"
+        },
+        {
+          "code": "B2_T15_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Professional Request",
+          "instructions": "Listen carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "B2_T15_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What is the main request?",
+              "option_a": "Confirmation of the legal review",
+              "option_b": "A hotel booking",
+              "option_c": "A delivery",
+              "option_d": "A salary increase",
+              "correct_option": "A",
+              "explanation": "The speaker asks whether legal review is complete."
+            },
+            {
+              "code": "B2_T15_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 4,
+              "prompt": "What additional information is requested?",
+              "option_a": "When the final version is likely to arrive",
+              "option_b": "Who wrote the first draft",
+              "option_c": "The office address",
+              "option_d": "A personal phone number",
+              "correct_option": "A",
+              "explanation": "The speaker asks about expected timing."
+            }
+          ],
+          "audio_text": "Good afternoon. I'm calling regarding the revised contract. I would be grateful if you could confirm whether the legal team has completed its review. If possible, could you also let me know when we are likely to receive the final version?",
+          "audio_accent": "en-US",
+          "audio_rate": 1.02,
+          "max_audio_plays": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,15 +1,195 @@
 {% extends 'base.html' %}
+{% block title %}Administration · English Practice Hub{% endblock %}
 {% block content %}
-<h2>Panel de administración</h2>
-<div class="row g-3">
-<div class="col-md-4"><div class="card p-3 shadow-sm"><h4>Crear nivel</h4><form method="post" action="{{ url_for('admin.create_level') }}"><input class="form-control mb-2" name="code" placeholder="A1" required><input class="form-control mb-2" name="name" placeholder="Beginner" required><textarea class="form-control mb-2" name="description" placeholder="Descripción"></textarea><button class="btn btn-primary">Guardar</button></form></div></div>
-<div class="col-md-4"><div class="card p-3 shadow-sm"><h4>Crear tema</h4><form method="post" action="{{ url_for('admin.create_topic') }}"><select class="form-select mb-2" name="level_id">{% for l in levels %}<option value="{{ l.id }}">{{ l.code }}</option>{% endfor %}</select><input class="form-control mb-2" name="title" placeholder="Tema" required><textarea class="form-control mb-2" name="theory" placeholder="Teoría" required rows="5"></textarea><button class="btn btn-primary">Guardar</button></form></div></div>
-<div class="col-md-4"><div class="card p-3 shadow-sm"><h4>Crear pregunta</h4><form method="post" action="{{ url_for('admin.create_question') }}"><select class="form-select mb-2" name="topic_id">{% for l in levels %}{% for t in l.topics %}<option value="{{ t.id }}">{{ l.code }} - {{ t.title }}</option>{% endfor %}{% endfor %}</select><textarea class="form-control mb-2" name="prompt" placeholder="Pregunta" required></textarea><input class="form-control mb-2" name="option_a" placeholder="Opción A" required><input class="form-control mb-2" name="option_b" placeholder="Opción B" required><input class="form-control mb-2" name="option_c" placeholder="Opción C" required><input class="form-control mb-2" name="option_d" placeholder="Opción D" required><select class="form-select mb-2" name="correct_option"><option>A</option><option>B</option><option>C</option><option>D</option></select><textarea class="form-control mb-2" name="explanation" placeholder="Explicación"></textarea><button class="btn btn-primary">Guardar</button></form></div></div>
-</div>
-<h3 class="mt-4">Usuarios</h3>
-<div class="row g-3 mb-3">
-<div class="col-md-5"><div class="card p-3 shadow-sm"><h5>Agregar usuario</h5><form method="post" action="{{ url_for('admin.create_user') }}"><input class="form-control mb-2" name="username" placeholder="Usuario" required><input class="form-control mb-2" name="full_name" placeholder="Nombre completo" required><input class="form-control mb-2" name="password" type="password" placeholder="Contraseña" required><select class="form-select mb-2" name="role"><option value="student">Estudiante</option><option value="admin">Admin</option></select><button class="btn btn-success">Crear usuario</button></form></div></div>
-</div>
-<table class="table bg-white align-middle"><tr><th>Usuario</th><th>Nombre</th><th>Rol</th><th>Creado</th><th></th></tr>{% for u in users %}<tr><td>{{ u.username }}</td><td>{{ u.full_name }}</td><td><span class="badge {% if u.is_admin %}bg-danger{% else %}bg-secondary{% endif %}">{{ u.role }}</span></td><td>{{ u.created_at.strftime('%Y-%m-%d') }}</td><td>{% if u.id != current_user.id %}<form method="post" action="{{ url_for('admin.delete_user', user_id=u.id) }}" onsubmit="return confirm('¿Eliminar {{ u.username }}?')"><button class="btn btn-sm btn-outline-danger">Eliminar</button></form>{% endif %}</td></tr>{% endfor %}</table>
-<h3>Últimos intentos</h3><table class="table bg-white"><tr><th>Usuario</th><th>Tema</th><th>Puntaje</th><th>Fecha</th></tr>{% for a in attempts %}<tr><td>{{ a.user.full_name }}</td><td>{{ a.topic.title }}</td><td>{{ a.score }}/{{ a.total }}</td><td>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</td></tr>{% endfor %}</table>
+<section class="page-section admin-page">
+  <div class="page-title-row admin-title-row">
+    <div>
+      <span class="eyebrow">ADMINISTRATION</span>
+      <h1>Control panel</h1>
+      <p>Manage user accounts and review the academic configuration of the platform.</p>
+    </div>
+    <div class="page-title-icon"><i class="bi bi-shield-lock-fill"></i></div>
+  </div>
+
+  <section class="admin-users-card">
+    <div class="admin-section-heading">
+      <div>
+        <span class="eyebrow">USER MANAGEMENT</span>
+        <h2>Existing users</h2>
+        <p>Edit usernames, names, roles, and passwords directly from the administrator interface.</p>
+      </div>
+      <button class="btn btn-primary btn-modern" type="button" data-bs-toggle="collapse" data-bs-target="#createUserPanel">
+        <i class="bi bi-person-plus-fill"></i> Add user
+      </button>
+    </div>
+
+    <div class="collapse admin-create-collapse" id="createUserPanel">
+      <form method="post" action="{{ url_for('admin.create_user') }}" class="admin-create-user-form">
+        <div>
+          <label class="form-label">Username</label>
+          <input class="form-control" name="username" maxlength="80" required>
+        </div>
+        <div>
+          <label class="form-label">Full name</label>
+          <input class="form-control" name="full_name" maxlength="120" required>
+        </div>
+        <div>
+          <label class="form-label">Password</label>
+          <input class="form-control" name="password" type="password" minlength="8" required>
+        </div>
+        <div>
+          <label class="form-label">Role</label>
+          <select class="form-select" name="role">
+            <option value="student">Student</option>
+            <option value="admin">Administrator</option>
+          </select>
+        </div>
+        <div class="admin-create-user-action">
+          <button class="btn btn-success btn-modern" type="submit">
+            <i class="bi bi-check-lg"></i> Create user
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="admin-user-list">
+      {% for u in users %}
+      {% set stat = user_stats.get(u.id, {}) %}
+      <article class="admin-user-row">
+        <div class="admin-user-avatar">{{ (u.full_name or u.username)[0]|upper }}</div>
+
+        <div class="admin-user-main">
+          <div class="admin-user-name-row">
+            <strong>{{ u.full_name }}</strong>
+            {% if u.id == current_user.id %}<span class="admin-you-chip">You</span>{% endif %}
+            <span class="admin-role-chip {{ 'is-admin' if u.is_admin else 'is-student' }}">
+              {{ 'Administrator' if u.is_admin else 'Student' }}
+            </span>
+          </div>
+          <span class="admin-username">@{{ u.username }}</span>
+          <div class="admin-user-metrics">
+            <span><i class="bi bi-journal-check"></i>{{ stat.get('completed_lessons', 0) }} lessons</span>
+            <span><i class="bi bi-lightning-charge"></i>{{ stat.get('practice_attempts', 0) }} practice attempts</span>
+            <span><i class="bi bi-clipboard2-check"></i>{{ stat.get('assessment_attempts', 0) }} assessment attempts</span>
+          </div>
+        </div>
+
+        <div class="admin-user-created">
+          <span>Created</span>
+          <strong>{{ u.created_at.strftime('%Y-%m-%d') if u.created_at else '—' }}</strong>
+        </div>
+
+        <div class="admin-user-actions">
+          <a class="btn btn-sm btn-outline-primary" href="{{ url_for('admin.edit_user', user_id=u.id) }}">
+            <i class="bi bi-pencil-square"></i> Edit
+          </a>
+
+          {% if u.id != current_user.id %}
+          <form method="post" action="{{ url_for('admin.delete_user', user_id=u.id) }}"
+                onsubmit="return confirm('Delete {{ u.username }}? Accounts with learning history are protected from deletion.');">
+            <button class="btn btn-sm btn-outline-danger" type="submit">
+              <i class="bi bi-trash3"></i> Delete
+            </button>
+          </form>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="admin-academic-section">
+    <div class="admin-section-heading">
+      <div>
+        <span class="eyebrow">ACADEMIC CONTENT</span>
+        <h2>Manual content tools</h2>
+        <p>These existing tools remain available for small manual additions. Bulk curriculum remains managed through JSON import.</p>
+      </div>
+    </div>
+
+    <div class="admin-tools-grid">
+      <article class="admin-tool-card">
+        <div class="admin-tool-icon"><i class="bi bi-bar-chart-steps"></i></div>
+        <h3>Create level</h3>
+        <form method="post" action="{{ url_for('admin.create_level') }}">
+          <label class="form-label">Code</label>
+          <input class="form-control mb-2" name="code" placeholder="A1" required>
+          <label class="form-label">Name</label>
+          <input class="form-control mb-2" name="name" placeholder="Beginner" required>
+          <label class="form-label">Description</label>
+          <textarea class="form-control mb-3" name="description" rows="3"></textarea>
+          <button class="btn btn-primary btn-modern" type="submit">Save level</button>
+        </form>
+      </article>
+
+      <article class="admin-tool-card">
+        <div class="admin-tool-icon"><i class="bi bi-bookmark-plus-fill"></i></div>
+        <h3>Create topic</h3>
+        <form method="post" action="{{ url_for('admin.create_topic') }}">
+          <label class="form-label">Level</label>
+          <select class="form-select mb-2" name="level_id">
+            {% for l in levels %}<option value="{{ l.id }}">{{ l.code }} · {{ l.name }}</option>{% endfor %}
+          </select>
+          <label class="form-label">Title</label>
+          <input class="form-control mb-2" name="title" required>
+          <label class="form-label">Theory</label>
+          <textarea class="form-control mb-3" name="theory" required rows="6"></textarea>
+          <button class="btn btn-primary btn-modern" type="submit">Save topic</button>
+        </form>
+      </article>
+
+      <article class="admin-tool-card">
+        <div class="admin-tool-icon"><i class="bi bi-patch-question-fill"></i></div>
+        <h3>Create question</h3>
+        <form method="post" action="{{ url_for('admin.create_question') }}">
+          <label class="form-label">Topic</label>
+          <select class="form-select mb-2" name="topic_id">
+            {% for l in levels %}
+              {% for t in l.topics %}
+              <option value="{{ t.id }}">{{ l.code }} · {{ t.title }}</option>
+              {% endfor %}
+            {% endfor %}
+          </select>
+          <label class="form-label">Prompt</label>
+          <textarea class="form-control mb-2" name="prompt" required></textarea>
+          <input class="form-control mb-2" name="option_a" placeholder="Option A" required>
+          <input class="form-control mb-2" name="option_b" placeholder="Option B" required>
+          <input class="form-control mb-2" name="option_c" placeholder="Option C" required>
+          <input class="form-control mb-2" name="option_d" placeholder="Option D" required>
+          <select class="form-select mb-2" name="correct_option">
+            <option>A</option><option>B</option><option>C</option><option>D</option>
+          </select>
+          <textarea class="form-control mb-3" name="explanation" placeholder="Explanation"></textarea>
+          <button class="btn btn-primary btn-modern" type="submit">Save question</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <section class="admin-attempts-card">
+    <div class="admin-section-heading">
+      <div>
+        <span class="eyebrow">RECENT ACTIVITY</span>
+        <h2>Latest practice attempts</h2>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-middle admin-attempt-table">
+        <thead><tr><th>User</th><th>Topic</th><th>Score</th><th>Date</th></tr></thead>
+        <tbody>
+          {% for a in attempts %}
+          <tr>
+            <td>{{ a.user.full_name }}</td>
+            <td>{{ a.topic.title }}</td>
+            <td><strong>{{ a.score }}/{{ a.total }}</strong></td>
+            <td>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+          </tr>
+          {% else %}
+          <tr><td colspan="4" class="text-muted">No practice attempts yet.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>
 {% endblock %}

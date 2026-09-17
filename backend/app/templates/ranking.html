@@ -1,8 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Ranking · English Practice Hub{% endblock %}
 {% block content %}
-<h2>Ranking e historial</h2>
-<table class="table table-striped bg-white shadow-sm">
-<tr><th>Fecha</th><th>Usuario</th><th>Tema</th><th>Puntaje</th></tr>
-{% for a in attempts %}<tr><td>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</td><td>{{ a.user.full_name }}</td><td>{{ a.topic.title }}</td><td>{{ a.score }}/{{ a.total }}</td></tr>{% endfor %}
-</table>
+<section class="page-section"><div class="page-title-row"><div><span class="eyebrow">LEARNING HISTORY</span><h1>Ranking and history</h1><p>Review practice attempts recorded by learners on the platform.</p></div><div class="page-title-icon"><i class="bi bi-trophy-fill"></i></div></div><section class="content-card">{% if attempts %}<div class="table-responsive modern-table-wrap"><table class="table modern-table ranking-table align-middle mb-0"><thead><tr><th>#</th><th>Date</th><th>User</th><th>Topic</th><th>Score</th></tr></thead><tbody>{% for a in attempts %}<tr><td><span class="rank-number">{{ loop.index }}</span></td><td><div class="table-date"><i class="bi bi-calendar3"></i>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</div></td><td><div class="user-table-cell"><span class="mini-avatar">{{ a.user.full_name[0]|upper }}</span><strong>{{ a.user.full_name }}</strong></div></td><td>{{ a.topic.title }}</td><td><span class="score-pill"><i class="bi bi-star-fill"></i>{{ a.score }}/{{ a.total }}</span></td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty-state"><span class="empty-state-icon"><i class="bi bi-trophy"></i></span><h3>No results yet</h3><p>Attempts will appear here after learners complete practice tests.</p></div>{% endif %}</section></section>
 {% endblock %}

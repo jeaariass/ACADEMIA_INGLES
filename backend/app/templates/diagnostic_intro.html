@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}{{ assessment.title }} · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section narrow-page diagnostic-shell">
+  <a class="back-link" href="{{ url_for('assessment.index') }}"><i class="bi bi-arrow-left"></i> All assessments</a>
+
+  <article class="diagnostic-hero-card">
+    <div class="diagnostic-hero-copy">
+      <span class="eyebrow light">INITIAL PLACEMENT · A1–C2</span>
+      <h1>{{ assessment.title }}</h1>
+      <p>{{ assessment.description }}</p>
+      <div class="diagnostic-badges">
+        <span><i class="bi bi-diagram-3-fill"></i> Adaptive route</span>
+        <span><i class="bi bi-ui-checks-grid"></i> 36–72 questions</span>
+        <span><i class="bi bi-headphones"></i> Listening included</span>
+        <span><i class="bi bi-book-half"></i> Reading included</span>
+      </div>
+    </div>
+    <div class="diagnostic-level-stack" aria-label="CEFR levels">
+      {% for item in bank_summary %}<span>{{ item.code }}</span>{% endfor %}
+    </div>
+  </article>
+
+  <div class="diagnostic-explain-grid">
+    <section class="content-card">
+      <div class="content-card-header"><div><span class="eyebrow">HOW IT WORKS</span><h2>The test adapts to your performance</h2></div></div>
+      <div class="diagnostic-flow">
+        <div><strong>1</strong><span><b>Start at B1</b><small>An intermediate checkpoint avoids beginning with questions that are too easy for many learners.</small></span></div>
+        <div><strong>2</strong><span><b>Move up or down</b><small>Strong performance opens harder stages. Lower performance confirms A2 or A1 instead.</small></span></div>
+        <div><strong>3</strong><span><b>Build a skill profile</b><small>Grammar, vocabulary, reading, and listening are analyzed separately.</small></span></div>
+        <div><strong>4</strong><span><b>Get a starting recommendation</b><small>You receive an estimated level and lessons worth reviewing.</small></span></div>
+      </div>
+    </section>
+
+    <section class="content-card diagnostic-note-card">
+      <div class="content-card-header"><div><span class="eyebrow">IMPORTANT</span><h2>What the result means</h2></div></div>
+      <p>This is a <strong>CEFR-aligned placement estimate</strong> for this learning platform. It is not an official CEFR certificate.</p>
+      <p>The current diagnostic measures <strong>Grammar & Use of English, Vocabulary, Reading, and Listening</strong>. Speaking and extended writing are not scored in this version.</p>
+      <div class="diagnostic-bank-count"><strong>{{ bank_count }}</strong><span>items in the complete diagnostic bank</span></div>
+    </section>
+  </div>
+
+  <section class="content-card diagnostic-start-card">
+    <div>
+      <span class="eyebrow">READY</span>
+      <h2>Begin the adaptive diagnostic</h2>
+      <p>{{ assessment.instructions }}</p>
+    </div>
+    <form method="post" action="{{ url_for('assessment.start', code=assessment.code) }}">
+      <button class="btn btn-primary btn-modern btn-lg" type="submit">Start diagnostic <i class="bi bi-arrow-right"></i></button>
+    </form>
+  </section>
+
+  {% if latest_attempt %}
+  <div class="previous-attempt diagnostic-previous">
+    <span><i class="bi bi-clock-history"></i> Latest diagnostic</span>
+    <strong>{{ latest_attempt.estimated_level or '—' }}</strong>
+    <a href="{{ url_for('assessment.result', attempt_id=latest_attempt.id) }}">View result</a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

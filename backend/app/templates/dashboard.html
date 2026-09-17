@@ -1,27 +1,163 @@
 {% extends 'base.html' %}
+{% block title %}Home · English Practice Hub{% endblock %}
 {% block content %}
-<div class="hero p-4 mb-4 rounded-4 shadow-sm">
-  <h1 class="fw-bold">Bienvenida, {{ current_user.full_name }}</h1>
-  <p class="mb-0">Seleccione un nivel, estudie la teoría y resuelva el test asociado.</p>
-</div>
-<div class="row g-3">
-  {% for level in levels %}
-  <div class="col-md-6">
-    <div class="card h-100 shadow-sm rounded-4">
-      <div class="card-body">
-        <h3>{{ level.code }} · {{ level.name }}</h3>
-        <p>{{ level.description }}</p>
-        {% for topic in level.topics %}
-          <a class="btn btn-outline-primary mb-2" href="{{ url_for('main.topic', topic_id=topic.id) }}">{{ topic.title }}</a>
-        {% endfor %}
+<section class="page-section">
+  <div class="dashboard-hero">
+    <div class="hero-copy">
+      <span class="eyebrow light">ENGLISH PRACTICE HUB</span>
+      <h1>Hello, {{ current_user.full_name }} <span class="wave">👋</span></h1>
+      <p>Continue your learning path and complete each lesson to unlock level assessments.</p>
+    </div>
+    <div class="hero-summary">
+      <div class="summary-item">
+        <span class="summary-icon"><i class="bi bi-layers"></i></span>
+        <div><strong>{{ level_cards|length }}</strong><small>Available levels</small></div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-icon"><i class="bi bi-clock-history"></i></span>
+        <div><strong>{{ attempts|length }}</strong><small>Recent results</small></div>
       </div>
     </div>
   </div>
-  {% endfor %}
-</div>
-<h3 class="mt-4">Últimos resultados</h3>
-<table class="table table-striped bg-white rounded shadow-sm">
-  <tr><th>Fecha</th><th>Tema</th><th>Puntaje</th></tr>
-  {% for a in attempts %}<tr><td>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</td><td>{{ a.topic.title }}</td><td>{{ a.score }}/{{ a.total }}</td></tr>{% endfor %}
-</table>
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">YOUR LEARNING PATH</span>
+      <h2>Progress by level</h2>
+      <p>A lesson is marked as completed after you submit its practice test.</p>
+    </div>
+  </div>
+
+  <div class="level-grid progress-level-grid">
+    {% for card in level_cards %}
+    {% set level = card.level %}
+    {% set progress = card.progress %}
+    <article class="level-card progress-level-card level-theme-{{ (loop.index0 % 4) + 1 }}">
+      <div class="level-card-top">
+        <span class="level-code">{{ level.code }}</span>
+        {% if progress.is_complete %}
+        <span class="level-complete-badge"><i class="bi bi-check-circle-fill"></i> Complete</span>
+        {% else %}
+        <span class="level-icon"><i class="bi bi-mortarboard-fill"></i></span>
+        {% endif %}
+      </div>
+
+      <div class="level-card-body">
+        <h3>{{ level.name }}</h3>
+        <p>{{ level.description }}</p>
+
+        <div class="level-progress-summary">
+          <div>
+            <span>Level progress</span>
+            <strong>{{ progress.percentage }}%</strong>
+          </div>
+          <div class="level-progress-track">
+            <span style="width: {{ progress.percentage }}%"></span>
+          </div>
+          <small>{{ progress.completed }} of {{ progress.total }} lessons completed</small>
+        </div>
+
+        {% if progress.next_topic %}
+        <a class="continue-learning-card" href="{{ url_for('main.topic', topic_id=progress.next_topic.id) }}">
+          <span class="continue-icon"><i class="bi bi-play-fill"></i></span>
+          <span>
+            <small>CONTINUE LEARNING</small>
+            <strong>{{ progress.next_topic.title }}</strong>
+          </span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+        {% elif progress.is_complete and card.assessment %}
+        <a class="continue-learning-card assessment-ready" href="{{ url_for('assessment.intro', code=card.assessment.code) }}">
+          <span class="continue-icon"><i class="bi bi-clipboard2-check-fill"></i></span>
+          <span>
+            <small>LEVEL COMPLETE</small>
+            <strong>Take {{ card.assessment.title }}</strong>
+          </span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+        {% endif %}
+
+        <div class="level-topics-label">
+          <i class="bi bi-journal-check"></i>
+          <span>Lessons</span>
+          <strong>{{ progress.completed }}/{{ progress.total }}</strong>
+        </div>
+
+        <div class="topic-link-list progress-topic-list">
+          {% for topic in progress.topics %}
+          {% set tp = progress.progress_by_topic.get(topic.id) %}
+          <a class="topic-link {{ 'topic-completed' if tp and tp.completed else '' }}"
+             href="{{ url_for('main.topic', topic_id=topic.id) }}">
+            <span class="topic-link-icon">
+              {% if tp and tp.completed %}
+                <i class="bi bi-check-lg"></i>
+              {% else %}
+                <i class="bi bi-play-fill"></i>
+              {% endif %}
+            </span>
+
+            <span class="topic-progress-title">
+              <strong>{{ topic.title }}</strong>
+              {% if tp and tp.completed %}
+                <small>Completed · Best {{ tp.best_percentage }}%</small>
+              {% else %}
+                <small>Not completed</small>
+              {% endif %}
+            </span>
+
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <section class="content-card mt-4">
+    <div class="content-card-header">
+      <div>
+        <span class="eyebrow">ACTIVITY</span>
+        <h2>Recent results</h2>
+      </div>
+      <a href="{{ url_for('main.ranking') }}" class="text-link">
+        View full history <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+
+    {% if attempts %}
+    <div class="table-responsive modern-table-wrap">
+      <table class="table modern-table align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for a in attempts %}
+          <tr>
+            <td>
+              <div class="table-date">
+                <i class="bi bi-calendar3"></i>
+                <span>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</span>
+              </div>
+            </td>
+            <td><strong class="table-title">{{ a.topic.title }}</strong></td>
+            <td><span class="score-pill"><i class="bi bi-check2-circle"></i>{{ a.score }}/{{ a.total }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <span class="empty-state-icon"><i class="bi bi-clipboard2-check"></i></span>
+      <h3>No results yet</h3>
+      <p>Complete your first lesson practice to start tracking progress.</p>
+    </div>
+    {% endif %}
+  </section>
+</section>
 {% endblock %}

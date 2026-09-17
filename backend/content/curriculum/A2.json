@@ -1,0 +1,4022 @@
+{
+  "level": {
+    "code": "A2",
+    "order": 2,
+    "name": "Elementary",
+    "description": "Develop everyday English for familiar situations, past experiences, plans, comparisons, travel, and simple problem solving."
+  },
+  "topics": [
+    {
+      "code": "A2_T01",
+      "order": 1,
+      "title": "Past Simple: Regular Verbs",
+      "objective": "Use regular verbs in the past simple to talk about completed past events.",
+      "theory": "Regular verbs usually form the past simple by adding -ed. Verbs ending in -e add -d. A consonant plus y often changes to -ied. Use the same past form with all subjects. Common time expressions include yesterday, last night, last week, and two days ago.",
+      "examples": [
+        "I worked yesterday.",
+        "She visited her aunt last weekend.",
+        "They played football after school.",
+        "We studied for the test."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She work yesterday.",
+          "correct": "She worked yesterday."
+        },
+        {
+          "wrong": "They playd football.",
+          "correct": "They played football."
+        }
+      ],
+      "key_vocabulary": [
+        "worked",
+        "visited",
+        "played",
+        "studied",
+        "cleaned",
+        "watched",
+        "yesterday",
+        "last week",
+        "ago"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T01_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the past form of 'work'.",
+          "option_a": "work",
+          "option_b": "worked",
+          "option_c": "workt",
+          "option_d": "working",
+          "correct_option": "B",
+          "explanation": "Regular verbs usually add -ed."
+        },
+        {
+          "code": "A2_T01_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the past form of 'visit'.",
+          "option_a": "visited",
+          "option_b": "visitted",
+          "option_c": "visit",
+          "option_d": "visiting",
+          "correct_option": "A",
+          "explanation": "'Visit' becomes 'visited'."
+        },
+        {
+          "code": "A2_T01_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: We ___ the kitchen yesterday.",
+          "option_a": "clean",
+          "option_b": "cleaned",
+          "option_c": "cleans",
+          "option_d": "cleaning",
+          "correct_option": "B",
+          "explanation": "Use the past form 'cleaned'."
+        },
+        {
+          "code": "A2_T01_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: She ___ English last night.",
+          "option_a": "study",
+          "option_b": "studied",
+          "option_c": "studys",
+          "option_d": "studying",
+          "correct_option": "B",
+          "explanation": "Consonant + y changes to -ied."
+        },
+        {
+          "code": "A2_T01_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "I watched a movie yesterday.",
+          "option_b": "I watch a movie yesterday.",
+          "option_c": "I watching a movie yesterday.",
+          "option_d": "I did watched a movie yesterday.",
+          "correct_option": "A",
+          "explanation": "Use the regular past form with a finished past time."
+        },
+        {
+          "code": "A2_T01_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Tom walked to school and talked to his teacher.' What happened first?",
+          "option_a": "He talked to his teacher.",
+          "option_b": "He walked to school.",
+          "option_c": "He went home.",
+          "option_d": "The text does not say.",
+          "correct_option": "B",
+          "explanation": "The sentence first states that he walked to school."
+        },
+        {
+          "code": "A2_T01_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which time expression usually refers to the past?",
+          "option_a": "tomorrow",
+          "option_b": "next week",
+          "option_c": "yesterday",
+          "option_d": "every day",
+          "correct_option": "C",
+          "explanation": "'Yesterday' refers to the past."
+        },
+        {
+          "code": "A2_T01_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: They ___ tennis two hours ago.",
+          "option_a": "played",
+          "option_b": "play",
+          "option_c": "plays",
+          "option_d": "are playing",
+          "correct_option": "A",
+          "explanation": "Use the past form 'played'."
+        },
+        {
+          "code": "A2_T01_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What did the speaker do after work?",
+          "option_a": "Watched TV",
+          "option_b": "Visited a friend",
+          "option_c": "Played tennis",
+          "option_d": "Studied",
+          "correct_option": "B",
+          "explanation": "The speaker says they visited a friend.",
+          "audio_text": "Yesterday, I finished work at five and visited a friend after dinner.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T01_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What did Anna study?",
+          "option_a": "Math",
+          "option_b": "English",
+          "option_c": "History",
+          "option_d": "Science",
+          "correct_option": "A",
+          "explanation": "The speaker says Anna studied math.",
+          "audio_text": "Anna studied math for two hours last night and finished her homework.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T01_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Busy Saturday",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T01_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What did Eric do in the morning?",
+              "option_a": "He cleaned his apartment.",
+              "option_b": "He played basketball.",
+              "option_c": "He went to a café.",
+              "option_d": "He watched a movie.",
+              "correct_option": "A",
+              "explanation": "He cleaned his apartment in the morning."
+            },
+            {
+              "code": "A2_T01_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where did Eric play basketball?",
+              "option_a": "At school",
+              "option_b": "At the park",
+              "option_c": "At home",
+              "option_d": "At the café",
+              "correct_option": "B",
+              "explanation": "He played basketball in the park."
+            },
+            {
+              "code": "A2_T01_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Eric cleaned his apartment.",
+              "option_b": "He walked to the park.",
+              "option_c": "He played basketball.",
+              "option_d": "He watch a movie.",
+              "correct_option": "D",
+              "explanation": "The past form is 'watched'."
+            }
+          ],
+          "content_text": "Last Saturday, Eric stayed home in the morning. He cleaned his apartment, washed his clothes, and cooked lunch. In the afternoon, he walked to the park and played basketball with two friends. Later, they talked at a small café. Eric returned home at eight and watched a movie before bed."
+        },
+        {
+          "code": "A2_T01_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Last Weekend",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T01_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who did Mia visit?",
+              "option_a": "Her friends",
+              "option_b": "Her grandparents",
+              "option_c": "Her teacher",
+              "option_d": "Her sister",
+              "correct_option": "B",
+              "explanation": "She visited her grandparents."
+            },
+            {
+              "code": "A2_T01_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What did they watch?",
+              "option_a": "A sports game",
+              "option_b": "A new series",
+              "option_c": "An old movie",
+              "option_d": "The news",
+              "correct_option": "C",
+              "explanation": "They watched an old movie."
+            }
+          ],
+          "audio_text": "On Sunday, Mia visited her grandparents. She helped them in the garden and cooked lunch with her grandmother. In the afternoon, they watched an old movie and talked about family photos. Mia returned home in the evening.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T02",
+      "order": 2,
+      "title": "Past Simple: Irregular Verbs",
+      "objective": "Use common irregular past forms to describe completed past events.",
+      "theory": "Irregular verbs do not form the past by simply adding -ed. Their forms must be learned, for example go/went, see/saw, eat/ate, have/had, buy/bought, take/took, and come/came.",
+      "examples": [
+        "I went to the store.",
+        "She saw her friend.",
+        "We ate dinner at seven.",
+        "They bought a new table."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I goed home.",
+          "correct": "I went home."
+        },
+        {
+          "wrong": "She eated lunch.",
+          "correct": "She ate lunch."
+        }
+      ],
+      "key_vocabulary": [
+        "went",
+        "saw",
+        "ate",
+        "had",
+        "bought",
+        "took",
+        "came",
+        "gave",
+        "made"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T02_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "What is the past form of 'go'?",
+          "option_a": "goed",
+          "option_b": "went",
+          "option_c": "gone",
+          "option_d": "goes",
+          "correct_option": "B",
+          "explanation": "The irregular past form is 'went'."
+        },
+        {
+          "code": "A2_T02_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "What is the past form of 'eat'?",
+          "option_a": "eated",
+          "option_b": "ate",
+          "option_c": "eaten",
+          "option_d": "eats",
+          "correct_option": "B",
+          "explanation": "The irregular past form is 'ate'."
+        },
+        {
+          "code": "A2_T02_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: We ___ a taxi to the airport.",
+          "option_a": "take",
+          "option_b": "took",
+          "option_c": "taken",
+          "option_d": "takes",
+          "correct_option": "B",
+          "explanation": "The past form of 'take' is 'took'."
+        },
+        {
+          "code": "A2_T02_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: She ___ a new jacket yesterday.",
+          "option_a": "buyed",
+          "option_b": "bought",
+          "option_c": "buys",
+          "option_d": "buy",
+          "correct_option": "B",
+          "explanation": "The past form of 'buy' is 'bought'."
+        },
+        {
+          "code": "A2_T02_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "He came late.",
+          "option_b": "He comed late.",
+          "option_c": "He come late yesterday.",
+          "option_d": "He did came late.",
+          "correct_option": "A",
+          "explanation": "The past form of 'come' is 'came'."
+        },
+        {
+          "code": "A2_T02_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Lisa had breakfast and went to work.' What did Lisa do after breakfast?",
+          "option_a": "She went to work.",
+          "option_b": "She slept.",
+          "option_c": "She ate dinner.",
+          "option_d": "She studied.",
+          "correct_option": "A",
+          "explanation": "She went to work after breakfast."
+        },
+        {
+          "code": "A2_T02_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which pair is correct?",
+          "option_a": "see / seed",
+          "option_b": "see / saw",
+          "option_c": "see / seened",
+          "option_d": "see / seeing",
+          "correct_option": "B",
+          "explanation": "The past form of 'see' is 'saw'."
+        },
+        {
+          "code": "A2_T02_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: They ___ us a nice gift.",
+          "option_a": "gave",
+          "option_b": "gived",
+          "option_c": "give",
+          "option_d": "giving",
+          "correct_option": "A",
+          "explanation": "The past form of 'give' is 'gave'."
+        },
+        {
+          "code": "A2_T02_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What did the speaker buy?",
+          "option_a": "A phone",
+          "option_b": "A book",
+          "option_c": "A ticket",
+          "option_d": "A bag",
+          "correct_option": "C",
+          "explanation": "The speaker bought a ticket.",
+          "audio_text": "I went to the station this morning and bought a ticket for the ten o'clock train.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T02_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Who came to dinner?",
+          "option_a": "The speaker's cousin",
+          "option_b": "The speaker's boss",
+          "option_c": "A neighbor",
+          "option_d": "A teacher",
+          "correct_option": "A",
+          "explanation": "The cousin came to dinner.",
+          "audio_text": "My cousin came to dinner last night. We had pasta and talked for hours.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T02_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Surprise Trip",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T02_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How did Carla travel to Lisbon?",
+              "option_a": "By train",
+              "option_b": "By plane",
+              "option_c": "By bus",
+              "option_d": "By car",
+              "correct_option": "B",
+              "explanation": "They took an early flight."
+            },
+            {
+              "code": "A2_T02_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What did Carla buy?",
+              "option_a": "Shoes",
+              "option_b": "Postcards",
+              "option_c": "Food",
+              "option_d": "A camera",
+              "correct_option": "B",
+              "explanation": "She bought postcards."
+            },
+            {
+              "code": "A2_T02_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "They took a flight.",
+              "option_b": "They saw old buildings.",
+              "option_c": "Carla bought postcards.",
+              "option_d": "They eated local food.",
+              "correct_option": "D",
+              "explanation": "The correct past form is 'ate'."
+            }
+          ],
+          "content_text": "Last month, Carla went to Lisbon with her brother. They took an early flight and arrived before noon. They had lunch near the river and saw several old buildings. Carla bought postcards for her family. In the evening, they found a small restaurant and ate local food."
+        },
+        {
+          "code": "A2_T02_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "An Unexpected Morning",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T02_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Why was the speaker late?",
+              "option_a": "The bus broke down.",
+              "option_b": "The alarm did not ring.",
+              "option_c": "The speaker forgot the job.",
+              "option_d": "There was no coffee.",
+              "correct_option": "B",
+              "explanation": "The alarm did not ring."
+            },
+            {
+              "code": "A2_T02_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What did the manager give the speaker?",
+              "option_a": "A ticket",
+              "option_b": "A warning",
+              "option_c": "A coffee",
+              "option_d": "A phone",
+              "correct_option": "C",
+              "explanation": "The manager gave a coffee."
+            }
+          ],
+          "audio_text": "This morning, I woke up late because my alarm did not ring. I got dressed quickly, took a bus, and arrived at work twenty minutes late. My manager was understanding. She gave me a coffee and told me not to worry.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T03",
+      "order": 3,
+      "title": "Past Simple Questions and Negatives",
+      "objective": "Form past simple negatives and questions with did and didn't.",
+      "theory": "Use did not/didn't + base verb for negatives and Did + subject + base verb for questions. The main verb stays in the base form after did or didn't.",
+      "examples": [
+        "I didn't work yesterday.",
+        "Did you call your mother?",
+        "She didn't go out.",
+        "Did they arrive on time?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Did you went?",
+          "correct": "Did you go?"
+        },
+        {
+          "wrong": "He didn't worked.",
+          "correct": "He didn't work."
+        }
+      ],
+      "key_vocabulary": [
+        "did",
+        "didn't",
+        "Did you...?",
+        "last night",
+        "yesterday",
+        "arrive",
+        "call",
+        "go"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T03_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct negative.",
+          "option_a": "I didn't go.",
+          "option_b": "I didn't went.",
+          "option_c": "I not went.",
+          "option_d": "I don't went.",
+          "correct_option": "A",
+          "explanation": "Use didn't + base verb."
+        },
+        {
+          "code": "A2_T03_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Choose the correct question.",
+          "option_a": "Did she call you?",
+          "option_b": "Did she called you?",
+          "option_c": "She did call you?",
+          "option_d": "Does she called you?",
+          "correct_option": "A",
+          "explanation": "Use Did + subject + base verb."
+        },
+        {
+          "code": "A2_T03_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: They ___ watch the movie.",
+          "option_a": "didn't",
+          "option_b": "doesn't",
+          "option_c": "aren't",
+          "option_d": "not",
+          "correct_option": "A",
+          "explanation": "Use 'didn't' in the past."
+        },
+        {
+          "code": "A2_T03_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: ___ you see Alex yesterday?",
+          "option_a": "Do",
+          "option_b": "Did",
+          "option_c": "Are",
+          "option_d": "Were",
+          "correct_option": "B",
+          "explanation": "Use 'Did' for a past simple question."
+        },
+        {
+          "code": "A2_T03_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct answer to 'Did he come?'",
+          "option_a": "Yes, he did.",
+          "option_b": "Yes, he came did.",
+          "option_c": "Yes, he does.",
+          "option_d": "Yes, he is.",
+          "correct_option": "A",
+          "explanation": "Short answer: 'Yes, he did.'"
+        },
+        {
+          "code": "A2_T03_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Maya didn't work on Monday. She stayed home.' What did Maya NOT do?",
+          "option_a": "Stay home",
+          "option_b": "Work",
+          "option_c": "Rest",
+          "option_d": "Remain at home",
+          "correct_option": "B",
+          "explanation": "She didn't work."
+        },
+        {
+          "code": "A2_T03_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Complete: Why ___ they leave early?",
+          "option_a": "did",
+          "option_b": "do",
+          "option_c": "were",
+          "option_d": "does",
+          "correct_option": "A",
+          "explanation": "Use 'did' for a past question."
+        },
+        {
+          "code": "A2_T03_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "We didn't saw him.",
+          "option_b": "We didn't see him.",
+          "option_c": "We no see him.",
+          "option_d": "We weren't see him.",
+          "correct_option": "B",
+          "explanation": "Use base verb after didn't."
+        },
+        {
+          "code": "A2_T03_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Did the speaker go to the party?",
+          "option_a": "Yes",
+          "option_b": "No",
+          "option_c": "Only for an hour",
+          "option_d": "The audio does not say",
+          "correct_option": "B",
+          "explanation": "The speaker says they didn't go.",
+          "audio_text": "I didn't go to the party last night because I was tired.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T03_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What question did Mark ask?",
+          "option_a": "Did you finish the report?",
+          "option_b": "Do you finish the report?",
+          "option_c": "Were you finish the report?",
+          "option_d": "Did you finished the report?",
+          "correct_option": "A",
+          "explanation": "The audio uses a correct past question.",
+          "audio_text": "Mark asked, Did you finish the report yesterday?",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T03_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Missed Plans",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T03_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Why didn't Laura go to the café?",
+              "option_a": "She was sick.",
+              "option_b": "Her car didn't start.",
+              "option_c": "Ben canceled.",
+              "option_d": "The café was closed.",
+              "correct_option": "B",
+              "explanation": "Her car didn't start."
+            },
+            {
+              "code": "A2_T03_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Did Ben answer immediately?",
+              "option_a": "Yes",
+              "option_b": "No",
+              "option_c": "Only by email",
+              "option_d": "The text does not say",
+              "correct_option": "B",
+              "explanation": "He didn't answer at first."
+            },
+            {
+              "code": "A2_T03_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Laura didn't go.",
+              "option_b": "Her car didn't start.",
+              "option_c": "Ben didn't answer.",
+              "option_d": "They didn't met.",
+              "correct_option": "D",
+              "explanation": "Use 'didn't meet'."
+            }
+          ],
+          "content_text": "Laura planned to meet her friend Ben on Friday evening, but she didn't go to the café. Her car didn't start, so she called Ben. He didn't answer his phone at first. Ten minutes later, he called her back. They decided to meet on Saturday instead."
+        },
+        {
+          "code": "A2_T03_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Customer Call",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T03_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Did the package arrive?",
+              "option_a": "Yes",
+              "option_b": "No",
+              "option_c": "It arrived late",
+              "option_d": "The audio does not say",
+              "correct_option": "B",
+              "explanation": "The package didn't arrive."
+            },
+            {
+              "code": "A2_T03_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What did the customer do this morning?",
+              "option_a": "Placed another order",
+              "option_b": "Called customer service",
+              "option_c": "Went to the store",
+              "option_d": "Canceled the order",
+              "correct_option": "B",
+              "explanation": "The customer called customer service."
+            }
+          ],
+          "audio_text": "Did you receive my order yesterday? No, I didn't. The package didn't arrive. Did you check the tracking number? Yes, I did, but the website didn't show any new information. I called customer service this morning.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T04",
+      "order": 4,
+      "title": "Countable and Uncountable Nouns",
+      "objective": "Distinguish countable and uncountable nouns and use appropriate quantity expressions.",
+      "theory": "Countable nouns can be singular or plural and can use a/an and numbers. Uncountable nouns generally do not have a plural form and are used with expressions such as some, much, a little, or a piece of.",
+      "examples": [
+        "an apple / two apples",
+        "some water",
+        "a piece of information",
+        "some rice"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "two waters",
+          "correct": "two bottles of water"
+        },
+        {
+          "wrong": "an information",
+          "correct": "some information"
+        }
+      ],
+      "key_vocabulary": [
+        "apple",
+        "water",
+        "rice",
+        "information",
+        "bread",
+        "money",
+        "chair",
+        "bottle"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T04_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which noun is countable?",
+          "option_a": "water",
+          "option_b": "rice",
+          "option_c": "apple",
+          "option_d": "information",
+          "correct_option": "C",
+          "explanation": "An apple can be counted."
+        },
+        {
+          "code": "A2_T04_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which noun is uncountable?",
+          "option_a": "chair",
+          "option_b": "banana",
+          "option_c": "money",
+          "option_d": "ticket",
+          "correct_option": "C",
+          "explanation": "'Money' is uncountable."
+        },
+        {
+          "code": "A2_T04_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct phrase.",
+          "option_a": "an information",
+          "option_b": "some information",
+          "option_c": "two informations",
+          "option_d": "a informations",
+          "correct_option": "B",
+          "explanation": "Use 'some information'."
+        },
+        {
+          "code": "A2_T04_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct phrase.",
+          "option_a": "three breads",
+          "option_b": "three loaves of bread",
+          "option_c": "three bread",
+          "option_d": "a breads",
+          "correct_option": "B",
+          "explanation": "Use a countable container/unit."
+        },
+        {
+          "code": "A2_T04_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I need ___ water.",
+          "option_a": "a",
+          "option_b": "an",
+          "option_c": "some",
+          "option_d": "two",
+          "correct_option": "C",
+          "explanation": "Use 'some' with uncountable nouns."
+        },
+        {
+          "code": "A2_T04_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'We bought two oranges and some rice.' Which noun is uncountable?",
+          "option_a": "oranges",
+          "option_b": "rice",
+          "option_c": "both",
+          "option_d": "neither",
+          "correct_option": "B",
+          "explanation": "Rice is uncountable."
+        },
+        {
+          "code": "A2_T04_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which can be counted directly?",
+          "option_a": "milk",
+          "option_b": "sugar",
+          "option_c": "cup",
+          "option_d": "bread",
+          "correct_option": "C",
+          "explanation": "A cup is countable."
+        },
+        {
+          "code": "A2_T04_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "I need a bread.",
+          "option_b": "I need some bread.",
+          "option_c": "I need two bread.",
+          "option_d": "I need an bread.",
+          "correct_option": "B",
+          "explanation": "Bread is uncountable."
+        },
+        {
+          "code": "A2_T04_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What uncountable item does the speaker need?",
+          "option_a": "Eggs",
+          "option_b": "Milk",
+          "option_c": "Apples",
+          "option_d": "Bottles",
+          "correct_option": "B",
+          "explanation": "Milk is uncountable.",
+          "audio_text": "I need three eggs, two apples, and some milk for breakfast.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T04_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "How much bread is mentioned?",
+          "option_a": "A loaf",
+          "option_b": "Two breads",
+          "option_c": "Three bread",
+          "option_d": "No bread",
+          "correct_option": "A",
+          "explanation": "The speaker says a loaf of bread.",
+          "audio_text": "Please buy a loaf of bread and two bottles of water.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T04_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Preparing Dinner",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T04_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How many tomatoes does Nina have?",
+              "option_a": "One",
+              "option_b": "Two",
+              "option_c": "Three",
+              "option_d": "Some",
+              "correct_option": "B",
+              "explanation": "She has two tomatoes."
+            },
+            {
+              "code": "A2_T04_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What doesn't Nina have?",
+              "option_a": "Rice",
+              "option_b": "Cheese",
+              "option_c": "Bread",
+              "option_d": "Onion",
+              "correct_option": "C",
+              "explanation": "She doesn't have bread."
+            },
+            {
+              "code": "A2_T04_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "two tomatoes",
+              "option_b": "some rice",
+              "option_c": "a little cheese",
+              "option_d": "two breads",
+              "correct_option": "D",
+              "explanation": "Use 'two loaves of bread' or 'some bread'."
+            }
+          ],
+          "content_text": "For dinner, Nina needs several ingredients. She has two tomatoes, one onion, and some rice. She also has a little cheese, but she doesn't have any bread. Her brother is going to buy a loaf of bread and a bottle of olive oil."
+        },
+        {
+          "code": "A2_T04_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "At the Grocery Store",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T04_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How many carrots are needed?",
+              "option_a": "Two",
+              "option_b": "Three",
+              "option_c": "Four",
+              "option_d": "Some",
+              "correct_option": "B",
+              "explanation": "Three carrots are needed."
+            },
+            {
+              "code": "A2_T04_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What should NOT be bought?",
+              "option_a": "Cheese",
+              "option_b": "Juice",
+              "option_c": "Sugar",
+              "option_d": "Rice",
+              "correct_option": "D",
+              "explanation": "They already have rice."
+            }
+          ],
+          "audio_text": "We need some fruit and a few vegetables. Please get four bananas, three carrots, and some cheese. We also need a bottle of juice and a little sugar. Don't buy rice because we already have some at home.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T05",
+      "order": 5,
+      "title": "Some, Any, Much, Many, and A Lot Of",
+      "objective": "Use common quantifiers with countable and uncountable nouns.",
+      "theory": "Use some mainly in affirmative statements and any mainly in negatives and many questions. Use many with countable plural nouns and much with uncountable nouns. A lot of works with both.",
+      "examples": [
+        "some apples",
+        "any milk",
+        "many books",
+        "much time",
+        "a lot of people"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "much books",
+          "correct": "many books"
+        },
+        {
+          "wrong": "many water",
+          "correct": "much water"
+        }
+      ],
+      "key_vocabulary": [
+        "some",
+        "any",
+        "much",
+        "many",
+        "a lot of",
+        "few",
+        "little",
+        "quantity"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T05_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: I have ___ friends here.",
+          "option_a": "much",
+          "option_b": "many",
+          "option_c": "any much",
+          "option_d": "a little",
+          "correct_option": "B",
+          "explanation": "Use many with countable plural nouns."
+        },
+        {
+          "code": "A2_T05_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: We don't have ___ milk.",
+          "option_a": "some",
+          "option_b": "any",
+          "option_c": "many",
+          "option_d": "a few",
+          "correct_option": "B",
+          "explanation": "Use any in negatives."
+        },
+        {
+          "code": "A2_T05_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: How ___ time do we have?",
+          "option_a": "many",
+          "option_b": "much",
+          "option_c": "some",
+          "option_d": "few",
+          "correct_option": "B",
+          "explanation": "Time is uncountable."
+        },
+        {
+          "code": "A2_T05_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: She bought ___ vegetables.",
+          "option_a": "a lot of",
+          "option_b": "much",
+          "option_c": "a little",
+          "option_d": "any not",
+          "correct_option": "A",
+          "explanation": "A lot of can be used with plural countable nouns."
+        },
+        {
+          "code": "A2_T05_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the best sentence.",
+          "option_a": "There are much people.",
+          "option_b": "There are many people.",
+          "option_c": "There is many people.",
+          "option_d": "There are a much people.",
+          "correct_option": "B",
+          "explanation": "Use many with people."
+        },
+        {
+          "code": "A2_T05_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'We have some bread but we don't have any cheese.' What is missing?",
+          "option_a": "Bread",
+          "option_b": "Cheese",
+          "option_c": "Both",
+          "option_d": "Nothing",
+          "correct_option": "B",
+          "explanation": "There isn't any cheese."
+        },
+        {
+          "code": "A2_T05_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: Are there ___ eggs?",
+          "option_a": "some",
+          "option_b": "any",
+          "option_c": "much",
+          "option_d": "little",
+          "correct_option": "B",
+          "explanation": "Any is common in questions."
+        },
+        {
+          "code": "A2_T05_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I don't drink ___ coffee.",
+          "option_a": "many",
+          "option_b": "much",
+          "option_c": "few",
+          "option_d": "an",
+          "correct_option": "B",
+          "explanation": "Coffee is uncountable."
+        },
+        {
+          "code": "A2_T05_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What does the speaker have a lot of?",
+          "option_a": "Books",
+          "option_b": "Time",
+          "option_c": "Water",
+          "option_d": "Coffee",
+          "correct_option": "A",
+          "explanation": "The speaker says they have a lot of books.",
+          "audio_text": "I have a lot of books at home, but I don't have much free time to read them.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T05_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What is missing?",
+          "option_a": "Apples",
+          "option_b": "Water",
+          "option_c": "Chairs",
+          "option_d": "Money",
+          "correct_option": "B",
+          "explanation": "There isn't any water.",
+          "audio_text": "We have many apples, but we don't have any water.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T05_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Planning a Picnic",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T05_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What do they have a lot of?",
+              "option_a": "Food",
+              "option_b": "Water",
+              "option_c": "Plates",
+              "option_d": "Sugar",
+              "correct_option": "A",
+              "explanation": "They have a lot of food."
+            },
+            {
+              "code": "A2_T05_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What are they going to buy?",
+              "option_a": "Fruit",
+              "option_b": "Water only",
+              "option_c": "Plates",
+              "option_d": "Sugar",
+              "correct_option": "C",
+              "explanation": "Alex is going to buy plates."
+            },
+            {
+              "code": "A2_T05_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "many sandwiches",
+              "option_b": "some fruit",
+              "option_c": "much plates",
+              "option_d": "a lot of juice",
+              "correct_option": "C",
+              "explanation": "Use 'many plates'."
+            }
+          ],
+          "content_text": "We have a lot of food for the picnic. There are many sandwiches and some fruit. We also have a lot of juice, but we don't have any water. There aren't many plates, so Alex is going to buy some. We don't need much sugar because nobody drinks sweet coffee."
+        },
+        {
+          "code": "A2_T05_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Kitchen Check",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T05_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How many tomatoes are there?",
+              "option_a": "Two",
+              "option_b": "Three",
+              "option_c": "Four",
+              "option_d": "Many",
+              "correct_option": "C",
+              "explanation": "There are four tomatoes."
+            },
+            {
+              "code": "A2_T05_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What don't they have?",
+              "option_a": "Pasta",
+              "option_b": "Tomatoes",
+              "option_c": "Cheese",
+              "option_d": "Yogurt",
+              "correct_option": "C",
+              "explanation": "They don't have any cheese."
+            }
+          ],
+          "audio_text": "Do we have any pasta? Yes, we have some, but not much. How many tomatoes are there? There are four. We don't have any cheese, but there's a lot of yogurt in the refrigerator.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T06",
+      "order": 6,
+      "title": "Comparatives",
+      "objective": "Compare two people, places, or things using comparative adjectives.",
+      "theory": "Short adjectives usually add -er, while longer adjectives often use more. Use than after a comparative when naming the second item. Some forms are irregular, such as good/better and bad/worse.",
+      "examples": [
+        "My car is faster than yours.",
+        "This book is more interesting than that one.",
+        "Today is better than yesterday.",
+        "The blue bag is cheaper."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "more faster",
+          "correct": "faster"
+        },
+        {
+          "wrong": "gooder",
+          "correct": "better"
+        }
+      ],
+      "key_vocabulary": [
+        "bigger",
+        "smaller",
+        "faster",
+        "slower",
+        "cheaper",
+        "more expensive",
+        "better",
+        "worse",
+        "than"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T06_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Comparative of 'small':",
+          "option_a": "smaller",
+          "option_b": "more small",
+          "option_c": "smallest",
+          "option_d": "smalled",
+          "correct_option": "A",
+          "explanation": "Short adjectives usually add -er."
+        },
+        {
+          "code": "A2_T06_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Comparative of 'expensive':",
+          "option_a": "expensiver",
+          "option_b": "more expensive",
+          "option_c": "most expensive",
+          "option_d": "expensive than",
+          "correct_option": "B",
+          "explanation": "Long adjectives use 'more'."
+        },
+        {
+          "code": "A2_T06_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: A train is usually ___ than a bus.",
+          "option_a": "fast",
+          "option_b": "faster",
+          "option_c": "fastest",
+          "option_d": "more fast",
+          "correct_option": "B",
+          "explanation": "Use the comparative 'faster'."
+        },
+        {
+          "code": "A2_T06_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: This hotel is ___ than that one.",
+          "option_a": "more comfortable",
+          "option_b": "comfortabler",
+          "option_c": "most comfortable",
+          "option_d": "comfortable more",
+          "correct_option": "A",
+          "explanation": "Use more with longer adjectives."
+        },
+        {
+          "code": "A2_T06_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Comparative of 'good':",
+          "option_a": "gooder",
+          "option_b": "better",
+          "option_c": "best",
+          "option_d": "more good",
+          "correct_option": "B",
+          "explanation": "'Better' is irregular."
+        },
+        {
+          "code": "A2_T06_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'The red phone costs $500. The blue phone costs $350.' Which is cheaper?",
+          "option_a": "Red phone",
+          "option_b": "Blue phone",
+          "option_c": "Same price",
+          "option_d": "Unknown",
+          "correct_option": "B",
+          "explanation": "The blue phone costs less."
+        },
+        {
+          "code": "A2_T06_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "My house is bigger than yours.",
+          "option_b": "My house is more bigger than yours.",
+          "option_c": "My house is biggest than yours.",
+          "option_d": "My house bigger yours.",
+          "correct_option": "A",
+          "explanation": "Use 'bigger than'."
+        },
+        {
+          "code": "A2_T06_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Opposite comparative of 'better':",
+          "option_a": "worse",
+          "option_b": "smaller",
+          "option_c": "more",
+          "option_d": "older",
+          "correct_option": "A",
+          "explanation": "The comparative opposite is 'worse'."
+        },
+        {
+          "code": "A2_T06_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which city is colder?",
+          "option_a": "Rome",
+          "option_b": "Berlin",
+          "option_c": "Same temperature",
+          "option_d": "Not stated",
+          "correct_option": "B",
+          "explanation": "Berlin is described as colder.",
+          "audio_text": "Berlin is colder than Rome in winter, but Rome is usually sunnier.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T06_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which bag is cheaper?",
+          "option_a": "Black bag",
+          "option_b": "Brown bag",
+          "option_c": "Same price",
+          "option_d": "Not stated",
+          "correct_option": "B",
+          "explanation": "The brown bag is cheaper.",
+          "audio_text": "The black bag is bigger, but the brown bag is cheaper.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T06_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Choosing an Apartment",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T06_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which apartment is cheaper?",
+              "option_a": "A",
+              "option_b": "B",
+              "option_c": "Same price",
+              "option_d": "Not stated",
+              "correct_option": "A",
+              "explanation": "Apartment A is cheaper."
+            },
+            {
+              "code": "A2_T06_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which apartment is larger?",
+              "option_a": "A",
+              "option_b": "B",
+              "option_c": "Same size",
+              "option_d": "Not stated",
+              "correct_option": "B",
+              "explanation": "Apartment B is larger."
+            },
+            {
+              "code": "A2_T06_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "closer than",
+              "option_b": "more modern",
+              "option_c": "noisier",
+              "option_d": "more cheaper",
+              "correct_option": "D",
+              "explanation": "Use 'cheaper', not 'more cheaper'."
+            }
+          ],
+          "content_text": "Lisa is comparing two apartments. Apartment A is closer to her office and cheaper than Apartment B. Apartment B is larger and more modern, but it is also noisier because it is near a busy road. Lisa thinks Apartment A is more practical for her daily life."
+        },
+        {
+          "code": "A2_T06_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Two Restaurants",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T06_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Which place is quieter?",
+              "option_a": "Green Café",
+              "option_b": "Bella's",
+              "option_c": "Both",
+              "option_d": "Neither",
+              "correct_option": "A",
+              "explanation": "The Green Café is quieter."
+            },
+            {
+              "code": "A2_T06_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Where is the menu larger?",
+              "option_a": "Green Café",
+              "option_b": "Bella's",
+              "option_c": "Same size",
+              "option_d": "Not stated",
+              "correct_option": "B",
+              "explanation": "Bella's has the larger menu."
+            }
+          ],
+          "audio_text": "The Green Café is smaller than Bella's Restaurant, but it is quieter. Bella's is more expensive, but the menu is larger. I think the food at the Green Café is better.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T07",
+      "order": 7,
+      "title": "Superlatives",
+      "objective": "Describe the highest or lowest degree in a group using superlative adjectives.",
+      "theory": "Use the + adjective-est with many short adjectives and the most + adjective with many longer adjectives. Irregular forms include best and worst.",
+      "examples": [
+        "Mount Everest is the highest mountain.",
+        "This is the most expensive hotel.",
+        "She is the best student in the class.",
+        "That was the worst day."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "the most tallest",
+          "correct": "the tallest"
+        },
+        {
+          "wrong": "the goodest",
+          "correct": "the best"
+        }
+      ],
+      "key_vocabulary": [
+        "the biggest",
+        "the smallest",
+        "the fastest",
+        "the most expensive",
+        "the best",
+        "the worst",
+        "in the group"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T07_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Superlative of 'tall':",
+          "option_a": "taller",
+          "option_b": "the tallest",
+          "option_c": "the most tall",
+          "option_d": "tallest than",
+          "correct_option": "B",
+          "explanation": "Use 'the tallest'."
+        },
+        {
+          "code": "A2_T07_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Superlative of 'interesting':",
+          "option_a": "interestinger",
+          "option_b": "the most interesting",
+          "option_c": "the interestingest",
+          "option_d": "more interesting",
+          "correct_option": "B",
+          "explanation": "Use 'the most interesting'."
+        },
+        {
+          "code": "A2_T07_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: This is ___ restaurant in town.",
+          "option_a": "the cheapest",
+          "option_b": "cheaper",
+          "option_c": "the more cheap",
+          "option_d": "cheap than",
+          "correct_option": "A",
+          "explanation": "Use the superlative."
+        },
+        {
+          "code": "A2_T07_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Superlative of 'good':",
+          "option_a": "the goodest",
+          "option_b": "the better",
+          "option_c": "the best",
+          "option_d": "the most good",
+          "correct_option": "C",
+          "explanation": "The irregular form is 'the best'."
+        },
+        {
+          "code": "A2_T07_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "She is the youngest in the family.",
+          "option_b": "She is younger in the family.",
+          "option_c": "She is the most young.",
+          "option_d": "She is youngest than me.",
+          "correct_option": "A",
+          "explanation": "Use 'the youngest'."
+        },
+        {
+          "code": "A2_T07_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Three hotels cost $90, $120, and $200. Which is the most expensive?",
+          "option_a": "$90 hotel",
+          "option_b": "$120 hotel",
+          "option_c": "$200 hotel",
+          "option_d": "All",
+          "correct_option": "C",
+          "explanation": "$200 is the highest price."
+        },
+        {
+          "code": "A2_T07_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Opposite of 'the best':",
+          "option_a": "the tallest",
+          "option_b": "the worst",
+          "option_c": "the smaller",
+          "option_d": "the newest",
+          "correct_option": "B",
+          "explanation": "The opposite is 'the worst'."
+        },
+        {
+          "code": "A2_T07_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: January is usually ___ month here.",
+          "option_a": "the coldest",
+          "option_b": "colder",
+          "option_c": "the more cold",
+          "option_d": "coldest than",
+          "correct_option": "A",
+          "explanation": "Use the superlative 'the coldest'."
+        },
+        {
+          "code": "A2_T07_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which route is the shortest?",
+          "option_a": "Route A",
+          "option_b": "Route B",
+          "option_c": "Route C",
+          "option_d": "All",
+          "correct_option": "C",
+          "explanation": "Route C is described as the shortest.",
+          "audio_text": "Route A is long, Route B is shorter, and Route C is the shortest way to the station.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T07_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Who is the oldest?",
+          "option_a": "Anna",
+          "option_b": "Mia",
+          "option_c": "Tom",
+          "option_d": "Same age",
+          "correct_option": "C",
+          "explanation": "Tom is the oldest.",
+          "audio_text": "Anna is twenty, Mia is twenty-two, and Tom is twenty-five. Tom is the oldest.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T07_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "City Guide",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T07_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which park is the largest?",
+              "option_a": "River Park",
+              "option_b": "Central Park",
+              "option_c": "Hill Park",
+              "option_d": "All",
+              "correct_option": "A",
+              "explanation": "River Park is the largest."
+            },
+            {
+              "code": "A2_T07_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Which park has the most beautiful view according to many people?",
+              "option_a": "River Park",
+              "option_b": "Central Park",
+              "option_c": "Hill Park",
+              "option_d": "None",
+              "correct_option": "C",
+              "explanation": "Hill Park has the most beautiful view."
+            },
+            {
+              "code": "A2_T07_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "the largest",
+              "option_b": "the busiest",
+              "option_c": "the smallest",
+              "option_d": "the most crowdedest",
+              "correct_option": "D",
+              "explanation": "Use 'the most crowded'."
+            }
+          ],
+          "content_text": "Our city has three popular parks. River Park is the largest. Central Park is the busiest because it is downtown. Hill Park is the smallest, but many people think it has the most beautiful view. On weekends, Central Park is usually the most crowded."
+        },
+        {
+          "code": "A2_T07_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Class Results",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T07_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who got the highest score?",
+              "option_a": "Emma",
+              "option_b": "Leo",
+              "option_c": "Sara",
+              "option_d": "All",
+              "correct_option": "A",
+              "explanation": "Emma got ninety-eight."
+            },
+            {
+              "code": "A2_T07_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What was Sara's weakest area?",
+              "option_a": "Reading",
+              "option_b": "Grammar",
+              "option_c": "Listening",
+              "option_d": "Vocabulary",
+              "correct_option": "B",
+              "explanation": "Grammar was her weakest area."
+            }
+          ],
+          "audio_text": "In our class, Emma got ninety-eight points, Leo got ninety-four, and Sara got eighty-seven. Emma got the highest score. Sara's test was the most difficult for her because grammar was her weakest area.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T08",
+      "order": 8,
+      "title": "Future with Going To",
+      "objective": "Talk about future plans and intentions using be going to.",
+      "theory": "Use am/is/are + going to + base verb for plans and intentions. It can also describe predictions based on present evidence.",
+      "examples": [
+        "I'm going to study tonight.",
+        "They are going to travel next month.",
+        "She isn't going to work tomorrow.",
+        "Are you going to cook?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "I going to study.",
+          "correct": "I'm going to study."
+        },
+        {
+          "wrong": "She is going to studies.",
+          "correct": "She is going to study."
+        }
+      ],
+      "key_vocabulary": [
+        "going to",
+        "plan",
+        "intention",
+        "tomorrow",
+        "next week",
+        "travel",
+        "study",
+        "visit"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T08_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: I ___ going to cook tonight.",
+          "option_a": "am",
+          "option_b": "is",
+          "option_c": "are",
+          "option_d": "be",
+          "correct_option": "A",
+          "explanation": "Use 'am' with I."
+        },
+        {
+          "code": "A2_T08_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: They are going to ___ next week.",
+          "option_a": "travel",
+          "option_b": "travels",
+          "option_c": "traveled",
+          "option_d": "traveling",
+          "correct_option": "A",
+          "explanation": "Use the base verb after going to."
+        },
+        {
+          "code": "A2_T08_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct negative.",
+          "option_a": "She isn't going to work.",
+          "option_b": "She doesn't going to work.",
+          "option_c": "She not going work.",
+          "option_d": "She isn't going work.",
+          "correct_option": "A",
+          "explanation": "Use isn't going to + base verb."
+        },
+        {
+          "code": "A2_T08_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct question.",
+          "option_a": "Are you going to study?",
+          "option_b": "Do you going to study?",
+          "option_c": "Are you going study?",
+          "option_d": "Is you going to study?",
+          "correct_option": "A",
+          "explanation": "Use Are + subject + going to."
+        },
+        {
+          "code": "A2_T08_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: We ___ going to visit our aunt.",
+          "option_a": "is",
+          "option_b": "are",
+          "option_c": "am",
+          "option_d": "does",
+          "correct_option": "B",
+          "explanation": "Use 'are' with we."
+        },
+        {
+          "code": "A2_T08_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Ben bought paint because he is going to paint his room.' What is Ben's plan?",
+          "option_a": "Buy a room",
+          "option_b": "Paint his room",
+          "option_c": "Move house",
+          "option_d": "Sell paint",
+          "correct_option": "B",
+          "explanation": "His plan is to paint his room."
+        },
+        {
+          "code": "A2_T08_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which phrase shows a future plan?",
+          "option_a": "last night",
+          "option_b": "going to",
+          "option_c": "yesterday",
+          "option_d": "ago",
+          "correct_option": "B",
+          "explanation": "'Going to' can express a plan."
+        },
+        {
+          "code": "A2_T08_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "I'm going to meet Sara tomorrow.",
+          "option_b": "I going meet Sara tomorrow.",
+          "option_c": "I am going meeting Sara.",
+          "option_d": "I'm going to met Sara.",
+          "correct_option": "A",
+          "explanation": "Use am going to + base verb."
+        },
+        {
+          "code": "A2_T08_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What is the speaker going to do Saturday?",
+          "option_a": "Work",
+          "option_b": "Visit family",
+          "option_c": "Study",
+          "option_d": "Buy a car",
+          "correct_option": "B",
+          "explanation": "The speaker plans to visit family.",
+          "audio_text": "I'm going to visit my parents on Saturday and stay for dinner.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T08_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Where are they going to travel?",
+          "option_a": "Paris",
+          "option_b": "Rome",
+          "option_c": "Berlin",
+          "option_d": "Madrid",
+          "correct_option": "A",
+          "explanation": "They are going to Paris.",
+          "audio_text": "We're going to travel to Paris next month for four days.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T08_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Weekend Plans",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T08_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What is Olivia going to do Saturday morning?",
+              "option_a": "Visit parents",
+              "option_b": "Clean her apartment",
+              "option_c": "Watch a movie",
+              "option_d": "Work",
+              "correct_option": "B",
+              "explanation": "She is going to clean."
+            },
+            {
+              "code": "A2_T08_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Who is she going to meet?",
+              "option_a": "Her parents",
+              "option_b": "Two friends",
+              "option_c": "Her teacher",
+              "option_d": "Her manager",
+              "correct_option": "B",
+              "explanation": "She is going to meet two friends."
+            },
+            {
+              "code": "A2_T08_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "She is going to clean.",
+              "option_b": "She is going to meet friends.",
+              "option_c": "They are going to cook.",
+              "option_d": "She going to visit parents.",
+              "correct_option": "D",
+              "explanation": "Use 'She is going to visit'."
+            }
+          ],
+          "content_text": "Olivia has a busy weekend. On Saturday morning, she is going to clean her apartment. In the afternoon, she is going to meet two friends at a café. On Sunday, she is going to visit her parents. They are going to cook lunch together and watch a movie."
+        },
+        {
+          "code": "A2_T08_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Holiday Preparation",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T08_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "When are they going to leave?",
+              "option_a": "Tonight",
+              "option_b": "Tomorrow morning",
+              "option_c": "Tomorrow night",
+              "option_d": "Next week",
+              "correct_option": "B",
+              "explanation": "They will leave tomorrow morning."
+            },
+            {
+              "code": "A2_T08_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who is going to check the train times?",
+              "option_a": "The speaker",
+              "option_b": "The sister",
+              "option_c": "The parents",
+              "option_d": "A friend",
+              "correct_option": "B",
+              "explanation": "The sister will check them."
+            }
+          ],
+          "audio_text": "We're going to leave early tomorrow morning. I'm going to pack tonight, and my sister is going to check the train times. Our parents are going to drive us to the station.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T09",
+      "order": 9,
+      "title": "Will for Predictions and Decisions",
+      "objective": "Use will for simple predictions, promises, offers, and decisions made at the moment of speaking.",
+      "theory": "Use will + base verb. Common contractions include I'll, you'll, he'll, she'll, we'll, and they'll. Negative form: won't.",
+      "examples": [
+        "I think it will rain.",
+        "I'll help you.",
+        "She won't be late.",
+        "Will they come?"
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "He will goes.",
+          "correct": "He will go."
+        },
+        {
+          "wrong": "I will to help.",
+          "correct": "I will help."
+        }
+      ],
+      "key_vocabulary": [
+        "will",
+        "won't",
+        "prediction",
+        "promise",
+        "offer",
+        "decision",
+        "probably",
+        "maybe"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T09_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: I think it ___ rain tomorrow.",
+          "option_a": "will",
+          "option_b": "is",
+          "option_c": "did",
+          "option_d": "does",
+          "correct_option": "A",
+          "explanation": "Use will for a prediction."
+        },
+        {
+          "code": "A2_T09_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: Don't worry. I ___ help you.",
+          "option_a": "will",
+          "option_b": "am going yesterday",
+          "option_c": "did",
+          "option_d": "was",
+          "correct_option": "A",
+          "explanation": "Will can express an offer."
+        },
+        {
+          "code": "A2_T09_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Negative of 'will':",
+          "option_a": "willn't",
+          "option_b": "won't",
+          "option_c": "don't will",
+          "option_d": "not will to",
+          "correct_option": "B",
+          "explanation": "The contraction is 'won't'."
+        },
+        {
+          "code": "A2_T09_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct question.",
+          "option_a": "Will you come?",
+          "option_b": "Do you will come?",
+          "option_c": "Will you comes?",
+          "option_d": "Are you will come?",
+          "correct_option": "A",
+          "explanation": "Use Will + subject + base verb."
+        },
+        {
+          "code": "A2_T09_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: She will ___ later.",
+          "option_a": "call",
+          "option_b": "calls",
+          "option_c": "called",
+          "option_d": "calling",
+          "correct_option": "A",
+          "explanation": "Use the base verb after will."
+        },
+        {
+          "code": "A2_T09_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'The phone is ringing. I'll answer it.' Why does the speaker use will?",
+          "option_a": "Past event",
+          "option_b": "Decision now",
+          "option_c": "Regular habit",
+          "option_d": "Completed plan",
+          "correct_option": "B",
+          "explanation": "The decision is made at the moment."
+        },
+        {
+          "code": "A2_T09_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which word often introduces a prediction?",
+          "option_a": "probably",
+          "option_b": "yesterday",
+          "option_c": "ago",
+          "option_d": "last",
+          "correct_option": "A",
+          "explanation": "'Probably' often appears with predictions."
+        },
+        {
+          "code": "A2_T09_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "They won't be late.",
+          "option_b": "They won't are late.",
+          "option_c": "They not will be late.",
+          "option_d": "They won't to be late.",
+          "correct_option": "A",
+          "explanation": "Use won't + base verb."
+        },
+        {
+          "code": "A2_T09_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What does the speaker offer to do?",
+          "option_a": "Carry a bag",
+          "option_b": "Buy food",
+          "option_c": "Call later",
+          "option_d": "Drive home",
+          "correct_option": "A",
+          "explanation": "The speaker offers to carry the bag.",
+          "audio_text": "That bag looks heavy. I'll carry it for you.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T09_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What is the prediction?",
+          "option_a": "It will be sunny",
+          "option_b": "It will snow",
+          "option_c": "It will rain",
+          "option_d": "It will be windy",
+          "correct_option": "C",
+          "explanation": "The speaker predicts rain.",
+          "audio_text": "Look at those dark clouds. I think it will rain soon.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T09_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Tomorrow's Technology",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T09_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What will lights do?",
+              "option_a": "Use phones",
+              "option_b": "Turn on automatically",
+              "option_c": "Disappear",
+              "option_d": "Become larger",
+              "correct_option": "B",
+              "explanation": "They will turn on automatically."
+            },
+            {
+              "code": "A2_T09_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What will people probably use to control things?",
+              "option_a": "Books",
+              "option_b": "Phones",
+              "option_c": "Cars",
+              "option_d": "Keys only",
+              "correct_option": "B",
+              "explanation": "They will use phones."
+            },
+            {
+              "code": "A2_T09_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "Homes will become smarter.",
+              "option_b": "Lights will turn on.",
+              "option_c": "Technology won't replace everything.",
+              "option_d": "People will controls appliances.",
+              "correct_option": "D",
+              "explanation": "Use 'will control'."
+            }
+          ],
+          "content_text": "Some people think homes will become smarter in the future. Lights will turn on automatically, and appliances will use less energy. People will probably control many things with their phones. However, experts say technology won't replace every human task."
+        },
+        {
+          "code": "A2_T09_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Quick Decisions",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T09_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What will the speaker get?",
+              "option_a": "Coffee",
+              "option_b": "Water",
+              "option_c": "Tea",
+              "option_d": "Juice",
+              "correct_option": "B",
+              "explanation": "The speaker will get water."
+            },
+            {
+              "code": "A2_T09_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What will the speaker turn on?",
+              "option_a": "The TV",
+              "option_b": "The light",
+              "option_c": "The oven",
+              "option_d": "The phone",
+              "correct_option": "B",
+              "explanation": "The speaker will turn on the light."
+            }
+          ],
+          "audio_text": "I'm thirsty. I'll get some water. Do you want some? Yes, please. I'll have a glass too. The kitchen is dark. I'll turn on the light. Thanks. I'll wait here.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T10",
+      "order": 10,
+      "title": "Present Perfect: Introduction",
+      "objective": "Use the present perfect for life experiences and recent actions connected to the present.",
+      "theory": "Form the present perfect with have/has + past participle. At A2, common uses include life experiences with ever/never and recent actions with already/just/yet.",
+      "examples": [
+        "I have visited London.",
+        "She has never flown.",
+        "Have you ever tried sushi?",
+        "They haven't finished yet."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She has went.",
+          "correct": "She has gone."
+        },
+        {
+          "wrong": "I have saw it.",
+          "correct": "I have seen it."
+        }
+      ],
+      "key_vocabulary": [
+        "have",
+        "has",
+        "past participle",
+        "ever",
+        "never",
+        "already",
+        "just",
+        "yet",
+        "experience"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T10_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: I ___ visited Spain.",
+          "option_a": "have",
+          "option_b": "has",
+          "option_c": "did",
+          "option_d": "am",
+          "correct_option": "A",
+          "explanation": "Use 'have' with I."
+        },
+        {
+          "code": "A2_T10_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: She ___ finished her homework.",
+          "option_a": "have",
+          "option_b": "has",
+          "option_c": "did",
+          "option_d": "is",
+          "correct_option": "B",
+          "explanation": "Use 'has' with she."
+        },
+        {
+          "code": "A2_T10_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct participle: see →",
+          "option_a": "saw",
+          "option_b": "seen",
+          "option_c": "seed",
+          "option_d": "seeing",
+          "correct_option": "B",
+          "explanation": "The past participle is 'seen'."
+        },
+        {
+          "code": "A2_T10_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: Have you ___ been to Canada?",
+          "option_a": "ever",
+          "option_b": "ago",
+          "option_c": "last",
+          "option_d": "yesterday",
+          "correct_option": "A",
+          "explanation": "Use 'ever' for life experience questions."
+        },
+        {
+          "code": "A2_T10_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: He has ___ tried sushi.",
+          "option_a": "never",
+          "option_b": "yesterday",
+          "option_c": "ago",
+          "option_d": "last week",
+          "correct_option": "A",
+          "explanation": "Use 'never' for an experience that has not happened."
+        },
+        {
+          "code": "A2_T10_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Lena has just arrived.' Is Lena here now?",
+          "option_a": "Probably yes",
+          "option_b": "Definitely no",
+          "option_c": "Only yesterday",
+          "option_d": "The sentence is past simple",
+          "correct_option": "A",
+          "explanation": "'Has just arrived' connects a recent action to the present."
+        },
+        {
+          "code": "A2_T10_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "I have seen that film.",
+          "option_b": "I have saw that film.",
+          "option_c": "I has seen that film.",
+          "option_d": "I have see that film.",
+          "correct_option": "A",
+          "explanation": "Use have + past participle."
+        },
+        {
+          "code": "A2_T10_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: They haven't finished ___.",
+          "option_a": "yet",
+          "option_b": "last night",
+          "option_c": "ago",
+          "option_d": "yesterday",
+          "correct_option": "A",
+          "explanation": "'Yet' is common in negatives and questions."
+        },
+        {
+          "code": "A2_T10_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Has the speaker ever flown?",
+          "option_a": "Yes",
+          "option_b": "No",
+          "option_c": "Only once last year",
+          "option_d": "Not stated",
+          "correct_option": "B",
+          "explanation": "The speaker says never.",
+          "audio_text": "I've traveled by train many times, but I've never flown on a plane.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T10_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What has Maria just done?",
+          "option_a": "Left work",
+          "option_b": "Finished dinner",
+          "option_c": "Called a friend",
+          "option_d": "Arrived home",
+          "correct_option": "D",
+          "explanation": "Maria has just arrived home.",
+          "audio_text": "Maria has just arrived home, so she's taking off her coat now.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T10_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Travel Experiences",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T10_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How many countries has Kevin visited?",
+              "option_a": "Two",
+              "option_b": "Five",
+              "option_c": "Ten",
+              "option_d": "None",
+              "correct_option": "B",
+              "explanation": "He has visited five countries."
+            },
+            {
+              "code": "A2_T10_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Has he traveled to Asia?",
+              "option_a": "Yes",
+              "option_b": "No",
+              "option_c": "Twice",
+              "option_d": "Last weekend",
+              "correct_option": "B",
+              "explanation": "He has never traveled to Asia."
+            },
+            {
+              "code": "A2_T10_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "He has visited five countries.",
+              "option_b": "He has never traveled to Asia.",
+              "option_c": "He has already been to France.",
+              "option_d": "He has went to Belgium.",
+              "correct_option": "D",
+              "explanation": "Use 'has gone' or 'has been'."
+            }
+          ],
+          "content_text": "Kevin loves travel. He has visited five countries and has taken many train trips. He has never traveled to Asia, but he wants to go there one day. He has already been to France twice, and he has just returned from a weekend in Belgium."
+        },
+        {
+          "code": "A2_T10_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Experiences with Food",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T10_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Has the speaker tried Indian food?",
+              "option_a": "Yes",
+              "option_b": "No",
+              "option_c": "Only yesterday",
+              "option_d": "Not stated",
+              "correct_option": "A",
+              "explanation": "The speaker says yes."
+            },
+            {
+              "code": "A2_T10_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What has the speaker just bought?",
+              "option_a": "Food",
+              "option_b": "A cookbook",
+              "option_c": "A ticket",
+              "option_d": "A pan",
+              "correct_option": "B",
+              "explanation": "The speaker has just bought a cookbook."
+            }
+          ],
+          "audio_text": "Have you ever tried Indian food? Yes, I have. I've tried it several times. Have you ever cooked it? No, I haven't. But I've just bought a cookbook, so I want to learn.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T11",
+      "order": 11,
+      "title": "Adverbs of Manner",
+      "objective": "Describe how actions happen using common adverbs of manner.",
+      "theory": "Many adverbs of manner are formed by adding -ly to an adjective, for example slow/slowly and careful/carefully. Some forms are irregular, such as good/well and fast/fast.",
+      "examples": [
+        "She speaks slowly.",
+        "He drives carefully.",
+        "They work hard.",
+        "She sings well."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She sings good.",
+          "correct": "She sings well."
+        },
+        {
+          "wrong": "He drives careful.",
+          "correct": "He drives carefully."
+        }
+      ],
+      "key_vocabulary": [
+        "slowly",
+        "quickly",
+        "carefully",
+        "quietly",
+        "well",
+        "fast",
+        "hard",
+        "politely"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T11_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Adverb form of 'slow':",
+          "option_a": "slowly",
+          "option_b": "slower",
+          "option_c": "slowest",
+          "option_d": "slow",
+          "correct_option": "A",
+          "explanation": "Add -ly."
+        },
+        {
+          "code": "A2_T11_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Adverb form of 'careful':",
+          "option_a": "carefuly",
+          "option_b": "carefully",
+          "option_c": "more careful",
+          "option_d": "care",
+          "correct_option": "B",
+          "explanation": "The adverb is 'carefully'."
+        },
+        {
+          "code": "A2_T11_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose: She speaks English ___.",
+          "option_a": "good",
+          "option_b": "well",
+          "option_c": "best",
+          "option_d": "goodly",
+          "correct_option": "B",
+          "explanation": "The irregular adverb is 'well'."
+        },
+        {
+          "code": "A2_T11_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "He drives carefully.",
+          "option_b": "He carefully drives always fastly.",
+          "option_c": "He drives careful.",
+          "option_d": "He driving carefully.",
+          "correct_option": "A",
+          "explanation": "Use the adverb 'carefully'."
+        },
+        {
+          "code": "A2_T11_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Opposite of 'quietly':",
+          "option_a": "loudly",
+          "option_b": "slowly",
+          "option_c": "politely",
+          "option_d": "well",
+          "correct_option": "A",
+          "explanation": "'Loudly' is the opposite."
+        },
+        {
+          "code": "A2_T11_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'The nurse spoke calmly to the patient.' How did she speak?",
+          "option_a": "Calmly",
+          "option_b": "Angrily",
+          "option_c": "Fast",
+          "option_d": "Bad",
+          "correct_option": "A",
+          "explanation": "The adverb says 'calmly'."
+        },
+        {
+          "code": "A2_T11_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose: The team worked ___.",
+          "option_a": "hard",
+          "option_b": "hardly",
+          "option_c": "harderly",
+          "option_d": "hardness",
+          "correct_option": "A",
+          "explanation": "'Hard' can be an adverb."
+        },
+        {
+          "code": "A2_T11_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: Please speak ___.",
+          "option_a": "clear",
+          "option_b": "clearly",
+          "option_c": "clearest",
+          "option_d": "more clear",
+          "correct_option": "B",
+          "explanation": "Use the adverb 'clearly'."
+        },
+        {
+          "code": "A2_T11_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "How does the driver drive?",
+          "option_a": "Carefully",
+          "option_b": "Badly",
+          "option_c": "Slow only",
+          "option_d": "Loudly",
+          "correct_option": "A",
+          "explanation": "The speaker says carefully.",
+          "audio_text": "My father drives very carefully, especially when it rains.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T11_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "How did the child answer?",
+          "option_a": "Politely",
+          "option_b": "Angrily",
+          "option_c": "Quickly",
+          "option_d": "Loudly",
+          "correct_option": "A",
+          "explanation": "The child answered politely.",
+          "audio_text": "The child listened to the teacher and answered politely.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T11_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Music Lesson",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T11_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How did the teacher explain the exercises?",
+              "option_a": "Slowly and clearly",
+              "option_b": "Quickly",
+              "option_c": "Badly",
+              "option_d": "Loudly",
+              "correct_option": "A",
+              "explanation": "She explained slowly and clearly."
+            },
+            {
+              "code": "A2_T11_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How did the students listen?",
+              "option_a": "Carefully",
+              "option_b": "Poorly",
+              "option_c": "Noisily",
+              "option_d": "Fast",
+              "correct_option": "A",
+              "explanation": "They listened carefully."
+            },
+            {
+              "code": "A2_T11_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "played beautifully",
+              "option_b": "explained clearly",
+              "option_c": "listened carefully",
+              "option_d": "played good",
+              "correct_option": "D",
+              "explanation": "Use 'played well'."
+            }
+          ],
+          "content_text": "During the lesson, the teacher played the piano beautifully. She explained each exercise slowly and clearly. The students listened carefully. One student played very well, while another played too quickly and made several mistakes."
+        },
+        {
+          "code": "A2_T11_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "A Careful Worker",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T11_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Why does Sam work carefully?",
+              "option_a": "He repairs computers",
+              "option_b": "He drives buses",
+              "option_c": "He teaches music",
+              "option_d": "He cooks",
+              "correct_option": "A",
+              "explanation": "He repairs computers."
+            },
+            {
+              "code": "A2_T11_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "How does he speak to customers?",
+              "option_a": "Politely",
+              "option_b": "Loudly",
+              "option_c": "Badly",
+              "option_d": "Slow only",
+              "correct_option": "A",
+              "explanation": "He speaks politely."
+            }
+          ],
+          "audio_text": "Sam works carefully because he repairs computers. He checks each part slowly, writes notes clearly, and speaks politely to customers. He usually finishes jobs quickly without making many mistakes.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T12",
+      "order": 12,
+      "title": "Object Pronouns",
+      "objective": "Use me, you, him, her, it, us, and them as objects of verbs and prepositions.",
+      "theory": "Object pronouns receive the action. Use me, you, him, her, it, us, and them after verbs and prepositions.",
+      "examples": [
+        "She called me.",
+        "I saw him yesterday.",
+        "Can you help us?",
+        "I bought it for them."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "She called I.",
+          "correct": "She called me."
+        },
+        {
+          "wrong": "I spoke to he.",
+          "correct": "I spoke to him."
+        }
+      ],
+      "key_vocabulary": [
+        "me",
+        "you",
+        "him",
+        "her",
+        "it",
+        "us",
+        "them",
+        "object"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T12_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Replace 'John': I called ___.",
+          "option_a": "he",
+          "option_b": "him",
+          "option_c": "his",
+          "option_d": "they",
+          "correct_option": "B",
+          "explanation": "Use the object pronoun 'him'."
+        },
+        {
+          "code": "A2_T12_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Replace 'Maria': We saw ___.",
+          "option_a": "she",
+          "option_b": "her",
+          "option_c": "hers",
+          "option_d": "they",
+          "correct_option": "B",
+          "explanation": "Use 'her'."
+        },
+        {
+          "code": "A2_T12_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: Can you help ___?",
+          "option_a": "we",
+          "option_b": "us",
+          "option_c": "our",
+          "option_d": "ours",
+          "correct_option": "B",
+          "explanation": "Use the object pronoun 'us'."
+        },
+        {
+          "code": "A2_T12_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: I bought the book for ___.",
+          "option_a": "they",
+          "option_b": "them",
+          "option_c": "their",
+          "option_d": "theirs",
+          "correct_option": "B",
+          "explanation": "Use 'them' after a preposition."
+        },
+        {
+          "code": "A2_T12_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "She invited I.",
+          "option_b": "She invited me.",
+          "option_c": "She invited my.",
+          "option_d": "She invited mine.",
+          "correct_option": "B",
+          "explanation": "Use 'me' as the object."
+        },
+        {
+          "code": "A2_T12_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'I saw Anna and Ben, so I spoke to them.' Who does 'them' refer to?",
+          "option_a": "Only Anna",
+          "option_b": "Only Ben",
+          "option_c": "Anna and Ben",
+          "option_d": "The speaker",
+          "correct_option": "C",
+          "explanation": "'Them' refers to both people."
+        },
+        {
+          "code": "A2_T12_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: Where is my phone? I can't find ___.",
+          "option_a": "it",
+          "option_b": "its",
+          "option_c": "he",
+          "option_d": "them",
+          "correct_option": "A",
+          "explanation": "Use 'it' for one thing."
+        },
+        {
+          "code": "A2_T12_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: My parents called ___.",
+          "option_a": "I",
+          "option_b": "me",
+          "option_c": "my",
+          "option_d": "mine",
+          "correct_option": "B",
+          "explanation": "Use 'me' as the object."
+        },
+        {
+          "code": "A2_T12_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Who did the speaker meet?",
+          "option_a": "Her",
+          "option_b": "Him",
+          "option_c": "Them",
+          "option_d": "Us",
+          "correct_option": "B",
+          "explanation": "The speaker uses 'him'.",
+          "audio_text": "I met Daniel at the station and gave him the tickets.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T12_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What did the speaker buy for the children?",
+          "option_a": "It",
+          "option_b": "Them",
+          "option_c": "Us",
+          "option_d": "Him",
+          "correct_option": "B",
+          "explanation": "The speaker bought something for them.",
+          "audio_text": "The children needed notebooks, so I bought them some after school.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T12_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Family Visit",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T12_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Who visited the family?",
+              "option_a": "Cousins",
+              "option_b": "Teachers",
+              "option_c": "Friends",
+              "option_d": "Neighbors",
+              "correct_option": "A",
+              "explanation": "The cousins visited."
+            },
+            {
+              "code": "A2_T12_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Who cooked dinner for them?",
+              "option_a": "The speaker",
+              "option_b": "The mother",
+              "option_c": "The cousins",
+              "option_d": "A friend",
+              "correct_option": "B",
+              "explanation": "The mother cooked dinner."
+            },
+            {
+              "code": "A2_T12_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "We met them.",
+              "option_b": "Mother cooked for them.",
+              "option_c": "They thanked us.",
+              "option_d": "I showed they the city.",
+              "correct_option": "D",
+              "explanation": "Use 'showed them'."
+            }
+          ],
+          "content_text": "My cousins visited us last weekend. We met them at the station and took them home. My mother cooked dinner for them. On Sunday, I showed them the city center. They thanked us before they left."
+        },
+        {
+          "code": "A2_T12_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Helping a Friend",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T12_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Who helped the speaker?",
+              "option_a": "Maya",
+              "option_b": "The speaker's mother",
+              "option_c": "A neighbor",
+              "option_d": "No one",
+              "correct_option": "A",
+              "explanation": "Maya helped."
+            },
+            {
+              "code": "A2_T12_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Where were the keys?",
+              "option_a": "On the table",
+              "option_b": "Under the sofa",
+              "option_c": "In a bag",
+              "option_d": "At work",
+              "correct_option": "B",
+              "explanation": "They were under the sofa."
+            }
+          ],
+          "audio_text": "I couldn't find my keys, so I called Maya. She helped me look for them. We found them under the sofa. I thanked her and bought her a coffee.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T13",
+      "order": 13,
+      "title": "Should and Shouldn't",
+      "objective": "Give simple advice and recommendations using should and shouldn't.",
+      "theory": "Use should + base verb to give advice and shouldn't + base verb to advise against something.",
+      "examples": [
+        "You should rest.",
+        "You shouldn't drive when you're tired.",
+        "Should I call the doctor?",
+        "We should leave early."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "You should to rest.",
+          "correct": "You should rest."
+        },
+        {
+          "wrong": "He shouldn't drives.",
+          "correct": "He shouldn't drive."
+        }
+      ],
+      "key_vocabulary": [
+        "should",
+        "shouldn't",
+        "advice",
+        "rest",
+        "doctor",
+        "healthy",
+        "problem",
+        "recommendation"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T13_Q01",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: You ___ drink more water.",
+          "option_a": "should",
+          "option_b": "should to",
+          "option_c": "shoulds",
+          "option_d": "are should",
+          "correct_option": "A",
+          "explanation": "Use should + base verb."
+        },
+        {
+          "code": "A2_T13_Q02",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Complete: You ___ stay up all night.",
+          "option_a": "shouldn't",
+          "option_b": "don't should",
+          "option_c": "shouldn't to",
+          "option_d": "not should",
+          "correct_option": "A",
+          "explanation": "Use shouldn't + base verb."
+        },
+        {
+          "code": "A2_T13_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "He should see a doctor.",
+          "option_b": "He should sees a doctor.",
+          "option_c": "He should to see a doctor.",
+          "option_d": "He should seeing a doctor.",
+          "correct_option": "A",
+          "explanation": "Use base verb after should."
+        },
+        {
+          "code": "A2_T13_Q04",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct question.",
+          "option_a": "Should I call her?",
+          "option_b": "Do I should call her?",
+          "option_c": "Should I to call her?",
+          "option_d": "Am I should call her?",
+          "correct_option": "A",
+          "explanation": "Use Should + subject + base verb."
+        },
+        {
+          "code": "A2_T13_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which sentence gives advice?",
+          "option_a": "You should rest.",
+          "option_b": "You rested yesterday.",
+          "option_c": "You are resting now.",
+          "option_d": "You rest every day.",
+          "correct_option": "A",
+          "explanation": "Should expresses advice."
+        },
+        {
+          "code": "A2_T13_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'Sam has a headache. He should drink water and rest.' What advice is given?",
+          "option_a": "Exercise hard",
+          "option_b": "Rest",
+          "option_c": "Drive",
+          "option_d": "Work late",
+          "correct_option": "B",
+          "explanation": "He should rest."
+        },
+        {
+          "code": "A2_T13_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Complete: We ___ be late for the appointment.",
+          "option_a": "shouldn't",
+          "option_b": "should to not",
+          "option_c": "don't should",
+          "option_d": "not should",
+          "correct_option": "A",
+          "explanation": "Use shouldn't."
+        },
+        {
+          "code": "A2_T13_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the best advice for someone who is tired.",
+          "option_a": "You should sleep.",
+          "option_b": "You should run all night.",
+          "option_c": "You shouldn't rest.",
+          "option_d": "You should drink ten coffees.",
+          "correct_option": "A",
+          "explanation": "Sleep is appropriate advice."
+        },
+        {
+          "code": "A2_T13_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What should the speaker do?",
+          "option_a": "Rest",
+          "option_b": "Go running",
+          "option_c": "Drive",
+          "option_d": "Work longer",
+          "correct_option": "A",
+          "explanation": "The advice is to rest.",
+          "audio_text": "You look exhausted. You should go home and rest.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T13_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What shouldn't Alex do?",
+          "option_a": "Study",
+          "option_b": "Drive",
+          "option_c": "Eat",
+          "option_d": "Call",
+          "correct_option": "B",
+          "explanation": "Alex shouldn't drive.",
+          "audio_text": "Alex is very tired, so he shouldn't drive tonight.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T13_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Health Advice",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T13_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "How long should Ben stay home?",
+              "option_a": "One day",
+              "option_b": "Two days",
+              "option_c": "A week",
+              "option_d": "A month",
+              "correct_option": "B",
+              "explanation": "He should stay home for two days."
+            },
+            {
+              "code": "A2_T13_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What shouldn't he do?",
+              "option_a": "Drink water",
+              "option_b": "Sleep",
+              "option_c": "Exercise hard",
+              "option_d": "Stay home",
+              "correct_option": "C",
+              "explanation": "He shouldn't exercise hard."
+            },
+            {
+              "code": "A2_T13_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "He should rest.",
+              "option_b": "He should drink water.",
+              "option_c": "He shouldn't work.",
+              "option_d": "He should to sleep.",
+              "correct_option": "D",
+              "explanation": "Use 'should sleep'."
+            }
+          ],
+          "content_text": "Ben has a cold. His doctor says he should stay home for two days, drink plenty of water, and sleep more. He shouldn't exercise hard, and he shouldn't go to work while he has a fever."
+        },
+        {
+          "code": "A2_T13_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Advice for an Exam",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T13_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What should the student review?",
+              "option_a": "Notes",
+              "option_b": "A movie",
+              "option_c": "A map",
+              "option_d": "A menu",
+              "correct_option": "A",
+              "explanation": "The student should review notes."
+            },
+            {
+              "code": "A2_T13_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What shouldn't the student do?",
+              "option_a": "Prepare a bag",
+              "option_b": "Sleep",
+              "option_c": "Study until 3 a.m.",
+              "option_d": "Review notes",
+              "correct_option": "C",
+              "explanation": "The advice is not to study until 3 a.m."
+            }
+          ],
+          "audio_text": "You have an exam tomorrow. You should review your notes tonight, but you shouldn't study until three in the morning. You should prepare your bag before bed and get enough sleep.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T14",
+      "order": 14,
+      "title": "Travel and Directions",
+      "objective": "Ask for and understand simple travel information and directions.",
+      "theory": "Useful travel language includes turn left/right, go straight, get on/off, platform, ticket, departure, arrival, next to, across from, and between.",
+      "examples": [
+        "Go straight for two blocks.",
+        "Turn left at the bank.",
+        "Which platform does the train leave from?",
+        "Get off at the next stop."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "Turn to left.",
+          "correct": "Turn left."
+        },
+        {
+          "wrong": "Get down the bus.",
+          "correct": "Get off the bus."
+        }
+      ],
+      "key_vocabulary": [
+        "turn left",
+        "turn right",
+        "go straight",
+        "platform",
+        "ticket",
+        "departure",
+        "arrival",
+        "get on",
+        "get off"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T14_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which phrase means continue forward?",
+          "option_a": "turn left",
+          "option_b": "go straight",
+          "option_c": "get off",
+          "option_d": "come back",
+          "correct_option": "B",
+          "explanation": "'Go straight' means continue forward."
+        },
+        {
+          "code": "A2_T14_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Where do trains usually leave from?",
+          "option_a": "platforms",
+          "option_b": "kitchens",
+          "option_c": "bedrooms",
+          "option_d": "parks",
+          "correct_option": "A",
+          "explanation": "Trains leave from platforms."
+        },
+        {
+          "code": "A2_T14_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct direction.",
+          "option_a": "Turn left at the bank.",
+          "option_b": "Turn at left the bank.",
+          "option_c": "Left turn bank.",
+          "option_d": "Turn to left at bank.",
+          "correct_option": "A",
+          "explanation": "Use 'Turn left at...'."
+        },
+        {
+          "code": "A2_T14_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Opposite of 'departure':",
+          "option_a": "arrival",
+          "option_b": "ticket",
+          "option_c": "platform",
+          "option_d": "journey",
+          "correct_option": "A",
+          "explanation": "Arrival is the opposite."
+        },
+        {
+          "code": "A2_T14_Q05",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "What do you do when you leave a bus?",
+          "option_a": "get on",
+          "option_b": "get off",
+          "option_c": "go straight",
+          "option_d": "check in",
+          "correct_option": "B",
+          "explanation": "You get off a bus."
+        },
+        {
+          "code": "A2_T14_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'The museum is across from the station.' Where is it?",
+          "option_a": "Opposite the station",
+          "option_b": "Inside the station",
+          "option_c": "Behind the city",
+          "option_d": "On the train",
+          "correct_option": "A",
+          "explanation": "Across from means opposite."
+        },
+        {
+          "code": "A2_T14_Q07",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the polite travel question.",
+          "option_a": "Which platform does the train leave from?",
+          "option_b": "Train where?",
+          "option_c": "You tell platform.",
+          "option_d": "Where train leaves platform do?",
+          "correct_option": "A",
+          "explanation": "This is a natural question."
+        },
+        {
+          "code": "A2_T14_Q08",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "What do you usually need before boarding a train?",
+          "option_a": "A ticket",
+          "option_b": "A pillow",
+          "option_c": "A recipe",
+          "option_d": "A classroom",
+          "correct_option": "A",
+          "explanation": "A ticket is normally required."
+        },
+        {
+          "code": "A2_T14_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Where should the traveler turn?",
+          "option_a": "Left",
+          "option_b": "Right",
+          "option_c": "Back",
+          "option_d": "Nowhere",
+          "correct_option": "B",
+          "explanation": "The audio says turn right.",
+          "audio_text": "Go straight for one block, then turn right at the pharmacy.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T14_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Which platform is mentioned?",
+          "option_a": "2",
+          "option_b": "4",
+          "option_c": "6",
+          "option_d": "8",
+          "correct_option": "C",
+          "explanation": "Platform six is mentioned.",
+          "audio_text": "The train to Oxford leaves from platform six at ten fifteen.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T14_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "Finding the Hotel",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T14_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "Where should you turn?",
+              "option_a": "Right at the bank",
+              "option_b": "Left at the bank",
+              "option_c": "Left at the park",
+              "option_d": "Right at the hotel",
+              "correct_option": "B",
+              "explanation": "Turn left at the bank."
+            },
+            {
+              "code": "A2_T14_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What is next to the hotel?",
+              "option_a": "A pharmacy",
+              "option_b": "The station",
+              "option_c": "A museum",
+              "option_d": "A school",
+              "correct_option": "A",
+              "explanation": "A pharmacy is next to it."
+            },
+            {
+              "code": "A2_T14_Q13",
+              "skill": "vocabulary",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which phrase is incorrect?",
+              "option_a": "go straight",
+              "option_b": "turn left",
+              "option_c": "across from",
+              "option_d": "turn to right",
+              "correct_option": "D",
+              "explanation": "Use 'turn right'."
+            }
+          ],
+          "content_text": "From the train station, walk straight along King Street for about five minutes. Turn left at the bank. The Grand Hotel is on your right, next to a pharmacy and across from a small park. The entrance is on Queen Street."
+        },
+        {
+          "code": "A2_T14_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "At the Station",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T14_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Which platform does the train use?",
+              "option_a": "2",
+              "option_b": "3",
+              "option_c": "4",
+              "option_d": "5",
+              "correct_option": "C",
+              "explanation": "It leaves from platform four."
+            },
+            {
+              "code": "A2_T14_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "Is the train direct?",
+              "option_a": "Yes",
+              "option_b": "No",
+              "option_c": "Only on weekends",
+              "option_d": "Not stated",
+              "correct_option": "A",
+              "explanation": "The speaker says it is direct."
+            }
+          ],
+          "audio_text": "Excuse me, which platform is the train to Bristol? Platform four. It leaves at eleven twenty. Do I need to change trains? No, it's direct. Great. And what time does it arrive? At twelve forty-five.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    },
+    {
+      "code": "A2_T15",
+      "order": 15,
+      "title": "Everyday Problems and Solutions",
+      "objective": "Describe common everyday problems and respond with simple solutions or requests.",
+      "theory": "Useful language includes 'There's a problem with...', 'It doesn't work', 'I can't find...', 'Could you help me?', 'You should...', and 'I'll...'. Combine problem descriptions with polite requests and simple advice.",
+      "examples": [
+        "My phone doesn't work.",
+        "I can't find my keys.",
+        "Could you help me?",
+        "You should restart the computer.",
+        "I'll call customer service."
+      ],
+      "common_mistakes": [
+        {
+          "wrong": "My phone no work.",
+          "correct": "My phone doesn't work."
+        },
+        {
+          "wrong": "You should to restart it.",
+          "correct": "You should restart it."
+        }
+      ],
+      "key_vocabulary": [
+        "problem",
+        "solution",
+        "broken",
+        "lost",
+        "doesn't work",
+        "help",
+        "repair",
+        "customer service",
+        "restart"
+      ],
+      "youtube_video_id": null,
+      "is_published": true,
+      "questions": [
+        {
+          "code": "A2_T15_Q01",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "Which sentence describes a problem?",
+          "option_a": "My phone doesn't work.",
+          "option_b": "My phone is new.",
+          "option_c": "I like my phone.",
+          "option_d": "I bought a phone.",
+          "correct_option": "A",
+          "explanation": "It states that the phone is not working."
+        },
+        {
+          "code": "A2_T15_Q02",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "prompt": "If you can't find your keys, they may be ___.",
+          "option_a": "lost",
+          "option_b": "expensive",
+          "option_c": "quiet",
+          "option_d": "early",
+          "correct_option": "A",
+          "explanation": "Lost means you cannot find them."
+        },
+        {
+          "code": "A2_T15_Q03",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the polite request.",
+          "option_a": "Could you help me?",
+          "option_b": "Help now.",
+          "option_c": "You help me.",
+          "option_d": "Helped me.",
+          "correct_option": "A",
+          "explanation": "This is a polite request."
+        },
+        {
+          "code": "A2_T15_Q04",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "What can you do if a computer freezes?",
+          "option_a": "Restart it",
+          "option_b": "Eat it",
+          "option_c": "Turn left",
+          "option_d": "Buy milk",
+          "correct_option": "A",
+          "explanation": "Restarting is a common solution."
+        },
+        {
+          "code": "A2_T15_Q05",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Choose the correct sentence.",
+          "option_a": "The printer doesn't work.",
+          "option_b": "The printer don't works.",
+          "option_c": "The printer no work.",
+          "option_d": "The printer isn't work.",
+          "correct_option": "A",
+          "explanation": "Use doesn't + base verb."
+        },
+        {
+          "code": "A2_T15_Q06",
+          "skill": "reading",
+          "question_type": "reading_multiple_choice",
+          "difficulty": 2,
+          "prompt": "Read: 'The sink is leaking, so Maya called the building manager.' What is the problem?",
+          "option_a": "The sink is leaking.",
+          "option_b": "The manager is lost.",
+          "option_c": "The phone is broken.",
+          "option_d": "The building is closed.",
+          "correct_option": "A",
+          "explanation": "The sink is leaking."
+        },
+        {
+          "code": "A2_T15_Q07",
+          "skill": "vocabulary",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Who can help with a problem with a purchased product?",
+          "option_a": "Customer service",
+          "option_b": "A platform",
+          "option_c": "A classroom",
+          "option_d": "A waiter always",
+          "correct_option": "A",
+          "explanation": "Customer service handles product problems."
+        },
+        {
+          "code": "A2_T15_Q08",
+          "skill": "grammar",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "prompt": "Best advice: 'My back hurts.'",
+          "option_a": "You should rest.",
+          "option_b": "You should carry a heavy box.",
+          "option_c": "You should never sleep.",
+          "option_d": "You should drive faster.",
+          "correct_option": "A",
+          "explanation": "Rest is appropriate advice."
+        },
+        {
+          "code": "A2_T15_Q09",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What is broken?",
+          "option_a": "The phone screen",
+          "option_b": "The printer",
+          "option_c": "The door",
+          "option_d": "The car",
+          "correct_option": "B",
+          "explanation": "The printer is broken.",
+          "audio_text": "The office printer is broken. It turns on, but it doesn't print anything.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        },
+        {
+          "code": "A2_T15_Q10",
+          "skill": "listening",
+          "question_type": "listening_multiple_choice",
+          "difficulty": 2,
+          "prompt": "What can't the speaker find?",
+          "option_a": "A ticket",
+          "option_b": "Keys",
+          "option_c": "A phone",
+          "option_d": "A bag",
+          "correct_option": "B",
+          "explanation": "The speaker can't find the keys.",
+          "audio_text": "I can't find my keys. I've checked my bag and my desk, but they're not there.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ],
+      "passages": [
+        {
+          "code": "A2_T15_R01",
+          "order": 1,
+          "passage_type": "reading",
+          "title": "A Problem at Home",
+          "instructions": "Read the text carefully and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T15_Q11",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "What was the problem?",
+              "option_a": "The sink was leaking.",
+              "option_b": "The lights were off.",
+              "option_c": "The door was locked.",
+              "option_d": "The phone was lost.",
+              "correct_option": "A",
+              "explanation": "The sink was leaking."
+            },
+            {
+              "code": "A2_T15_Q12",
+              "skill": "reading",
+              "question_type": "reading_comprehension",
+              "difficulty": 2,
+              "prompt": "When did the repair worker come?",
+              "option_a": "Monday morning",
+              "option_b": "Monday night",
+              "option_c": "Tuesday morning",
+              "option_d": "Wednesday",
+              "correct_option": "C",
+              "explanation": "The worker came the next morning."
+            },
+            {
+              "code": "A2_T15_Q13",
+              "skill": "grammar",
+              "question_type": "error_identification",
+              "difficulty": 2,
+              "prompt": "Which sentence is incorrect?",
+              "option_a": "The sink was leaking.",
+              "option_b": "She called the manager.",
+              "option_c": "He told her to turn off the water.",
+              "option_d": "He told her to turned off the water.",
+              "correct_option": "D",
+              "explanation": "After 'to', use the base verb 'turn'."
+            }
+          ],
+          "content_text": "On Monday evening, Sofia noticed that her kitchen sink was leaking. She put a bucket under it and called the building manager. He couldn't come that night, so he told her to turn off the water under the sink. A repair worker came the next morning and fixed the problem."
+        },
+        {
+          "code": "A2_T15_L01",
+          "order": 2,
+          "passage_type": "listening",
+          "title": "Customer Service",
+          "instructions": "Listen to the passage and answer the questions.",
+          "is_active": true,
+          "questions": [
+            {
+              "code": "A2_T15_Q14",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What product has a problem?",
+              "option_a": "A phone",
+              "option_b": "Headphones",
+              "option_c": "A computer",
+              "option_d": "A printer",
+              "correct_option": "B",
+              "explanation": "The headphones don't work."
+            },
+            {
+              "code": "A2_T15_Q15",
+              "skill": "listening",
+              "question_type": "listening_comprehension",
+              "difficulty": 2,
+              "prompt": "What should the customer try first?",
+              "option_a": "Buy new headphones",
+              "option_b": "Restart the phone",
+              "option_c": "Throw them away",
+              "option_d": "Call a friend",
+              "correct_option": "B",
+              "explanation": "The representative suggests restarting the phone."
+            }
+          ],
+          "audio_text": "Hello, I'm calling because my new headphones don't work. Have you charged them? Yes, I have. Have you tried restarting your phone? No, I haven't. Please try that first. If they still don't work, bring them to the store with your receipt.",
+          "audio_accent": "en-US",
+          "audio_rate": 0.98,
+          "max_audio_plays": 2
+        }
+      ]
+    }
+  ]
+}

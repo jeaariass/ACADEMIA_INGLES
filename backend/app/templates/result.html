@@ -1,14 +1,142 @@
 {% extends 'base.html' %}
+{% block title %}Result · English Practice Hub{% endblock %}
 {% block content %}
-<div class="card p-4 shadow-sm rounded-4">
-  <h2>Resultado: {{ attempt.score }}/{{ attempt.total }}</h2>
-  <p>{{ ((attempt.score / attempt.total) * 100)|round(1) }}%</p>
-  {% for ans in attempt.answers %}
-    <div class="p-3 my-2 rounded-3 {{ 'ok' if ans.is_correct else 'bad' }}">
-      <strong>{{ ans.question.prompt }}</strong><br>
-      Respuesta marcada: {{ ans.selected_option }} · Correcta: {{ ans.question.correct_option }}<br>
-      <small>{{ ans.question.explanation }}</small>
+{% set percentage = (((attempt.score / attempt.total) * 100)|round(1)) if attempt.total else 0 %}
+<section class="page-section narrow-page">
+  <div class="result-hero">
+    <div class="result-score-wrap">
+      <div class="result-score-ring" style="--score: {{ percentage }};">
+        <div class="result-score-inner">
+          <strong>{{ percentage }}%</strong>
+          <span>Score</span>
+        </div>
+      </div>
     </div>
-  {% endfor %}
-</div>
+
+    <div class="result-copy">
+      <span class="eyebrow light">LESSON COMPLETED</span>
+      <h1>
+        {% if percentage >= 80 %}
+          Excellent work!
+        {% elif percentage >= 60 %}
+          Good progress!
+        {% else %}
+          Keep practising
+        {% endif %}
+      </h1>
+      <p>
+        You answered <strong>{{ attempt.score }}</strong>
+        out of <strong>{{ attempt.total }}</strong>
+        questions correctly. This lesson is now marked as completed.
+      </p>
+
+      <div class="result-main-actions">
+        {% if next_topic %}
+        <a href="{{ url_for('main.topic', topic_id=next_topic.id) }}"
+           class="btn btn-light btn-modern">
+          Continue to next lesson <i class="bi bi-arrow-right"></i>
+        </a>
+        {% elif level_assessment %}
+        <a href="{{ url_for('assessment.intro', code=level_assessment.code) }}"
+           class="btn btn-light btn-modern">
+          Take {{ level_assessment.title }} <i class="bi bi-arrow-right"></i>
+        </a>
+        {% else %}
+        <a href="{{ url_for('main.dashboard') }}"
+           class="btn btn-light btn-modern">
+          <i class="bi bi-check2-circle"></i> Back to learning path
+        </a>
+        {% endif %}
+
+        <a href="{{ url_for('main.dashboard') }}"
+           class="btn btn-ghost-light btn-modern">
+          <i class="bi bi-grid"></i> Learning path
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-heading result-section-heading">
+    <div>
+      <span class="eyebrow">FEEDBACK</span>
+      <h2>Review your answers</h2>
+      <p>See your answer, the correct answer, and the explanation for each question.</p>
+    </div>
+  </div>
+
+  <div class="result-list">
+    {% for ans in attempt.answers %}
+    <article class="result-answer-card {{ 'is-correct' if ans.is_correct else 'is-wrong' }}">
+      <div class="result-answer-status">
+        <span><i class="bi {{ 'bi-check-lg' if ans.is_correct else 'bi-x-lg' }}"></i></span>
+      </div>
+      <div class="result-answer-content">
+        <div class="result-answer-top">
+          <span class="question-mini-label">Question {{ loop.index }}</span>
+          <span class="status-text">
+            {% if ans.is_correct %}Correct{% else %}Incorrect{% endif %}
+          </span>
+        </div>
+
+        <h3>{{ ans.question.prompt }}</h3>
+
+        <div class="answer-summary-grid">
+          <div>
+            <small>Your answer</small>
+            <strong>{{ ans.selected_option }}</strong>
+          </div>
+          <div>
+            <small>Correct answer</small>
+            <strong>{{ ans.question.correct_option }}</strong>
+          </div>
+        </div>
+
+        {% if ans.question.explanation %}
+        <div class="answer-explanation">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div>
+            <strong>Explanation</strong>
+            <p>{{ ans.question.explanation }}</p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="after-review-actions">
+    {% if next_topic %}
+    <div>
+      <span class="eyebrow">NEXT LESSON</span>
+      <h2>{{ next_topic.title }}</h2>
+      <p>Keep your momentum and continue with the next topic.</p>
+    </div>
+    <a href="{{ url_for('main.topic', topic_id=next_topic.id) }}"
+       class="btn btn-primary btn-modern">
+      Continue <i class="bi bi-arrow-right"></i>
+    </a>
+    {% elif level_assessment %}
+    <div>
+      <span class="eyebrow">LEVEL COMPLETE</span>
+      <h2>{{ level_assessment.title }} is now unlocked</h2>
+      <p>You completed every published lesson in {{ attempt.topic.level.code }}.</p>
+    </div>
+    <a href="{{ url_for('assessment.intro', code=level_assessment.code) }}"
+       class="btn btn-primary btn-modern">
+      Open assessment <i class="bi bi-arrow-right"></i>
+    </a>
+    {% else %}
+    <div>
+      <span class="eyebrow">LEVEL PROGRESS</span>
+      <h2>You reached the end of this level's lessons</h2>
+      <p>Return to your learning path to continue.</p>
+    </div>
+    <a href="{{ url_for('main.dashboard') }}"
+       class="btn btn-primary btn-modern">
+      Back to learning path <i class="bi bi-arrow-right"></i>
+    </a>
+    {% endif %}
+  </div>
+</section>
 {% endblock %}

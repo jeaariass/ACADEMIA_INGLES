@@ -1,18 +1,138 @@
 {% extends 'base.html' %}
+{% block title %}Practice: {{ topic.title }} · English Practice Hub{% endblock %}
 {% block content %}
-<form method="post" class="card p-4 shadow-sm rounded-4">
-  <h2>Test: {{ topic.title }}</h2>
-  {% for q in questions %}
-  <div class="question-box my-3 p-3 rounded-3">
-    <h5>{{ loop.index }}. {{ q.prompt }}</h5>
-    {% for key, txt in [('A',q.option_a),('B',q.option_b),('C',q.option_c),('D',q.option_d)] %}
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="q_{{ q.id }}" value="{{ key }}" required>
-      <label class="form-check-label">{{ key }}. {{ txt }}</label>
+<section class="page-section narrow-page">
+  <div class="test-header">
+    <div>
+      <a class="back-link" href="{{ url_for('main.topic', topic_id=topic.id) }}"><i class="bi bi-arrow-left"></i> Back to lesson</a>
+      <span class="eyebrow">PRACTICE</span>
+      <h1>{{ topic.title }}</h1>
+      <p>Complete the practice questions and the comprehension activities.</p>
     </div>
-    {% endfor %}
+    <div class="test-count"><span><i class="bi bi-ui-checks-grid"></i></span><div><strong>{{ questions|length }}</strong><small>Questions</small></div></div>
   </div>
-  {% endfor %}
-  <button class="btn btn-success">Enviar respuestas</button>
-</form>
+
+  <form method="post" class="test-form">
+    {% set ns = namespace(number=0) %}
+
+    {% for q in standalone_questions %}
+      {% set ns.number = ns.number + 1 %}
+      <article class="question-card {% if q.question_type == 'listening_multiple_choice' %}listening-question-card{% endif %}">
+        <div class="question-number">{{ ns.number }}</div>
+        <div class="question-content">
+          <div class="question-meta-row">
+            <span class="skill-badge skill-{{ q.skill }}">
+              {% if q.skill == 'listening' %}<i class="bi bi-headphones"></i>
+              {% elif q.skill == 'reading' %}<i class="bi bi-book"></i>
+              {% elif q.skill == 'vocabulary' %}<i class="bi bi-alphabet-uppercase"></i>
+              {% else %}<i class="bi bi-braces"></i>{% endif %}
+              {{ q.skill|title }}
+            </span>
+            <span class="difficulty-label">Difficulty {{ q.difficulty }}/5</span>
+          </div>
+
+          {% if q.question_type == 'listening_multiple_choice' %}
+          <div class="listening-player">
+            <div class="listening-player-icon"><i class="bi bi-headphones"></i></div>
+            <div class="listening-player-copy"><strong>Listen before you answer</strong><small>The transcript is hidden.</small></div>
+            <button type="button" class="btn btn-primary btn-modern listening-play-button"
+                    data-audio-id="question-{{ q.id }}"
+                    data-audio-text="{{ q.audio_text|e }}"
+                    data-lang="{{ q.audio_accent or 'en-US' }}"
+                    data-rate="{{ q.audio_rate or 1.0 }}"
+                    data-max-plays="{{ q.max_audio_plays or 2 }}"
+                    onclick="playListening(this)">
+              <i class="bi bi-play-fill"></i><span class="play-label">Play audio</span>
+            </button>
+            <div class="plays-remaining" data-counter-for="question-{{ q.id }}">{{ q.max_audio_plays or 2 }} plays remaining</div>
+          </div>
+          {% endif %}
+
+          <h2>{{ q.prompt }}</h2>
+          <div class="answer-grid">
+            {% for key, txt in [('A',q.option_a),('B',q.option_b),('C',q.option_c),('D',q.option_d)] %}
+            <label class="answer-option">
+              <input class="form-check-input" type="radio" name="q_{{ q.id }}" value="{{ key }}" required>
+              <span class="answer-key">{{ key }}</span><span class="answer-text">{{ txt }}</span>
+              <span class="answer-check"><i class="bi bi-check-lg"></i></span>
+            </label>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+
+    {% if passages %}
+    <div class="comprehension-heading">
+      <span class="eyebrow">COMPREHENSION</span>
+      <h2>Context practice</h2>
+      <p>Use longer texts and audio to understand meaning in context.</p>
+    </div>
+    {% endif %}
+
+    {% for passage in passages %}
+      <section class="passage-block passage-{{ passage.passage_type }}">
+        <div class="passage-header">
+          <div>
+            <span class="passage-type-badge">
+              {% if passage.passage_type == 'listening' %}<i class="bi bi-headphones"></i> Listening passage
+              {% else %}<i class="bi bi-book-half"></i> Reading passage{% endif %}
+            </span>
+            <h2>{{ passage.title }}</h2>
+            {% if passage.instructions %}<p>{{ passage.instructions }}</p>{% endif %}
+          </div>
+        </div>
+
+        {% if passage.passage_type == 'reading' %}
+        <div class="reading-passage-text">{{ passage.content_text }}</div>
+        {% else %}
+        <div class="listening-player passage-player">
+          <div class="listening-player-icon"><i class="bi bi-headphones"></i></div>
+          <div class="listening-player-copy"><strong>Listen to the complete passage</strong><small>You can play this audio {{ passage.max_audio_plays }} times.</small></div>
+          <button type="button" class="btn btn-primary btn-modern listening-play-button"
+                  data-audio-id="passage-{{ passage.id }}"
+                  data-audio-text="{{ passage.audio_text|e }}"
+                  data-lang="{{ passage.audio_accent or 'en-US' }}"
+                  data-rate="{{ passage.audio_rate or 1.0 }}"
+                  data-max-plays="{{ passage.max_audio_plays or 2 }}"
+                  onclick="playListening(this)">
+            <i class="bi bi-play-fill"></i><span class="play-label">Play passage</span>
+          </button>
+          <div class="plays-remaining" data-counter-for="passage-{{ passage.id }}">{{ passage.max_audio_plays or 2 }} plays remaining</div>
+        </div>
+        {% endif %}
+
+        <div class="passage-question-list">
+          {% for q in passage.questions if q.is_active %}
+            {% set ns.number = ns.number + 1 %}
+            <article class="question-card passage-question-card">
+              <div class="question-number">{{ ns.number }}</div>
+              <div class="question-content">
+                <div class="question-meta-row">
+                  <span class="skill-badge skill-{{ q.skill }}">{{ q.skill|title }}</span>
+                  <span class="difficulty-label">Difficulty {{ q.difficulty }}/5</span>
+                </div>
+                <h2>{{ q.prompt }}</h2>
+                <div class="answer-grid">
+                  {% for key, txt in [('A',q.option_a),('B',q.option_b),('C',q.option_c),('D',q.option_d)] %}
+                  <label class="answer-option">
+                    <input class="form-check-input" type="radio" name="q_{{ q.id }}" value="{{ key }}" required>
+                    <span class="answer-key">{{ key }}</span><span class="answer-text">{{ txt }}</span>
+                    <span class="answer-check"><i class="bi bi-check-lg"></i></span>
+                  </label>
+                  {% endfor %}
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+
+    <div class="test-submit-bar">
+      <div class="test-submit-note"><i class="bi bi-info-circle"></i> Review your answers before submitting.</div>
+      <button class="btn btn-primary btn-modern btn-submit-test" type="submit">Submit answers <i class="bi bi-send-fill"></i></button>
+    </div>
+  </form>
+</section>
 {% endblock %}
