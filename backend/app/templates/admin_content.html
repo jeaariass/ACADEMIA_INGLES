@@ -8,6 +8,7 @@
     <div><span class="eyebrow">CONTENT MANAGEMENT</span><h1>Edit platform content</h1><p>Make precise corrections from the web. Use bulk Excel import when many records need changes.</p></div>
     <div class="d-flex gap-2 align-items-center flex-wrap">
       <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.bulk_import') }}"><i class="bi bi-file-earmark-spreadsheet"></i> Topics & questions Excel</a>
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('question_import.index') }}"><i class="bi bi-patch-question-fill"></i> Import questions</a>
       <a class="btn btn-success btn-modern" href="{{ url_for('admin.library_import') }}"><i class="bi bi-journal-arrow-up"></i> Readings Excel</a>
     </div>
   </div>

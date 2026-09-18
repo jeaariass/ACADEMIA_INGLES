@@ -90,6 +90,7 @@ def create_app():
     from .admin import admin_bp
     from .assessment import assessment_bp
     from .game_vocab_admin import bp as game_vocab_admin_bp
+    from .question_import import question_import_bp
     from .library import library_bp
     from .game import game_bp
     from .insights import insights_bp
@@ -103,6 +104,7 @@ def create_app():
     app.register_blueprint(admin_bp, url_prefix="/admin")
     app.register_blueprint(assessment_bp)
     app.register_blueprint(game_vocab_admin_bp)
+    app.register_blueprint(question_import_bp)
     app.register_blueprint(library_bp)
     app.register_blueprint(game_bp)
     app.register_blueprint(insights_bp)
