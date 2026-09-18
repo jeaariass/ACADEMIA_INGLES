@@ -16,6 +16,18 @@
     </div>
   </div>
 
+  {% if learning_plan_summary %}
+  <section class="dashboard-path-card diagnostic-path-created-card">
+    <div class="dashboard-path-icon"><i class="bi bi-signpost-split-fill"></i></div>
+    <div class="dashboard-path-copy">
+      <span class="eyebrow">PERSONALIZED PATH CREATED</span>
+      <h2>Your study priorities are ready</h2>
+      <p><strong>{{ learning_plan_summary.counts.required }}</strong> required · <strong>{{ learning_plan_summary.counts.recommended }}</strong> recommended · <strong>{{ learning_plan_summary.counts.optional }}</strong> optional · <strong>{{ learning_plan_summary.counts.mastered }}</strong> with strong diagnostic evidence.</p>
+    </div>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('main.learning_path') }}">View my path <i class="bi bi-arrow-right"></i></a>
+  </section>
+  {% endif %}
+
   <section class="content-card diagnostic-route-card">
     <div class="content-card-header"><div><span class="eyebrow">ADAPTIVE ROUTE</span><h2>Levels tested</h2></div></div>
     <div class="diagnostic-route">
@@ -83,9 +95,9 @@
   {% endif %}
 
   <div class="after-review-actions">
-    <div><span class="eyebrow">NEXT STEP</span><h2>Use the estimate to guide your study</h2><p>You can retake the diagnostic later, but your lesson and level-assessment results should be used together with this placement estimate.</p></div>
-    <a class="btn btn-outline-primary btn-modern" href="{{ url_for('main.dashboard') }}">Go to Home</a>
-    <a class="btn btn-primary btn-modern" href="{{ url_for('assessment.intro', code=assessment.code) }}">Diagnostic overview <i class="bi bi-arrow-right"></i></a>
+    <div><span class="eyebrow">NEXT STEP</span><h2>Use the estimate to guide your study</h2><p>Your personalized path prioritizes the required topics while keeping recommended and optional material available for reinforcement.</p></div>
+    {% if learning_plan_summary %}<a class="btn btn-outline-primary btn-modern" href="{{ url_for('main.learning_path') }}">My learning path</a>{% endif %}
+    <a class="btn btn-primary btn-modern" href="{{ url_for('main.dashboard') }}">Go to Home <i class="bi bi-arrow-right"></i></a>
   </div>
 </section>
 {% endblock %}

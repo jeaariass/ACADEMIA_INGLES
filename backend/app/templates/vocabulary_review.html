@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Vocabulary Review · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section vocabulary-review-page">
+  <div class="review-topbar">
+    <a class="back-link" href="{{ url_for('library.vocabulary') }}"><i class="bi bi-arrow-left"></i> My Vocabulary</a>
+    <span><strong>{{ due_count }}</strong> due now</span>
+  </div>
+
+  {% if entry %}
+  <article class="review-card" id="reviewCard">
+    <div class="review-progress-label"><span class="eyebrow">SPACED REPETITION</span><b>Mastery {{ entry.mastery_level }}/5</b></div>
+    <div class="review-prompt">
+      <small>Do you remember this word or phrase?</small>
+      <h1>{{ entry.text }}</h1>
+      <button type="button" class="btn btn-soft btn-modern" onclick='speakLongText({{ entry.text|tojson }}, {lang:"en-US", rate:0.92})'><i class="bi bi-volume-up-fill"></i> Listen</button>
+      {% if entry.context_text %}<p class="review-context">“{{ entry.context_text }}”</p>{% endif %}
+    </div>
+
+    <div class="review-answer" id="reviewAnswer" hidden>
+      <span>Translation</span>
+      <strong>{{ entry.translation }}</strong>
+      {% if entry.notes %}<p>{{ entry.notes }}</p>{% endif %}
+    </div>
+
+    <button class="btn btn-primary btn-modern review-reveal" id="revealReviewAnswer" type="button"><i class="bi bi-eye-fill"></i> Reveal answer</button>
+
+    <div class="review-grades" id="reviewGrades" hidden>
+      <form method="post" action="{{ url_for('library.review_entry', entry_id=entry.id) }}">
+        <button class="btn btn-outline-danger" name="grade" value="again" type="submit"><strong>Again</strong><small>Return soon</small></button>
+        <button class="btn btn-outline-primary" name="grade" value="good" type="submit"><strong>Good</strong><small>Increase interval</small></button>
+        <button class="btn btn-outline-success" name="grade" value="easy" type="submit"><strong>Easy</strong><small>Increase faster</small></button>
+      </form>
+    </div>
+  </article>
+  {% else %}
+  <div class="review-complete-card">
+    <span class="review-complete-icon"><i class="bi bi-check2-circle"></i></span>
+    <span class="eyebrow">REVIEW COMPLETE</span>
+    <h1>No vocabulary is due right now</h1>
+    <p>Your next review dates will appear automatically. Items you remember successfully return after longer intervals.</p>
+    <div class="review-complete-stats"><span><strong>{{ stats.saved }}</strong> saved</span><span><strong>{{ stats.mastered }}</strong> mastered</span></div>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('library.index') }}">Keep reading <i class="bi bi-arrow-right"></i></a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+(() => {
+  const reveal = document.getElementById('revealReviewAnswer');
+  const answer = document.getElementById('reviewAnswer');
+  const grades = document.getElementById('reviewGrades');
+  if (!reveal || !answer || !grades) return;
+  reveal.addEventListener('click', () => {
+    answer.hidden = false;
+    grades.hidden = false;
+    reveal.hidden = true;
+  });
+})();
+</script>
+{% endblock %}

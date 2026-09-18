@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Speaking · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section speaking-page">
+  <div class="page-title-row">
+    <div><span class="eyebrow">SPEAKING LAB</span><h1>Practice speaking out loud</h1><p>Use your microphone for repetition, read-aloud, open answers and role-play. The platform stores the recognized transcript, not your raw audio.</p></div>
+    <div class="page-title-icon"><i class="bi bi-mic-fill"></i></div>
+  </div>
+  <div class="speaking-note"><i class="bi bi-info-circle-fill"></i><span>Closed tasks compare recognized words with an expected sentence. Open tasks report objective practice signals only; they are not a pronunciation certification.</span></div>
+  {% for level, items in grouped.items() if items %}
+  <section class="speaking-level-section">
+    <div class="section-heading"><div><span class="eyebrow">{{ level }}</span><h2>{{ level }} speaking practice</h2></div></div>
+    <div class="speaking-grid">
+      {% for item in items %}
+      <a class="speaking-card" href="{{ url_for('speaking.practice', exercise_id=item.id) }}">
+        <span class="speaking-card-type">{{ item.activity_type.replace('_',' ')|title }}</span>
+        <h3>{{ item.title }}</h3><p>{{ item.prompt }}</p>
+        <span class="speaking-open">Practice <i class="bi bi-arrow-right"></i></span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  {% if latest %}
+  <section class="content-card mt-4"><div class="content-card-header"><div><span class="eyebrow">RECENT PRACTICE</span><h2>Latest speaking attempts</h2></div></div>
+    <div class="speaking-history">{% for row in latest %}<div><strong>{{ row.exercise.level_code }} · {{ row.exercise.title }}</strong><span>{{ row.word_count }} words{% if row.similarity_score is not none %} · {{ row.similarity_score }}% transcript similarity{% endif %}</span></div>{% endfor %}</div>
+  </section>
+  {% endif %}
+</section>
+{% endblock %}

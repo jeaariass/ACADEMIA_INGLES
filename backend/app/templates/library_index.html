@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}Library · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section library-page">
+  <div class="library-hero">
+    <div>
+      <span class="eyebrow light">READ · DISCOVER · SAVE</span>
+      <h1>Library</h1>
+      <p>Read level-appropriate English, select useful words or phrases, and build a personal vocabulary bank for spaced review.</p>
+    </div>
+    <div class="library-hero-actions">
+      <a class="btn btn-light btn-modern" href="{{ url_for('library.vocabulary') }}">
+        <i class="bi bi-bookmark-star-fill"></i> My Vocabulary
+      </a>
+      <a class="btn btn-outline-light btn-modern" href="{{ url_for('library.review') }}">
+        <i class="bi bi-arrow-repeat"></i> Review due words
+      </a>
+    </div>
+  </div>
+
+  <div class="library-stat-grid">
+    <div><span><i class="bi bi-bookmarks-fill"></i></span><strong>{{ stats.saved }}</strong><small>Saved words & phrases</small></div>
+    <div><span><i class="bi bi-alarm-fill"></i></span><strong>{{ stats.due }}</strong><small>Due for review</small></div>
+    <div><span><i class="bi bi-stars"></i></span><strong>{{ stats.mastered }}</strong><small>High-mastery items</small></div>
+  </div>
+
+  <form class="library-filter-card" method="get">
+    <div>
+      <label class="form-label">Search</label>
+      <input class="form-control" type="search" name="q" value="{{ query_text }}" placeholder="Search titles or text">
+    </div>
+    <div>
+      <label class="form-label">CEFR level</label>
+      <select class="form-select" name="level">
+        <option value="">All levels</option>
+        {% for level in levels %}
+        <option value="{{ level }}" {{ 'selected' if selected_level == level else '' }}>{{ level }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label class="form-label">Category</label>
+      <select class="form-select" name="category">
+        <option value="">All categories</option>
+        {% for key, count in categories %}
+        <option value="{{ key }}" {{ 'selected' if selected_category == key else '' }}>{{ category_labels.get(key, key|title) }} ({{ count }})</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="library-filter-action">
+      <button class="btn btn-primary btn-modern" type="submit"><i class="bi bi-funnel-fill"></i> Filter</button>
+    </div>
+  </form>
+
+  <div class="library-grid">
+    {% for item in items %}
+    <article class="library-card">
+      <div class="library-card-top">
+        <span class="library-level">{{ item.level_code }}</span>
+        <span class="library-category">{{ category_labels.get(item.category, item.category|title) }}</span>
+      </div>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.summary }}</p>
+      <div class="library-card-meta">
+        <span><i class="bi bi-file-text"></i>{{ item.word_count }} words</span>
+        <span><i class="bi bi-clock"></i>{{ [1, (item.word_count / 180)|round(0, 'ceil')|int]|max }} min</span>
+      </div>
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('library.item', item_id=item.id) }}">
+        Read <i class="bi bi-arrow-right"></i>
+      </a>
+    </article>
+    {% else %}
+    <div class="empty-state library-empty">
+      <span class="empty-state-icon"><i class="bi bi-journal-x"></i></span>
+      <h3>No readings match these filters</h3>
+      <p>Try another level, category, or search term.</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

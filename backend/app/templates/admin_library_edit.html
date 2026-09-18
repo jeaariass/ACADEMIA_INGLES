@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}{{ 'Edit reading' if reading else 'New reading' }} · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section admin-page narrow-page">
+  <nav class="breadcrumb-modern mb-4"><a href="{{ url_for('admin.content_manager', kind='readings') }}">Content manager</a><i class="bi bi-chevron-right"></i><strong>{{ reading.code if reading else 'New reading' }}</strong></nav>
+  <article class="content-card admin-editor-card">
+    <div class="content-card-header"><div><span class="eyebrow">LIBRARY EDITOR</span><h1>{{ reading.title if reading else 'Create a reading' }}</h1><p>Use the Excel importer for large collections; use this editor for individual corrections.</p></div></div>
+    <form method="post" class="admin-editor-form">
+      <div class="row g-3">
+        <div class="col-md-4"><label class="form-label">Code</label><input class="form-control" name="code" value="{{ reading.code if reading else '' }}" maxlength="80" required></div>
+        <div class="col-md-3"><label class="form-label">CEFR level</label><select class="form-select" name="level_code">{% for level in levels %}<option value="{{ level.code }}" {{ 'selected' if reading and reading.level_code == level.code else '' }}>{{ level.code }} · {{ level.name }}</option>{% endfor %}</select></div>
+        <div class="col-md-3"><label class="form-label">Category</label><select class="form-select" name="category">{% for key,label in categories.items() %}<option value="{{ key }}" {{ 'selected' if reading and reading.category == key else '' }}>{{ label }}</option>{% endfor %}</select></div>
+        <div class="col-md-2"><label class="form-label">Order</label><input class="form-control" type="number" name="sort_order" value="{{ reading.sort_order if reading else 0 }}"></div>
+        <div class="col-12"><label class="form-label">Title</label><input class="form-control" name="title" value="{{ reading.title if reading else '' }}" maxlength="200" required></div>
+        <div class="col-12"><label class="form-label">Summary</label><textarea class="form-control" name="summary" rows="3">{{ reading.summary if reading else '' }}</textarea></div>
+        <div class="col-12"><label class="form-label">Reading content</label><textarea class="form-control library-content-editor" name="content_text" rows="18" required>{{ reading.content_text if reading else '' }}</textarea><small class="text-muted">Separate paragraphs with a blank line. Word count is recalculated automatically.</small></div>
+        <div class="col-md-5"><label class="form-label">Source label</label><input class="form-control" name="source_label" value="{{ reading.source_label if reading and reading.source_label else '' }}" maxlength="160"></div>
+        <div class="col-md-5"><label class="form-label">Source URL</label><input class="form-control" name="source_url" value="{{ reading.source_url if reading and reading.source_url else '' }}" maxlength="500" placeholder="https://..."></div>
+        <div class="col-md-2"><label class="form-label">Publication</label><select class="form-select" name="is_published"><option value="1" {{ 'selected' if not reading or reading.is_published else '' }}>Published</option><option value="0" {{ 'selected' if reading and not reading.is_published else '' }}>Hidden</option></select></div>
+      </div>
+      {% if reading %}<div class="alert alert-light border mt-4 mb-0"><i class="bi bi-info-circle"></i> Current word count: <strong>{{ reading.word_count }}</strong>. Hiding a reading does not delete vocabulary students already saved from it.</div>{% endif %}
+      <div class="admin-editor-actions"><button class="btn btn-primary btn-modern" type="submit"><i class="bi bi-check-lg"></i> Save reading</button><a class="btn btn-outline-secondary btn-modern" href="{{ url_for('admin.content_manager', kind='readings') }}">Cancel</a></div>
+    </form>
+  </article>
+</section>
+{% endblock %}

@@ -30,6 +30,8 @@
           <span class="diagnostic-adaptive-chip"><i class="bi bi-diagram-3-fill"></i> Adaptive</span>
         {% elif assessment.assessment_type == 'final' %}
           <span class="final-comprehensive-chip"><i class="bi bi-stars"></i> A1–C2</span>
+        {% elif card.adaptive %}
+          <span class="level-adaptive-chip"><i class="bi bi-shuffle"></i> Adaptive</span>
         {% endif %}
       </div>
 
@@ -46,6 +48,10 @@
           <span><i class="bi bi-ui-checks-grid"></i>{{ assessment.question_links|length }} questions</span>
           <span><i class="bi bi-layers-fill"></i>6 level stages</span>
           <span><i class="bi bi-graph-up-arrow"></i>Growth report</span>
+        {% elif card.adaptive %}
+          <span><i class="bi bi-ui-checks-grid"></i>{{ card.adaptive_target }} adaptive questions</span>
+          <span><i class="bi bi-database"></i>{{ assessment.question_links|length }}-item bank</span>
+          {% if assessment.passing_score is not none %}<span><i class="bi bi-bullseye"></i>{{ assessment.passing_score|int }}% reference threshold</span>{% endif %}
         {% else %}
           <span><i class="bi bi-ui-checks-grid"></i>{{ assessment.question_links|length }} questions</span>
           {% if assessment.passing_score is not none %}<span><i class="bi bi-bullseye"></i>{{ assessment.passing_score|int }}% threshold</span>{% endif %}

@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% block title %}Analytics · Administration · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section admin-analytics-page">
+  <div class="admin-analytics-title">
+    <div>
+      <a class="back-link" href="{{ url_for('admin.panel') }}"><i class="bi bi-arrow-left"></i> Administration</a>
+      <span class="eyebrow">ADMIN ANALYTICS · PHASE 7</span>
+      <h1>Platform health & item analysis</h1>
+      <p>Monitor adoption, learning activity, question-bank calibration, content difficulty and module usage. Academic responses and game responses remain separate evidence sources.</p>
+    </div>
+    <div class="admin-analytics-actions">
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.bulk_import_difficulty_bank') }}">
+        <i class="bi bi-file-earmark-spreadsheet"></i> Export difficulty bank
+      </a>
+      <a class="btn btn-primary btn-modern" href="{{ url_for('admin.analytics_questions_csv', level=filters.level, skill=filters.skill, status=filters.status, min_responses=filters.min_responses) }}">
+        <i class="bi bi-download"></i> Export filtered CSV
+      </a>
+    </div>
+  </div>
+
+  <div class="analytics-kpi-grid">
+    <article class="analytics-kpi-card">
+      <span class="analytics-kpi-icon"><i class="bi bi-people-fill"></i></span>
+      <div><strong>{{ dashboard.engagement.students }}</strong><span>Students</span><small>{{ dashboard.engagement.active_30d }} active in last 30 days</small></div>
+    </article>
+    <article class="analytics-kpi-card">
+      <span class="analytics-kpi-icon"><i class="bi bi-clipboard2-check-fill"></i></span>
+      <div><strong>{{ dashboard.totals.formal_attempts }}</strong><span>Completed formal assessments</span><small>{{ dashboard.totals.practice_attempts }} lesson-practice attempts</small></div>
+    </article>
+    <article class="analytics-kpi-card">
+      <span class="analytics-kpi-icon"><i class="bi bi-journal-check"></i></span>
+      <div><strong>{{ dashboard.totals.lesson_completions }}</strong><span>Lesson completions</span><small>Across all student accounts</small></div>
+    </article>
+    <article class="analytics-kpi-card {{ 'needs-review' if dashboard.question_health.flagged else '' }}">
+      <span class="analytics-kpi-icon"><i class="bi bi-activity"></i></span>
+      <div><strong>{{ dashboard.question_health.flagged }}</strong><span>Items flagged for review</span><small>Among {{ dashboard.question_health.with_evidence }} items with ≥ {{ dashboard.question_health.min_evidence }} academic responses</small></div>
+    </article>
+  </div>
+
+  <div class="analytics-two-column">
+    <section class="content-card analytics-section-card">
+      <div class="content-card-header">
+        <div><span class="eyebrow">STUDENT ADOPTION</span><h2>Feature coverage</h2></div>
+        <span class="analytics-generated">UTC {{ dashboard.generated_at.strftime('%Y-%m-%d %H:%M') }}</span>
+      </div>
+      <div class="analytics-adoption-list">
+        {% set adoption = [
+          ('Initial diagnostic', dashboard.engagement.diagnosed, dashboard.engagement.diagnosed_pct, 'bi-compass'),
+          ('Personalized path', dashboard.engagement.personalized, dashboard.engagement.personalized_pct, 'bi-signpost-split'),
+          ('Vocabulary bank', dashboard.engagement.vocabulary_users, dashboard.engagement.vocabulary_pct, 'bi-collection'),
+          ('Word Runner', dashboard.engagement.game_users, dashboard.engagement.game_pct, 'bi-controller'),
+          ('Active last 30 days', dashboard.engagement.active_30d, dashboard.engagement.active_30d_pct, 'bi-calendar-check')
+        ] %}
+        {% for label, count, pct, icon in adoption %}
+        <div class="analytics-adoption-row">
+          <span class="analytics-adoption-icon"><i class="bi {{ icon }}"></i></span>
+          <div class="analytics-adoption-copy"><strong>{{ label }}</strong><small>{{ count }} of {{ dashboard.engagement.students }} students</small></div>
+          <div class="analytics-adoption-track"><span style="width: {{ pct or 0 }}%"></span></div>
+          <b>{{ pct if pct is not none else '—' }}{% if pct is not none %}%{% endif %}</b>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="content-card analytics-section-card">
+      <div class="content-card-header"><div><span class="eyebrow">MODULE ACTIVITY</span><h2>Practice ecosystem</h2></div></div>
+      <div class="analytics-module-grid">
+        <div><i class="bi bi-book-half"></i><strong>{{ dashboard.totals.library_items }}</strong><span>Published library texts</span></div>
+        <div><i class="bi bi-bookmark-star"></i><strong>{{ dashboard.totals.saved_vocabulary }}</strong><span>Saved vocabulary items</span></div>
+        <div><i class="bi bi-arrow-repeat"></i><strong>{{ dashboard.totals.vocabulary_reviews }}</strong><span>Vocabulary review ratings</span><small>{{ dashboard.totals.vocabulary_review_accuracy if dashboard.totals.vocabulary_review_accuracy is not none else '—' }}{% if dashboard.totals.vocabulary_review_accuracy is not none %}% Good/Easy{% endif %}</small></div>
+        <div><i class="bi bi-controller"></i><strong>{{ dashboard.totals.game_runs }}</strong><span>Game runs</span><small>{{ dashboard.totals.game_completion_rate if dashboard.totals.game_completion_rate is not none else '—' }}{% if dashboard.totals.game_completion_rate is not none %}% completed{% endif %}</small></div>
+        <div><i class="bi bi-patch-question"></i><strong>{{ dashboard.totals.game_challenge_accuracy if dashboard.totals.game_challenge_accuracy is not none else '—' }}{% if dashboard.totals.game_challenge_accuracy is not none %}%{% endif %}</strong><span>Game challenge accuracy</span><small>Not used as formal CEFR evidence</small></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="content-card analytics-section-card mt-4">
+    <div class="content-card-header">
+      <div><span class="eyebrow">ADAPTIVE BANK HEALTH</span><h2>Internal difficulty distribution by CEFR level</h2></div>
+      <a class="text-link" href="{{ url_for('admin.bulk_import') }}">Manage with Excel <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <p class="analytics-section-note">For full adaptation, each level should have useful coverage across multiple internal difficulty values. A bank concentrated only at difficulty 3 limits the engine even though it still operates.</p>
+    <div class="table-responsive modern-table-wrap analytics-difficulty-table-wrap">
+      <table class="table modern-table align-middle mb-0 analytics-difficulty-table">
+        <thead><tr><th>Level</th>{% for d in range(1,6) %}<th>Difficulty {{ d }}</th>{% endfor %}<th>Total</th><th>Adaptive readiness</th></tr></thead>
+        <tbody>
+          {% for row in dashboard.difficulty_distribution %}
+          <tr>
+            <td><strong class="analytics-level-pill">{{ row.code }}</strong></td>
+            {% for d in range(1,6) %}
+            <td>
+              <div class="difficulty-cell"><strong>{{ row.counts[d] }}</strong><span style="width: {{ ((row.counts[d] / row.total * 100) if row.total else 0)|round(0) }}%"></span></div>
+            </td>
+            {% endfor %}
+            <td><strong>{{ row.total }}</strong></td>
+            <td>
+              {% if row.adaptive_ready %}<span class="analytics-status healthy"><i class="bi bi-check-circle-fill"></i> {{ row.populated }}/5 bands populated</span>
+              {% else %}<span class="analytics-status warning"><i class="bi bi-exclamation-triangle-fill"></i> {{ row.populated }}/5 bands populated</span>{% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="analytics-two-column mt-4">
+    <section class="content-card analytics-section-card">
+      <div class="content-card-header"><div><span class="eyebrow">CONTENT SIGNALS</span><h2>Topics with lowest observed accuracy</h2></div></div>
+      <p class="analytics-section-note">Only topics with at least {{ dashboard.question_health.min_evidence }} academic responses are shown. This is a review signal, not proof that a topic is poorly designed.</p>
+      <div class="analytics-topic-list">
+        {% for row in dashboard.topics_to_review %}
+        <div class="analytics-topic-row">
+          <span class="analytics-level-pill">{{ row.level }}</span>
+          <div><strong>{{ row.topic }}</strong><small>{{ row.correct }}/{{ row.responses }} correct across {{ row.questions_with_evidence }} evidenced items</small></div>
+          <b>{{ row.rate }}%</b>
+        </div>
+        {% else %}
+        <div class="analytics-empty">Not enough response evidence yet.</div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="content-card analytics-section-card">
+      <div class="content-card-header"><div><span class="eyebrow">LIBRARY SIGNALS</span><h2>Vocabulary saves by source</h2></div></div>
+      <p class="analytics-section-note">This measures saved vocabulary originating from a text; it is not a readership or page-view metric.</p>
+      <div class="analytics-topic-list">
+        {% for row in dashboard.library_sources %}
+        <div class="analytics-topic-row">
+          <span class="analytics-level-pill">{{ row.level }}</span>
+          <div><strong>{{ row.title }}</strong><small>{{ row.users }} user{{ '' if row.users == 1 else 's' }} saved vocabulary from this text</small></div>
+          <b>{{ row.saved_count }}</b>
+        </div>
+        {% else %}
+        <div class="analytics-empty">No vocabulary has been saved from library texts yet.</div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <section class="content-card analytics-section-card analytics-items-card mt-4">
+    <div class="content-card-header">
+      <div><span class="eyebrow">ITEM ANALYSIS</span><h2>Question-bank evidence</h2></div>
+      <span class="analytics-source-note"><i class="bi bi-info-circle"></i> Academic accuracy = lesson practice + formal assessments. Game accuracy is shown separately.</span>
+    </div>
+
+    <form method="get" class="analytics-filter-form">
+      <div>
+        <label class="form-label">CEFR level</label>
+        <select class="form-select" name="level">
+          <option value="ALL" {{ 'selected' if filters.level == 'ALL' else '' }}>All levels</option>
+          {% for code in ['A1','A2','B1','B2','C1','C2'] %}<option value="{{ code }}" {{ 'selected' if filters.level == code else '' }}>{{ code }}</option>{% endfor %}
+        </select>
+      </div>
+      <div>
+        <label class="form-label">Skill</label>
+        <select class="form-select" name="skill">
+          <option value="ALL" {{ 'selected' if filters.skill == 'ALL' else '' }}>All skills</option>
+          {% for key in ['grammar','vocabulary','reading','listening','integrated'] %}<option value="{{ key }}" {{ 'selected' if filters.skill == key else '' }}>{{ key|title }}</option>{% endfor %}
+        </select>
+      </div>
+      <div>
+        <label class="form-label">Review status</label>
+        <select class="form-select" name="status">
+          <option value="ALL" {{ 'selected' if filters.status == 'ALL' else '' }}>All statuses</option>
+          <option value="difficulty_mismatch" {{ 'selected' if filters.status == 'difficulty_mismatch' else '' }}>Difficulty mismatch</option>
+          <option value="too_hard" {{ 'selected' if filters.status == 'too_hard' else '' }}>Too hard</option>
+          <option value="too_easy" {{ 'selected' if filters.status == 'too_easy' else '' }}>Too easy</option>
+          <option value="healthy" {{ 'selected' if filters.status == 'healthy' else '' }}>Within review band</option>
+          <option value="insufficient" {{ 'selected' if filters.status == 'insufficient' else '' }}>Insufficient evidence</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-label">Minimum academic responses</label>
+        <input class="form-control" type="number" min="0" step="1" name="min_responses" value="{{ filters.min_responses }}">
+      </div>
+      <button class="btn btn-primary btn-modern" type="submit"><i class="bi bi-funnel-fill"></i> Apply filters</button>
+      <a class="btn btn-outline-secondary btn-modern" href="{{ url_for('admin.analytics') }}">Reset</a>
+    </form>
+
+    <div class="analytics-legend">
+      <span class="analytics-status mismatch">Difficulty mismatch</span>
+      <span class="analytics-status danger">Too hard ≤40%</span>
+      <span class="analytics-status warning">Too easy ≥90%</span>
+      <span class="analytics-status healthy">Within review band</span>
+      <span class="analytics-status neutral">Insufficient evidence &lt;{{ dashboard.question_health.min_evidence }}</span>
+    </div>
+
+    <div class="analytics-table-summary">
+      <strong>{{ question_total_filtered }}</strong> items match the filters.
+      {% if question_total_filtered > 250 %}The page shows the first 250; the CSV export contains all filtered rows.{% endif %}
+    </div>
+
+    <div class="table-responsive modern-table-wrap analytics-item-table-wrap">
+      <table class="table modern-table align-middle mb-0 analytics-item-table">
+        <thead><tr><th>Question</th><th>Level / skill</th><th>Internal difficulty</th><th>Academic evidence</th><th>Avg. formal time</th><th>Game evidence</th><th>Review status</th><th></th></tr></thead>
+        <tbody>
+          {% for row in question_rows %}
+          <tr>
+            <td class="analytics-question-cell"><strong>{{ row.code }}</strong><span>{{ row.prompt }}</span><small>{{ row.topic_code or '' }} · {{ row.topic }}</small></td>
+            <td><span class="analytics-level-pill">{{ row.level }}</span><small class="d-block mt-1 text-muted">{{ row.skill|title }}</small></td>
+            <td><span class="difficulty-number d{{ row.level_difficulty }}">{{ row.level_difficulty }}/5</span></td>
+            <td>
+              {% if row.academic_responses %}<strong>{{ row.academic_rate }}%</strong><small class="d-block text-muted">{{ row.academic_correct }}/{{ row.academic_responses }} correct</small><small class="d-block text-muted">{{ row.formal_responses }} formal · {{ row.practice_responses }} practice</small>
+              {% else %}<span class="text-muted">No responses</span>{% endif %}
+            </td>
+            <td>{{ (row.avg_response_seconds|string + ' s') if row.avg_response_seconds is not none else '—' }}</td>
+            <td>
+              {% if row.game_responses %}<strong>{{ row.game_rate }}%</strong><small class="d-block text-muted">{{ row.game_correct }}/{{ row.game_responses }} correct</small>
+              {% else %}<span class="text-muted">—</span>{% endif %}
+            </td>
+            <td>
+              {% if row.status == 'difficulty_mismatch' %}<span class="analytics-status mismatch"><i class="bi bi-sliders"></i> Difficulty mismatch</span>
+              {% elif row.status == 'too_hard' %}<span class="analytics-status danger"><i class="bi bi-arrow-down-circle-fill"></i> Too hard</span>
+              {% elif row.status == 'too_easy' %}<span class="analytics-status warning"><i class="bi bi-arrow-up-circle-fill"></i> Too easy</span>
+              {% elif row.status == 'healthy' %}<span class="analytics-status healthy"><i class="bi bi-check-circle-fill"></i> Within band</span>
+              {% else %}<span class="analytics-status neutral"><i class="bi bi-hourglass-split"></i> Insufficient evidence</span>{% endif %}
+            </td>
+            <td><a class="btn btn-sm btn-outline-primary" href="{{ url_for('admin.edit_question', question_id=row.id) }}"><i class="bi bi-pencil-square"></i> Edit</a></td>
+          </tr>
+          {% else %}
+          <tr><td colspan="8" class="analytics-empty">No questions match the current filters.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="analytics-method-note">
+      <i class="bi bi-shield-check"></i>
+      <div><strong>Interpretation rules</strong><span>An item needs at least {{ dashboard.question_health.min_evidence }} academic responses before the dashboard labels it too easy or too hard. Difficulty mismatch flags high-difficulty items with ≥80% success or low-difficulty items with ≤55% success. These are maintenance signals, not psychometric validation.</span></div>
+    </div>
+  </section>
+</section>
+{% endblock %}

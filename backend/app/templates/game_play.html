@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}Play Word Runner · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section game-play-page">
+  <div class="game-play-heading">
+    <div><span class="eyebrow">WORD RUNNER</span><h1>Protect your energy</h1><p>Jump with <strong>Space</strong>, <strong>↑</strong>, <strong>W</strong>, or the on-screen button.</p></div>
+    <a class="btn btn-outline-secondary btn-modern" href="{{ url_for('game.index') }}"><i class="bi bi-arrow-left"></i> Game home</a>
+  </div>
+
+  <div id="wordRunnerApp"
+       class="word-runner-shell"
+       data-start-url="{{ url_for('game.start_run') }}"
+       data-challenge-url="{{ url_for('game.create_challenge', run_id=0) }}"
+       data-answer-url="{{ url_for('game.answer_challenge', run_id=0, challenge_id=0) }}"
+       data-finish-url="{{ url_for('game.finish_run', run_id=0) }}">
+
+    <div class="game-hud">
+      <div class="game-hud-item"><small>TIER</small><strong id="gameTier">—</strong></div>
+      <div class="game-hud-item"><small>CEFR</small><strong id="gameLevel">—</strong></div>
+      <div class="game-energy-wrap">
+        <div><small>ENERGY</small><strong id="energyText">100%</strong></div>
+        <div class="game-energy-track"><span id="energyBar" style="width:100%"></span></div>
+      </div>
+      <div class="game-hud-item"><small>DISTANCE</small><strong><span id="distanceText">0</span>/<span id="targetDistance">—</span></strong></div>
+      <div class="game-hud-item"><small>SCORE</small><strong id="scoreText">0</strong></div>
+    </div>
+
+    <div class="game-canvas-wrap">
+      <div id="scenarioBadge" class="game-scenario-badge"><i class="bi bi-image"></i> Green Valley</div>
+      <canvas id="runnerCanvas" width="960" height="420" aria-label="Word Runner game canvas"></canvas>
+      <div id="gameStartOverlay" class="game-screen-overlay is-visible">
+        <div class="game-screen-card">
+          <span class="game-screen-icon"><i class="bi bi-lightning-charge-fill"></i></span>
+          <h2>Ready to run?</h2>
+          <p>The run is faster, obstacles are lower, and every game uses a different scenario. At checkpoints, answer English challenges to recover energy.</p>
+          <button id="startRunButton" class="btn btn-primary btn-modern" type="button"><i class="bi bi-play-fill"></i> Start run</button>
+        </div>
+      </div>
+      <div id="gameEndOverlay" class="game-screen-overlay">
+        <div class="game-screen-card">
+          <span id="endIcon" class="game-screen-icon"><i class="bi bi-flag-fill"></i></span>
+          <h2 id="endTitle">Run finished</h2>
+          <p id="endCopy"></p>
+          <div class="game-end-stats">
+            <div><small>Score</small><strong id="endScore">0</strong></div>
+            <div><small>Questions</small><strong id="endQuestions">0/0</strong></div>
+            <div><small>Distance</small><strong id="endDistance">0</strong></div>
+          </div>
+          <div class="game-end-actions">
+            <button id="playAgainButton" class="btn btn-primary btn-modern" type="button"><i class="bi bi-arrow-repeat"></i> Play again</button>
+            <a class="btn btn-outline-secondary btn-modern" href="{{ url_for('game.index') }}">Game home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-mobile-controls">
+      <button id="jumpButton" type="button" aria-label="Jump"><i class="bi bi-arrow-up-circle-fill"></i> Jump</button>
+    </div>
+
+    <div id="challengeOverlay" class="challenge-overlay" aria-hidden="true">
+      <div class="challenge-card">
+        <div class="challenge-card-top">
+          <div><span id="challengeSource" class="challenge-source">Curriculum</span><span id="challengeDifficulty" class="challenge-difficulty">Difficulty 3/5</span></div>
+          <span class="challenge-energy-copy"><i class="bi bi-lightning-charge-fill"></i> Recharge checkpoint</span>
+        </div>
+        <h2 id="challengePrompt">Question</h2>
+        <div id="challengeOptions" class="challenge-options"></div>
+        <div id="challengeFeedback" class="challenge-feedback"></div>
+        <button id="challengeContinue" class="btn btn-primary btn-modern challenge-continue" type="button">Continue running <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Writing feedback · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section narrow-page writing-result-page">
+  <a class="back-link" href="{{ url_for('writing.practice', prompt_id=submission.prompt_id) }}"><i class="bi bi-arrow-left"></i> Back to prompt</a>
+  <div class="writing-result-hero"><div><span class="eyebrow light">DRAFT {{ submission.revision_number }}</span><h1>{{ submission.prompt.title }}</h1><p>Objective writing-practice signals for this saved version.</p></div><span class="assessment-big-level">{{ submission.prompt.level_code }}</span></div>
+  <div class="writing-metrics"><div><strong>{{ submission.word_count }}</strong><span>Words</span></div><div><strong>{{ submission.sentence_count }}</strong><span>Sentences</span></div><div><strong>{{ submission.unique_word_ratio if submission.unique_word_ratio is not none else '—' }}{{ '%' if submission.unique_word_ratio is not none else '' }}</strong><span>Unique-word ratio</span></div><div><strong>{{ submission.target_hits }}/{{ submission.prompt.target_vocabulary|length }}</strong><span>Target vocabulary</span></div><div><strong>{{ submission.connector_hits }}/{{ submission.prompt.target_connectors|length }}</strong><span>Connectors</span></div></div>
+  <section class="content-card mt-4 writing-feedback-card"><div class="content-card-header"><div><span class="eyebrow">PRACTICE FEEDBACK</span><h2>What to revise next</h2></div></div><div class="writing-feedback-list">
+    {% if submission.word_count < submission.prompt.min_words %}<p><i class="bi bi-arrow-up-circle"></i> Add more detail: this draft is below the {{ submission.prompt.min_words }}-word practice target.</p>{% elif submission.word_count > submission.prompt.max_words %}<p><i class="bi bi-scissors"></i> Try editing for concision: this draft is above the {{ submission.prompt.max_words }}-word practice target.</p>{% else %}<p><i class="bi bi-check-circle"></i> Your draft is inside the target length range.</p>{% endif %}
+    {% if submission.target_hits < submission.prompt.target_vocabulary|length %}<p><i class="bi bi-alphabet-uppercase"></i> Try incorporating more of the suggested target vocabulary naturally.</p>{% endif %}
+    {% if submission.connector_hits < submission.prompt.target_connectors|length %}<p><i class="bi bi-link-45deg"></i> Consider using more of the suggested connectors where they fit your meaning.</p>{% endif %}
+    <p><i class="bi bi-info-circle"></i> These signals do not score grammar accuracy, argument quality or CEFR proficiency.</p>
+  </div></section>
+  <section class="content-card mt-4"><div class="content-card-header"><div><span class="eyebrow">YOUR TEXT</span><h2>Draft {{ submission.revision_number }}</h2></div></div><div class="saved-writing-text">{{ submission.content_text }}</div></section>
+  {% if prior %}<section class="writing-comparison"><span>Compared with Draft {{ prior.revision_number }}</span><strong>{{ '%+d'|format(submission.word_count-prior.word_count) }} words · {{ '%+d'|format(submission.target_hits-prior.target_hits) }} target-vocabulary hits</strong></section>{% endif %}
+  <a class="btn btn-primary btn-modern mt-4" href="{{ url_for('writing.practice', prompt_id=submission.prompt_id) }}">Create another revision <i class="bi bi-arrow-right"></i></a>
+</section>
+{% endblock %}

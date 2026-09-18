@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}My Learning Path · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section learning-path-page">
+  <div class="page-title-row learning-path-title-row">
+    <div>
+      <span class="eyebrow">PERSONALIZED LEARNING</span>
+      <h1>My learning path</h1>
+      {% if plan_summary %}
+      <p>Your route was generated from your latest completed diagnostic. It prioritizes gaps without treating a small number of diagnostic items as a formal mastery certification.</p>
+      {% else %}
+      <p>Complete the initial diagnostic to generate a personalized route through the curriculum.</p>
+      {% endif %}
+    </div>
+    <div class="page-title-icon"><i class="bi bi-signpost-split-fill"></i></div>
+  </div>
+
+  {% if not plan_summary %}
+  <section class="learning-path-empty content-card">
+    <div class="learning-path-empty-icon"><i class="bi bi-compass-fill"></i></div>
+    <div>
+      <span class="eyebrow">START HERE</span>
+      <h2>No personalized path yet</h2>
+      <p>The platform needs a completed initial diagnostic before it can decide which foundational topics deserve review and which topics belong in your core route.</p>
+    </div>
+    {% if diagnostic %}
+    <a class="btn btn-primary btn-modern" href="{{ url_for('assessment.intro', code=diagnostic.code) }}">Open diagnostic <i class="bi bi-arrow-right"></i></a>
+    {% endif %}
+  </section>
+  {% else %}
+  <section class="learning-path-hero">
+    <div class="learning-path-level">
+      <span>Estimated starting level</span>
+      <strong>{{ plan_summary.estimated_level }}</strong>
+      <small>CEFR-aligned platform estimate</small>
+    </div>
+    <div class="learning-path-summary-copy">
+      <span class="eyebrow light">CURRENT ROUTE</span>
+      <h2>{{ plan_summary.required_remaining }} required topic{{ 's' if plan_summary.required_remaining != 1 else '' }} remaining</h2>
+      <p>Required topics control access to personalized level assessments. Recommended and optional topics remain available whenever you want extra practice.</p>
+      <div class="learning-path-progress-line">
+        <span style="width: {{ (plan_summary.required_completed / plan_summary.required_total * 100) if plan_summary.required_total else 100 }}%"></span>
+      </div>
+      <small>{{ plan_summary.required_completed }}/{{ plan_summary.required_total }} required topics completed</small>
+    </div>
+  </section>
+
+  <div class="learning-path-legend">
+    <span class="path-chip required"><i class="bi bi-exclamation-circle-fill"></i> Required · blocks level assessment until completed</span>
+    <span class="path-chip recommended"><i class="bi bi-stars"></i> Recommended · useful review, not blocking</span>
+    <span class="path-chip optional"><i class="bi bi-circle"></i> Optional · available for reinforcement</span>
+    <span class="path-chip mastered"><i class="bi bi-check-circle-fill"></i> Strong evidence · diagnostic signal only</span>
+  </div>
+
+  {% for level_code, rows in plan_summary.by_level.items() %}
+  <section class="content-card learning-path-level-card">
+    <div class="content-card-header">
+      <div><span class="eyebrow">LEVEL {{ level_code }}</span><h2>{{ rows|length }} topics in your personalized route</h2></div>
+      <div class="path-level-counts">
+        {% set ns = namespace(required=0, recommended=0, optional=0, mastered=0) %}
+        {% for row in rows %}
+          {% if row.status == 'required' %}{% set ns.required = ns.required + 1 %}
+          {% elif row.status == 'recommended' %}{% set ns.recommended = ns.recommended + 1 %}
+          {% elif row.status == 'optional' %}{% set ns.optional = ns.optional + 1 %}
+          {% elif row.status == 'mastered' %}{% set ns.mastered = ns.mastered + 1 %}{% endif %}
+        {% endfor %}
+        <span>{{ ns.required }} required</span><span>{{ ns.recommended }} recommended</span>
+      </div>
+    </div>
+
+    <div class="learning-path-topic-list">
+      {% for row in rows %}
+      <article class="learning-path-topic path-{{ row.status }}">
+        <div class="path-topic-status"><span class="path-chip {{ row.status }}">{{ 'Strong evidence' if row.status == 'mastered' else row.status|title }}</span></div>
+        <div class="path-topic-main">
+          <h3>{{ row.topic.title }}</h3>
+          <p>{{ row.rationale }}</p>
+          {% if row.evidence_total %}
+          <small><i class="bi bi-clipboard-data"></i> Diagnostic evidence: {{ row.evidence_correct }}/{{ row.evidence_total }} correct{% if row.evidence_percentage is not none %} · {{ row.evidence_percentage }}%{% endif %}</small>
+          {% else %}
+          <small><i class="bi bi-info-circle"></i> No direct topic-level diagnostic sample</small>
+          {% endif %}
+        </div>
+        <a class="btn btn-sm btn-outline-primary" href="{{ url_for('main.topic', topic_id=row.topic.id) }}">Open lesson</a>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+  <div class="learning-path-note">
+    <i class="bi bi-info-circle-fill"></i>
+    <p><strong>How to read this path:</strong> topic labels are study priorities derived from the diagnostic route, not official CEFR mastery determinations. A later diagnostic can rebuild the route with newer evidence.</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

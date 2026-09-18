@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Kids Games · English Practice Hub{% endblock %}
+{% block content %}
+<section class="kids-home">
+  <div class="kids-hero"><div><span>🌟 ENGLISH PLAYGROUND</span><h1>Hi, {{ current_user.full_name }}! 👋</h1><p>Pick a game, listen, tap and learn your first English words.</p></div><div class="kids-hero-stars"><strong>{{ total_stars }}</strong><span>⭐ stars</span></div></div>
+  <div class="kids-summary"><div><span>🧠</span><strong>{{ seen_words }}</strong><small>words discovered</small></div><div><span>🎮</span><strong>{{ runs|length }}</strong><small>recent games</small></div><div><span>🏆</span><strong>{{ total_stars }}</strong><small>happy stars</small></div></div>
+  <section class="kids-section"><h2>Choose a word world</h2><div class="kids-categories">{% for key,label,emoji in categories %}<a href="#games" data-kids-category="{{ key }}"><span>{{ emoji }}</span><strong>{{ label }}</strong></a>{% endfor %}</div></section>
+  <section class="kids-section" id="games"><h2>Choose a game</h2><p class="kids-subtitle">There are no tests here. Just play and learn! 🎈</p><div class="kids-game-grid">{% for key,game in games.items() %}<a class="kids-game-card" href="{{ url_for('kids.play', game_type=key, category='first_words') }}" data-game-url="{{ url_for('kids.play', game_type=key) }}"><i class="bi {{ game.icon }}"></i><h3>{{ game.label }}</h3><p>{{ game.description }}</p><b>PLAY ▶</b></a>{% endfor %}</div></section>
+</section>
+{% endblock %}
+{% block scripts %}<script>let cat='first_words';document.querySelectorAll('[data-kids-category]').forEach(a=>a.onclick=e=>{e.preventDefault();cat=a.dataset.kidsCategory;document.querySelectorAll('[data-kids-category]').forEach(x=>x.classList.toggle('selected',x===a));document.querySelectorAll('[data-game-url]').forEach(g=>g.href=g.dataset.gameUrl+'?category='+encodeURIComponent(cat));document.getElementById('games').scrollIntoView({behavior:'smooth'})});</script>{% endblock %}

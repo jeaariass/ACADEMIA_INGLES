@@ -2,12 +2,14 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 
 from . import db
-from .models import Level, Topic, Question, Passage, Attempt, Answer
+from .models import Level, Topic, Question, Passage, Attempt, Answer, Assessment
 from .progress import (
     update_topic_progress,
     get_level_progress,
     get_level_assessment,
 )
+from .learning_plan import ensure_learning_plan, get_learning_plan_summary
+from .insights import get_student_insights
 
 main_bp = Blueprint("main", __name__)
 
@@ -37,7 +39,11 @@ def index():
 @main_bp.route("/dashboard")
 @login_required
 def dashboard():
+    if ensure_learning_plan(current_user.id):
+        db.session.commit()
+
     levels = Level.query.order_by(Level.sort_order, Level.code).all()
+    plan_summary = get_learning_plan_summary(current_user.id)
 
     level_cards = []
     for level in levels:
@@ -47,6 +53,8 @@ def dashboard():
             "progress": progress,
             "assessment": get_level_assessment(level),
         })
+
+    insights = get_student_insights(current_user.id)
 
     attempts = (
         Attempt.query
@@ -61,6 +69,28 @@ def dashboard():
         levels=levels,
         level_cards=level_cards,
         attempts=attempts,
+        plan_summary=plan_summary,
+        insights=insights,
+    )
+
+
+@main_bp.route("/learning-path")
+@login_required
+def learning_path():
+    if ensure_learning_plan(current_user.id):
+        db.session.commit()
+
+    plan_summary = get_learning_plan_summary(current_user.id)
+    diagnostic = (
+        Assessment.query
+        .filter_by(assessment_type="diagnostic", is_published=True)
+        .order_by(Assessment.id.asc())
+        .first()
+    )
+    return render_template(
+        "learning_path.html",
+        plan_summary=plan_summary,
+        diagnostic=diagnostic,
     )
 
 
@@ -122,14 +152,9 @@ def test(topic_id):
         )
 
         db.session.commit()
-        return redirect(
-            url_for("main.result", attempt_id=attempt.id)
-        )
+        return redirect(url_for("main.result", attempt_id=attempt.id))
 
-    standalone_questions = [
-        q for q in questions
-        if q.passage_id is None
-    ]
+    standalone_questions = [q for q in questions if q.passage_id is None]
 
     passages = (
         Passage.query
@@ -152,25 +177,15 @@ def test(topic_id):
 def result(attempt_id):
     attempt = Attempt.query.get_or_404(attempt_id)
 
-    if (
-        attempt.user_id != current_user.id
-        and not current_user.is_admin
-    ):
+    if attempt.user_id != current_user.id and not current_user.is_admin:
         return redirect(url_for("main.dashboard"))
 
-    next_topic = get_next_topic(attempt.topic)
+    progress = get_level_progress(attempt.user_id, attempt.topic.level)
+    next_topic = progress["next_topic"] if progress["personalized"] else get_next_topic(attempt.topic)
     level_assessment = None
 
-    if next_topic is None:
-        progress = get_level_progress(
-            current_user.id,
-            attempt.topic.level,
-        )
-
-        if progress["is_complete"]:
-            level_assessment = get_level_assessment(
-                attempt.topic.level
-            )
+    if progress["is_complete"]:
+        level_assessment = get_level_assessment(attempt.topic.level)
 
     return render_template(
         "result.html",
@@ -183,12 +198,5 @@ def result(attempt_id):
 @main_bp.route("/ranking")
 @login_required
 def ranking():
-    attempts = (
-        Attempt.query
-        .order_by(Attempt.created_at.desc())
-        .all()
-    )
-    return render_template(
-        "ranking.html",
-        attempts=attempts,
-    )
+    attempts = Attempt.query.order_by(Attempt.created_at.desc()).all()
+    return render_template("ranking.html", attempts=attempts)

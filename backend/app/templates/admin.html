@@ -8,7 +8,13 @@
       <h1>Control panel</h1>
       <p>Manage user accounts and review the academic configuration of the platform.</p>
     </div>
-    <div class="page-title-icon"><i class="bi bi-shield-lock-fill"></i></div>
+    <div class="d-flex gap-2 align-items-center flex-wrap">
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.content_manager') }}"><i class="bi bi-pencil-square"></i> Content manager</a>
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('game_vocab_admin.index') }}"><i class="bi bi-controller"></i> Game Vocabulary</a>
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('kids.index') }}"><i class="bi bi-balloon-heart-fill"></i> Kids Games</a>
+      <a class="btn btn-primary btn-modern" href="{{ url_for('admin.analytics') }}"><i class="bi bi-graph-up-arrow"></i> Analytics</a>
+      <div class="page-title-icon"><i class="bi bi-shield-lock-fill"></i></div>
+    </div>
   </div>
 
   <section class="admin-users-card">
@@ -35,13 +41,20 @@
         </div>
         <div>
           <label class="form-label">Password</label>
-          <input class="form-control" name="password" type="password" minlength="8" required>
+          <input class="form-control" name="password" type="password" minlength="10" required>
         </div>
         <div>
           <label class="form-label">Role</label>
           <select class="form-select" name="role">
             <option value="student">Student</option>
             <option value="admin">Administrator</option>
+          </select>
+        </div>
+        <div>
+          <label class="form-label">Learning experience</label>
+          <select class="form-select" name="learning_mode">
+            <option value="standard">Standard learning</option>
+            <option value="kids">Kids mode · games only</option>
           </select>
         </div>
         <div class="admin-create-user-action">
@@ -65,6 +78,7 @@
             <span class="admin-role-chip {{ 'is-admin' if u.is_admin else 'is-student' }}">
               {{ 'Administrator' if u.is_admin else 'Student' }}
             </span>
+            {% if u.is_kids_mode %}<span class="admin-role-chip is-student"><i class="bi bi-balloon-heart-fill"></i> Kids mode</span>{% endif %}
           </div>
           <span class="admin-username">@{{ u.username }}</span>
           <div class="admin-user-metrics">
@@ -102,8 +116,36 @@
     <div class="admin-section-heading">
       <div>
         <span class="eyebrow">ACADEMIC CONTENT</span>
-        <h2>Manual content tools</h2>
-        <p>These existing tools remain available for small manual additions. Bulk curriculum remains managed through JSON import.</p>
+        <h2>Content management</h2>
+        <p>Use bulk import for regular content maintenance, or keep the manual tools for small one-off additions.</p>
+      </div>
+      <div class="d-flex gap-2 flex-wrap">
+        <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.content_manager') }}"><i class="bi bi-pencil-square"></i> Content manager</a>
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('game_vocab_admin.index') }}"><i class="bi bi-controller"></i> Game Vocabulary</a>
+        <a class="btn btn-success btn-modern" href="{{ url_for('admin.bulk_import') }}"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Topics & questions Excel</a>
+        <a class="btn btn-outline-success btn-modern" href="{{ url_for('admin.library_import') }}"><i class="bi bi-journal-arrow-up"></i> Readings Excel</a>
+      </div>
+    </div>
+
+    <article class="admin-users-card mb-4">
+      <div class="d-flex flex-column flex-lg-row gap-3 align-items-lg-center justify-content-between">
+        <div>
+          <span class="eyebrow">NEW · PHASE 1B</span>
+          <h3 class="h4 mb-2">Manage content and CEFR-relative difficulty from Excel</h3>
+          <p class="mb-0 text-muted">The importer now includes difficulty within each CEFR level (1–5) and lets you export the current bank for bulk review before adaptive exams are enabled.</p>
+        </div>
+        <div class="d-flex flex-column gap-2 flex-shrink-0">
+          <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.content_manager') }}">Open content manager <i class="bi bi-arrow-right"></i></a>
+          <a class="btn btn-outline-success btn-modern" href="{{ url_for('admin.library_import') }}">Bulk readings <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="admin-section-heading">
+      <div>
+        <span class="eyebrow">MANUAL TOOLS</span>
+        <h2>Small manual additions</h2>
+        <p>These existing tools remain available and work exactly as before.</p>
       </div>
     </div>
 
@@ -156,8 +198,17 @@
           <input class="form-control mb-2" name="option_b" placeholder="Option B" required>
           <input class="form-control mb-2" name="option_c" placeholder="Option C" required>
           <input class="form-control mb-2" name="option_d" placeholder="Option D" required>
+          <label class="form-label">Correct option</label>
           <select class="form-select mb-2" name="correct_option">
             <option>A</option><option>B</option><option>C</option><option>D</option>
+          </select>
+          <label class="form-label">Difficulty within this CEFR level</label>
+          <select class="form-select mb-2" name="level_difficulty">
+            <option value="1">1 · Very easy within the level</option>
+            <option value="2">2 · Easy</option>
+            <option value="3" selected>3 · Medium</option>
+            <option value="4">4 · Difficult</option>
+            <option value="5">5 · Very difficult within the level</option>
           </select>
           <textarea class="form-control mb-3" name="explanation" placeholder="Explanation"></textarea>
           <button class="btn btn-primary btn-modern" type="submit">Save question</button>

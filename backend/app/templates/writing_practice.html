@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}{{ prompt.title }} · Writing{% endblock %}
+{% block content %}
+<section class="page-section narrow-page writing-practice-page">
+  <a class="back-link" href="{{ url_for('writing.index') }}"><i class="bi bi-arrow-left"></i> Writing Lab</a>
+  <article class="writing-editor-card">
+    <header><span class="assessment-level">{{ prompt.level_code }}</span><h1>{{ prompt.title }}</h1><p>{{ prompt.prompt }}</p><small>{{ prompt.instructions }}</small></header>
+    <div class="writing-target-row"><div><span>Target length</span><strong>{{ prompt.min_words }}–{{ prompt.max_words }} words</strong></div><div><span>Revision</span><strong>{{ (previous[0].revision_number + 1) if previous else 1 }}</strong></div></div>
+    {% if prompt.target_vocabulary %}<div class="writing-targets"><span>Target vocabulary</span>{% for word in prompt.target_vocabulary %}<b>{{ word }}</b>{% endfor %}</div>{% endif %}
+    {% if prompt.target_connectors %}<div class="writing-targets connectors"><span>Useful connectors</span>{% for word in prompt.target_connectors %}<b>{{ word }}</b>{% endfor %}</div>{% endif %}
+    <form method="post"><textarea class="form-control writing-editor" id="writingEditor" name="content_text" rows="16" required>{{ initial }}</textarea><div class="writing-editor-footer"><span id="writingWordCount">0 words</span><button class="btn btn-primary btn-modern" type="submit">Save new draft <i class="bi bi-check-lg"></i></button></div></form>
+  </article>
+  {% if previous %}<section class="content-card mt-4"><div class="content-card-header"><div><span class="eyebrow">HISTORY</span><h2>Previous drafts</h2></div></div><div class="writing-history">{% for row in previous %}<a href="{{ url_for('writing.result', submission_id=row.id) }}"><strong>Draft {{ row.revision_number }}</strong><span>{{ row.word_count }} words · {{ row.created_at.strftime('%Y-%m-%d %H:%M') }}</span></a>{% endfor %}</div></section>{% endif %}
+</section>
+{% endblock %}
+{% block scripts %}<script>const e=document.getElementById('writingEditor'),o=document.getElementById('writingWordCount');function c(){const n=(e.value.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g)||[]).length;o.textContent=n+' word'+(n===1?'':'s')}e.addEventListener('input',c);c();</script>{% endblock %}

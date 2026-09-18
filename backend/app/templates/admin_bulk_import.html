@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% block title %}Bulk content import · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section admin-page">
+  <nav class="breadcrumb-modern mb-4" aria-label="breadcrumb">
+    <a href="{{ url_for('admin.panel') }}"><i class="bi bi-shield-lock-fill"></i> Administration</a>
+    <i class="bi bi-chevron-right"></i><strong>Bulk import</strong>
+  </nav>
+
+  <div class="page-title-row admin-title-row">
+    <div>
+      <span class="eyebrow">ACADEMIC CONTENT</span>
+      <h1>Bulk content import</h1>
+      <p>Upload topics and questions from Excel, including difficulty relative to each CEFR level. Library readings have their own bulk importer.</p>
+    </div>
+    <div class="d-flex gap-2 align-items-center flex-wrap"><a class="btn btn-outline-success btn-modern" href="{{ url_for('admin.library_import') }}"><i class="bi bi-journal-arrow-up"></i> Bulk readings</a><div class="page-title-icon"><i class="bi bi-file-earmark-spreadsheet-fill"></i></div></div>
+  </div>
+
+  <div class="row g-4 mb-4">
+    <div class="col-lg-5">
+      <article class="admin-tool-card h-100">
+        <div class="admin-tool-icon"><i class="bi bi-download"></i></div>
+        <h3>1. Download the template</h3>
+        <p class="text-muted">Use the official workbook so column names, codes and formats can be validated automatically.</p>
+        <div class="d-flex flex-column gap-2">
+          <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.bulk_import_template') }}">
+            <i class="bi bi-file-earmark-arrow-down"></i> Download empty template
+          </a>
+          <a class="btn btn-outline-success btn-modern" href="{{ url_for('admin.bulk_import_difficulty_bank') }}">
+            <i class="bi bi-database-down"></i> Export current question bank
+          </a>
+        </div>
+        <hr>
+        <small class="text-muted">
+          The workbook contains <strong>TEMAS</strong>, <strong>PREGUNTAS</strong> and <strong>INSTRUCCIONES</strong> sheets.
+          Rows with an existing code are updated; new codes are created. The bank export is useful for reviewing <strong>dificultad_nivel</strong> in bulk.
+        </small>
+      </article>
+    </div>
+
+    <div class="col-lg-7">
+      <article class="admin-tool-card h-100">
+        <div class="admin-tool-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+        <h3>2. Validate your workbook</h3>
+        <p class="text-muted">Validation is a dry run. It does not modify PostgreSQL.</p>
+        <form method="post" action="{{ url_for('admin.bulk_import_preview') }}" enctype="multipart/form-data">
+          <label class="form-label" for="bulk-file">Excel file (.xlsx)</label>
+          <input class="form-control mb-3" id="bulk-file" name="file" type="file" accept=".xlsx" required>
+          <button class="btn btn-primary btn-modern" type="submit">
+            <i class="bi bi-shield-check"></i> Validate and preview
+          </button>
+        </form>
+        <div class="alert alert-light border mt-3 mb-0">
+          <small><i class="bi bi-info-circle"></i> Maximum file size: 10 MB. Existing passage questions can now be updated safely without losing their passage relationship, provided they stay in the same topic.</small>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  {% if preview %}
+  <section class="admin-users-card mb-4">
+    <div class="admin-section-heading">
+      <div>
+        <span class="eyebrow">VALIDATION RESULT</span>
+        <h2>{{ upload_filename or 'Uploaded workbook' }}</h2>
+        <p>The platform checked required fields, level/topic references, duplicate codes, question types and database conflicts.</p>
+      </div>
+      {% if preview.errors %}
+      <span class="badge text-bg-danger fs-6">{{ preview.errors|length }} error{{ '' if preview.errors|length == 1 else 's' }}</span>
+      {% else %}
+      <span class="badge text-bg-success fs-6"><i class="bi bi-check-circle-fill"></i> Valid</span>
+      {% endif %}
+    </div>
+
+    {% if preview.errors %}
+    <div class="alert alert-danger">
+      <h3 class="h6"><i class="bi bi-exclamation-triangle-fill"></i> Fix these items and upload the workbook again</h3>
+      <ul class="mb-0">
+        {% for error in preview.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% else %}
+    <div class="row g-3 mb-4">
+      <div class="col-md-3">
+        <div class="border rounded-3 p-3 h-100">
+          <small class="text-muted d-block">New topics</small>
+          <strong class="fs-3">{{ preview.topics.new }}</strong>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="border rounded-3 p-3 h-100">
+          <small class="text-muted d-block">Topics to update</small>
+          <strong class="fs-3">{{ preview.topics.update }}</strong>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="border rounded-3 p-3 h-100">
+          <small class="text-muted d-block">New questions</small>
+          <strong class="fs-3">{{ preview.questions.new }}</strong>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="border rounded-3 p-3 h-100">
+          <small class="text-muted d-block">Questions to update</small>
+          <strong class="fs-3">{{ preview.questions.update }}</strong>
+        </div>
+      </div>
+    </div>
+
+    {% if preview.topic_preview %}
+    <h3 class="h5 mt-4">Topic preview</h3>
+    <div class="table-responsive mb-4">
+      <table class="table table-sm align-middle">
+        <thead><tr><th>Code</th><th>Level</th><th>Title</th><th>Action</th></tr></thead>
+        <tbody>
+          {% for item in preview.topic_preview %}
+          <tr>
+            <td><code>{{ item.code }}</code></td>
+            <td>{{ item.level }}</td>
+            <td>{{ item.title }}</td>
+            <td><span class="badge {{ 'text-bg-warning' if item.action == 'Update' else 'text-bg-success' }}">{{ item.action }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if preview.topics.total > preview.topic_preview|length %}
+      <small class="text-muted">Showing the first {{ preview.topic_preview|length }} of {{ preview.topics.total }} topics.</small>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if preview.question_preview %}
+    <h3 class="h5">Question preview</h3>
+    <div class="table-responsive mb-4">
+      <table class="table table-sm align-middle">
+        <thead><tr><th>Code</th><th>Topic</th><th>Skill</th><th>Global difficulty</th><th>Level difficulty</th><th>Action</th></tr></thead>
+        <tbody>
+          {% for item in preview.question_preview %}
+          <tr>
+            <td><code>{{ item.code }}</code></td>
+            <td><code>{{ item.topic }}</code></td>
+            <td>{{ item.skill }}</td>
+            <td>{{ item.difficulty }}</td>
+            <td><strong>{{ item.level_difficulty }}</strong></td>
+            <td><span class="badge {{ 'text-bg-warning' if item.action == 'Update' else 'text-bg-success' }}">{{ item.action }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if preview.questions.total > preview.question_preview|length %}
+      <small class="text-muted">Showing the first {{ preview.question_preview|length }} of {{ preview.questions.total }} questions.</small>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="alert alert-warning">
+      <strong><i class="bi bi-exclamation-circle"></i> Before confirming:</strong>
+      records marked <em>Update</em> will replace their editable academic fields with the values in this workbook. The operation is committed as one transaction.
+    </div>
+
+    <form method="post" action="{{ url_for('admin.bulk_import_confirm') }}" onsubmit="return confirm('Import this validated workbook into the academic database?');">
+      <input type="hidden" name="token" value="{{ token }}">
+      <button class="btn btn-success btn-modern" type="submit">
+        <i class="bi bi-database-fill-check"></i> Confirm import
+      </button>
+      <a class="btn btn-outline-secondary ms-2" href="{{ url_for('admin.bulk_import') }}">Cancel</a>
+    </form>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <section class="admin-attempts-card">
+    <div class="admin-section-heading">
+      <div>
+        <span class="eyebrow">PHASE 1B SCOPE</span>
+        <h2>What this version imports</h2>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="border rounded-3 p-3 h-100">
+          <h3 class="h6"><i class="bi bi-bookmark-check"></i> Topics</h3>
+          <p class="mb-0 text-muted">Level, order, title, objective, theory, examples, common mistakes, vocabulary, YouTube ID and publication status.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="border rounded-3 p-3 h-100">
+          <h3 class="h6"><i class="bi bi-patch-question"></i> Questions + adaptive difficulty</h3>
+          <p class="mb-0 text-muted">Keeps the legacy/global difficulty and adds <strong>dificultad_nivel</strong> (1–5), which will drive the adaptive level exams. Existing passage questions may also be reviewed without detaching them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+{% endblock %}

@@ -7,33 +7,91 @@
   <article class="assessment-intro-card">
     <div class="assessment-intro-hero">
       <div>
-        <span class="assessment-type light">{{ assessment.assessment_type|upper }}</span>
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+          <span class="assessment-type light">{{ assessment.assessment_type|upper }}</span>
+          {% if adaptive %}<span class="assessment-adaptive-light"><i class="bi bi-diagram-3-fill"></i> Adaptive</span>{% endif %}
+        </div>
         <h1>{{ assessment.title }}</h1>
         <p>{{ assessment.description }}</p>
       </div>
       {% if assessment.level %}<div class="assessment-big-level">{{ assessment.level.code }}</div>{% endif %}
     </div>
 
-    <div class="assessment-info-grid">
-      <div><i class="bi bi-ui-checks-grid"></i><strong>{{ question_count }}</strong><span>Questions</span></div>
+    <div class="assessment-info-grid {{ 'adaptive-info-grid' if adaptive else '' }}">
+      <div><i class="bi bi-ui-checks-grid"></i><strong>{{ question_count }}</strong><span>{{ 'Adaptive questions' if adaptive else 'Questions' }}</span></div>
       <div><i class="bi bi-clock"></i><strong>{{ assessment.duration_minutes or '—' }}</strong><span>Minutes</span></div>
       <div><i class="bi bi-bullseye"></i><strong>{{ assessment.passing_score|int if assessment.passing_score is not none else '—' }}%</strong><span>Reference threshold</span></div>
+      {% if adaptive %}
+      <div><i class="bi bi-database-check"></i><strong>{{ bank_count }}</strong><span>Items in bank</span></div>
+      {% endif %}
     </div>
 
     <div class="assessment-instructions">
       <h2>Instructions</h2>
-      <p>{{ assessment.instructions }}</p>
-      <div class="assessment-section-list">
-        {% for section in sections %}
-        <div><span>{{ loop.index }}</span><strong>{{ section.label }}</strong><small>{{ section.links|length }} questions</small></div>
-        {% endfor %}
-      </div>
+      {% if adaptive %}
+        <p>
+          This level assessment is adaptive. It starts around medium difficulty and recalibrates after each response.
+          Regular items are shown one at a time; reading and listening passages remain together as contextual blocks.
+          Questions already answered are not repeated during the same attempt.
+        </p>
+
+        <div class="adaptive-intro-callout">
+          <i class="bi bi-shuffle"></i>
+          <div>
+            <strong>How adaptation works</strong>
+            <span>Correct answers can move the selection toward harder items; incorrect answers move it toward easier items. Section coverage remains balanced throughout the assessment.</span>
+          </div>
+        </div>
+
+        <div class="assessment-section-list">
+          {% for section in adaptive_section_plan %}
+          <div><span>{{ loop.index }}</span><strong>{{ section.label }}</strong><small>{{ section.count }} questions</small></div>
+          {% endfor %}
+        </div>
+
+        <div class="adaptive-bank-readiness">
+          <div class="adaptive-bank-heading">
+            <div>
+              <span class="eyebrow">QUESTION BANK</span>
+              <strong>Internal difficulty distribution</strong>
+            </div>
+            <small>{{ bank_count }} linked items</small>
+          </div>
+          <div class="adaptive-difficulty-distribution">
+            {% for difficulty in range(1, 6) %}
+            <div>
+              <span>Difficulty {{ difficulty }}</span>
+              <strong>{{ adaptive_summary.difficulty_counts[difficulty] }}</strong>
+            </div>
+            {% endfor %}
+          </div>
+          {% if not adaptive_summary.ready_for_full_adaptation %}
+          <div class="adaptive-bank-warning">
+            <i class="bi bi-info-circle-fill"></i>
+            <span>
+              The bank currently has limited internal-difficulty variety. The engine will still work and keep section coverage balanced, but it will use the nearest available difficulty until more items are classified across levels 1–5.
+            </span>
+          </div>
+          {% endif %}
+        </div>
+      {% else %}
+        <p>{{ assessment.instructions }}</p>
+        <div class="assessment-section-list">
+          {% for section in sections %}
+          <div><span>{{ loop.index }}</span><strong>{{ section.label }}</strong><small>{{ section.links|length }} questions</small></div>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
 
     <div class="assessment-start-box">
       <div>
         <strong>Ready to begin?</strong>
+        {% if adaptive %}
+        <span>Your path through the question bank is generated during the attempt.</span>
+        {% else %}
         <span>Your answers are submitted when you finish the complete assessment.</span>
+        {% endif %}
       </div>
       <form method="post" action="{{ url_for('assessment.start', code=assessment.code) }}">
         <button class="btn btn-primary btn-modern" type="submit">Start assessment <i class="bi bi-arrow-right"></i></button>

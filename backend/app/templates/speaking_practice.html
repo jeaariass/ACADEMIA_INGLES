@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{ exercise.title }} · Speaking{% endblock %}
+{% block content %}
+<section class="page-section narrow-page speaking-practice-page">
+  <a class="back-link" href="{{ url_for('speaking.index') }}"><i class="bi bi-arrow-left"></i> Speaking Lab</a>
+  <article class="speaking-practice-card" data-exercise-id="{{ exercise.id }}" data-endpoint="{{ url_for('speaking.submit_attempt', exercise_id=exercise.id) }}">
+    <header><span class="assessment-level">{{ exercise.level_code }}</span><span class="speaking-card-type">{{ exercise.activity_type.replace('_',' ')|title }}</span><h1>{{ exercise.title }}</h1><p>{{ exercise.instructions }}</p></header>
+    <section class="speaking-prompt"><span>PROMPT</span><h2>{{ exercise.prompt }}</h2>{% if exercise.expected_text %}<div class="expected-sentence"><strong>{{ exercise.expected_text }}</strong><button type="button" class="btn btn-outline-primary btn-sm" onclick='speakLongText({{ exercise.expected_text|tojson }}, {lang:"en-US", rate:0.95})'><i class="bi bi-volume-up-fill"></i> Listen</button></div>{% endif %}</section>
+    {% if exercise.target_vocabulary %}<section class="speaking-targets"><span>TRY TO USE</span><div>{% for word in exercise.target_vocabulary %}<b>{{ word }}</b>{% endfor %}</div></section>{% endif %}
+    <section class="speaking-recorder">
+      <div class="mic-orb" id="micOrb"><i class="bi bi-mic-fill"></i></div>
+      <button class="btn btn-primary btn-modern" type="button" id="startSpeaking"><i class="bi bi-mic-fill"></i> Start speaking</button>
+      <button class="btn btn-outline-secondary btn-modern" type="button" id="stopSpeaking" disabled><i class="bi bi-stop-fill"></i> Stop</button>
+      <p id="speechStatus">Your browser will ask for microphone permission.</p>
+    </section>
+    <section class="speaking-transcript"><label for="speechTranscript">Recognized transcript</label><textarea id="speechTranscript" class="form-control" rows="6" placeholder="Your recognized speech will appear here. You can correct obvious recognition errors before saving."></textarea><small>Editing the transcript is allowed because this module is practice, not a formal assessment.</small></section>
+    <div class="speaking-save"><button class="btn btn-success btn-modern" id="saveSpeaking" type="button" disabled>Save practice <i class="bi bi-check-lg"></i></button></div>
+    <section class="speaking-feedback d-none" id="speakingFeedback"></section>
+  </article>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/speaking.js') }}"></script>{% endblock %}

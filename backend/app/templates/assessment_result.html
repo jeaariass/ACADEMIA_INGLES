@@ -5,7 +5,7 @@
   <div class="assessment-result-hero">
     <div class="assessment-score-circle"><strong>{{ attempt.percentage }}%</strong><span>Overall</span></div>
     <div>
-      <span class="eyebrow light">ASSESSMENT COMPLETED</span>
+      <span class="eyebrow light">ASSESSMENT COMPLETED{% if adaptive_summary %} · ADAPTIVE{% endif %}</span>
       <h1>{{ assessment.title }}</h1>
       <p>You answered <strong>{{ attempt.score }}</strong> of <strong>{{ attempt.total }}</strong> questions correctly.</p>
       {% if threshold is not none %}
@@ -20,6 +20,24 @@
       {% endif %}
     </div>
   </div>
+
+  {% if adaptive_summary %}
+  <section class="content-card adaptive-result-card">
+    <div class="content-card-header">
+      <div><span class="eyebrow">ADAPTIVE PATH</span><h2>How the assessment adjusted</h2></div>
+      <span class="adaptive-result-chip"><i class="bi bi-shuffle"></i> Rule-based v1</span>
+    </div>
+    <div class="adaptive-result-metrics">
+      <div><span>Questions answered</span><strong>{{ attempt.total }}/{{ adaptive_summary.target_questions }}</strong></div>
+      <div><span>Starting target</span><strong>3/5</strong></div>
+      <div><span>Ending target</span><strong>{{ adaptive_summary.ending_target_difficulty }}/5</strong></div>
+      <div><span>Average item difficulty</span><strong>{{ adaptive_summary.average_item_difficulty }}/5</strong></div>
+    </div>
+    <p class="adaptive-result-note">
+      The adaptive value is an internal platform heuristic used to select questions within this CEFR level. It is not an IRT/CAT psychometric score or an official CEFR certification measure.
+    </p>
+  </section>
+  {% endif %}
 
   <section class="content-card assessment-breakdown-card">
     <div class="content-card-header"><div><span class="eyebrow">SKILL PROFILE</span><h2>Performance by section</h2></div></div>
@@ -40,7 +58,7 @@
       {% if strengths %}
       <div class="recommendation-list success">
         {% for item in strengths %}
-        <div><i class="bi bi-check-circle-fill"></i><span><strong>{{ item.topic.title }}</strong><small>{{ item.percentage }}% across linked assessment questions</small></span></div>
+        <div><i class="bi bi-check-circle-fill"></i><span><strong>{{ item.topic.title }}</strong><small>{{ item.percentage }}% across answered assessment questions</small></span></div>
         {% endfor %}
       </div>
       {% else %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{{ status_code }} · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section narrow-page">
+  <article class="content-card" style="padding:32px; margin-top:40px; text-align:center;">
+    <span class="eyebrow">ERROR {{ status_code }}</span>
+    <h1 style="margin-top:10px;">{{ title }}</h1>
+    <p style="color:var(--text-soft); max-width:620px; margin:12px auto 20px;">{{ message }}</p>
+    {% if request_id %}<small style="color:var(--text-soft);">Reference: {{ request_id }}</small>{% endif %}
+    <div style="margin-top:22px;">
+      <a class="btn btn-primary btn-modern" href="{{ url_for('main.dashboard') if current_user.is_authenticated else url_for('auth.login') }}">Continue</a>
+    </div>
+  </article>
+</section>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}My Vocabulary · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section vocabulary-page">
+  <div class="page-title-row">
+    <div>
+      <span class="eyebrow">PERSONAL WORD BANK</span>
+      <h1>My Vocabulary</h1>
+      <p>Words and phrases you save while reading become review cards that return at increasingly spaced intervals.</p>
+    </div>
+    <div class="page-title-icon"><i class="bi bi-bookmark-star-fill"></i></div>
+  </div>
+
+  <div class="vocabulary-actions-row">
+    <a class="btn btn-outline-primary btn-modern" href="{{ url_for('library.index') }}"><i class="bi bi-bookshelf"></i> Back to Library</a>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('library.review') }}"><i class="bi bi-arrow-repeat"></i> Review now <span class="badge text-bg-light ms-1">{{ stats.due }}</span></a>
+  </div>
+
+  <div class="library-stat-grid vocabulary-stat-grid">
+    <div><span><i class="bi bi-bookmarks-fill"></i></span><strong>{{ stats.saved }}</strong><small>Total saved</small></div>
+    <div><span><i class="bi bi-alarm-fill"></i></span><strong>{{ stats.due }}</strong><small>Due now</small></div>
+    <div><span><i class="bi bi-stars"></i></span><strong>{{ stats.mastered }}</strong><small>Mastery 5/5</small></div>
+  </div>
+
+  {% if items %}
+  <div class="vocabulary-list">
+    {% for item in items %}
+    <article class="vocabulary-row">
+      <div class="vocabulary-word-block">
+        <div class="vocabulary-word-title">
+          <strong>{{ item.text }}</strong>
+          <button type="button" class="icon-action" aria-label="Listen" onclick='speakLongText({{ item.text|tojson }}, {lang:"en-US", rate:0.95})'><i class="bi bi-volume-up-fill"></i></button>
+        </div>
+        {% if item.translation %}<span class="vocabulary-translation">{{ item.translation }}</span>{% else %}<span class="vocabulary-missing">Translation pending</span>{% endif %}
+        {% if item.context_text %}<small class="vocabulary-context">“{{ item.context_text }}”</small>{% endif %}
+        {% if item.library_item %}<a class="vocabulary-source" href="{{ url_for('library.item', item_id=item.library_item.id) }}"><i class="bi bi-journal-text"></i>{{ item.library_item.title }}</a>{% endif %}
+      </div>
+
+      <div class="vocabulary-review-meta">
+        <span>Mastery <strong>{{ item.mastery_level }}/5</strong></span>
+        <div class="vocabulary-mastery-track"><span style="width: {{ (item.mastery_level / 5 * 100)|round|int }}%"></span></div>
+        <small>
+          {% if item.next_review_at <= now %}<b class="due-now">Due now</b>
+          {% else %}Next: {{ item.next_review_at.strftime('%Y-%m-%d') }}{% endif %}
+        </small>
+      </div>
+
+      <div class="vocabulary-row-actions">
+        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#editVocabulary{{ item.id }}"><i class="bi bi-pencil-square"></i> Edit</button>
+        <form method="post" action="{{ url_for('library.delete_vocabulary', entry_id=item.id) }}" onsubmit="return confirm('Remove this vocabulary entry?');">
+          <button class="btn btn-sm btn-outline-danger" type="submit"><i class="bi bi-trash3"></i></button>
+        </form>
+      </div>
+
+      <div class="collapse vocabulary-edit-panel" id="editVocabulary{{ item.id }}">
+        <form method="post" action="{{ url_for('library.update_vocabulary', entry_id=item.id) }}">
+          <div><label class="form-label">Translation</label><input class="form-control" name="translation" value="{{ item.translation }}" maxlength="500"></div>
+          <div><label class="form-label">Notes</label><input class="form-control" name="notes" value="{{ item.notes or '' }}"></div>
+          <button class="btn btn-success btn-modern" type="submit">Save changes</button>
+        </form>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state content-card">
+    <span class="empty-state-icon"><i class="bi bi-bookmark-plus"></i></span>
+    <h3>Your vocabulary bank is empty</h3>
+    <p>Open a reading, select a useful word or phrase, and choose Save.</p>
+    <a class="btn btn-primary btn-modern" href="{{ url_for('library.index') }}">Open Library <i class="bi bi-arrow-right"></i></a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

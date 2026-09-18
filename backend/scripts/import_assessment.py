@@ -43,14 +43,21 @@ def upsert_assessment(data):
         if not level:
             raise ValueError(f"Level '{data['level_code']}' does not exist.")
 
+    assessment_type = data["assessment_type"].strip().lower()
     assessment.title = data["title"].strip()
-    assessment.assessment_type = data["assessment_type"].strip().lower()
+    assessment.assessment_type = assessment_type
     assessment.level_id = level.id if level else None
     assessment.description = data.get("description", "").strip()
     assessment.instructions = data.get("instructions", "").strip()
     assessment.duration_minutes = data.get("duration_minutes")
     assessment.passing_score = data.get("passing_score")
-    assessment.is_adaptive = bool(data.get("is_adaptive", False))
+
+    # Phase 2: every CEFR level assessment is adaptive. This deliberately
+    # overrides older JSON files that still contain is_adaptive=false.
+    assessment.is_adaptive = (
+        True if assessment_type == "level"
+        else bool(data.get("is_adaptive", False))
+    )
     assessment.is_published = bool(data.get("is_published", False))
     db.session.flush()
     return assessment
@@ -85,10 +92,23 @@ def upsert_passage(data):
     return passage
 
 
+def _optional_level_difficulty(data):
+    value = data.get("level_difficulty", data.get("difficulty_in_level"))
+    if value is None or str(value).strip() == "":
+        return None
+    value = int(value)
+    if not 1 <= value <= 5:
+        raise ValueError(
+            f"{data.get('code', 'question')}: level_difficulty must be 1-5"
+        )
+    return value
+
+
 def upsert_question(data, passage=None):
     topic = require_topic(data["topic_code"])
     code = data["code"].strip().upper()
     question = Question.query.filter_by(code=code).first()
+    is_new = question is None
 
     if not question:
         question = Question(
@@ -100,6 +120,7 @@ def upsert_question(data, passage=None):
             option_c="",
             option_d="",
             correct_option="A",
+            level_difficulty=3,
         )
         db.session.add(question)
 
@@ -109,6 +130,13 @@ def upsert_question(data, passage=None):
     question.skill = data["skill"].strip().lower()
     question.question_type = data["question_type"].strip().lower()
     question.difficulty = int(data.get("difficulty", 1))
+
+    level_difficulty = _optional_level_difficulty(data)
+    if level_difficulty is not None:
+        question.level_difficulty = level_difficulty
+    elif is_new:
+        question.level_difficulty = 3
+
     question.prompt = data["prompt"].strip()
     question.option_a = data["option_a"].strip()
     question.option_b = data["option_b"].strip()

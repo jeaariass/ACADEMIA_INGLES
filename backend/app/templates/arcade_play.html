@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}{{ game.label }} · Game Arcade{% endblock %}
+{% block content %}
+<section class="page-section narrow-page arcade-play-page" data-game-type="{{ game_type }}" data-start-url="{{ url_for('arcade.start') }}">
+  <a class="back-link" href="{{ url_for('arcade.index') }}"><i class="bi bi-arrow-left"></i> Game Arcade</a>
+  <article class="arcade-stage">
+    <header><span class="arcade-kicker">GAME ARCADE</span><h1><i class="bi {{ game.icon }}"></i> {{ game.label }}</h1><p>{{ game.description }}</p></header>
+    <div class="arcade-hud"><span>Round <strong id="arcadeRound">0</strong>/<b id="arcadeRoundLimit">—</b></span><span>Score <strong id="arcadeScore">0</strong></span><span>Level <strong id="arcadeLevel">—</strong></span></div>
+    <div id="arcadeWelcome" class="arcade-welcome"><i class="bi {{ game.icon }}"></i><h2>Ready?</h2><p>This is practice only. You can replay as often as you want.</p><button class="btn btn-primary btn-modern" id="arcadeStart" type="button">Start game</button></div>
+    <div id="arcadeBoard" class="arcade-board d-none"></div>
+    <div id="arcadeFeedback" class="arcade-feedback d-none"></div>
+    <div id="arcadeFinish" class="arcade-finish d-none"><i class="bi bi-stars"></i><h2>Game complete!</h2><p id="arcadeFinishText"></p><div><a class="btn btn-outline-primary btn-modern" href="{{ url_for('arcade.index') }}">Back to Arcade</a><button class="btn btn-primary btn-modern" type="button" onclick="location.reload()">Play again</button></div></div>
+  </article>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/arcade.js') }}"></script>{% endblock %}

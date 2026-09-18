@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}{{ game.label }} · Kids Games{% endblock %}
+{% block content %}
+<section class="kids-play-page" data-game-type="{{ game_type }}" data-category="{{ category }}" data-start-url="{{ url_for('kids.start') }}">
+  <div class="kids-play-top"><a href="{{ url_for('kids.index') }}">← Games</a><h1>{{ game.label }}</h1><span id="kidsStars">⭐</span></div>
+  <div class="kids-stage theme-rainbow" id="kidsStage">
+    <div id="kidsWelcome" class="kids-welcome"><i class="bi {{ game.icon }}"></i><h2>Ready to play?</h2><p>{{ game.description }}</p><button id="kidsStart" type="button">START! 🚀</button></div>
+    <div id="kidsBoard" class="kids-board d-none"></div>
+    <div id="kidsCheer" class="kids-cheer d-none"></div>
+    <div id="kidsFinish" class="kids-finish d-none"><div class="kids-confetti">🎉 ⭐ 🎈 🌟 🎉</div><h2>Awesome playing!</h2><p id="kidsFinishText"></p><div><a href="{{ url_for('kids.index') }}">More games</a><button type="button" onclick="location.reload()">Play again</button></div></div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/kids.js') }}"></script>{% endblock %}

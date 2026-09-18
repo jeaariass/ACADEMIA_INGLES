@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block title %}Bulk library import · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section admin-page">
+  <nav class="breadcrumb-modern mb-4" aria-label="breadcrumb">
+    <a href="{{ url_for('admin.panel') }}"><i class="bi bi-shield-lock-fill"></i> Administration</a>
+    <i class="bi bi-chevron-right"></i><a href="{{ url_for('admin.content_manager', kind='readings') }}">Content manager</a>
+    <i class="bi bi-chevron-right"></i><strong>Library import</strong>
+  </nav>
+
+  <div class="page-title-row admin-title-row">
+    <div>
+      <span class="eyebrow">LIBRARY CONTENT</span>
+      <h1>Bulk reading import</h1>
+      <p>Create or update many library readings from one Excel workbook. Validation runs before anything is written to PostgreSQL.</p>
+    </div>
+    <div class="page-title-icon"><i class="bi bi-journal-arrow-up"></i></div>
+  </div>
+
+  <div class="row g-4 mb-4">
+    <div class="col-lg-5">
+      <article class="admin-tool-card h-100">
+        <div class="admin-tool-icon"><i class="bi bi-file-earmark-spreadsheet-fill"></i></div>
+        <h3>1. Prepare the workbook</h3>
+        <p class="text-muted">Use the official <strong>LECTURAS</strong> sheet, or export the current library and edit it in bulk.</p>
+        <div class="d-flex flex-column gap-2">
+          <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.library_import_template') }}">
+            <i class="bi bi-download"></i> Download empty template
+          </a>
+          <a class="btn btn-outline-success btn-modern" href="{{ url_for('admin.library_import_export') }}">
+            <i class="bi bi-database-down"></i> Export current library
+          </a>
+        </div>
+        <hr>
+        <small class="text-muted">Supported fields: code, CEFR level, category, order, title, summary, full content, source, source URL and publication status. Word count is recalculated automatically.</small>
+      </article>
+    </div>
+
+    <div class="col-lg-7">
+      <article class="admin-tool-card h-100">
+        <div class="admin-tool-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+        <h3>2. Validate and preview</h3>
+        <p class="text-muted">The preview identifies which readings will be created and which will be updated.</p>
+        <form method="post" action="{{ url_for('admin.library_import_preview') }}" enctype="multipart/form-data">
+          <label class="form-label" for="library-file">Excel file (.xlsx)</label>
+          <input class="form-control mb-3" id="library-file" name="file" type="file" accept=".xlsx" required>
+          <button class="btn btn-primary btn-modern" type="submit"><i class="bi bi-shield-check"></i> Validate and preview</button>
+        </form>
+        <div class="alert alert-light border mt-3 mb-0"><small><i class="bi bi-info-circle"></i> Maximum size: 10 MB. Existing codes are updated; new codes are created. Despublishing is safer than deleting readings already referenced by saved vocabulary.</small></div>
+      </article>
+    </div>
+  </div>
+
+  {% if preview %}
+  <section class="admin-users-card mb-4">
+    <div class="admin-section-heading">
+      <div>
+        <span class="eyebrow">VALIDATION RESULT</span>
+        <h2>{{ upload_filename or 'Uploaded workbook' }}</h2>
+        <p>The importer checked required fields, categories, CEFR levels, duplicate codes and URLs.</p>
+      </div>
+      {% if preview.errors %}<span class="badge text-bg-danger fs-6">{{ preview.errors|length }} error{{ '' if preview.errors|length == 1 else 's' }}</span>
+      {% else %}<span class="badge text-bg-success fs-6"><i class="bi bi-check-circle-fill"></i> Valid</span>{% endif %}
+    </div>
+
+    {% if preview.errors %}
+    <div class="alert alert-danger">
+      <h3 class="h6"><i class="bi bi-exclamation-triangle-fill"></i> Fix these items and upload again</h3>
+      <ul class="mb-0">{% for error in preview.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+    </div>
+    {% else %}
+    <div class="row g-3 mb-4">
+      <div class="col-md-4"><div class="border rounded-3 p-3"><small class="text-muted d-block">Rows</small><strong class="fs-3">{{ preview.readings.total }}</strong></div></div>
+      <div class="col-md-4"><div class="border rounded-3 p-3"><small class="text-muted d-block">New readings</small><strong class="fs-3">{{ preview.readings.new }}</strong></div></div>
+      <div class="col-md-4"><div class="border rounded-3 p-3"><small class="text-muted d-block">Readings to update</small><strong class="fs-3">{{ preview.readings.update }}</strong></div></div>
+    </div>
+
+    <div class="table-responsive mb-4">
+      <table class="table table-sm align-middle">
+        <thead><tr><th>Code</th><th>Level</th><th>Category</th><th>Title</th><th>Words</th><th>Action</th></tr></thead>
+        <tbody>
+          {% for item in preview.preview %}
+          <tr>
+            <td><code>{{ item.code }}</code></td><td>{{ item.level }}</td><td>{{ item.category }}</td><td>{{ item.title }}</td><td>{{ item.words }}</td>
+            <td><span class="badge {{ 'text-bg-warning' if item.action == 'Update' else 'text-bg-success' }}">{{ item.action }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if preview.readings.total > preview.preview|length %}<small class="text-muted">Showing the first {{ preview.preview|length }} of {{ preview.readings.total }} readings.</small>{% endif %}
+    </div>
+
+    <div class="alert alert-warning"><strong><i class="bi bi-exclamation-circle"></i> Before confirming:</strong> rows marked <em>Update</em> replace the editable library fields of the matching code. The complete operation is committed as one transaction.</div>
+    <form method="post" action="{{ url_for('admin.library_import_confirm') }}" onsubmit="return confirm('Import this validated library workbook?');">
+      <input type="hidden" name="token" value="{{ token }}">
+      <button class="btn btn-success btn-modern" type="submit"><i class="bi bi-database-fill-check"></i> Confirm library import</button>
+      <a class="btn btn-outline-secondary ms-2" href="{{ url_for('admin.library_import') }}">Cancel</a>
+    </form>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <section class="admin-attempts-card">
+    <div class="admin-section-heading"><div><span class="eyebrow">CATEGORIES</span><h2>Accepted library categories</h2></div></div>
+    <div class="d-flex flex-wrap gap-2 p-3">
+      {% for key in ['story','travel','science','technology','society','news_practice','culture','academic'] %}<code class="border rounded px-2 py-1">{{ key }}</code>{% endfor %}
+    </div>
+  </section>
+</section>
+{% endblock %}

@@ -1,0 +1,110 @@
+[
+  {
+    "code": "LIB_A1_001",
+    "level_code": "A1",
+    "category": "story",
+    "title": "A Morning at the Market",
+    "summary": "A simple story about shopping, greetings, food, and prices.",
+    "sort_order": 1,
+    "content_text": "Mia goes to the market on Saturday morning. She takes a small bag and some money. The market is busy, but she likes the colors and the smells.\n\nFirst, Mia buys apples and bananas. The seller says, \"Good morning! How can I help you?\" Mia asks, \"How much are the apples?\" The seller tells her the price, and Mia buys six apples.\n\nNext, she goes to a bakery. She buys bread and two small cakes. Before she goes home, she drinks a cup of coffee with her friend Leo. They talk about their plans for the weekend."
+  },
+  {
+    "code": "LIB_A1_002",
+    "level_code": "A1",
+    "category": "story",
+    "title": "The New Neighbor",
+    "summary": "Practice introductions, family words, and everyday descriptions.",
+    "sort_order": 2,
+    "content_text": "A new family moves into the apartment next to Sam. On Monday evening, Sam meets the new neighbor in the hall. Her name is Clara. She is from Chile, and she works at a hospital.\n\nClara lives with her brother and a small dog. The dog is brown and very friendly. Sam tells Clara about the neighborhood. There is a supermarket near the building and a park across the street.\n\nClara says, \"Thank you. It is nice to meet you.\" Sam smiles and says, \"Welcome to the neighborhood.\""
+  },
+  {
+    "code": "LIB_A2_001",
+    "level_code": "A2",
+    "category": "travel",
+    "title": "A Weekend in Villa de Leyva",
+    "summary": "A travel diary with past tense, places, food, and activities.",
+    "sort_order": 3,
+    "content_text": "Last weekend, Daniel traveled to Villa de Leyva with two friends. They left Bogotá early on Saturday and arrived before lunch. The weather was cool and sunny.\n\nThey walked around the main square, visited a museum, and had lunch at a small restaurant. Daniel ordered soup and grilled chicken. In the afternoon, they took many photos and bought local sweets.\n\nOn Sunday, they visited a nearby nature area before returning home. Daniel was tired at the end of the trip, but he said the weekend was relaxing and interesting."
+  },
+  {
+    "code": "LIB_A2_002",
+    "level_code": "A2",
+    "category": "news_practice",
+    "title": "News Practice: A School Opens a Community Garden",
+    "summary": "An educational news-style text about a school garden project.",
+    "sort_order": 4,
+    "content_text": "This is an educational news-style text, not a report about a real current event.\n\nA local school has opened a new community garden. Students, teachers, and families worked together for three months to prepare the space. They planted vegetables, herbs, and flowers.\n\nThe school plans to use the garden in science classes. Students will learn how plants grow and how food moves from farms to kitchens. Families can also visit the garden on Saturday mornings.\n\nThe principal says the project gives students a practical way to learn outside the classroom."
+  },
+  {
+    "code": "LIB_B1_001",
+    "level_code": "B1",
+    "category": "science",
+    "title": "Why Cities Plant More Trees",
+    "summary": "Read about shade, temperature, air quality, and urban planning.",
+    "sort_order": 5,
+    "content_text": "Cities around the world are paying more attention to urban trees. Trees can provide shade, reduce surface temperatures, and make streets more comfortable for walking. They can also help manage rainwater by slowing the movement of water across hard surfaces.\n\nHowever, planting trees is not as simple as choosing an empty space. Planners need to consider the species, the size of the roots, available water, nearby buildings, and underground infrastructure. A tree that works well in a park may not be suitable for a narrow street.\n\nGood urban forestry therefore combines environmental goals with long-term maintenance. Planting is only the first step; cities also need to protect and care for trees as they grow."
+  },
+  {
+    "code": "LIB_B1_002",
+    "level_code": "B1",
+    "category": "technology",
+    "title": "A Small Robot in the Library",
+    "summary": "A technology story about automation and human assistance.",
+    "sort_order": 6,
+    "content_text": "A university library is testing a small robot that helps staff move books between floors. The robot follows a digital map of the building and stops automatically when a person walks in front of it.\n\nThe goal is not to replace librarians. Instead, the library wants to reduce the time employees spend carrying heavy boxes. Staff can then spend more time helping students, organizing collections, and answering research questions.\n\nDuring the first weeks of the test, the robot sometimes became confused near crowded elevators. Engineers changed the route and added clearer stopping points. The library will review the results before deciding whether to keep the system."
+  },
+  {
+    "code": "LIB_B2_001",
+    "level_code": "B2",
+    "category": "society",
+    "title": "Remote Work and the Shape of the Working Day",
+    "summary": "Explore how flexibility can improve or complicate daily routines.",
+    "sort_order": 7,
+    "content_text": "Remote work is often described as a simple exchange: employees give up commuting and gain flexibility. In practice, the change can reshape the entire working day. Some people use the flexibility to exercise, care for family members, or work during their most productive hours. Others find that the boundary between work and personal time becomes less clear.\n\nOrganizations face a similar trade-off. Flexible arrangements can widen the pool of potential employees, but they can also make coordination harder when teams rarely share the same schedule. As a result, many companies have moved away from one universal policy and toward agreements that depend on the type of work being done.\n\nThe central question is no longer whether remote work is good or bad in general. It is how to design routines that preserve flexibility without creating constant availability."
+  },
+  {
+    "code": "LIB_B2_002",
+    "level_code": "B2",
+    "category": "technology",
+    "title": "When a Map Tells a Story",
+    "summary": "A geospatial reading about how map design influences interpretation.",
+    "sort_order": 8,
+    "content_text": "Maps are often treated as neutral containers of geographic facts, but every map involves choices. A cartographer decides what to include, what to omit, how to classify values, and which visual variables deserve attention. Those decisions can change the story a reader sees.\n\nFor example, two maps may use the same data but different classification methods. One may emphasize sharp contrasts between places, while another suggests a gradual transition. Neither map necessarily contains false data, yet the visual interpretation can be quite different.\n\nThis is why responsible map design requires more than technical accuracy. It also requires transparency about methods, careful labeling, and awareness of the conclusions that a visual pattern may encourage."
+  },
+  {
+    "code": "LIB_C1_001",
+    "level_code": "C1",
+    "category": "technology",
+    "title": "AI and Human Judgment",
+    "summary": "Consider where automated recommendations help and where human oversight matters.",
+    "sort_order": 9,
+    "content_text": "Automated systems are increasingly used to recommend actions rather than merely organize information. This creates a subtle shift in responsibility. When a system ranks options, highlights anomalies, or predicts risk, the human user may still make the final decision, but the structure of that decision has already been influenced.\n\nThe challenge is therefore not simply to ask whether an algorithm is accurate. Decision-makers also need to understand when the model is likely to fail, which variables shape its outputs, and whether users are becoming overly dependent on its recommendations. A highly accurate system can still be dangerous if people treat its predictions as unquestionable facts.\n\nEffective oversight requires a productive division of labor. Machines can process large volumes of information consistently, while humans can evaluate context, competing objectives, and consequences that are difficult to encode. The strongest systems are often those that make this division explicit."
+  },
+  {
+    "code": "LIB_C1_002",
+    "level_code": "C1",
+    "category": "culture",
+    "title": "The Hidden Cost of Convenience",
+    "summary": "A reflective text about services that make everyday life faster and easier.",
+    "sort_order": 10,
+    "content_text": "Convenience is usually discussed as an obvious benefit. A faster payment, an automatic recommendation, or a delivery service appears to remove friction from daily life. Yet friction sometimes performs a useful function: it gives people time to notice what they are doing.\n\nWhen a process becomes nearly invisible, its costs may also become less visible. A one-click purchase can hide the labor and transport required to deliver an item. An automatic subscription can continue long after a user has stopped valuing the service. The point is not that convenience is undesirable, but that ease can change attention.\n\nA more useful question is therefore not whether a service is convenient. It is which decisions have been simplified, which have been moved elsewhere, and who carries the remaining cost."
+  },
+  {
+    "code": "LIB_C2_001",
+    "level_code": "C2",
+    "category": "academic",
+    "title": "When Measurement Changes Behavior",
+    "summary": "Analyze how indicators can become incentives rather than passive observations.",
+    "sort_order": 11,
+    "content_text": "Performance indicators are commonly introduced as instruments of observation: they are expected to reveal whether an organization is achieving its goals. The assumption is that measurement stands outside the activity being measured. Once rewards, sanctions, or reputational consequences are attached to an indicator, however, that assumption becomes difficult to sustain.\n\nPeople adapt. A metric that initially summarized performance can become a target around which behavior is reorganized. This adaptation may be desirable, because it can focus attention on neglected outcomes. It can also produce distortions if actors optimize the visible indicator while ignoring less measurable dimensions of quality.\n\nThe implication is not that metrics should be abandoned. Rather, evaluation systems should treat indicators as interventions with behavioral effects of their own. A mature framework asks both what a metric measures and what the existence of that metric causes people to do."
+  },
+  {
+    "code": "LIB_C2_002",
+    "level_code": "C2",
+    "category": "culture",
+    "title": "Language, Power, and Precision",
+    "summary": "A nuanced reading about specialized vocabulary and public communication.",
+    "sort_order": 12,
+    "content_text": "Specialized vocabulary can make communication more precise, but precision is not socially neutral. Technical terms often mark membership in a professional community. They allow experts to compress complex distinctions into a few words, yet they can also exclude readers who do not share the same background.\n\nCalls to eliminate jargon entirely therefore miss part of the problem. Replacing every specialized term with everyday language may make a text longer and, in some cases, less exact. The more productive task is to decide when technical vocabulary is necessary and when it functions mainly as a barrier.\n\nGood public communication often operates on two levels at once. It preserves the distinctions that matter while providing enough explanation for non-specialists to follow the argument. Precision and accessibility are not opposites; they are design constraints that must be balanced deliberately."
+  }
+]

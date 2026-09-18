@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Writing · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section writing-page">
+  <div class="page-title-row"><div><span class="eyebrow">WRITING LAB</span><h1>Build better writing through revisions</h1><p>Save multiple drafts and compare objective practice signals such as length, lexical variety, connectors and target vocabulary.</p></div><div class="page-title-icon"><i class="bi bi-pencil-square"></i></div></div>
+  <div class="writing-note"><i class="bi bi-info-circle-fill"></i><span>These metrics describe the text you wrote. They do not judge argument quality, factual accuracy or CEFR writing proficiency.</span></div>
+  {% for level, items in grouped.items() if items %}
+  <section class="writing-level-section"><div class="section-heading"><div><span class="eyebrow">{{ level }}</span><h2>{{ level }} writing</h2></div></div><div class="writing-grid">
+    {% for item in items %}<a class="writing-card" href="{{ url_for('writing.practice', prompt_id=item.id) }}"><span>{{ item.min_words }}–{{ item.max_words }} words</span><h3>{{ item.title }}</h3><p>{{ item.prompt }}</p><b>{{ counts.get(item.id,0) }} saved draft{{ 's' if counts.get(item.id,0) != 1 else '' }}</b></a>{% endfor %}
+  </div></section>
+  {% endfor %}
+</section>
+{% endblock %}

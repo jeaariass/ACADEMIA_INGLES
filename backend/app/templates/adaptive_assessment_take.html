@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block title %}{{ assessment.title }} · Adaptive assessment{% endblock %}
+{% block content %}
+<section class="page-section assessment-page adaptive-assessment-page">
+  <div class="assessment-sticky-header adaptive-sticky-header">
+    <div>
+      <span class="eyebrow">{{ assessment.level.code if assessment.level else '' }} · ADAPTIVE MODE</span>
+      <h1>{{ assessment.title }}</h1>
+    </div>
+    <div class="adaptive-header-side">
+      <div class="adaptive-progress-copy">
+        <strong>{{ answered_count }}/{{ target_questions }}</strong>
+        <span>answered</span>
+      </div>
+      {% if assessment.duration_minutes %}
+      <div class="assessment-timer"
+           data-started-at="{{ attempt.started_at.isoformat() }}"
+           data-duration-minutes="{{ assessment.duration_minutes }}">
+        <i class="bi bi-clock-fill"></i><span id="assessmentTimer">--:--</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="adaptive-progress-track" aria-label="Assessment progress">
+    <span style="width: {{ progress_percentage }}%"></span>
+  </div>
+
+  <section class="adaptive-context-card">
+    <div>
+      <span class="adaptive-mode-chip"><i class="bi bi-diagram-3-fill"></i> Adaptive</span>
+      <strong>{{ section_label }}</strong>
+      <small>
+        {% if links|length > 1 %}
+          Context block · {{ links|length }} questions
+        {% else %}
+          The next question is selected from your current performance.
+        {% endif %}
+      </small>
+    </div>
+    <div class="adaptive-section-progress">
+      <span>Section coverage</span>
+      <strong>{{ section_completed }}/{{ section_target }}</strong>
+    </div>
+  </section>
+
+  <form method="post" id="adaptiveAssessmentForm" class="adaptive-assessment-form">
+    <input type="hidden" name="unit_question_ids" value="{{ unit_question_ids }}">
+    <input type="hidden" name="elapsed_seconds" id="adaptiveElapsedSeconds" value="0">
+
+    {% if passage %}
+    <article class="assessment-passage {{ passage.passage_type }} adaptive-passage-block">
+      <div class="assessment-passage-header">
+        <span class="passage-type-badge">
+          {% if passage.passage_type == 'listening' %}
+            <i class="bi bi-headphones"></i> Listening passage
+          {% else %}
+            <i class="bi bi-book-half"></i> Reading passage
+          {% endif %}
+        </span>
+        <h3>{{ passage.title }}</h3>
+        <p>{{ passage.instructions }}</p>
+      </div>
+
+      {% if passage.passage_type == 'reading' %}
+        <div class="reading-passage-text">{{ passage.content_text }}</div>
+      {% else %}
+        <div class="listening-player passage-player">
+          <div class="listening-player-icon"><i class="bi bi-headphones"></i></div>
+          <div class="listening-player-copy">
+            <strong>Listen to the complete passage</strong>
+            <small>Playback remains limited for this passage during the attempt.</small>
+          </div>
+          <button type="button"
+                  class="btn btn-primary btn-modern listening-play-button"
+                  data-audio-text="{{ passage.audio_text|e }}"
+                  data-lang="{{ passage.audio_accent or 'en-US' }}"
+                  data-rate="{{ passage.audio_rate or 1.0 }}"
+                  data-endpoint="{{ url_for('assessment.register_audio_play', attempt_id=attempt.id, question_id=links[0].question.id) }}"
+                  onclick="playAssessmentAudio(this)">
+            <i class="bi bi-play-fill"></i><span class="play-label">Play passage</span>
+          </button>
+        </div>
+      {% endif %}
+    </article>
+    {% endif %}
+
+    {% for link in links %}
+      {% set q = link.question %}
+      <article class="question-card assessment-question-card adaptive-question-card">
+        <div class="question-number">{{ answered_count + loop.index }}</div>
+        <div class="question-content">
+          <div class="question-meta-row">
+            <span class="skill-badge skill-{{ q.skill }}">{{ q.skill|title }}</span>
+            <span class="adaptive-question-label"><i class="bi bi-stars"></i> Adaptive item</span>
+          </div>
+
+          {% if not passage and q.audio_text %}
+          <div class="listening-player adaptive-inline-listening">
+            <div class="listening-player-icon"><i class="bi bi-headphones"></i></div>
+            <div class="listening-player-copy">
+              <strong>Listen before answering</strong>
+              <small>Playback is limited for this assessment item.</small>
+            </div>
+            <button type="button"
+                    class="btn btn-primary btn-modern listening-play-button"
+                    data-audio-text="{{ q.audio_text|e }}"
+                    data-lang="{{ q.audio_accent or 'en-US' }}"
+                    data-rate="{{ q.audio_rate or 1.0 }}"
+                    data-endpoint="{{ url_for('assessment.register_audio_play', attempt_id=attempt.id, question_id=q.id) }}"
+                    onclick="playAssessmentAudio(this)">
+              <i class="bi bi-play-fill"></i><span class="play-label">Play audio</span>
+            </button>
+          </div>
+          {% endif %}
+
+          <h2>{{ q.prompt }}</h2>
+          <div class="answer-grid">
+            {% for key, txt in [('A',q.option_a),('B',q.option_b),('C',q.option_c),('D',q.option_d)] %}
+            <label class="answer-option">
+              <input class="form-check-input" type="radio" name="q_{{ q.id }}" value="{{ key }}" required>
+              <span class="answer-key">{{ key }}</span>
+              <span class="answer-text">{{ txt }}</span>
+              <span class="answer-check"><i class="bi bi-check-lg"></i></span>
+            </label>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+
+    <div class="test-submit-bar adaptive-submit-bar">
+      <div class="test-submit-note">
+        <i class="bi bi-shuffle"></i>
+        Your next item is chosen after these answers are evaluated.
+      </div>
+      <button class="btn btn-primary btn-modern btn-submit-test" type="submit">
+        {% if answered_count + (links|length) >= target_questions %}
+          Finish assessment <i class="bi bi-flag-fill"></i>
+        {% else %}
+          Continue <i class="bi bi-arrow-right"></i>
+        {% endif %}
+      </button>
+    </div>
+  </form>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/assessment.js') }}"></script>
+<script>
+(function trackAdaptiveElapsedTime() {
+  const form = document.getElementById('adaptiveAssessmentForm');
+  const elapsed = document.getElementById('adaptiveElapsedSeconds');
+  if (!form || !elapsed) return;
+
+  const started = Date.now();
+  form.addEventListener('submit', () => {
+    elapsed.value = Math.max(0, Math.round((Date.now() - started) / 1000));
+  });
+})();
+</script>
+{% endblock %}

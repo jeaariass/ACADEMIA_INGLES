@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Content manager · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section admin-page content-manager-page">
+  <nav class="breadcrumb-modern mb-4"><a href="{{ url_for('admin.panel') }}"><i class="bi bi-shield-lock-fill"></i> Administration</a><i class="bi bi-chevron-right"></i><strong>Content manager</strong></nav>
+
+  <div class="page-title-row admin-title-row">
+    <div><span class="eyebrow">CONTENT MANAGEMENT</span><h1>Edit platform content</h1><p>Make precise corrections from the web. Use bulk Excel import when many records need changes.</p></div>
+    <div class="d-flex gap-2 align-items-center flex-wrap">
+      <a class="btn btn-outline-primary btn-modern" href="{{ url_for('admin.bulk_import') }}"><i class="bi bi-file-earmark-spreadsheet"></i> Topics & questions Excel</a>
+      <a class="btn btn-success btn-modern" href="{{ url_for('admin.library_import') }}"><i class="bi bi-journal-arrow-up"></i> Readings Excel</a>
+    </div>
+  </div>
+
+  <div class="content-manager-tabs">
+    <a class="{{ 'active' if kind == 'questions' else '' }}" href="{{ url_for('admin.content_manager', kind='questions') }}"><i class="bi bi-patch-question"></i><span>Questions</span><strong>{{ counts.questions }}</strong></a>
+    <a class="{{ 'active' if kind == 'topics' else '' }}" href="{{ url_for('admin.content_manager', kind='topics') }}"><i class="bi bi-bookmark"></i><span>Topics</span><strong>{{ counts.topics }}</strong></a>
+    <a class="{{ 'active' if kind == 'readings' else '' }}" href="{{ url_for('admin.content_manager', kind='readings') }}"><i class="bi bi-journal-text"></i><span>Readings</span><strong>{{ counts.readings }}</strong></a>
+  </div>
+
+  <section class="content-card content-manager-filter-card">
+    <form method="get" class="content-manager-filter">
+      <input type="hidden" name="kind" value="{{ kind }}">
+      <div><label class="form-label">Search</label><input class="form-control" name="q" value="{{ query_text }}" placeholder="Code, title or text"></div>
+      <div><label class="form-label">CEFR level</label><select class="form-select" name="level"><option value="ALL">All levels</option>{% for level in levels %}<option value="{{ level.code }}" {{ 'selected' if selected_level == level.code else '' }}>{{ level.code }} · {{ level.name }}</option>{% endfor %}</select></div>
+      {% if kind == 'readings' %}<div><label class="form-label">Category</label><select class="form-select" name="category"><option value="ALL">All categories</option>{% for key,label in categories.items() %}<option value="{{ key }}" {{ 'selected' if selected_category == key else '' }}>{{ label }}</option>{% endfor %}</select></div>{% endif %}
+      <button class="btn btn-primary btn-modern" type="submit"><i class="bi bi-search"></i> Search</button>
+      <a class="btn btn-outline-secondary btn-modern" href="{{ url_for('admin.content_manager', kind=kind) }}">Reset</a>
+      {% if kind == 'readings' %}<a class="btn btn-outline-success btn-modern ms-lg-auto" href="{{ url_for('admin.edit_reading') }}"><i class="bi bi-plus-lg"></i> New reading</a>{% endif %}
+    </form>
+  </section>
+
+  <section class="content-card mt-4">
+    <div class="content-card-header"><div><span class="eyebrow">{{ kind|upper }}</span><h2>Results</h2><p class="mb-0 text-muted">Showing up to 250 records. Use filters to narrow a large bank.</p></div></div>
+    <div class="table-responsive modern-table-wrap">
+      <table class="table modern-table align-middle mb-0 content-manager-table">
+        {% if kind == 'questions' %}
+        <thead><tr><th>Code</th><th>Level / topic</th><th>Skill</th><th>Difficulty</th><th>Prompt</th><th>Status</th><th></th></tr></thead>
+        <tbody>{% for row in rows %}<tr><td><strong>{{ row.code or ('Q' ~ row.id) }}</strong></td><td><span class="analytics-level-pill">{{ row.topic.level.code }}</span><small class="d-block mt-1">{{ row.topic.title }}</small></td><td>{{ row.skill|title }}</td><td><span class="difficulty-number d{{ row.level_difficulty or 3 }}">{{ row.level_difficulty or 3 }}/5</span></td><td class="content-manager-copy">{{ row.prompt }}</td><td><span class="badge {{ 'text-bg-success' if row.is_active else 'text-bg-secondary' }}">{{ 'Active' if row.is_active else 'Inactive' }}</span>{% if row.passage_id %}<small class="d-block mt-1 text-muted">Passage linked</small>{% endif %}</td><td><a class="btn btn-sm btn-outline-primary" href="{{ url_for('admin.edit_question', question_id=row.id) }}"><i class="bi bi-pencil-square"></i> Edit</a></td></tr>{% else %}<tr><td colspan="7" class="text-muted">No questions match the filters.</td></tr>{% endfor %}</tbody>
+        {% elif kind == 'topics' %}
+        <thead><tr><th>Code</th><th>Level</th><th>Order</th><th>Title</th><th>Questions</th><th>Status</th><th></th></tr></thead>
+        <tbody>{% for row in rows %}<tr><td><strong>{{ row.code or ('TOPIC_' ~ row.id) }}</strong></td><td><span class="analytics-level-pill">{{ row.level.code }}</span></td><td>{{ row.sort_order }}</td><td><strong>{{ row.title }}</strong><small class="d-block text-muted">{{ row.objective }}</small></td><td>{{ row.questions|length }}</td><td><span class="badge {{ 'text-bg-success' if row.is_published else 'text-bg-secondary' }}">{{ 'Published' if row.is_published else 'Hidden' }}</span></td><td><a class="btn btn-sm btn-outline-primary" href="{{ url_for('admin.edit_topic', topic_id=row.id) }}"><i class="bi bi-pencil-square"></i> Edit</a></td></tr>{% else %}<tr><td colspan="7" class="text-muted">No topics match the filters.</td></tr>{% endfor %}</tbody>
+        {% else %}
+        <thead><tr><th>Code</th><th>Level</th><th>Category</th><th>Title</th><th>Words</th><th>Status</th><th></th></tr></thead>
+        <tbody>{% for row in rows %}<tr><td><strong>{{ row.code }}</strong></td><td><span class="analytics-level-pill">{{ row.level_code }}</span></td><td>{{ categories.get(row.category, row.category|title) }}</td><td><strong>{{ row.title }}</strong><small class="d-block text-muted">{{ row.summary }}</small></td><td>{{ row.word_count }}</td><td><span class="badge {{ 'text-bg-success' if row.is_published else 'text-bg-secondary' }}">{{ 'Published' if row.is_published else 'Hidden' }}</span></td><td><a class="btn btn-sm btn-outline-primary" href="{{ url_for('admin.edit_reading', reading_id=row.id) }}"><i class="bi bi-pencil-square"></i> Edit</a></td></tr>{% else %}<tr><td colspan="7" class="text-muted">No readings match the filters.</td></tr>{% endfor %}</tbody>
+        {% endif %}
+      </table>
+    </div>
+  </section>
+</section>
+{% endblock %}

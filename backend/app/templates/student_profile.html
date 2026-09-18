@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% block title %}Learning Profile · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section student-profile-page">
+  {% set assessment = insights.assessments %}
+  {% set path = insights.path %}
+  {% set vocab = insights.vocabulary %}
+  {% set game = insights.game %}
+  {% set lessons = insights.lessons %}
+  {% set skills = insights.skills %}
+  {% set action = insights.next_action %}
+  {% set speaking = insights.speaking %}
+  {% set writing = insights.writing %}
+  {% set arcade = insights.arcade %}
+
+  <div class="profile-hero">
+    <div class="profile-level-orbit">
+      <span>Estimated level</span>
+      <strong>{{ assessment.estimated_level or '—' }}</strong>
+      <small>{{ 'CEFR-aligned platform estimate' if assessment.estimated_level else 'Take the diagnostic to estimate' }}</small>
+    </div>
+    <div class="profile-hero-copy">
+      <span class="eyebrow light">LEARNING PROFILE</span>
+      <h1>{{ current_user.full_name }}</h1>
+      <p>This profile keeps formal assessment evidence, lesson progress, vocabulary retention, and game practice separate so each metric keeps its meaning.</p>
+    </div>
+    <a class="profile-action-card action-{{ action.kind }}" href="{{ action.url }}">
+      <span class="profile-action-icon"><i class="bi {{ action.icon }}"></i></span>
+      <span class="profile-action-copy">
+        <small>{{ action.eyebrow }}</small>
+        <strong>{{ action.title }}</strong>
+        <em>{{ action.detail }}</em>
+      </span>
+      <span class="profile-action-link">{{ action.label }} <i class="bi bi-arrow-right"></i></span>
+    </a>
+  </div>
+
+  <div class="profile-metric-grid">
+    <article class="profile-metric-card">
+      <i class="bi bi-journal-check"></i>
+      <div><strong>{{ lessons.completed }}/{{ lessons.total }}</strong><span>Published lessons completed</span></div>
+      <b>{{ lessons.percentage }}%</b>
+    </article>
+    <article class="profile-metric-card">
+      <i class="bi bi-bullseye"></i>
+      {% if path.summary %}
+      <div><strong>{{ path.summary.required_completed }}/{{ path.summary.required_total }}</strong><span>Required path completed</span></div>
+      <b>{{ path.summary.required_remaining }} left</b>
+      {% else %}
+      <div><strong>—</strong><span>Personalized route</span></div><b>Not created</b>
+      {% endif %}
+    </article>
+    <article class="profile-metric-card">
+      <i class="bi bi-layers-half"></i>
+      <div><strong>{{ vocab.mastered }}/{{ vocab.saved }}</strong><span>Vocabulary at mastery 5</span></div>
+      <b>{{ vocab.due }} due</b>
+    </article>
+    <article class="profile-metric-card">
+      <i class="bi bi-controller"></i>
+      <div><strong>{{ game.completed }}</strong><span>Word Runner completions</span></div>
+      <b>Tier {{ game.next_tier }}</b>
+    </article>
+  </div>
+
+  <div class="profile-two-column">
+    <section class="content-card profile-section-card">
+      <div class="content-card-header">
+        <div><span class="eyebrow">FORMAL EVIDENCE</span><h2>Skill profile</h2></div>
+        <span class="profile-source-count">{{ skills.total_items }} answered items · {{ skills.assessment_sources }} latest assessment source{{ 's' if skills.assessment_sources != 1 else '' }}</span>
+      </div>
+      <div class="profile-skill-list">
+        {% for stat in skills.rows %}
+        <div class="profile-skill-row">
+          <div class="profile-skill-heading">
+            <strong>{{ stat.label }}</strong>
+            {% if stat.total %}<span>{{ stat.correct }}/{{ stat.total }} · {{ stat.percentage }}%</span>{% else %}<span>No formal evidence yet</span>{% endif %}
+          </div>
+          <div class="profile-skill-track">
+            <span style="width: {{ stat.percentage if stat.percentage is not none else 0 }}%"></span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="profile-data-note"><i class="bi bi-info-circle"></i> Percentages are descriptive accuracy across the latest completed attempt for each formal assessment. They are not an IRT ability score.</p>
+    </section>
+
+    <section class="content-card profile-section-card">
+      <div class="content-card-header"><div><span class="eyebrow">ASSESSMENTS</span><h2>Level evidence</h2></div></div>
+      {% if assessment.levels %}
+      <div class="profile-assessment-list">
+        {% for row in assessment.levels %}
+        <article class="profile-assessment-row">
+          <span class="profile-assessment-level">{{ row.level }}</span>
+          <div>
+            <strong>{{ row.title }}</strong>
+            <small>{{ row.score }}/{{ row.total }} correct{% if row.completed_at %} · {{ row.completed_at.strftime('%Y-%m-%d') }}{% endif %}</small>
+            {% if row.adaptive %}<em>Adaptive path: target {{ row.adaptive.ending_target_difficulty }}/5 · avg item {{ row.adaptive.average_item_difficulty }}/5</em>{% endif %}
+          </div>
+          <b>{{ row.percentage }}%</b>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="profile-empty"><i class="bi bi-clipboard2"></i><strong>No completed level assessments yet</strong><span>Complete your route and take a level assessment to add formal evidence here.</span></div>
+      {% endif %}
+    </section>
+  </div>
+
+  <div class="profile-two-column profile-focus-grid">
+    <section class="content-card profile-section-card">
+      <div class="content-card-header">
+        <div><span class="eyebrow">LEARNING PATH</span><h2>Current focus</h2></div>
+        <a class="text-link" href="{{ url_for('main.learning_path') }}">Open full path <i class="bi bi-arrow-right"></i></a>
+      </div>
+      {% if path.required_pending %}
+      <div class="profile-focus-list">
+        {% for row in path.required_pending[:5] %}
+        <a href="{{ url_for('main.topic', topic_id=row.topic_id) }}">
+          <span class="focus-status required"><i class="bi bi-exclamation-lg"></i></span>
+          <span><strong>{{ row.topic.level.code }} · {{ row.topic.title }}</strong><small>{{ row.rationale }}</small></span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+        {% endfor %}
+      </div>
+      {% elif path.recommended_pending %}
+      <div class="profile-focus-list">
+        {% for row in path.recommended_pending[:5] %}
+        <a href="{{ url_for('main.topic', topic_id=row.topic_id) }}">
+          <span class="focus-status recommended"><i class="bi bi-stars"></i></span>
+          <span><strong>{{ row.topic.level.code }} · {{ row.topic.title }}</strong><small>{{ row.rationale }}</small></span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+        {% endfor %}
+      </div>
+      {% elif path.summary %}
+      <div class="profile-empty positive"><i class="bi bi-check-circle-fill"></i><strong>No required or recommended topics pending</strong><span>Your current personalized route has no remaining priority lessons.</span></div>
+      {% else %}
+      <div class="profile-empty"><i class="bi bi-signpost-split"></i><strong>No personalized path yet</strong><span>Complete the initial diagnostic to create one.</span></div>
+      {% endif %}
+    </section>
+
+    <section class="content-card profile-section-card">
+      <div class="content-card-header"><div><span class="eyebrow">EVIDENCE SIGNALS</span><h2>Strengths & review areas</h2></div></div>
+      <div class="profile-signal-columns">
+        <div>
+          <h3><i class="bi bi-check-circle-fill"></i> Strong skill signals</h3>
+          {% if skills.strong %}
+            {% for stat in skills.strong %}<span class="signal-pill strong">{{ stat.label }} · {{ stat.percentage }}%</span>{% endfor %}
+          {% else %}<p>Not enough formal evidence yet.</p>{% endif %}
+        </div>
+        <div>
+          <h3><i class="bi bi-arrow-repeat"></i> Review signals</h3>
+          {% if skills.weak %}
+            {% for stat in skills.weak %}<span class="signal-pill review">{{ stat.label }} · {{ stat.percentage }}%</span>{% endfor %}
+          {% else %}<p>No skill is currently below the review threshold with enough evidence.</p>{% endif %}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="profile-two-column">
+    <section class="content-card profile-section-card">
+      <div class="content-card-header">
+        <div><span class="eyebrow">VOCABULARY RETENTION</span><h2>Spaced repetition</h2></div>
+        <a class="text-link" href="{{ url_for('library.vocabulary') }}">My Vocabulary <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="profile-mini-metrics">
+        <div><strong>{{ vocab.saved }}</strong><span>Saved</span></div>
+        <div><strong>{{ vocab.translated }}</strong><span>Ready to review</span></div>
+        <div><strong>{{ vocab.due }}</strong><span>Due now</span></div>
+        <div><strong>{{ vocab.review_accuracy if vocab.review_accuracy is not none else '—' }}{{ '%' if vocab.review_accuracy is not none else '' }}</strong><span>Review success</span></div>
+      </div>
+      <div class="mastery-distribution">
+        {% set max_count = vocab.distribution.values()|max if vocab.distribution else 1 %}
+        {% for level, count in vocab.distribution.items() %}
+        <div><span>M{{ level }}</span><div><b style="width: {{ ((count / max_count) * 100) if max_count else 0 }}%"></b></div><strong>{{ count }}</strong></div>
+        {% endfor %}
+      </div>
+      {% if vocab.due %}<a class="btn btn-primary btn-modern mt-3" href="{{ url_for('library.review') }}">Review due vocabulary <i class="bi bi-arrow-right"></i></a>{% endif %}
+    </section>
+
+    <section class="content-card profile-section-card">
+      <div class="content-card-header">
+        <div><span class="eyebrow">GAME PRACTICE</span><h2>Word Runner</h2></div>
+        <a class="text-link" href="{{ url_for('game.index') }}">Open game <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="profile-mini-metrics">
+        <div><strong>{{ game.completed }}</strong><span>Completed runs</span></div>
+        <div><strong>{{ game.best_score }}</strong><span>Best score</span></div>
+        <div><strong>{{ game.accuracy if game.accuracy is not none else '—' }}{{ '%' if game.accuracy is not none else '' }}</strong><span>Challenge accuracy</span></div>
+        <div><strong>{{ game.highest_completed_tier or '—' }}</strong><span>Highest completed tier</span></div>
+      </div>
+      <p class="profile-data-note"><i class="bi bi-controller"></i> Game metrics are practice indicators only; they do not change lesson completion, diagnostic placement, or formal assessment results.</p>
+    </section>
+  </div>
+
+  <div class="profile-two-column">
+    <section class="content-card profile-section-card">
+      <div class="content-card-header"><div><span class="eyebrow">SPEAKING PRACTICE</span><h2>Microphone practice</h2></div><a class="text-link" href="{{ url_for('speaking.index') }}">Speaking Lab <i class="bi bi-arrow-right"></i></a></div>
+      <div class="profile-mini-metrics"><div><strong>{{ speaking.attempts }}</strong><span>Attempts</span></div><div><strong>{{ speaking.avg_similarity if speaking.avg_similarity is not none else '—' }}{{ '%' if speaking.avg_similarity is not none else '' }}</strong><span>Avg. closed-task similarity</span></div><div><strong>{{ speaking.avg_wpm if speaking.avg_wpm is not none else '—' }}</strong><span>Avg. recognized WPM</span></div></div>
+      <p class="profile-data-note"><i class="bi bi-mic"></i> Speaking metrics use browser speech recognition and transcript comparison. They are not a certified pronunciation score.</p>
+    </section>
+    <section class="content-card profile-section-card">
+      <div class="content-card-header"><div><span class="eyebrow">WRITING PRACTICE</span><h2>Draft development</h2></div><a class="text-link" href="{{ url_for('writing.index') }}">Writing Lab <i class="bi bi-arrow-right"></i></a></div>
+      <div class="profile-mini-metrics"><div><strong>{{ writing.submissions }}</strong><span>Saved drafts</span></div><div><strong>{{ writing.prompts }}</strong><span>Prompts practised</span></div><div><strong>{{ writing.avg_words_latest if writing.avg_words_latest is not none else '—' }}</strong><span>Avg. words in latest drafts</span></div><div><strong>{{ writing.avg_unique_latest if writing.avg_unique_latest is not none else '—' }}{{ '%' if writing.avg_unique_latest is not none else '' }}</strong><span>Unique-word ratio</span></div></div>
+      <p class="profile-data-note"><i class="bi bi-pencil-square"></i> Writing metrics describe text structure and usage signals; they do not score argument quality or CEFR writing proficiency.</p>
+    </section>
+  </div>
+
+  <section class="content-card profile-section-card mt-4">
+    <div class="content-card-header"><div><span class="eyebrow">GAME ARCADE</span><h2>Practice variety</h2></div><a class="text-link" href="{{ url_for('arcade.index') }}">Open Arcade <i class="bi bi-arrow-right"></i></a></div>
+    <div class="profile-mini-metrics"><div><strong>{{ arcade.completed }}</strong><span>Completed arcade games</span></div><div><strong>{{ arcade.best_score }}</strong><span>Best arcade score</span></div><div><strong>{{ arcade.accuracy if arcade.accuracy is not none else '—' }}{{ '%' if arcade.accuracy is not none else '' }}</strong><span>Arcade round accuracy</span></div><div><strong>{{ arcade.favorite.replace('_',' ')|title if arcade.favorite else '—' }}</strong><span>Most played game</span></div></div>
+  </section>
+
+  <section class="content-card profile-section-card profile-activity-card">
+    <div class="content-card-header"><div><span class="eyebrow">RECENT ACTIVITY</span><h2>Your learning timeline</h2></div></div>
+    {% if insights.recent_activity %}
+    <div class="profile-timeline">
+      {% for event in insights.recent_activity %}
+      <a href="{{ event.url }}" class="profile-timeline-row kind-{{ event.kind }}">
+        <span class="timeline-icon"><i class="bi {{ event.icon }}"></i></span>
+        <span class="timeline-copy"><strong>{{ event.title }}</strong><small>{{ event.detail }}</small></span>
+        <time>{{ event.at.strftime('%Y-%m-%d %H:%M') }}</time>
+        <i class="bi bi-arrow-right"></i>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="profile-empty"><i class="bi bi-clock-history"></i><strong>No activity yet</strong><span>Your completed lessons, assessments, and game runs will appear here.</span></div>
+    {% endif %}
+  </section>
+</section>
+{% endblock %}

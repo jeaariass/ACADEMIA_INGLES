@@ -24,6 +24,21 @@ from .models import (
     TopicProgress,
 )
 from .progress import assessment_access
+from .learning_plan import generate_learning_plan, get_learning_plan_summary
+from .adaptive_level import (
+    ADAPTIVE_SECTION_ORDER,
+    ADAPTIVE_SECTION_TARGETS,
+    ADAPTIVE_START_ABILITY,
+    ADAPTIVE_TARGET_QUESTIONS,
+    answered_context,
+    bank_summary as adaptive_bank_summary,
+    choose_next_unit,
+    difficulty_from_ability,
+    initial_state as adaptive_initial_state,
+    item_difficulty,
+    result_summary as adaptive_result_summary,
+    update_ability,
+)
 
 assessment_bp = Blueprint(
     "assessment",
@@ -84,6 +99,24 @@ def build_sections(assessment):
     return build_sections_from_links(assessment.question_links)
 
 
+def build_adaptive_section_plan():
+    return [
+        {
+            "key": section,
+            "label": SECTION_LABELS.get(section, section.title()),
+            "count": ADAPTIVE_SECTION_TARGETS[section],
+        }
+        for section in ADAPTIVE_SECTION_ORDER
+    ]
+
+
+def is_adaptive_level_assessment(assessment):
+    return (
+        assessment.assessment_type == "level"
+        and bool(assessment.is_adaptive)
+    )
+
+
 def _level_index(code):
     return LEVEL_ORDER.index(code)
 
@@ -114,7 +147,6 @@ def diagnostic_bank_summary(assessment):
         if links:
             summary.append({"code": code, "count": len(links)})
     return summary
-
 
 
 def final_links_for_level(assessment, level_code):
@@ -314,8 +346,6 @@ def calculate_final_profile(attempt):
     estimated_code = attempt.estimated_level or "A1"
     estimated_index = _level_index(estimated_code)
 
-    # Questions above the estimated level are useful for level estimation but
-    # are not treated as "weaknesses" the learner must already have mastered.
     eligible_review = [
         item for item in topic_stats
         if _level_index(item["topic"].level.code) <= estimated_index
@@ -360,7 +390,6 @@ def calculate_final_profile(attempt):
             .first()
         )
 
-    # Latest initial diagnostic completed before this final attempt.
     diagnostic = (
         Assessment.query
         .filter_by(assessment_type="diagnostic", is_published=True)
@@ -472,6 +501,211 @@ def calculate_final_profile(attempt):
     }
 
 
+def _adaptive_state(attempt):
+    profile = dict(attempt.result_profile or {})
+    state = dict(profile.get("adaptive_level") or {})
+    if not state:
+        state = adaptive_initial_state()
+        profile["adaptive_level"] = state
+        attempt.result_profile = profile
+    return profile, state
+
+
+def _safe_elapsed_seconds():
+    raw = request.form.get("elapsed_seconds")
+    try:
+        value = int(float(raw))
+    except (TypeError, ValueError):
+        return None
+    return max(0, min(3600, value))
+
+
+def _complete_adaptive_level(attempt, state):
+    context = answered_context(attempt)
+    answers = context["answers"]
+    attempt.score = sum(1 for answer in answers if answer.is_correct)
+    attempt.total = len(answers)
+    attempt.percentage = (
+        round((attempt.score / attempt.total) * 100, 1)
+        if attempt.total else 0.0
+    )
+    attempt.completed_at = datetime.utcnow()
+    attempt.status = "completed"
+
+    if (
+        attempt.assessment.level
+        and attempt.assessment.passing_score is not None
+        and attempt.percentage >= attempt.assessment.passing_score
+    ):
+        attempt.estimated_level = attempt.assessment.level.code
+    else:
+        attempt.estimated_level = None
+
+    profile = dict(attempt.result_profile or {})
+    profile["adaptive_level"] = dict(state)
+    attempt.result_profile = profile
+
+
+def take_adaptive_level(attempt):
+    profile, state = _adaptive_state(attempt)
+    context = answered_context(attempt)
+
+    if context["answered_count"] >= ADAPTIVE_TARGET_QUESTIONS:
+        _complete_adaptive_level(attempt, state)
+        db.session.commit()
+        return redirect(url_for("assessment.result", attempt_id=attempt.id))
+
+    ability = float(state.get("ability", ADAPTIVE_START_ABILITY))
+    target_difficulty = difficulty_from_ability(ability)
+    unit = choose_next_unit(
+        attempt.assessment,
+        answered_ids=context["answered_ids"],
+        section_counts=context["section_counts"],
+        topic_counts=context["topic_counts"],
+        target_difficulty=target_difficulty,
+        attempt_id=attempt.id,
+        step=len(state.get("history") or []),
+        answered_count=context["answered_count"],
+    )
+
+    if unit is None:
+        # If the configured bank is smaller than expected, complete using every
+        # valid response collected rather than trapping the learner.
+        _complete_adaptive_level(attempt, state)
+        db.session.commit()
+        flash(
+            "The adaptive bank had no additional eligible questions, so the assessment was completed with the available items.",
+            "warning",
+        )
+        return redirect(url_for("assessment.result", attempt_id=attempt.id))
+
+    unit_links = unit["links"]
+
+    if request.method == "POST":
+        expected_ids = {link.question_id for link in unit_links}
+        posted_unit = request.form.get("unit_question_ids", "")
+        try:
+            posted_ids = {
+                int(value)
+                for value in posted_unit.split(",")
+                if value.strip()
+            }
+        except ValueError:
+            posted_ids = set()
+
+        # This protects against a stale tab posting answers for a previous unit.
+        if posted_ids != expected_ids:
+            flash(
+                "This assessment page was out of date. The current adaptive question has been reloaded.",
+                "warning",
+            )
+            return redirect(url_for("assessment.take", attempt_id=attempt.id))
+
+        missing = []
+        selected_rows = []
+        for link in unit_links:
+            question = link.question
+            selected = request.form.get(f"q_{question.id}", "").strip().upper()
+            if selected not in {"A", "B", "C", "D"}:
+                missing.append(question.id)
+            else:
+                selected_rows.append((link, selected))
+
+        if missing:
+            flash("Please answer every question shown before continuing.", "warning")
+            return redirect(url_for("assessment.take", attempt_id=attempt.id))
+
+        elapsed = _safe_elapsed_seconds()
+        per_question_elapsed = None
+        if elapsed is not None and unit_links:
+            per_question_elapsed = max(0, round(elapsed / len(unit_links)))
+
+        correct_count = 0
+        ability_before = ability
+        difficulty_before = target_difficulty
+        actual_difficulties = []
+
+        for link, selected in selected_rows:
+            question = link.question
+            answer = AssessmentAnswer.query.filter_by(
+                assessment_attempt_id=attempt.id,
+                question_id=question.id,
+            ).first()
+            if not answer:
+                answer = AssessmentAnswer(
+                    assessment_attempt_id=attempt.id,
+                    question_id=question.id,
+                    audio_plays=0,
+                )
+                db.session.add(answer)
+
+            answer.selected_option = selected
+            answer.is_correct = selected == question.correct_option
+            answer.response_time_seconds = per_question_elapsed
+            if answer.is_correct:
+                correct_count += 1
+
+            q_difficulty = item_difficulty(question)
+            actual_difficulties.append(q_difficulty)
+            ability = update_ability(ability, q_difficulty, answer.is_correct)
+
+        history = list(state.get("history") or [])
+        history.append({
+            "section": unit["section"],
+            "question_ids": [link.question_id for link in unit_links],
+            "target_difficulty": difficulty_before,
+            "average_item_difficulty": round(
+                sum(actual_difficulties) / len(actual_difficulties), 2
+            ),
+            "correct": correct_count,
+            "total": len(unit_links),
+            "ability_before": round(ability_before, 2),
+            "ability_after": round(ability, 2),
+        })
+        state["ability"] = ability
+        state["history"] = history
+        state["target_questions"] = ADAPTIVE_TARGET_QUESTIONS
+        profile["adaptive_level"] = state
+        attempt.result_profile = profile
+
+        db.session.flush()
+        db.session.expire(attempt, ["answers"])
+        new_context = answered_context(attempt)
+        if new_context["answered_count"] >= ADAPTIVE_TARGET_QUESTIONS:
+            _complete_adaptive_level(attempt, state)
+            db.session.commit()
+            return redirect(url_for("assessment.result", attempt_id=attempt.id))
+
+        db.session.commit()
+        return redirect(url_for("assessment.take", attempt_id=attempt.id))
+
+    section = unit["section"]
+    section_target = ADAPTIVE_SECTION_TARGETS.get(section, len(unit_links))
+    section_completed = context["section_counts"].get(section, 0)
+    progress_percentage = round(
+        (context["answered_count"] / ADAPTIVE_TARGET_QUESTIONS) * 100,
+        1,
+    )
+
+    return render_template(
+        "adaptive_assessment_take.html",
+        attempt=attempt,
+        assessment=attempt.assessment,
+        unit=unit,
+        links=unit_links,
+        passage=unit_links[0].question.passage if unit_links and unit_links[0].question.passage else None,
+        answered_count=context["answered_count"],
+        target_questions=ADAPTIVE_TARGET_QUESTIONS,
+        progress_percentage=progress_percentage,
+        section_label=SECTION_LABELS.get(section, section.title()),
+        section_completed=section_completed,
+        section_target=section_target,
+        target_difficulty=target_difficulty,
+        ability=round(ability, 2),
+        unit_question_ids=",".join(str(link.question_id) for link in unit_links),
+    )
+
+
 def calculate_result(attempt):
     links = attempt.assessment.question_links
     answers = {
@@ -480,9 +714,16 @@ def calculate_result(attempt):
         if answer.selected_option is not None
     }
 
+    is_adaptive = bool((attempt.result_profile or {}).get("adaptive_level"))
+
     section_stats = {}
     for section in SECTION_ORDER:
         section_links = [link for link in links if link.section == section]
+        if is_adaptive:
+            section_links = [
+                link for link in section_links
+                if link.question_id in answers
+            ]
         if not section_links:
             continue
         correct = sum(
@@ -501,6 +742,8 @@ def calculate_result(attempt):
     for link in links:
         q = link.question
         if not q.topic:
+            continue
+        if is_adaptive and q.id not in answers:
             continue
         entry = topic_data[q.topic_id]
         entry["topic"] = q.topic
@@ -549,8 +792,6 @@ def _upsert_diagnostic_answer(attempt, question, selected):
 def _diagnostic_next_step(attempt, level_code, percentage):
     direction = attempt.diagnostic_direction
 
-    # Initial B1 screen. A borderline B1 result is confirmed with A2 so that
-    # the diagnostic never ends after only one 18-item stage.
     if direction is None:
         if percentage >= DIAGNOSTIC_ADVANCE_THRESHOLD:
             return _higher_level(level_code), "up", None
@@ -575,7 +816,6 @@ def _diagnostic_next_step(attempt, level_code, percentage):
             return None, direction, level_code
         return None, direction, _lower_level(level_code) or "A1"
 
-    # Downward confirmation path.
     if percentage >= DIAGNOSTIC_CONFIRM_THRESHOLD:
         return None, direction, level_code
     lower = _lower_level(level_code)
@@ -600,6 +840,10 @@ def _complete_diagnostic(attempt, estimated_level):
     attempt.completed_at = datetime.utcnow()
     attempt.status = "completed"
     attempt.current_stage = None
+
+    # Build the learner's personalized curriculum route from this completed
+    # diagnostic. The rows participate in the same transaction as the attempt.
+    generate_learning_plan(attempt)
 
 
 def take_diagnostic(attempt):
@@ -730,8 +974,6 @@ def calculate_diagnostic_profile(attempt):
     estimated_code = attempt.estimated_level or "A1"
     estimated_level = Level.query.filter_by(code=estimated_code).first()
 
-    # Missed diagnostic items indicate areas worth reviewing; they are not
-    # presented as psychometrically validated topic diagnoses.
     recommendations = sorted(
         [item for item in topic_stats if item["percentage"] < 70],
         key=lambda item: (
@@ -798,6 +1040,8 @@ def index():
             "unlocked": access["unlocked"],
             "reason": access["reason"],
             "progress": access["progress"],
+            "adaptive": is_adaptive_level_assessment(assessment),
+            "adaptive_target": ADAPTIVE_TARGET_QUESTIONS,
         })
     return render_template("assessments.html", assessment_cards=assessment_cards)
 
@@ -843,12 +1087,18 @@ def intro(code):
             course_progress=access["progress"],
         )
 
+    adaptive = is_adaptive_level_assessment(assessment)
+    adaptive_summary = adaptive_bank_summary(assessment) if adaptive else None
     return render_template(
         "assessment_intro.html",
         assessment=assessment,
         sections=build_sections(assessment),
-        question_count=len(assessment.question_links),
+        question_count=(ADAPTIVE_TARGET_QUESTIONS if adaptive else len(assessment.question_links)),
+        bank_count=len(assessment.question_links),
         latest_attempt=latest_attempt,
+        adaptive=adaptive,
+        adaptive_summary=adaptive_summary,
+        adaptive_section_plan=build_adaptive_section_plan() if adaptive else None,
     )
 
 
@@ -865,7 +1115,14 @@ def start(code):
 
     is_diagnostic = assessment.assessment_type == "diagnostic" and assessment.is_adaptive
     is_final = assessment.assessment_type == "final"
-    staged_assessment = is_diagnostic or is_final
+    is_adaptive_level = is_adaptive_level_assessment(assessment)
+    staged_assessment = is_diagnostic or is_final or is_adaptive_level
+
+    result_profile = None
+    if is_diagnostic or is_final:
+        result_profile = {"stage_scores": {}}
+    elif is_adaptive_level:
+        result_profile = {"adaptive_level": adaptive_initial_state()}
 
     attempt = AssessmentAttempt(
         user_id=current_user.id,
@@ -879,8 +1136,8 @@ def start(code):
             else (FINAL_START_LEVEL if is_final else None)
         ),
         diagnostic_direction=None,
-        diagnostic_path=[] if staged_assessment else None,
-        result_profile={"stage_scores": {}} if staged_assessment else None,
+        diagnostic_path=[] if (is_diagnostic or is_final) else None,
+        result_profile=result_profile,
     )
     db.session.add(attempt)
     db.session.commit()
@@ -899,6 +1156,9 @@ def take(attempt_id):
 
     if attempt.assessment.assessment_type == "final":
         return take_final(attempt)
+
+    if is_adaptive_level_assessment(attempt.assessment):
+        return take_adaptive_level(attempt)
 
     if request.method == "POST":
         score = 0
@@ -1013,11 +1273,13 @@ def result(attempt_id):
 
     if attempt.assessment.assessment_type == "diagnostic":
         profile = calculate_diagnostic_profile(attempt)
+        learning_plan_summary = get_learning_plan_summary(attempt.user_id)
         return render_template(
             "diagnostic_result.html",
             attempt=attempt,
             assessment=attempt.assessment,
             profile=profile,
+            learning_plan_summary=learning_plan_summary,
         )
 
     if attempt.assessment.assessment_type == "final":
@@ -1030,6 +1292,10 @@ def result(attempt_id):
         )
 
     section_stats, topic_stats, recommendations, strengths = calculate_result(attempt)
+    adaptive_summary = None
+    if (attempt.result_profile or {}).get("adaptive_level"):
+        adaptive_summary = adaptive_result_summary(attempt)
+
     return render_template(
         "assessment_result.html",
         attempt=attempt,
@@ -1039,4 +1305,5 @@ def result(attempt_id):
         recommendations=recommendations,
         strengths=strengths,
         threshold=attempt.assessment.passing_score,
+        adaptive_summary=adaptive_summary,
     )

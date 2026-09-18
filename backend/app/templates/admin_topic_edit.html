@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Edit topic · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section admin-page narrow-page">
+  <nav class="breadcrumb-modern mb-4"><a href="{{ url_for('admin.content_manager', kind='topics') }}">Content manager</a><i class="bi bi-chevron-right"></i><strong>{{ topic.code or topic.title }}</strong></nav>
+  <article class="content-card admin-editor-card">
+    <div class="content-card-header"><div><span class="eyebrow">TOPIC EDITOR</span><h1>{{ topic.title }}</h1><p>Changes are saved directly to the academic database.</p></div></div>
+    <form method="post" class="admin-editor-form">
+      <div class="row g-3">
+        <div class="col-md-4"><label class="form-label">Code</label><input class="form-control" name="code" value="{{ topic.code or '' }}" maxlength="40" required></div>
+        <div class="col-md-4"><label class="form-label">Level</label><select class="form-select" name="level_id">{% for level in levels %}<option value="{{ level.id }}" {{ 'selected' if level.id == topic.level_id else '' }}>{{ level.code }} · {{ level.name }}</option>{% endfor %}</select></div>
+        <div class="col-md-4"><label class="form-label">Order</label><input class="form-control" type="number" name="sort_order" value="{{ topic.sort_order }}"></div>
+        <div class="col-12"><label class="form-label">Title</label><input class="form-control" name="title" value="{{ topic.title }}" maxlength="160" required></div>
+        <div class="col-12"><label class="form-label">Objective</label><textarea class="form-control" name="objective" rows="2">{{ topic.objective }}</textarea></div>
+        <div class="col-12"><label class="form-label">Theory</label><textarea class="form-control" name="theory" rows="10" required>{{ topic.theory }}</textarea></div>
+        <div class="col-md-6"><label class="form-label">Examples <small class="text-muted">one per line</small></label><textarea class="form-control" name="examples" rows="8">{{ examples_text }}</textarea></div>
+        <div class="col-md-6"><label class="form-label">Key vocabulary <small class="text-muted">one per line</small></label><textarea class="form-control" name="key_vocabulary" rows="8">{{ vocabulary_text }}</textarea></div>
+        <div class="col-12"><label class="form-label">Common mistakes JSON</label><textarea class="form-control font-monospace" name="common_mistakes" rows="8">{{ mistakes_text }}</textarea></div>
+        <div class="col-md-8"><label class="form-label">YouTube video ID</label><input class="form-control" name="youtube_video_id" value="{{ topic.youtube_video_id or '' }}" maxlength="80"></div>
+        <div class="col-md-4"><label class="form-label">Publication</label><select class="form-select" name="is_published"><option value="1" {{ 'selected' if topic.is_published else '' }}>Published</option><option value="0" {{ 'selected' if not topic.is_published else '' }}>Hidden</option></select></div>
+      </div>
+      <div class="admin-editor-actions"><button class="btn btn-primary btn-modern" type="submit"><i class="bi bi-check-lg"></i> Save changes</button><a class="btn btn-outline-secondary btn-modern" href="{{ url_for('admin.content_manager', kind='topics') }}">Cancel</a></div>
+    </form>
+  </article>
+</section>
+{% endblock %}

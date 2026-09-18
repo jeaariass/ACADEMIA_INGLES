@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }} · Library{% endblock %}
+{% block content %}
+<section class="page-section library-reader-page">
+  <nav class="breadcrumb-modern" aria-label="breadcrumb">
+    <a href="{{ url_for('library.index') }}"><i class="bi bi-bookshelf"></i> Library</a>
+    <i class="bi bi-chevron-right"></i><strong>{{ article.title }}</strong>
+  </nav>
+
+  <article class="library-reader-card" data-article-id="{{ article.id }}">
+    <header class="library-reader-header">
+      <div>
+        <div class="library-reader-badges">
+          <span class="library-level">{{ article.level_code }}</span>
+          <span class="library-category">{{ category_label }}</span>
+        </div>
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.summary }}</p>
+        <div class="library-reader-meta">
+          <span><i class="bi bi-file-text"></i>{{ article.word_count }} words</span>
+          <span><i class="bi bi-bookmark-star"></i>{{ saved_count }} saved from this reading</span>
+          {% if article.source_label %}<span><i class="bi bi-pencil-square"></i>{{ article.source_label }}</span>{% endif %}
+        </div>
+      </div>
+      <div class="library-reader-actions">
+        <button class="btn btn-soft btn-modern" type="button" onclick='speakLongText({{ article.content_text|tojson }}, {lang:"en-US", rate:1.0})'>
+          <i class="bi bi-volume-up-fill"></i> Listen
+        </button>
+        <a class="btn btn-outline-primary btn-modern" href="{{ url_for('library.vocabulary') }}"><i class="bi bi-bookmark-star-fill"></i> My Vocabulary</a>
+      </div>
+    </header>
+
+    <div class="library-selection-tip">
+      <i class="bi bi-cursor-text"></i>
+      <span><strong>Select any English word or phrase.</strong> You can listen to it, translate it, or save it to your personal vocabulary bank.</span>
+    </div>
+
+    <div class="library-reading-body" id="libraryReadingBody">
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+    </div>
+  </article>
+</section>
+
+<div class="selection-toolbar" id="selectionToolbar" hidden>
+  <button type="button" data-selection-action="listen"><i class="bi bi-volume-up-fill"></i><span>Listen</span></button>
+  <button type="button" data-selection-action="translate"><i class="bi bi-translate"></i><span>Translate</span></button>
+  <button type="button" data-selection-action="save"><i class="bi bi-bookmark-plus-fill"></i><span>Save</span></button>
+</div>
+
+<div class="modal fade" id="saveVocabularyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content vocabulary-save-modal">
+      <div class="modal-header">
+        <div><span class="eyebrow">PERSONAL VOCABULARY</span><h2 class="modal-title">Save word or phrase</h2></div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label class="form-label">English</label>
+        <div class="saved-selection-preview" id="selectedVocabularyText"></div>
+
+        <label class="form-label mt-3">Spanish translation</label>
+        <input class="form-control" id="selectedVocabularyTranslation" maxlength="500" placeholder="Write or paste the translation">
+        <div class="vocabulary-translation-helper">
+          <button class="btn btn-sm btn-outline-secondary" id="openTranslatorFromModal" type="button"><i class="bi bi-box-arrow-up-right"></i> Open translator</button>
+          <small>The platform stores the translation you confirm, so future reviews are stable.</small>
+        </div>
+
+        <label class="form-label mt-3">Notes <span class="text-muted">(optional)</span></label>
+        <textarea class="form-control" id="selectedVocabularyNotes" rows="2" placeholder="Example, synonym, pronunciation note..."></textarea>
+        <div class="alert alert-danger mt-3 mb-0 d-none" id="saveVocabularyError"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary btn-modern" id="confirmSaveVocabulary"><i class="bi bi-bookmark-check-fill"></i> Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+window.LIBRARY_CONFIG = {
+  articleId: {{ article.id }},
+  saveEndpoint: {{ url_for('library.save_vocabulary')|tojson }}
+};
+</script>
+<script src="{{ url_for('static', filename='js/library.js') }}"></script>
+{% endblock %}

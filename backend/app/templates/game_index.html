@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}Word Runner · English Practice Hub{% endblock %}
+{% block content %}
+<section class="page-section game-home-page">
+  <div class="game-hero">
+    <div>
+      <span class="eyebrow light">EDUCATIONAL GAME</span>
+      <h1>Word Runner</h1>
+      <p>Run through changing scenarios, jump lower obstacles, protect your energy, and answer English challenges drawn from your learning path and personal vocabulary.</p>
+      <div class="game-hero-actions">
+        <a class="btn btn-light btn-modern" href="{{ url_for('game.play') }}"><i class="bi bi-play-fill"></i> Play now</a>
+        <a class="btn btn-outline-light btn-modern" href="{{ url_for('main.learning_path') }}"><i class="bi bi-signpost-split-fill"></i> My Path</a>
+      </div>
+    </div>
+    <div class="game-hero-orb"><i class="bi bi-controller"></i></div>
+  </div>
+
+  <div class="game-stat-grid">
+    <article><span><i class="bi bi-flag-fill"></i></span><strong>{{ completed_runs }}</strong><small>Completed runs</small></article>
+    <article><span><i class="bi bi-stars"></i></span><strong>{{ best_score }}</strong><small>Best score</small></article>
+    <article><span><i class="bi bi-signpost-2-fill"></i></span><strong>{{ best_distance }}</strong><small>Best distance</small></article>
+    <article><span><i class="bi bi-translate"></i></span><strong>{{ vocab_count }}</strong><small>Vocabulary items available</small></article>
+  </div>
+
+  <div class="game-info-grid">
+    <section class="content-card game-next-run-card">
+      <div class="content-card-header">
+        <div><span class="eyebrow">NEXT RUN</span><h2>Tier {{ next_settings.tier }}</h2></div>
+        <span class="game-tier-pill">{{ estimated_level }}</span>
+      </div>
+      <div class="game-next-metrics">
+        <div><small>Target distance</small><strong>{{ next_settings.target_distance }}</strong></div>
+        <div><small>Question target</small><strong>{{ next_settings.target_difficulty }}/5</strong></div>
+        <div><small>Speed</small><strong>x{{ next_settings.speed_multiplier }}</strong></div>
+      </div>
+      <p>The runner now starts faster with lower obstacles. Each completed run still increases speed, energy pressure and the target difficulty of the English challenges.</p>
+    </section>
+
+    <section class="content-card game-rules-card">
+      <div class="content-card-header"><div><span class="eyebrow">HOW IT WORKS</span><h2>Energy is your lifeline</h2></div></div>
+      <div class="game-rule-list">
+        <div><i class="bi bi-lightning-charge-fill"></i><span><strong>Keep moving</strong><small>Energy decreases while you advance and drops faster after collisions.</small></span></div>
+        <div><i class="bi bi-patch-question-fill"></i><span><strong>Answer checkpoints</strong><small>Correct answers restore energy and add points.</small></span></div>
+        <div><i class="bi bi-person-check-fill"></i><span><strong>Personalized challenges</strong><small>The game prioritizes required/recommended topics and periodically uses My Vocabulary.</small></span></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="content-card mt-4">
+    <div class="content-card-header"><div><span class="eyebrow">RUN HISTORY</span><h2>Recent games</h2></div></div>
+    {% if recent_runs %}
+    <div class="table-responsive modern-table-wrap">
+      <table class="table modern-table align-middle mb-0">
+        <thead><tr><th>Date</th><th>Tier</th><th>Status</th><th>Distance</th><th>Questions</th><th>Score</th></tr></thead>
+        <tbody>
+        {% for run in recent_runs %}
+          <tr>
+            <td>{{ run.started_at.strftime('%Y-%m-%d %H:%M') if run.started_at else '—' }}</td>
+            <td><strong>{{ run.difficulty_tier }}</strong></td>
+            <td><span class="game-status-pill status-{{ run.status }}">{{ run.status|replace('_',' ')|title }}</span></td>
+            <td>{{ run.distance|int }} / {{ run.target_distance }}</td>
+            <td>{{ run.correct_answers }}/{{ run.questions_answered }}</td>
+            <td><span class="score-pill">{{ run.score }}</span></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="empty-state"><span class="empty-state-icon"><i class="bi bi-controller"></i></span><h3>No runs yet</h3><p>Your first game will appear here.</p></div>
+    {% endif %}
+  </section>
+</section>
+{% endblock %}
