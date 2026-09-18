@@ -1,1486 +1,146 @@
-# English Practice Hub
+# English Practice Hub v2.0
 
-Plataforma web para aprendizaje de inglés con contenidos organizados por niveles **A1–C2**, práctica por temas, ejercicios de lectura y listening, evaluaciones por nivel, diagnóstico inicial, seguimiento de progreso, evaluación final y panel de administración.
+Plataforma web de aprendizaje de inglés organizada por niveles **A1-C2**, con diagnóstico inicial, ruta personalizada, práctica por temas, evaluaciones adaptativas, biblioteca, vocabulario con repetición espaciada, Speaking, Writing, Game Arcade, Kids Mode y herramientas administrativas de contenido y analítica.
 
-> **Estado actual del proyecto**
->
-> - 6 niveles: A1, A2, B1, B2, C1 y C2
-> - 90 temas publicados
-> - 1.350 preguntas de práctica
-> - 180 passages de práctica
-> - 8 assessments formales
-> - 420 preguntas enlazadas a assessments
-> - 1.770 preguntas totales en la base de datos
-> - 228 passages totales
->
-> Los resultados de nivel de la plataforma deben interpretarse como una **estimación alineada con CEFR**, no como una certificación oficial CEFR.
+> **Versión documentada:** v2.0 / Fase 14 - Game Vocabulary Content Manager  
+> **Revisión Alembic esperada:** `f0d24b6a8e85`  
+> **URL local por defecto:** `http://localhost:8000`
+
+## Alcance y advertencias
+
+- Los resultados CEFR de la plataforma son **estimaciones alineadas con CEFR**, no certificaciones oficiales.
+- Los indicadores de Speaking son métricas de práctica derivadas del texto reconocido por el navegador; no constituyen una evaluación fonética certificada.
+- Writing utiliza métricas objetivas de práctica (longitud, variedad léxica, conectores y vocabulario objetivo); no sustituye una rúbrica humana completa.
+- Kids Mode está diseñado como experiencia lúdica: no muestra diagnósticos, exámenes, aprobado/reprobado ni calificaciones formales.
 
 ---
 
-# 1. Tecnologías
+## 1. Funcionalidades principales
 
-La aplicación utiliza:
+### Estudiante estándar
 
-- **Python / Flask**
-- **Jinja2**
-- **Bootstrap**
-- **PostgreSQL 16**
-- **SQLAlchemy**
-- **Flask-Migrate / Alembic**
-- **Gunicorn**
-- **Docker / Docker Compose**
-- **Web Speech API** del navegador para Text-to-Speech
-- JavaScript para listening, timers y comportamiento de evaluaciones
+- 6 niveles CEFR: **A1, A2, B1, B2, C1 y C2**.
+- Diagnóstico inicial adaptativo que comienza en B1.
+- Ruta personalizada por tema: `required`, `recommended`, `optional` y `mastered/strong evidence`.
+- Lecciones y prácticas por tema.
+- Exámenes de nivel adaptativos pregunta por pregunta.
+- Biblioteca de lecturas con filtro por nivel/categoría.
+- Banco personal de vocabulario y repetición espaciada.
+- Speaking con reconocimiento de voz del navegador.
+- Writing con versiones `Draft 1`, `Draft 2`, etc.
+- Word Runner y Game Arcade.
+- Learning Profile y analítica personal.
+- Ranking de resultados de práctica.
 
-La aplicación se expone localmente en:
+### Kids Mode
 
-```text
-http://localhost:8000
-```
+- Experiencia separada orientada a vocabulario básico desde cero.
+- Sin diagnóstico, evaluaciones formales, ranking, Speaking/Writing adulto ni ruta CEFR.
+- Juegos: **Picture Match, Listen & Tap, Bubble Pop, Memory Garden, Word Train y Colors & Numbers**.
+- Temas visuales rotativos y refuerzo mediante estrellas.
+- El sistema registra exposiciones/aciertos internamente para repetir vocabulario menos practicado, sin mostrarlos como nota al niño.
+
+### Administración
+
+- Usuarios estándar y Kids Mode.
+- Content Manager de temas, preguntas y lecturas.
+- Carga masiva Excel de temas/preguntas.
+- Carga masiva Excel de lecturas.
+- Game Vocabulary Manager compartido por Kids Mode y juegos de estudiantes estándar.
+- Importación/exportación masiva del banco de vocabulario de juegos.
+- Analítica administrativa e Item Analysis.
+- Exportación CSV del análisis de preguntas.
+- Backups, restore, healthchecks y QA de producción.
 
 ---
 
-# 2. Estructura general del proyecto
+## 2. Stack tecnológico
 
-La estructura principal es:
+- Python 3.12 / Flask
+- Jinja2
+- Bootstrap 5
+- PostgreSQL 16
+- SQLAlchemy
+- Flask-Migrate / Alembic
+- Gunicorn
+- Docker / Docker Compose
+- JavaScript / Canvas
+- Web Speech API (`speechSynthesis` y reconocimiento de voz según soporte del navegador)
+- `openpyxl` para importaciones/exportaciones Excel
+
+Se recomienda **Google Chrome o Microsoft Edge** para disponer de mejor compatibilidad con Web Speech API.
+
+---
+
+## 3. Estructura funcional del proyecto
 
 ```text
 ACADEMIA_INGLES/
-│
-├── docker-compose.local.yml
 ├── .env.example
-│
+├── docker-compose.local.yml
+├── docker-compose.yml
+├── scripts/
+│   ├── backup_postgres.ps1
+│   ├── restore_postgres.ps1
+│   ├── backup_postgres.sh
+│   ├── restore_postgres.sh
+│   └── release_check.ps1
 └── backend/
     ├── Dockerfile
     ├── requirements.txt
-    ├── run.py
     ├── start.sh
     ├── wsgi.py
-    │
     ├── app/
     │   ├── __init__.py
     │   ├── models.py
     │   ├── routes.py
     │   ├── auth.py
-    │   ├── admin.py
     │   ├── assessment.py
     │   ├── progress.py
-    │   ├── seed.py
-    │   │
+    │   ├── learning_plan.py
+    │   ├── adaptive_level.py
+    │   ├── library.py
+    │   ├── game.py
+    │   ├── arcade.py
+    │   ├── kids.py
+    │   ├── speaking.py
+    │   ├── writing.py
+    │   ├── insights.py
+    │   ├── admin.py
+    │   ├── admin_analytics.py
+    │   ├── bulk_import.py
+    │   ├── library_bulk_import.py
+    │   ├── game_vocab_admin.py
+    │   ├── game_vocab_bulk.py
+    │   ├── game_vocabulary.py
+    │   ├── security.py
     │   ├── templates/
     │   └── static/
-    │       ├── css/
-    │       └── js/
-    │           ├── speech.js
-    │           └── assessment.js
-    │
     ├── content/
     │   ├── curriculum/
-    │   │   ├── A1.json
-    │   │   ├── A2.json
-    │   │   ├── B1.json
-    │   │   ├── B2.json
-    │   │   ├── C1.json
-    │   │   └── C2.json
-    │   │
-    │   └── assessments/
-    │       ├── A1_level.json
-    │       ├── A2_level.json
-    │       ├── B1_level.json
-    │       ├── B2_level.json
-    │       ├── C1_level.json
-    │       ├── C2_level.json
-    │       ├── initial_diagnostic.json
-    │       └── final_comprehensive.json
-    │
+    │   ├── assessments/
+    │   ├── library/starter_library.json
+    │   ├── speaking/starter_speaking.json
+    │   ├── writing/starter_writing.json
+    │   └── kids/basic_vocabulary.json
     ├── migrations/
-    │
-    ├── qa/
-    │   └── qa_rules.json
-    │
-    └── scripts/
-        ├── import_content.py
-        ├── import_assessment.py
-        ├── validate_content.py
-        ├── audit_database.py
-        ├── qa_all.py
-        └── content_inventory.py
+    └── qa/
+        ├── adaptive_engine_smoke.py
+        └── production_check.py
 ```
+
+Los JSON `starter_*` y `basic_vocabulary.json` actúan como **semillas create-only** para esos módulos: una vez creados los registros en PostgreSQL, los cambios administrativos no se sobreescriben al reiniciar Docker.
 
 ---
 
-# 3. Requisitos para ejecutar el proyecto
-
-Necesitas:
-
-- Docker Desktop
-- Docker Compose
-- Git
-- Navegador moderno, preferiblemente:
-  - Microsoft Edge
-  - Google Chrome
-
-En Windows también es recomendable tener instalado:
-
-- English (United States) Text-to-Speech
-
-para que los ejercicios de listening puedan utilizar una voz inglesa.
-
----
-
-# 4. Descargar el proyecto por primera vez
-
-Desde PowerShell:
-
-```powershell
-cd "K:\Educacion\Idiomas"
-git clone https://github.com/jeaariass/ACADEMIA_INGLES.git
-cd ACADEMIA_INGLES
-```
-
-Si ya tienes el repositorio:
-
-```powershell
-cd "K:\Educacion\Idiomas\ACADEMIA_INGLES"
-git pull origin main
-```
-
----
-
-# 5. Iniciar la aplicación con Docker
-
-Ubícate siempre en la raíz del proyecto:
-
-```powershell
-cd "K:\Educacion\Idiomas\ACADEMIA_INGLES"
-```
-
-Después ejecuta:
-
-```powershell
-docker compose -f docker-compose.local.yml up --build -d
-```
-
-Esto inicia dos contenedores:
-
-```text
-ingles-postgres-local
-ingles-backend-local
-```
-
-La aplicación queda disponible en:
-
-```text
-http://localhost:8000
-```
-
----
-
-# 6. Verificar que Docker esté funcionando
-
-Ejecuta:
-
-```powershell
-docker compose -f docker-compose.local.yml ps
-```
-
-Debes ver los servicios `postgres` y `backend` en ejecución.
-
-Para revisar logs:
-
-```powershell
-docker compose -f docker-compose.local.yml logs -f backend
-```
-
-Para PostgreSQL:
-
-```powershell
-docker compose -f docker-compose.local.yml logs -f postgres
-```
-
-Para salir de los logs:
-
-```text
-Ctrl + C
-```
-
-Esto **no detiene** los contenedores.
-
----
-
-# 7. Detener la aplicación
-
-Ejecuta:
-
-```powershell
-docker compose -f docker-compose.local.yml down
-```
-
-Esto apaga los contenedores, pero conserva la información de PostgreSQL.
-
-## IMPORTANTE
-
-Normalmente **NO debes ejecutar**:
-
-```powershell
-docker compose -f docker-compose.local.yml down -v
-```
-
-El parámetro:
-
-```text
--v
-```
-
-elimina los volúmenes de Docker y puede borrar la base de datos local.
-
-El volumen actual es:
-
-```text
-english_postgres_data
-```
-
----
-
-# 8. Reiniciar después de modificar código
-
-Cuando modifiques Python, templates, JavaScript, CSS o el Dockerfile:
-
-```powershell
-docker compose -f docker-compose.local.yml down
-docker compose -f docker-compose.local.yml up --build -d
-```
-
-Para cambios en JavaScript o CSS, después haz una recarga forzada del navegador:
-
-```text
-Ctrl + F5
-```
-
-o:
-
-```text
-Ctrl + Shift + R
-```
-
-Esto evita que el navegador siga utilizando archivos antiguos almacenados en caché.
-
----
-
-# 9. Usuarios iniciales de desarrollo
-
-En `docker-compose.local.yml` existen usuarios de desarrollo:
-
-```text
-admin
-student1
-student2
-```
-
-Las contraseñas actuales del entorno local están definidas como variables del Compose.
-
-> Estas credenciales son únicamente para desarrollo.
->
-> Antes de desplegar la aplicación públicamente se deben cambiar las contraseñas, el `FLASK_SECRET_KEY` y las credenciales de PostgreSQL.
-
-El script `seed.py` crea usuarios faltantes, pero no debe utilizarse como mecanismo para cambiar contraseñas de usuarios que ya existen.
-
-Las cuentas existentes pueden editarse desde:
-
-```text
-Admin
-→ Existing users
-→ Edit
-```
-
-Desde allí el administrador puede modificar:
-
-- username
-- nombre completo
-- rol
-- contraseña
-
-El cambio no elimina el progreso del estudiante.
-
----
-
-# 10. Base de datos y migraciones
-
-La aplicación utiliza:
-
-```text
-Flask-Migrate + Alembic
-```
-
-Durante el arranque:
-
-```text
-backend/start.sh
-```
-
-ejecuta automáticamente:
-
-```bash
-flask db upgrade
-```
-
-Por lo tanto, las migraciones existentes se aplican al iniciar el backend.
-
-## Cuándo crear una nueva migración
-
-Solo cuando cambies la estructura de `models.py`.
-
-Ejemplos:
-
-- agregar una columna
-- agregar una tabla
-- cambiar relaciones
-- agregar restricciones
-
-Después de modificar los modelos:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend flask db migrate -m "descripcion del cambio"
-```
-
-Revisa la migración generada.
-
-Luego:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend flask db upgrade
-```
-
-## No crear migraciones para
-
-No necesitas migración si solo cambias:
-
-- JSON de contenidos
-- preguntas
-- topics
-- CSS
-- HTML
-- JavaScript
-- textos
-- audio_text
-- assessment content
-
----
-
-# 11. Cómo está organizado el contenido académico
-
-El contenido principal se guarda en:
-
-```text
-backend/content/curriculum/
-```
-
-Cada nivel tiene su propio archivo:
-
-```text
-A1.json
-A2.json
-B1.json
-B2.json
-C1.json
-C2.json
-```
-
-Actualmente cada nivel tiene:
-
-```text
-15 topics
-```
-
-y cada topic sigue la estructura:
-
-```text
-10 preguntas directas
-1 reading passage
-1 listening passage
-5 preguntas asociadas a passages
-
-Total: 15 preguntas por topic
-```
-
----
-
-# 12. Regla fundamental: los códigos son identificadores permanentes
-
-El importador utiliza códigos para decidir si debe crear o actualizar un registro.
-
-Ejemplos:
-
-```text
-A1_T01
-A1_T01_Q01
-A1_T01_READING_01
-A1_T01_LISTENING_01
-```
-
-Los códigos deben ser:
-
-- únicos
-- estables
-- descriptivos
-- no reutilizados para otro contenido
-
-## Muy importante
-
-Si cambias:
-
-```text
-A1_T01_Q01
-```
-
-por:
-
-```text
-A1_T01_Q99
-```
-
-el sistema no interpreta esto como un cambio de nombre.
-
-Lo interpreta como:
-
-```text
-crear una pregunta nueva
-```
-
-Por eso no cambies códigos de contenido existente salvo que realmente quieras crear otro registro.
-
----
-
-# 13. Importador de contenidos
-
-El script es:
-
-```text
-backend/scripts/import_content.py
-```
-
-Su comportamiento es principalmente **upsert**:
-
-```text
-si el código no existe → crea
-si el código ya existe → actualiza
-```
-
-Esto permite ejecutar el importador varias veces sin duplicar los registros que mantienen el mismo código.
-
-## Importar un nivel
-
-Ejemplo A1:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/A1.json
-```
-
-B1:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/B1.json
-```
-
-C2:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/C2.json
-```
-
-## Importar todos los niveles
-
-También puedes ejecutar:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py
-```
-
-El script procesa los JSON de `content/curriculum/` que no empiezan por `_`.
-
----
-
-# 14. Cómo agregar un nuevo topic
-
-Supongamos que quieres agregar un topic adicional a B1.
-
-Actualmente B1 termina en:
-
-```text
-B1_T15
-```
-
-El nuevo podría ser:
-
-```text
-B1_T16
-```
-
-Abre:
-
-```text
-backend/content/curriculum/B1.json
-```
-
-y agrega un nuevo objeto dentro de:
-
-```json
-"topics": []
-```
-
-Ejemplo simplificado:
-
-```json
-{
-  "code": "B1_T16",
-  "order": 16,
-  "title": "Used To and Past Habits",
-  "objective": "Describe past habits and situations that are no longer true.",
-  "theory": "Use 'used to + base verb' for repeated past habits or past states.",
-  "examples": [
-    "I used to live near the university.",
-    "She didn't use to drink coffee."
-  ],
-  "common_mistakes": [
-    "Incorrect: I used to lived there.",
-    "Correct: I used to live there."
-  ],
-  "key_vocabulary": [
-    "used to",
-    "habit",
-    "in the past"
-  ],
-  "youtube_video_id": null,
-  "is_published": true,
-  "questions": [],
-  "passages": []
-}
-```
-
-Después debes agregar las preguntas y passages correspondientes.
-
-Finalmente importa B1:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/B1.json
-```
-
----
-
-# 15. Importante al agregar más topics: actualizar QA
-
-Actualmente las reglas QA esperan:
-
-```text
-15 topics por nivel
-```
-
-La configuración está en:
-
-```text
-backend/qa/qa_rules.json
-```
-
-Si B1 pasa de 15 a 16 topics y mantienes la regla global en 15, el QA reportará un error aunque el contenido sea válido.
-
-Actualmente la regla:
-
-```json
-"expected_topics_per_level": 15
-```
-
-es global para todos los niveles.
-
-Por eso, antes de expandir significativamente el currículo se recomienda mejorar esta regla para permitir cantidades por nivel, por ejemplo:
-
-```json
-"expected_topics_by_level": {
-  "A1": 15,
-  "A2": 15,
-  "B1": 16,
-  "B2": 15,
-  "C1": 15,
-  "C2": 15
-}
-```
-
-y adaptar `validate_content.py`.
-
-Hasta realizar ese cambio, si modificas el número de topics debes tener en cuenta que el QA está diseñado para la estructura actual de 15 por nivel.
-
----
-
-# 16. Cómo agregar una pregunta directa
-
-Dentro de un topic encontrarás:
-
-```json
-"questions": []
-```
-
-Una pregunta directa sigue aproximadamente esta estructura:
-
-```json
-{
-  "code": "B1_T16_Q01",
-  "order": 1,
-  "skill": "grammar",
-  "question_type": "multiple_choice",
-  "difficulty": 3,
-  "prompt": "Choose the correct sentence.",
-  "option_a": "I used to live there.",
-  "option_b": "I used to lived there.",
-  "option_c": "I use to lived there.",
-  "option_d": "I was use to live there.",
-  "correct_option": "A",
-  "explanation": "Use 'used to' followed by the base form of the verb."
-}
-```
-
-## Skills válidos
-
-El importador acepta:
-
-```text
-grammar
-vocabulary
-reading
-listening
-```
-
-## Difficulty
-
-Debe ser:
-
-```text
-1
-2
-3
-4
-5
-```
-
-## Correct option
-
-Debe ser exactamente:
-
-```text
-A
-B
-C
-D
-```
-
----
-
-# 17. Tipos de pregunta válidos
-
-Actualmente `import_content.py` admite:
-
-```text
-multiple_choice
-reading_multiple_choice
-listening_multiple_choice
-reading_comprehension
-listening_comprehension
-error_identification
-```
-
-No inventes un nuevo `question_type` sin actualizar antes el importador y, si corresponde, la interfaz.
-
----
-
-# 18. Cómo agregar un Reading Passage
-
-Dentro de:
-
-```json
-"passages": []
-```
-
-puedes agregar:
-
-```json
-{
-  "code": "B1_T16_READING_01",
-  "order": 1,
-  "passage_type": "reading",
-  "title": "Life Was Different",
-  "instructions": "Read the text and answer the questions.",
-  "content_text": "When Daniel was younger, he used to...",
-  "audio_text": null,
-  "audio_accent": "en-US",
-  "audio_rate": 1.0,
-  "max_audio_plays": 2,
-  "is_active": true,
-  "questions": []
-}
-```
-
-Para reading es obligatorio:
-
-```text
-content_text
-```
-
----
-
-# 19. Cómo agregar un Listening Passage
-
-Ejemplo:
-
-```json
-{
-  "code": "B1_T16_LISTENING_01",
-  "order": 2,
-  "passage_type": "listening",
-  "title": "Old Habits",
-  "instructions": "Listen and answer the questions.",
-  "content_text": null,
-  "audio_text": "When I was a child, I used to walk to school every morning...",
-  "audio_accent": "en-US",
-  "audio_rate": 1.0,
-  "max_audio_plays": 2,
-  "is_active": true,
-  "questions": []
-}
-```
-
-Para listening es obligatorio:
-
-```text
-audio_text
-```
-
----
-
-# 20. Velocidad del listening
-
-El campo:
-
-```json
-"audio_rate": 1.0
-```
-
-controla aproximadamente la velocidad del TTS.
-
-Como referencia práctica:
-
-```text
-A1   0.90–0.95
-A2   0.95–1.00
-B1   1.00
-B2   1.02–1.04
-C1   1.04–1.06
-C2   1.06–1.10
-```
-
-No es obligatorio usar exactamente esos valores.
-
----
-
-# 21. Voces inglesas y Web Speech API
-
-Actualmente el listening utiliza:
-
-```text
-window.speechSynthesis
-```
-
-del navegador.
-
-Eso significa que la voz disponible depende del equipo del estudiante.
-
-El archivo principal es:
-
-```text
-backend/app/static/js/speech.js
-```
-
-El sistema está configurado para utilizar exclusivamente voces con idioma:
-
-```text
-en
-en-US
-en-GB
-en-AU
-en-CA
-...
-```
-
-y evita utilizar voces:
-
-```text
-es-ES
-es-MX
-es-CO
-```
-
-para ejercicios de inglés.
-
----
-
-# 22. Si un estudiante recibe “No English text-to-speech voice is available”
-
-En Windows debe instalar una voz inglesa.
-
-Ruta recomendada:
-
-```text
-Settings
-→ Time & language
-→ Language & region
-→ Add a language
-→ English (United States)
-```
-
-Luego:
-
-```text
-Language options
-→ Text-to-speech
-→ Download / Install
-```
-
-Después:
-
-1. cerrar completamente Chrome/Edge;
-2. reiniciar Windows si es necesario;
-3. abrir de nuevo el navegador;
-4. realizar una recarga fuerte:
-
-```text
-Ctrl + F5
-```
-
-Para diagnosticar desde la consola del navegador:
-
-```javascript
-debugEnglishVoices()
-```
-
-También:
-
-```javascript
-speechSynthesis.getVoices()
-  .filter(v => v.lang.toLowerCase().startsWith('en'))
-```
-
-Si el resultado es:
-
-```javascript
-[]
-```
-
-el navegador no tiene disponible una voz inglesa.
-
----
-
-# 23. Recomendación futura para producción del listening
-
-El sistema actual depende del TTS del dispositivo.
-
-Para producción a mayor escala sería mejor migrar a:
-
-```text
-TTS controlado por servidor
-→ generación de audio
-→ MP3/OGG
-→ reproducción idéntica para todos
-```
-
-Esto permitiría controlar:
-
-- acento
-- voz
-- velocidad
-- pronunciación
-- calidad
-- consistencia entre estudiantes
-
----
-
-# 24. Cómo agregar preguntas a un topic existente
-
-Si quieres modificar una pregunta existente:
-
-1. abre el JSON del nivel;
-2. localiza el `code`;
-3. modifica el contenido;
-4. conserva el mismo `code`;
-5. vuelve a importar el nivel.
-
-Ejemplo:
-
-```text
-A2_T06_Q03
-```
-
-Después:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/A2.json
-```
-
-Como se conserva el código, el importador actualiza esa pregunta.
-
----
-
-# 25. ¿Puedo agregar más de 15 preguntas a un topic?
-
-Técnicamente sí, pero actualmente el QA espera:
-
-```text
-10 direct questions
-2 passages
-5 passage questions
-15 total
-```
-
-Por lo tanto, si agregas más preguntas sin modificar las reglas QA recibirás:
-
-```text
-TOPIC_ARCHITECTURE
-```
-
-o errores equivalentes.
-
-## Recomendación
-
-Para mantener la arquitectura estable:
-
-- conserva 15 preguntas activas por topic;
-- si necesitas cubrir otro bloque importante, crea un topic nuevo;
-- si decides ampliar el número de preguntas por topic, actualiza también:
-  - `backend/qa/qa_rules.json`
-  - `backend/scripts/validate_content.py`
-  - `backend/scripts/audit_database.py`
-
----
-
-# 26. Atención: eliminar algo del JSON no necesariamente lo elimina de PostgreSQL
-
-El importador de currículo es principalmente un **upsert**.
-
-Esto significa:
-
-```text
-JSON nuevo → crea
-mismo code → actualiza
-```
-
-Pero no existe actualmente una limpieza automática general que diga:
-
-```text
-si ya no está en el JSON → eliminar de la BD
-```
-
-Por esta razón:
-
-> No elimines simplemente una pregunta o topic del JSON esperando que desaparezca automáticamente de PostgreSQL.
-
-Si necesitas retirar contenido existente, lo más seguro es:
-
-1. marcarlo como inactivo/no publicado cuando la estructura lo permita;
-2. o crear un script/migración de limpieza controlada;
-3. ejecutar QA después.
-
-Nunca borres masivamente registros directamente en PostgreSQL sin revisar relaciones con progreso y assessments.
-
----
-
-# 27. Publicar o esconder un topic
-
-Los topics soportan:
-
-```json
-"is_published": true
-```
-
-Para ocultarlo:
-
-```json
-"is_published": false
-```
-
-Después importa nuevamente el nivel.
-
-El progreso y el desbloqueo de evaluaciones utilizan los topics publicados.
-
-Por esta razón agregar un topic nuevo con:
-
-```json
-"is_published": true
-```
-
-puede hacer que estudiantes que antes tenían un nivel “completo” deban completar también el nuevo topic para recuperar el 100 %.
-
----
-
-# 28. Assessments
-
-Los archivos están en:
-
-```text
-backend/content/assessments/
-```
-
-Actualmente existen:
-
-```text
-A1_level.json
-A2_level.json
-B1_level.json
-B2_level.json
-C1_level.json
-C2_level.json
-initial_diagnostic.json
-final_comprehensive.json
-```
-
-Los assessments se importan con:
-
-```text
-backend/scripts/import_assessment.py
-```
-
----
-
-# 29. Importar un assessment
-
-Ejemplo A1:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_assessment.py content/assessments/A1_level.json
-```
-
-Diagnóstico:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_assessment.py content/assessments/initial_diagnostic.json
-```
-
-Final:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_assessment.py content/assessments/final_comprehensive.json
-```
-
-El importador de assessments también trabaja por códigos y relaciones existentes.
-
-Primero debe existir el currículo porque las preguntas formales se enlazan a `topic_code`.
-
----
-
-# 30. Diferencia entre preguntas de práctica y assessments
-
-Las preguntas del currículo:
-
-```text
-is_active = true
-```
-
-participan en la práctica normal de las lecciones.
-
-Las preguntas de assessments se importan con:
-
-```text
-is_active = false
-```
-
-porque no deben aparecer mezcladas en las prácticas normales.
-
-Aun así están enlazadas al topic correspondiente para poder calcular:
-
-- áreas de revisión
-- fortalezas
-- debilidades
-- resultados por tema
-
----
-
-# 31. Assessment por nivel
-
-Cada evaluación A1–C2 actualmente tiene:
-
-```text
-40 preguntas
-```
-
-Distribuidas en:
-
-```text
-Grammar       12
-Vocabulary     8
-Reading        8
-Listening      8
-Integrated     4
-```
-
-Si cambias esta estructura también debes actualizar:
-
-```text
-backend/qa/qa_rules.json
-```
-
----
-
-# 32. Diagnóstico inicial
-
-Archivo:
-
-```text
-backend/content/assessments/initial_diagnostic.json
-```
-
-Tiene:
-
-```text
-108 preguntas
-18 por nivel
-A1–C2
-```
-
-Es adaptativo y comienza en:
-
-```text
-B1
-```
-
-El algoritmo es una heurística de plataforma, no una calibración psicométrica formal.
-
-Si modificas los thresholds debes revisar:
-
-```text
-backend/app/assessment.py
-```
-
----
-
-# 33. Evaluación final
-
-Archivo:
-
-```text
-backend/content/assessments/final_comprehensive.json
-```
-
-Tiene:
-
-```text
-72 preguntas
-12 por nivel
-```
-
-Recorre:
-
-```text
-A1
-→ A2
-→ B1
-→ B2
-→ C1
-→ C2
-```
-
-y produce:
-
-- nivel final estimado
-- rendimiento por nivel
-- rendimiento por skill
-- comparación diagnóstico vs final
-- temas a revisar
-- resumen de progreso
-
----
-
-# 34. QA del contenido
-
-Después de agregar o modificar contenido ejecuta siempre:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/validate_content.py
-```
-
-El objetivo es:
-
-```text
-Errors: 0
-```
-
-Los `Warnings` pueden ser señales editoriales y no necesariamente errores estructurales.
-
----
-
-# 35. Auditoría de PostgreSQL
-
-Ejecuta:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/audit_database.py
-```
-
-Este script revisa la información ya importada en PostgreSQL.
-
-El objetivo es:
-
-```text
-Errors: 0
-```
-
----
-
-# 36. Ejecutar todo el QA
-
-Usa:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/qa_all.py
-```
-
-El resultado esperado es:
-
-```text
-[qa-all] RESULT: PASS
-```
-
-No uses normalmente:
-
-```powershell
-python scripts/qa_all.py --strict
-```
-
-hasta haber revisado los warnings editoriales, porque `--strict` convierte warnings en fallo.
-
----
-
-# 37. Inventario del contenido
-
-Puedes consultar los conteos con:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/content_inventory.py
-```
-
-Esto muestra:
-
-- topics
-- preguntas
-- passages
-- assessments
-- total del banco
-
----
-
-# 38. Flujo recomendado para agregar contenido nuevo
-
-Siempre sigue este orden:
-
-```text
-1. Editar JSON
-       ↓
-2. Revisar códigos
-       ↓
-3. Ejecutar validate_content.py
-       ↓
-4. Importar JSON
-       ↓
-5. Ejecutar audit_database.py
-       ↓
-6. Probar visualmente en navegador
-       ↓
-7. Ejecutar qa_all.py
-       ↓
-8. Commit
-       ↓
-9. Push
-```
-
-Ejemplo:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/validate_content.py
-
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/B1.json
-
-docker compose -f docker-compose.local.yml exec backend python scripts/audit_database.py
-
-docker compose -f docker-compose.local.yml exec backend python scripts/qa_all.py
-```
-
----
-
-# 39. Panel de administración
-
-El usuario con rol:
-
-```text
-admin
-```
-
-puede acceder a:
-
-```text
-Admin
-```
-
-Desde allí actualmente se pueden:
-
-- crear usuarios;
-- editar usuarios;
-- cambiar username;
-- cambiar nombre completo;
-- cambiar rol;
-- restablecer contraseña;
-- consultar estadísticas básicas;
-- crear manualmente levels;
-- crear manualmente topics;
-- crear manualmente questions.
-
-## Recomendación
-
-Aunque el panel permite crear contenido manualmente, el **source of truth académico recomendado sigue siendo el JSON**.
-
-Para contenido importante o masivo usa:
-
-```text
-backend/content/
-```
-
-porque así:
-
-- queda versionado en Git;
-- puede reconstruirse la BD;
-- QA puede revisarlo;
-- los cambios son auditables.
-
-El Admin UI es mejor para pequeñas modificaciones operativas y gestión de usuarios.
-
----
-
-# 40. Git: guardar los cambios
-
-Primero revisa:
-
-```powershell
-git status
-```
-
-Agregar:
-
-```powershell
-git add .
-```
-
-Revisar de nuevo:
-
-```powershell
-git status
-```
-
-Commit:
-
-```powershell
-git commit -m "Describe the change"
-```
-
-Antes de subir:
-
-```powershell
-git pull --rebase origin main
-```
-
-Después:
-
-```powershell
-git push origin main
-```
-
-Verificación final:
-
-```powershell
-git status
-```
-
-Debe quedar:
-
-```text
-nothing to commit, working tree clean
-```
-
----
-
-# 41. No subir secretos a GitHub
-
-No subir:
-
-```text
-.env
-contraseñas reales
-tokens
-API keys
-backups de PostgreSQL con información sensible
-```
-
-Sí se puede subir:
-
-```text
-.env.example
-```
-
-si solo contiene valores de ejemplo.
-
----
-
-# 42. Flujo normal al comenzar a trabajar otro día
+## 4. Inicio local rápido
 
 Desde PowerShell:
 
 ```powershell
 cd "K:\Educacion\Idiomas\ACADEMIA_INGLES"
-
-git pull origin main
-
 docker compose -f docker-compose.local.yml up --build -d
-
-docker compose -f docker-compose.local.yml ps
 ```
-
-Luego:
-
-```text
-http://localhost:8000
-```
-
----
-
-# 43. Flujo normal al terminar de trabajar
-
-Primero QA si hubo cambios de contenido:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/qa_all.py
-```
-
-Después:
-
-```powershell
-git status
-git add .
-git commit -m "Describe the change"
-git pull --rebase origin main
-git push origin main
-```
-
-Finalmente puedes apagar Docker:
-
-```powershell
-docker compose -f docker-compose.local.yml down
-```
-
----
-
-# 44. Si Docker falla
 
 Verifica:
 
@@ -1488,347 +148,650 @@ Verifica:
 docker compose -f docker-compose.local.yml ps
 ```
 
-Luego:
-
-```powershell
-docker compose -f docker-compose.local.yml logs backend
-```
-
-o:
-
-```powershell
-docker compose -f docker-compose.local.yml logs postgres
-```
-
-Reconstrucción completa de contenedores sin borrar la BD:
-
-```powershell
-docker compose -f docker-compose.local.yml down
-docker compose -f docker-compose.local.yml up --build -d
-```
-
----
-
-# 45. Si PostgreSQL tarda en iniciar
-
-`docker-compose.local.yml` incluye un healthcheck para PostgreSQL.
-
-El backend espera a que PostgreSQL esté healthy antes de iniciar.
-
-Puedes verificar:
-
-```powershell
-docker compose -f docker-compose.local.yml ps
-```
-
----
-
-# 46. Si una migración falla
-
-Revisa:
-
-```powershell
-docker compose -f docker-compose.local.yml logs backend
-```
-
-Consulta el estado:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend flask db current
-```
-
-Historial:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend flask db history
-```
-
-No borres la carpeta:
+Abre:
 
 ```text
-backend/migrations/
+http://localhost:8000
 ```
 
-porque contiene el historial necesario para reconstruir la base de datos.
-
----
-
-# 47. Si cambias un JSON pero la web no cambia
-
-Comprueba primero que realmente lo importaste:
-
-```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/A1.json
-```
-
-Luego recarga:
+Healthchecks:
 
 ```text
-Ctrl + F5
+http://localhost:8000/healthz
+http://localhost:8000/readyz
 ```
 
-Recuerda:
-
-```text
-editar JSON ≠ actualizar automáticamente PostgreSQL
-```
-
-Debes ejecutar el importador.
-
----
-
-# 48. Si cambias JavaScript pero el navegador muestra la versión anterior
-
-Ejecuta:
-
-```powershell
-docker compose -f docker-compose.local.yml down
-docker compose -f docker-compose.local.yml up --build -d
-```
-
-Luego:
-
-```text
-Ctrl + Shift + R
-```
-
-Si aún persiste, abre DevTools y revisa la consola.
-
----
-
-# 49. Compartir temporalmente la aplicación
-
-La aplicación local escucha en:
-
-```text
-localhost:8000
-```
-
-Si utilizas un Dev Tunnel o el reenvío de puertos de VS Code, debes exponer el puerto:
-
-```text
-8000
-```
-
-La URL externa depende del túnel creado y puede cambiar.
-
-Importante:
-
-> Un Dev Tunnel es adecuado para pruebas. No debe considerarse por sí solo un despliegue de producción.
-
----
-
-# 50. Seguridad antes de producción
-
-Antes de publicar permanentemente debes como mínimo:
-
-- cambiar usuario y contraseña de PostgreSQL;
-- cambiar `FLASK_SECRET_KEY`;
-- eliminar credenciales de desarrollo;
-- usar variables de entorno/secretos;
-- configurar HTTPS;
-- restringir acceso administrativo;
-- configurar backups;
-- revisar logs;
-- utilizar un servidor o plataforma de despliegue estable;
-- limitar exposición de PostgreSQL;
-- revisar sesiones y cookies;
-- aplicar rate limiting al login;
-- implementar recuperación segura de contraseña si será necesaria.
-
----
-
-# 51. Backups
-
-Antes de cambios grandes de contenido o estructura, haz backup de PostgreSQL.
-
-Ejemplo desde Docker:
-
-```powershell
-docker compose -f docker-compose.local.yml exec postgres pg_dump -U postgres english_db > backup_english_db.sql
-```
-
-Para restaurar una base vacía se puede utilizar `psql`, pero la restauración debe hacerse cuidadosamente porque reemplazar datos puede afectar usuarios y progreso.
-
-También conserva:
-
-```text
-backend/content/
-backend/migrations/
-```
-
-en Git.
-
-La combinación:
-
-```text
-código + JSON + migraciones + backup BD
-```
-
-es la estrategia de recuperación más segura.
-
----
-
-# 52. Qué hacer si quieres ampliar el proyecto en el futuro
-
-Antes de programar una nueva característica identifica qué tipo de cambio es:
-
-## Solo contenido
-
-Ejemplos:
-
-- nuevo topic
-- nuevas preguntas
-- nuevo reading
-- nuevo listening
-
-Usa:
-
-```text
-JSON → import_content.py → QA
-```
-
-## Nueva evaluación
-
-Usa:
-
-```text
-content/assessments → import_assessment.py → QA
-```
-
-## Nueva columna o tabla
-
-Usa:
-
-```text
-models.py → flask db migrate → flask db upgrade
-```
-
-## Cambio visual
-
-Usa:
-
-```text
-templates / CSS / JS
-```
-
-y reconstruye Docker.
-
-## Cambio de lógica
-
-Usa:
-
-```text
-routes.py
-assessment.py
-progress.py
-admin.py
-```
-
-según corresponda.
-
----
-
-# 53. Recomendación de mantenimiento del currículo
-
-Antes de ampliar mucho el contenido, conviene realizar una segunda etapa de QA académico.
-
-Especialmente revisar:
-
-- longitud de readings;
-- longitud de listenings;
-- diversidad de distractores;
-- repetición de prompts;
-- dificultad real A1–C2;
-- cobertura gramatical;
-- cobertura lexical;
-- calibración del diagnóstico;
-- calibración de evaluación final.
-
-La estructura técnica ya soporta la expansión, pero la calidad académica debe revisarse paralelamente.
-
----
-
-# 54. Limitaciones actuales
-
-Actualmente:
-
-- speaking no está evaluado directamente;
-- writing extendido no está evaluado directamente;
-- TTS depende de las voces disponibles en el equipo;
-- diagnóstico y final utilizan heurísticas internas;
-- no existe calibración psicométrica formal;
-- los resultados no son certificaciones CEFR;
-- el importador de currículo no elimina automáticamente contenido ausente del JSON.
-
-Estas limitaciones deben conservarse documentadas para evitar interpretar la plataforma como un examen oficial.
-
----
-
-# 55. Comandos rápidos
-
-## Iniciar
-
-```powershell
-docker compose -f docker-compose.local.yml up --build -d
-```
-
-## Detener
-
-```powershell
-docker compose -f docker-compose.local.yml down
-```
-
-## Estado
-
-```powershell
-docker compose -f docker-compose.local.yml ps
-```
-
-## Logs
+Logs:
 
 ```powershell
 docker compose -f docker-compose.local.yml logs -f backend
 ```
 
-## Importar A1
+Detener sin borrar datos:
 
 ```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py content/curriculum/A1.json
+docker compose -f docker-compose.local.yml down
 ```
 
-## Importar todos los currículos
+> **Nunca uses normalmente `down -v`**: elimina el volumen `english_postgres_data` y puede borrar la base de datos local.
+
+---
+
+## 5. Usuarios locales de desarrollo
+
+`docker-compose.local.yml` permite sembrar:
+
+- `admin`
+- `student1`
+- `student2`
+
+Las credenciales están en el Compose local y son únicamente para desarrollo. En producción, `SEED_DEMO_USERS=false` debe permanecer desactivado y se debe configurar un administrador real mediante `.env`.
+
+La política para contraseñas nuevas/resets exige:
+
+- mínimo 10 caracteres;
+- al menos 3 de 4 categorías: minúsculas, mayúsculas, números y símbolos.
+
+---
+
+## 6. Flujo del estudiante estándar
+
+### 6.1 Sin diagnóstico
+
+El estudiante puede navegar el currículo normal A1-C2. No se inventa un nivel estimado ni una ruta personalizada. `My Path` invita a realizar el diagnóstico inicial.
+
+### 6.2 Diagnóstico inicial
+
+- Inicia en **B1**.
+- Evalúa Grammar, Vocabulary, Reading y Listening.
+- La ruta cambia de nivel según el desempeño de cada etapa.
+- El resultado genera un nivel inicial estimado y señales por habilidad/tema.
+- El resultado es orientativo, no certificación CEFR.
+
+### 6.3 Ruta personalizada
+
+Después de un diagnóstico completado, cada tema puede quedar como:
+
+- `required`: bloquea el examen del nivel hasta completarlo;
+- `recommended`: repaso sugerido, no bloqueante;
+- `optional`: disponible para estudio voluntario;
+- `mastered`: evidencia diagnóstica fuerte; en interfaz puede aparecer como **Strong**.
+
+Una sola respuesta incorrecta no convierte automáticamente un tema en obligatorio. La lógica utiliza evidencia conservadora.
+
+### 6.4 Lecciones y prácticas
+
+Una lección se marca como completada al enviar su práctica. Se conserva el mejor porcentaje y el último intento.
+
+### 6.5 Exámenes adaptativos de nivel
+
+Los assessments A1-C2 usan `level_difficulty` (1-5) como dificultad relativa dentro del mismo nivel.
+
+Configuración actual:
+
+```text
+20 preguntas por intento
+Grammar       6
+Vocabulary    4
+Reading       4
+Listening     4
+Integrated    2
+```
+
+La habilidad interna comienza en 3/5 y se actualiza después de cada respuesta mediante una heurística transparente tipo Elo. No es IRT/CAT psicométrico.
+
+Si las preguntas existentes permanecen todas en `level_difficulty=3`, el flujo funciona pero la adaptación tendrá poca variación. Usa Admin -> Bulk import -> Export difficulty bank para recalibrar el banco.
+
+---
+
+## 7. Library y My Vocabulary
+
+La biblioteca permite buscar y filtrar lecturas por nivel y categoría. Categorías admitidas:
+
+```text
+story, travel, science, technology, society,
+news_practice, culture, academic
+```
+
+Al seleccionar texto dentro de una lectura, el usuario puede escuchar, traducir externamente y guardarlo en **My Vocabulary** con traducción, contexto y notas.
+
+### Repetición espaciada
+
+En `Review now` el usuario revela la traducción y marca:
+
+- `Again`: vuelve a aparecer aproximadamente en 10 minutos y baja etapa;
+- `Good`: avanza una etapa;
+- `Easy`: avanza dos etapas.
+
+Intervalos de referencia:
+
+```text
+Etapa 1   1 día
+Etapa 2   3 días
+Etapa 3   7 días
+Etapa 4  14 días
+Etapa 5  30 días
+Etapa 6  60 días
+Etapa 7 120 días
+```
+
+---
+
+## 8. Games
+
+### Word Runner
+
+Juego de carrera lateral con energía y checkpoints de inglés. Usa preguntas curriculares, ruta personalizada, vocabulario personal y/o el banco administrado de Game Vocabulary cuando corresponde.
+
+- Las partidas completadas incrementan el tier.
+- Perder o abandonar no incrementa el tier.
+- Los obstáculos son deliberadamente bajos y los escenarios rotan entre partidas.
+- El rendimiento del juego no completa lecciones ni modifica el CEFR.
+
+### Game Arcade
+
+Incluye:
+
+- Vocabulary Blitz
+- Grammar Target
+- Listening Sprint
+- Word Scramble
+- Sentence Builder
+- Memory Match
+
+Los juegos de vocabulario pueden usar el banco personal y el banco compartido administrado por el sistema.
+
+---
+
+## 9. Speaking
+
+Tipos iniciales de actividad:
+
+- Repeat the sentence
+- Read aloud
+- Open answer
+- Role play
+
+Para actividades cerradas se calculan, cuando aplica:
+
+- similitud transcript esperado/reconocido;
+- cobertura de palabras esperadas;
+- confianza del reconocimiento;
+- palabras por minuto;
+- uso de vocabulario objetivo.
+
+La aplicación guarda el **transcript reconocido**, no presenta estas métricas como una nota certificada de pronunciación.
+
+---
+
+## 10. Writing
+
+Writing organiza prompts por nivel A1-C2 y conserva revisiones sucesivas:
+
+```text
+Draft 1 -> Draft 2 -> Draft 3 -> ...
+```
+
+Métricas de práctica:
+
+- número de palabras;
+- número de oraciones;
+- proporción de vocabulario único;
+- vocabulario objetivo usado;
+- conectores objetivo usados.
+
+El sistema permite comparar una revisión con la anterior.
+
+---
+
+## 11. Learning Profile y Ranking
+
+`Learning profile` mantiene separadas las fuentes de evidencia:
+
+- evaluaciones formales;
+- progreso de lecciones;
+- ruta personalizada;
+- vocabulario y repetición espaciada;
+- Word Runner / Game Arcade;
+- Speaking;
+- Writing.
+
+No existe un único "score total" que mezcle actividades lúdicas con evidencia formal.
+
+---
+
+## 12. Kids Mode
+
+En Admin, un estudiante puede configurarse con:
+
+```text
+Learning experience: Kids mode - games only
+```
+
+El usuario Kids entra directamente a **English Playground** y no puede acceder por navegación ni URL directa a Assessments, My Path, Ranking, Speaking, Writing o perfil adulto.
+
+Juegos disponibles:
+
+- Picture Match
+- Listen & Tap
+- Bubble Pop
+- Memory Garden
+- Word Train
+- Colors & Numbers
+
+Temas visuales de partida:
+
+```text
+jungle, space, ocean, candy, rainbow
+```
+
+La experiencia no muestra aprobado/reprobado ni calificaciones. Los resultados se expresan en estrellas y refuerzo positivo. Internamente se conservan exposiciones y aciertos por `word_key` para priorizar palabras menos practicadas.
+
+---
+
+## 13. Administración de usuarios
+
+Desde `Admin` se pueden crear, editar y eliminar cuentas conforme a las restricciones del sistema.
+
+Al crear/editar un estudiante:
+
+- username;
+- nombre completo;
+- rol;
+- contraseña;
+- `Standard learning` o `Kids mode`.
+
+Cambiar nombre, username, rol, contraseña o modo no reinicia automáticamente el historial académico.
+
+---
+
+## 14. Content Manager
+
+`Admin -> Content manager` permite correcciones puntuales de:
+
+- Topics;
+- Questions;
+- Library readings.
+
+Para registros ya referenciados por intentos o vocabulario, es preferible **desactivar/despublicar** en lugar de borrar físicamente.
+
+---
+
+## 15. Carga masiva de temas y preguntas
+
+Ruta: `Admin -> Bulk import`.
+
+El Excel utiliza:
+
+```text
+TEMAS
+PREGUNTAS
+INSTRUCCIONES
+```
+
+La importación valida primero, muestra preview y requiere confirmación. Trabaja por código estable (upsert).
+
+### Columnas TEMAS
+
+```text
+codigo, nivel, orden, titulo, objetivo, teoria, ejemplos,
+errores_comunes_json, vocabulario_clave, youtube_video_id, publicado
+```
+
+### Columnas PREGUNTAS
+
+```text
+codigo, tema_codigo, orden, habilidad, tipo_pregunta,
+dificultad, dificultad_nivel, pregunta,
+opcion_a, opcion_b, opcion_c, opcion_d,
+respuesta_correcta, explicacion,
+audio_text, audio_accent, audio_rate, max_audio_plays, activa
+```
+
+`dificultad_nivel` debe ser 1-5 y es la variable utilizada por los exámenes adaptativos dentro del nivel CEFR.
+
+Los códigos son identificadores estables. Cambiar un código se interpreta como crear otro registro.
+
+---
+
+## 16. Carga masiva de lecturas
+
+Ruta: `Admin -> Readings Excel`.
+
+Hoja:
+
+```text
+LECTURAS
+```
+
+Columnas:
+
+```text
+codigo, nivel, categoria, orden, titulo, resumen,
+contenido, fuente, url_fuente, publicado
+```
+
+El sistema permite descargar plantilla, exportar el banco actual, validar/preview y confirmar importación.
+
+---
+
+## 17. Game Vocabulary Manager
+
+Ruta: `Admin -> Game Vocabulary`.
+
+Es el banco compartido de vocabulario para **Kids Mode** y juegos estándar.
+
+Cada palabra tiene:
+
+- `key` estable;
+- English;
+- Spanish;
+- visual/emoji;
+- categoría;
+- dificultad Kids 1-3;
+- CEFR A1-C2;
+- dificultad estándar 1-5;
+- audiencia Kids y/o Standard;
+- juegos permitidos;
+- orden;
+- activa/inactiva.
+
+Juegos Kids compatibles:
+
+```text
+picture_match
+listen_tap
+bubble_pop
+memory_garden
+word_train
+colors_numbers
+```
+
+Juegos estándar compatibles:
+
+```text
+vocabulary_blitz
+listening_sprint
+word_scramble
+memory_match
+word_runner
+```
+
+Si la lista de juegos se deja vacía/`ALL`, la palabra puede usarse en todos los juegos compatibles de esa audiencia.
+
+> No cambies la `key` de una palabra que ya tenga progreso infantil; `KidsWordProgress` se enlaza mediante esa clave.
+
+### Bulk import de Game Vocabulary
+
+Hojas:
+
+```text
+CATEGORIAS_JUEGOS
+VOCABULARIO_JUEGOS
+```
+
+Columnas de categorías:
+
+```text
+codigo, nombre, visual, orden, kids, estudiantes, activo
+```
+
+Columnas de vocabulario:
+
+```text
+clave, ingles, espanol, visual, categoria, dificultad_kids,
+nivel_cefr, dificultad_estudiante, kids, estudiantes,
+juegos_kids, juegos_estudiantes, orden, activo
+```
+
+---
+
+## 18. Analítica administrativa
+
+`Admin -> Analytics` incluye:
+
+- actividad de usuarios;
+- diagnósticos y rutas personalizadas;
+- uso de vocabulario y juegos;
+- distribución de `level_difficulty`;
+- señales por tema;
+- Item Analysis por pregunta;
+- exportación CSV.
+
+Las etiquetas de Item Analysis requieren una muestra mínima de respuestas académicas y deben interpretarse como señales de mantenimiento, no como calibración psicométrica.
+
+Estados típicos:
+
+- Insufficient evidence
+- Too easy
+- Too hard
+- Difficulty mismatch
+- Within review band
+
+La evidencia de juego se mantiene separada de la evidencia académica formal.
+
+---
+
+## 19. Backups y restauración
+
+Antes de una actualización importante:
 
 ```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_content.py
+powershell -ExecutionPolicy Bypass -File .\scripts\backup_postgres.ps1
 ```
 
-## Importar diagnóstico
+Los backups se almacenan en `backups/` como `.dump`.
+
+Restauración (destructiva sobre la base actual):
 
 ```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/import_assessment.py content/assessments/initial_diagnostic.json
+powershell -ExecutionPolicy Bypass `
+  -File .\scripts\restore_postgres.ps1 `
+  -BackupFile .\backups\english_db_YYYYMMDD_HHMMSS.dump
 ```
 
-## QA
+No uses restauración sobre datos importantes sin haber probado antes el procedimiento.
+
+---
+
+## 20. QA y verificación de release
+
+Verificación de producción:
 
 ```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/qa_all.py
+docker compose -f docker-compose.local.yml exec -T backend python qa/production_check.py
 ```
 
-## Inventario
+La revisión esperada actualmente es:
+
+```text
+f0d24b6a8e85
+```
+
+Flujo completo:
 
 ```powershell
-docker compose -f docker-compose.local.yml exec backend python scripts/content_inventory.py
+powershell -ExecutionPolicy Bypass -File .\scripts\release_check.ps1
 ```
 
-## Migración
+El QA revisa, entre otros:
+
+- conexión a PostgreSQL;
+- revisión Alembic;
+- existencia de administrador;
+- `level_difficulty` válido;
+- respuestas correctas A-D;
+- prompts activos no vacíos;
+- lecturas publicadas con contenido;
+- integridad del banco compartido de juegos;
+- assessments publicados con preguntas.
+
+---
+
+## 21. Producción y `.env`
+
+Copia:
+
+```text
+.env.example -> .env
+```
+
+Variables principales:
+
+```dotenv
+APP_ENV=production
+LOG_LEVEL=INFO
+FLASK_SECRET_KEY=CHANGE_ME_WITH_A_LONG_RANDOM_SECRET
+DATABASE_URL=postgresql://english_app:CHANGE_ME@postgres:5432/english_db
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=CHANGE_ME_STRONG_PASSWORD
+SEED_DEMO_USERS=false
+TRUST_PROXY=true
+SESSION_COOKIE_SECURE=true
+FORCE_HTTPS=false
+ALLOWED_HOSTS=
+LOGIN_MAX_FAILURES=8
+LOGIN_FAILURE_WINDOW_SECONDS=900
+MAX_UPLOAD_BYTES=10485760
+GUNICORN_WORKERS=2
+GUNICORN_TIMEOUT=120
+RUN_STARTUP_QA=0
+```
+
+Genera una clave Flask fuerte, por ejemplo:
 
 ```powershell
-docker compose -f docker-compose.local.yml exec backend flask db migrate -m "descripcion"
-docker compose -f docker-compose.local.yml exec backend flask db upgrade
+python -c "import secrets; print(secrets.token_urlsafe(64))"
 ```
 
-## Git
+En producción no uses las credenciales de `docker-compose.local.yml`.
+
+---
+
+## 22. Seguridad incorporada
+
+La aplicación incluye:
+
+- protección CSRF global para formularios y AJAX;
+- logout por POST;
+- cookies HttpOnly / SameSite=Lax / Secure configurable;
+- protección fuerte de sesión Flask-Login;
+- rate limiting básico del login;
+- mitigación de session fixation;
+- headers CSP, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy y COOP;
+- HSTS cuando corresponde;
+- validación de hosts y HTTPS opcional;
+- request ID por petición;
+- páginas de error sin stack trace al usuario;
+- límite de tamaño para uploads;
+- validación estructural de XLSX;
+- contenedor backend no-root y `no-new-privileges`.
+
+Para exposición pública, complementa el rate limiting de la app con Nginx, Cloudflare, ngrok/WAF u otra capa de infraestructura.
+
+---
+
+## 23. Troubleshooting rápido
+
+### La web muestra un error genérico
+
+Revisa:
+
+```powershell
+docker compose -f docker-compose.local.yml logs -f backend
+```
+
+La interfaz no expone trazas técnicas; usa el `request_id` del error para correlacionar logs.
+
+### El navegador muestra CSS/JS antiguo
+
+```text
+Ctrl + Shift + R
+```
+
+Si persiste:
+
+```powershell
+docker compose -f docker-compose.local.yml down
+docker compose -f docker-compose.local.yml up --build -d
+```
+
+### PostgreSQL no está listo
+
+Consulta:
+
+```text
+http://localhost:8000/readyz
+```
+
+Y:
+
+```powershell
+docker compose -f docker-compose.local.yml logs -f postgres
+```
+
+### Una migración falla
+
+```powershell
+docker compose -f docker-compose.local.yml exec backend flask db current
+docker compose -f docker-compose.local.yml exec backend flask db history
+```
+
+No borres `backend/migrations/`.
+
+### Speaking no reconoce la voz
+
+- usa Chrome/Edge;
+- concede permiso de micrófono;
+- comprueba que el navegador/OS tenga soporte de reconocimiento de voz;
+- recuerda que la disponibilidad de Web Speech API puede depender del navegador y sistema operativo.
+
+### Listening/TTS no reproduce voz inglesa
+
+Instala una voz inglesa en el sistema operativo y reinicia el navegador.
+
+---
+
+## 24. Flujo recomendado de actualización
+
+```text
+1. Backup PostgreSQL
+2. git pull / reemplazar archivos de la nueva versión
+3. docker compose ... down
+4. docker compose ... up --build -d
+5. comprobar /healthz y /readyz
+6. ejecutar production_check.py
+7. hacer smoke test con Admin, estudiante estándar y Kids Mode
+8. revisar logs
+```
+
+Nunca actualices destruyendo el volumen de PostgreSQL.
+
+---
+
+## 25. Git y secretos
+
+No subir a Git:
+
+```text
+.env
+contraseñas reales
+tokens
+API keys
+backups con datos sensibles
+```
+
+Sí mantener versionados:
+
+```text
+.env.example
+backend/migrations/
+backend/content/
+código fuente
+scripts de operación
+```
+
+Flujo habitual:
 
 ```powershell
 git status
@@ -1840,109 +803,23 @@ git push origin main
 
 ---
 
-# 56. Checklist antes de hacer push
+## 26. Estado de la versión documentada
 
-Antes de subir cambios importantes:
-
-- [ ] Docker inicia correctamente.
-- [ ] La aplicación abre en `localhost:8000`.
-- [ ] Login funciona.
-- [ ] No hay errores en consola del navegador.
-- [ ] `validate_content.py` tiene 0 errores si hubo cambios académicos.
-- [ ] `audit_database.py` tiene 0 errores.
-- [ ] `qa_all.py` termina en PASS.
-- [ ] No se agregó `.env`.
-- [ ] No se agregaron contraseñas o tokens reales.
-- [ ] Se revisó `git status`.
-- [ ] El commit describe correctamente el cambio.
-
----
-
-# 57. Orden recomendado para una expansión futura
-
-Si dentro de varios meses quieres volver al proyecto y agregar contenido:
+La plataforma queda organizada en cuatro grandes experiencias:
 
 ```text
-git pull
-   ↓
-Docker up
-   ↓
-Revisar JSON actual
-   ↓
-Crear topic/preguntas con códigos nuevos
-   ↓
-validate_content
-   ↓
-import_content
-   ↓
-audit_database
-   ↓
-probar navegador
-   ↓
-qa_all
-   ↓
-git add / commit / push
+STANDARD STUDENT
+  Home -> Diagnostic -> My Path -> Lessons -> Adaptive Assessments
+       -> Library/Vocabulary -> Speaking/Writing -> Games -> Profile
+
+KIDS MODE
+  English Playground -> games-only basic vocabulary experience
+
+ADMIN
+  Users -> Content Manager -> Bulk Imports -> Game Vocabulary -> Analytics
+
+OPERATIONS
+  Docker -> PostgreSQL -> Alembic -> Backups -> Security -> QA/Healthchecks
 ```
 
-Este flujo permite mantener sincronizados:
-
-```text
-Git
-JSON académico
-PostgreSQL
-aplicación
-QA
-```
-
-y reduce el riesgo de introducir inconsistencias.
-
----
-
-# 58. Resumen de arquitectura académica actual
-
-```text
-Initial Diagnostic
-       ↓
-Estimated starting level
-       ↓
-A1
-↓
-A2
-↓
-B1
-↓
-B2
-↓
-C1
-↓
-C2
-       ↓
-Level Assessments
-       ↓
-Progress Tracking
-       ↓
-Final Comprehensive Assessment
-       ↓
-Final estimated level
-+ skill profile
-+ review signals
-+ initial/final comparison
-```
-
----
-
-# 59. Nota final
-
-El principio más importante para mantener este proyecto es:
-
-> **El contenido académico importante debe existir primero como JSON versionado en Git y luego importarse a PostgreSQL.**
-
-Evita convertir PostgreSQL en la única fuente del contenido.
-
-La base de datos debe almacenar la versión operacional utilizada por los estudiantes, mientras que los archivos:
-
-```text
-backend/content/
-```
-
-deben mantenerse como fuente reproducible y auditable del currículo y las evaluaciones.
+Para una guía detallada paso a paso consulta el documento **Manual completo de uso - English Practice Hub v2.0**.
