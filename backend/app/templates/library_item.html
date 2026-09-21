@@ -23,12 +23,23 @@
         </div>
       </div>
       <div class="library-reader-actions">
-        <button class="btn btn-soft btn-modern" type="button" onclick='speakLongText({{ article.content_text|tojson }}, {lang:"en-US", rate:1.0})'>
-          <i class="bi bi-volume-up-fill"></i> Listen
-        </button>
         <a class="btn btn-outline-primary btn-modern" href="{{ url_for('library.vocabulary') }}"><i class="bi bi-bookmark-star-fill"></i> My Vocabulary</a>
       </div>
     </header>
+
+    <div class="audio-player"
+         data-audio-text="{{ article.content_text|e }}"
+         data-lang="en-US"
+         data-rate="1.0"
+         data-unlimited="true">
+      <div class="audio-player-row">
+        <button type="button" class="audio-player-toggle" aria-label="Listen to this story"><i class="bi bi-play-fill"></i></button>
+        <div class="audio-player-track">
+          <input type="range" class="audio-player-seek" min="0" max="100" value="0" step="0.1" disabled>
+          <div class="audio-player-times"><span class="audio-player-elapsed">0:00</span><span class="audio-player-remaining">-0:00</span></div>
+        </div>
+      </div>
+    </div>
 
     <div class="library-selection-tip">
       <i class="bi bi-cursor-text"></i>

@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/diagnostic.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/final.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/audio_player.css') }}">
 </head>
 <body class="{% if current_user.is_authenticated %}app-body{% else %}auth-body{% endif %} {% if current_user.is_authenticated and current_user.is_kids_mode %}kids-mode-body{% endif %}">
   {% if current_user.is_authenticated %}

@@ -35,16 +35,20 @@
           <div class="listening-player">
             <div class="listening-player-icon"><i class="bi bi-headphones"></i></div>
             <div class="listening-player-copy"><strong>Listen before you answer</strong><small>The transcript is hidden.</small></div>
-            <button type="button" class="btn btn-primary btn-modern listening-play-button"
-                    data-audio-id="question-{{ q.id }}"
-                    data-audio-text="{{ q.audio_text|e }}"
-                    data-lang="{{ q.audio_accent or 'en-US' }}"
-                    data-rate="{{ q.audio_rate or 1.0 }}"
-                    data-max-plays="{{ q.max_audio_plays or 2 }}"
-                    onclick="playListening(this)">
-              <i class="bi bi-play-fill"></i><span class="play-label">Play audio</span>
-            </button>
-            <div class="plays-remaining" data-counter-for="question-{{ q.id }}">{{ q.max_audio_plays or 2 }} plays remaining</div>
+          </div>
+          <div class="audio-player"
+               data-audio-text="{{ q.audio_text|e }}"
+               data-lang="{{ q.audio_accent or 'en-US' }}"
+               data-rate="{{ q.audio_rate or 1.0 }}"
+               data-max-plays="{{ q.max_audio_plays or 2 }}">
+            <div class="audio-player-row">
+              <button type="button" class="audio-player-toggle" aria-label="Play audio"><i class="bi bi-play-fill"></i></button>
+              <div class="audio-player-track">
+                <input type="range" class="audio-player-seek" min="0" max="100" value="0" step="0.1" disabled>
+                <div class="audio-player-times"><span class="audio-player-elapsed">0:00</span><span class="audio-player-remaining">-0:00</span></div>
+              </div>
+            </div>
+            <div class="audio-player-meta"><span class="audio-player-plays">{{ q.max_audio_plays or 2 }} plays remaining</span></div>
           </div>
           {% endif %}
 
@@ -89,16 +93,20 @@
         <div class="listening-player passage-player">
           <div class="listening-player-icon"><i class="bi bi-headphones"></i></div>
           <div class="listening-player-copy"><strong>Listen to the complete passage</strong><small>You can play this audio {{ passage.max_audio_plays }} times.</small></div>
-          <button type="button" class="btn btn-primary btn-modern listening-play-button"
-                  data-audio-id="passage-{{ passage.id }}"
-                  data-audio-text="{{ passage.audio_text|e }}"
-                  data-lang="{{ passage.audio_accent or 'en-US' }}"
-                  data-rate="{{ passage.audio_rate or 1.0 }}"
-                  data-max-plays="{{ passage.max_audio_plays or 2 }}"
-                  onclick="playListening(this)">
-            <i class="bi bi-play-fill"></i><span class="play-label">Play passage</span>
-          </button>
-          <div class="plays-remaining" data-counter-for="passage-{{ passage.id }}">{{ passage.max_audio_plays or 2 }} plays remaining</div>
+        </div>
+        <div class="audio-player"
+             data-audio-text="{{ passage.audio_text|e }}"
+             data-lang="{{ passage.audio_accent or 'en-US' }}"
+             data-rate="{{ passage.audio_rate or 1.0 }}"
+             data-max-plays="{{ passage.max_audio_plays or 2 }}">
+          <div class="audio-player-row">
+            <button type="button" class="audio-player-toggle" aria-label="Play passage"><i class="bi bi-play-fill"></i></button>
+            <div class="audio-player-track">
+              <input type="range" class="audio-player-seek" min="0" max="100" value="0" step="0.1" disabled>
+              <div class="audio-player-times"><span class="audio-player-elapsed">0:00</span><span class="audio-player-remaining">-0:00</span></div>
+            </div>
+          </div>
+          <div class="audio-player-meta"><span class="audio-player-plays">{{ passage.max_audio_plays or 2 }} plays remaining</span></div>
         </div>
         {% endif %}
 

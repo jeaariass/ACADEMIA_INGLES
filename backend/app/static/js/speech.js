@@ -1,320 +1,96 @@
 /*
  * English Practice Hub - TTS / Listening
  *
- * IMPORTANT:
- * Listening exercises must NEVER fall back to a Spanish voice.
- * The browser's Web Speech API uses voices installed/available on each device,
- * so we explicitly filter the voice list to English voices only.
+ * Audio is generated on the server (not with the browser's Web Speech API),
+ * so playback sounds the same on every device and never depends on which
+ * voices or language packs happen to be installed locally.
  */
+
+const TTS_ENDPOINT = '/tts/speak';
 
 const listeningState = new Map();
 let speechSessionToken = 0;
+let currentAudio = null;
 
-const ENGLISH_VOICE_WAIT_MS = 3000;
-
-function normalizeVoiceLang(lang) {
-  return String(lang || '')
-    .trim()
-    .replace(/_/g, '-')
-    .toLowerCase();
-}
-
-function isEnglishVoice(voice) {
-  if (!voice) return false;
-  const lang = normalizeVoiceLang(voice.lang);
-  return lang === 'en' || lang.startsWith('en-');
-}
-
-function getLoadedVoices() {
-  if (!('speechSynthesis' in window)) return [];
-  return window.speechSynthesis.getVoices() || [];
-}
-
-function scoreVoice(voice, requestedLang = 'en-US') {
-  if (!isEnglishVoice(voice)) return Number.NEGATIVE_INFINITY;
-
-  let score = 0;
-  const name = String(voice.name || '').toLowerCase();
-  const voiceLang = normalizeVoiceLang(voice.lang);
-  const target = normalizeVoiceLang(requestedLang || 'en-US');
-
-  // Prefer the requested English variant first.
-  if (voiceLang === target) {
-    score += 100;
-  } else if (voiceLang.startsWith('en-')) {
-    score += 60;
-  } else if (voiceLang === 'en') {
-    score += 50;
+function stopCurrentAudio() {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.src = '';
+    currentAudio = null;
   }
+}
 
-  // Prefer commonly available high-quality English voices.
-  const preferred = [
-    'microsoft aria',
-    'microsoft jenny',
-    'microsoft guy',
-    'microsoft ava',
-    'microsoft andrew',
-    'microsoft brian',
-    'microsoft emma',
-    'microsoft sonia',
-    'microsoft ryan',
-    'google us english',
-    'google uk english female',
-    'google uk english male',
-    'samantha',
-    'daniel',
-    'serena',
-    'ava'
-  ];
-
-  preferred.forEach((item, index) => {
-    if (name.includes(item)) {
-      score += Math.max(1, 40 - index);
-    }
+async function fetchSpeechAudio(text, { lang = 'en-US', rate = 1.0 } = {}) {
+  const response = await fetch(TTS_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text, lang, rate }),
   });
 
-  // "Natural" / online voices generally sound better when the browser exposes them.
-  if (name.includes('natural')) score += 25;
-  if (name.includes('online')) score += 12;
+  if (!response.ok) {
+    let message = 'The audio could not be generated. Please try again.';
+    try {
+      const data = await response.json();
+      if (data && data.error) message = data.error;
+    } catch (_err) {
+      // response body was not JSON; keep the default message
+    }
+    throw new Error(message);
+  }
 
-  if (voice.default) score += 2;
-
-  return score;
+  const blob = await response.blob();
+  return URL.createObjectURL(blob);
 }
 
-function getEnglishVoices(requestedLang = 'en-US') {
-  const voices = getLoadedVoices();
-
-  return voices
-    .filter(isEnglishVoice)
-    .sort((a, b) => scoreVoice(b, requestedLang) - scoreVoice(a, requestedLang));
+function notifySpeechError(message) {
+  alert(message || 'The audio could not be played. Please try again.');
 }
 
-/*
- * Synchronous lookup.
- * This is useful after voices have already loaded.
- */
-function getPreferredVoice(lang = 'en-US') {
-  return getEnglishVoices(lang)[0] || null;
-}
-
-/*
- * Browsers may populate speechSynthesis voices asynchronously.
- * This waits briefly for the voiceschanged event instead of immediately
- * assuming that no English voice exists.
- */
-function waitForSpeechVoices(timeoutMs = ENGLISH_VOICE_WAIT_MS) {
+function playAudioUrl(url, token) {
   return new Promise((resolve) => {
-    if (!('speechSynthesis' in window)) {
-      resolve([]);
+    if (token !== speechSessionToken) {
+      URL.revokeObjectURL(url);
+      resolve();
       return;
     }
 
-    const initial = getLoadedVoices();
-    if (initial.length) {
-      resolve(initial);
-      return;
-    }
+    stopCurrentAudio();
+    const audio = new Audio(url);
+    currentAudio = audio;
 
-    let settled = false;
-    let timeoutId = null;
-
-    const finish = () => {
-      if (settled) return;
-      settled = true;
-
-      if (timeoutId) {
-        window.clearTimeout(timeoutId);
-      }
-
-      if (typeof window.speechSynthesis.removeEventListener === 'function') {
-        window.speechSynthesis.removeEventListener('voiceschanged', handleVoicesChanged);
-      }
-
-      resolve(getLoadedVoices());
+    const cleanup = () => {
+      URL.revokeObjectURL(url);
+      if (currentAudio === audio) currentAudio = null;
+      resolve();
     };
 
-    const handleVoicesChanged = () => {
-      if (getLoadedVoices().length) {
-        finish();
-      }
-    };
-
-    if (typeof window.speechSynthesis.addEventListener === 'function') {
-      window.speechSynthesis.addEventListener('voiceschanged', handleVoicesChanged);
-    }
-
-    // Trigger loading in browsers that lazy-load voices.
-    window.speechSynthesis.getVoices();
-
-    timeoutId = window.setTimeout(finish, timeoutMs);
+    audio.onended = cleanup;
+    audio.onerror = cleanup;
+    audio.play().catch(cleanup);
   });
-}
-
-async function getPreferredVoiceAsync(lang = 'en-US') {
-  let voice = getPreferredVoice(lang);
-  if (voice) return voice;
-
-  await waitForSpeechVoices();
-
-  voice = getPreferredVoice(lang);
-  return voice || null;
-}
-
-function englishVoiceUnavailableMessage() {
-  return [
-    'No English text-to-speech voice is available on this device.',
-    '',
-    'The listening exercise was NOT played with a Spanish voice.',
-    '',
-    'Please enable or install an English voice (English US or English UK)',
-    'in Windows/macOS or try Chrome/Edge with an English voice available,',
-    'then reload this page.'
-  ].join('\n');
-}
-
-function notifyEnglishVoiceUnavailable() {
-  alert(englishVoiceUnavailableMessage());
-}
-
-function makeUtterance(text, options = {}, voice = null) {
-  if (!voice || !isEnglishVoice(voice)) {
-    return null;
-  }
-
-  const utterance = new SpeechSynthesisUtterance(text);
-
-  // Match the actual selected English voice. This avoids asking a British voice
-  // to behave as Spanish/US/etc. while still preferring requestedLang in scoring.
-  utterance.lang = voice.lang || options.lang || 'en-US';
-  utterance.rate = Number(options.rate || 1.0);
-  utterance.pitch = Number(options.pitch || 1.0);
-  utterance.voice = voice;
-
-  return utterance;
 }
 
 async function speakText(text, options = {}) {
-  if (!('speechSynthesis' in window)) {
-    alert('Your browser does not support text-to-speech.');
-    return false;
-  }
-
   if (!text) return false;
-
-  const lang = options.lang || 'en-US';
-  const voice = await getPreferredVoiceAsync(lang);
-
-  if (!voice) {
-    notifyEnglishVoiceUnavailable();
-    return false;
-  }
-
-  const utterance = makeUtterance(text, options, voice);
-  if (!utterance) {
-    notifyEnglishVoiceUnavailable();
-    return false;
-  }
-
-  speechSessionToken += 1;
-  window.speechSynthesis.cancel();
-
-  console.info(`[speech] English voice: ${voice.name} (${voice.lang})`);
-  window.speechSynthesis.speak(utterance);
-
-  return true;
-}
-
-function splitSpeechText(text, maxLength = 180) {
-  const sentences = String(text)
-    .replace(/\s+/g, ' ')
-    .trim()
-    .match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
-
-  const chunks = [];
-  let current = '';
-
-  for (const sentence of sentences) {
-    const clean = sentence.trim();
-    if (!clean) continue;
-
-    if ((current + ' ' + clean).trim().length <= maxLength) {
-      current = (current + ' ' + clean).trim();
-    } else {
-      if (current) chunks.push(current);
-      current = clean;
-    }
-  }
-
-  if (current) chunks.push(current);
-  return chunks;
-}
-
-async function speakLongText(text, options = {}) {
-  if (!('speechSynthesis' in window)) {
-    alert('Your browser does not support text-to-speech.');
-    return false;
-  }
-
-  const chunks = splitSpeechText(
-    text,
-    Number(options.maxLength || 180)
-  );
-
-  if (!chunks.length) return false;
-
-  const lang = options.lang || 'en-US';
-  const voice = await getPreferredVoiceAsync(lang);
-
-  if (!voice) {
-    notifyEnglishVoiceUnavailable();
-    return false;
-  }
 
   speechSessionToken += 1;
   const token = speechSessionToken;
-  window.speechSynthesis.cancel();
 
-  console.info(`[speech] English voice: ${voice.name} (${voice.lang})`);
-
-  let index = 0;
-
-  function playNext() {
-    if (token !== speechSessionToken || index >= chunks.length) {
-      return;
-    }
-
-    const utterance = makeUtterance(
-      chunks[index],
-      {
-        lang,
-        rate: Number(options.rate || 1.03),
-        pitch: Number(options.pitch || 1.0)
-      },
-      voice
-    );
-
-    if (!utterance) {
-      notifyEnglishVoiceUnavailable();
-      return;
-    }
-
-    utterance.onend = () => {
-      index += 1;
-      window.setTimeout(playNext, 40);
-    };
-
-    utterance.onerror = (event) => {
-      console.error('[speech] TTS error:', event);
-      index += 1;
-      window.setTimeout(playNext, 40);
-    };
-
-    window.speechSynthesis.speak(utterance);
+  try {
+    const url = await fetchSpeechAudio(text, options);
+    await playAudioUrl(url, token);
+    return true;
+  } catch (err) {
+    console.error('[speech] TTS error:', err);
+    notifySpeechError(err.message);
+    return false;
   }
+}
 
-  playNext();
-  return true;
+async function speakLongText(text, options = {}) {
+  // gTTS already tokenizes/paces long passages server-side, so no client-side
+  // chunking is needed here.
+  return speakText(text, options);
 }
 
 function updateListeningCounter(audioId, remaining) {
@@ -332,9 +108,8 @@ function updateListeningCounter(audioId, remaining) {
 /*
  * Lesson listening.
  *
- * IMPORTANT:
- * We resolve a real English voice BEFORE consuming one of the local play counts.
- * If no English voice exists, playback is refused and no play is consumed.
+ * A local play count is only consumed once the audio has actually been
+ * generated and is ready to play, so a failed request never burns a play.
  */
 async function playListening(button) {
   const audioId = button.dataset.audioId || button.dataset.questionId;
@@ -355,63 +130,37 @@ async function playListening(button) {
     return;
   }
 
-  if (!('speechSynthesis' in window)) {
-    alert('Your browser does not support listening playback.');
-    return;
-  }
-
   if (!text) return;
 
   const label = button.querySelector('.play-label');
   const icon = button.querySelector('i');
 
   button.disabled = true;
-  if (label) label.textContent = 'Loading English voice...';
+  if (label) label.textContent = 'Loading audio...';
   if (icon) icon.className = 'bi bi-hourglass-split';
 
-  const voice = await getPreferredVoiceAsync(lang);
+  speechSessionToken += 1;
+  const token = speechSessionToken;
 
-  if (!voice) {
-    if (label) label.textContent = 'English voice unavailable';
+  let url;
+  try {
+    url = await fetchSpeechAudio(text, { lang, rate });
+  } catch (err) {
+    console.error('[speech] Listening TTS error:', err);
+    if (label) label.textContent = 'Audio unavailable';
     if (icon) icon.className = 'bi bi-exclamation-triangle-fill';
     button.disabled = false;
-
-    notifyEnglishVoiceUnavailable();
+    notifySpeechError(err.message);
     return;
   }
 
-  // Only consume a play after a valid English voice exists.
+  // Only consume a play now that audio is confirmed ready.
   remaining -= 1;
   listeningState.set(audioId, remaining);
   updateListeningCounter(audioId, remaining);
 
-  speechSessionToken += 1;
-  window.speechSynthesis.cancel();
-
   if (label) label.textContent = 'Playing...';
   if (icon) icon.className = 'bi bi-volume-up-fill';
-
-  const utterance = makeUtterance(
-    text,
-    {lang, rate},
-    voice
-  );
-
-  if (!utterance) {
-    // Put the play back because nothing could be played.
-    remaining += 1;
-    listeningState.set(audioId, remaining);
-    updateListeningCounter(audioId, remaining);
-
-    if (label) label.textContent = 'Play audio';
-    if (icon) icon.className = 'bi bi-play-fill';
-    button.disabled = false;
-
-    notifyEnglishVoiceUnavailable();
-    return;
-  }
-
-  console.info(`[speech] Listening voice: ${voice.name} (${voice.lang})`);
 
   const finish = () => {
     if (label) {
@@ -429,44 +178,207 @@ async function playListening(button) {
     button.disabled = remaining <= 0;
   };
 
-  utterance.onend = finish;
-
-  utterance.onerror = (event) => {
-    console.error('[speech] Listening TTS error:', event);
-    finish();
-  };
-
-  window.speechSynthesis.speak(utterance);
+  await playAudioUrl(url, token);
+  finish();
 }
 
 /*
- * Debug helper.
- * Run this from the browser console if you need to inspect available voices:
+ * Seekable audio player.
  *
- *   debugEnglishVoices()
+ * A richer player for longer content (stories, reading/listening passages):
+ * play/pause, a draggable seek bar, elapsed/remaining time - like scrubbing
+ * through a song. Attach it by giving an element class="audio-player" with:
+ *
+ *   data-audio-text   text to synthesize
+ *   data-lang         accent, e.g. "en-US"
+ *   data-rate         playback rate used when generating the audio
+ *   data-max-plays    times playback may be (re)started from the beginning
+ *   data-unlimited    "true" to skip the play limit entirely
+ *   data-endpoint     optional POST endpoint that must approve every new
+ *                     play (formal assessments track this server-side so
+ *                     reloading the page cannot reset it); the response is
+ *                     expected as JSON {allowed, remaining}
+ *
+ * Pausing, resuming and dragging the seek bar are always free - only
+ * starting a fresh playback consumes a play.
  */
-function debugEnglishVoices() {
-  const voices = getLoadedVoices();
 
-  const rows = voices.map((voice) => ({
-    name: voice.name,
-    lang: voice.lang,
-    english: isEnglishVoice(voice),
-    default: voice.default,
-    localService: voice.localService
-  }));
+const audioPlayerRoots = new Set();
+const audioPlayerAudioGetters = new WeakMap();
 
-  console.table(rows);
-  return rows;
+function formatAudioTime(seconds) {
+  if (!isFinite(seconds) || seconds < 0) seconds = 0;
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m}:${String(s).padStart(2, '0')}`;
 }
 
-// Trigger voice loading as soon as the page is ready.
-if ('speechSynthesis' in window) {
-  window.speechSynthesis.getVoices();
+function pauseOtherAudioPlayers(except) {
+  audioPlayerRoots.forEach((root) => {
+    if (root === except) return;
+    const getAudio = audioPlayerAudioGetters.get(root);
+    const audioEl = getAudio && getAudio();
+    if (audioEl && !audioEl.paused) audioEl.pause();
+  });
+}
 
-  if (typeof window.speechSynthesis.addEventListener === 'function') {
-    window.speechSynthesis.addEventListener('voiceschanged', () => {
-      window.speechSynthesis.getVoices();
-    });
+function initAudioPlayer(root) {
+  if (!root || root.dataset.playerReady) return;
+
+  const text = root.dataset.audioText || '';
+  const toggleBtn = root.querySelector('.audio-player-toggle');
+  const seekInput = root.querySelector('.audio-player-seek');
+  const elapsedEl = root.querySelector('.audio-player-elapsed');
+  const remainingEl = root.querySelector('.audio-player-remaining');
+  const playsEl = root.querySelector('.audio-player-plays');
+
+  if (!text || !toggleBtn || !seekInput) return;
+  root.dataset.playerReady = 'true';
+
+  const lang = root.dataset.lang || 'en-US';
+  const rate = Number(root.dataset.rate || 1.0);
+  const unlimited = root.dataset.unlimited === 'true';
+  const endpoint = root.dataset.endpoint || '';
+  let remainingPlays = Number(root.dataset.maxPlays || 2);
+
+  let audioEl = null;
+  let seeking = false;
+  let busy = false;
+
+  audioPlayerRoots.add(root);
+  audioPlayerAudioGetters.set(root, () => audioEl);
+
+  function playsLabel(n) {
+    return n === 1 ? '1 play remaining' : `${n} plays remaining`;
   }
+
+  function updatePlaysLabel(label) {
+    if (playsEl) playsEl.textContent = label;
+  }
+
+  if (!unlimited) updatePlaysLabel(playsLabel(Math.max(remainingPlays, 0)));
+
+  function setIcon(playing) {
+    toggleBtn.innerHTML = playing
+      ? '<i class="bi bi-pause-fill"></i>'
+      : '<i class="bi bi-play-fill"></i>';
+  }
+
+  function lockOut() {
+    toggleBtn.disabled = true;
+    updatePlaysLabel('No plays left');
+  }
+
+  async function approvePlay() {
+    if (!endpoint) return true;
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'X-Requested-With': 'XMLHttpRequest' },
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      remainingPlays = Number(data.remaining || 0);
+      if (!data.allowed) {
+        lockOut();
+        return false;
+      }
+      return true;
+    } catch (err) {
+      console.error('[audio-player] play-count check failed:', err);
+      notifySpeechError('Could not verify remaining plays. Please try again.');
+      return false;
+    }
+  }
+
+  async function startNewPlayback() {
+    if (!unlimited && !endpoint && remainingPlays <= 0) return;
+
+    busy = true;
+    toggleBtn.disabled = true;
+    toggleBtn.innerHTML = '<i class="bi bi-hourglass-split"></i>';
+
+    // Generate the audio BEFORE consuming a server-tracked play, so a failed
+    // request never costs the student a play.
+    let url;
+    try {
+      url = await fetchSpeechAudio(text, { lang, rate });
+    } catch (err) {
+      console.error('[audio-player] TTS error:', err);
+      notifySpeechError(err.message);
+      toggleBtn.disabled = false;
+      setIcon(false);
+      busy = false;
+      return;
+    }
+
+    const approved = await approvePlay();
+    if (!approved) {
+      URL.revokeObjectURL(url);
+      busy = false;
+      toggleBtn.disabled = false;
+      setIcon(false);
+      return;
+    }
+
+    if (!unlimited && !endpoint) {
+      remainingPlays -= 1;
+    }
+    if (!unlimited) updatePlaysLabel(playsLabel(Math.max(remainingPlays, 0)));
+
+    pauseOtherAudioPlayers(root);
+
+    audioEl = new Audio(url);
+
+    audioEl.addEventListener('loadedmetadata', () => {
+      seekInput.max = audioEl.duration || 0;
+      seekInput.disabled = false;
+    });
+    audioEl.addEventListener('timeupdate', () => {
+      if (seeking) return;
+      seekInput.value = audioEl.currentTime;
+      elapsedEl.textContent = formatAudioTime(audioEl.currentTime);
+      remainingEl.textContent = `-${formatAudioTime((audioEl.duration || 0) - audioEl.currentTime)}`;
+    });
+    audioEl.addEventListener('play', () => setIcon(true));
+    audioEl.addEventListener('pause', () => setIcon(false));
+    audioEl.addEventListener('ended', () => {
+      setIcon(false);
+      URL.revokeObjectURL(url);
+      if (!unlimited && remainingPlays <= 0) lockOut();
+    });
+
+    busy = false;
+    toggleBtn.disabled = false;
+    audioEl.play().catch(() => {});
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (busy) return;
+
+    if (audioEl && !audioEl.ended) {
+      if (audioEl.paused) {
+        pauseOtherAudioPlayers(root);
+        audioEl.play().catch(() => {});
+      } else {
+        audioEl.pause();
+      }
+      return;
+    }
+
+    startNewPlayback();
+  });
+
+  seekInput.addEventListener('input', () => {
+    seeking = true;
+    elapsedEl.textContent = formatAudioTime(Number(seekInput.value));
+  });
+  seekInput.addEventListener('change', () => {
+    if (audioEl) audioEl.currentTime = Number(seekInput.value);
+    seeking = false;
+  });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.audio-player').forEach(initAudioPlayer);
+});

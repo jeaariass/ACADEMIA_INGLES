@@ -16,6 +16,27 @@ services:
       timeout: 3s
       retries: 10
 
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ingles-ollama-local
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        ollama serve &
+        pid=$$!
+        sleep 3
+        ollama pull llama3.2:3b
+        wait $$pid
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 60s
+    restart: unless-stopped
+
   backend:
     build:
       context: ./backend
@@ -36,11 +57,15 @@ services:
       STUDENT2_USERNAME: student2
       STUDENT2_PASSWORD: Student123*
       LOG_LEVEL: INFO
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: llama3.2:3b
     volumes:
       - ./backend/migrations:/app/migrations
     depends_on:
       postgres:
         condition: service_healthy
+      ollama:
+        condition: service_started
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/readyz', timeout=3).read()"]
       interval: 15s
@@ -52,3 +77,4 @@ services:
 
 volumes:
   english_postgres_data:
+  ollama_data:

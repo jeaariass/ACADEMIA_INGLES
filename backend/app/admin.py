@@ -41,7 +41,9 @@ from .library_bulk_import import (
     build_library_template,
     validate_library_import,
 )
+from .library import LEVEL_ORDER as LIBRARY_LEVEL_CODES
 from .security import password_policy_error
+from .story_ai import StoryGenerationError, generate_story
 from .models import (
     AssessmentAttempt,
     Attempt,
@@ -906,6 +908,92 @@ def library_import_confirm():
         f"{result['updated_readings']} updated.",
         "success",
     )
+    return redirect(url_for("admin.content_manager", kind="readings"))
+
+
+@admin_bp.route("/story-generator")
+@login_required
+@admin_required
+def story_generator():
+    return render_template(
+        "admin_story_generator.html",
+        levels=LIBRARY_LEVEL_CODES,
+        categories=LIBRARY_CATEGORY_LABELS,
+        story=None,
+        form_theme="",
+        form_level="A1",
+        form_category="story",
+    )
+
+
+@admin_bp.route("/story-generator/generate", methods=["POST"])
+@login_required
+@admin_required
+def story_generator_generate():
+    theme = (request.form.get("theme") or "").strip()
+    level_code = (request.form.get("level_code") or "A1").strip().upper()
+    category = (request.form.get("category") or "story").strip().lower()
+    if category not in LIBRARY_CATEGORY_LABELS:
+        category = "story"
+    if level_code not in LIBRARY_LEVEL_CODES:
+        level_code = "A1"
+
+    try:
+        story = generate_story(theme, level_code)
+    except StoryGenerationError as exc:
+        flash(str(exc), "danger")
+        story = None
+
+    return render_template(
+        "admin_story_generator.html",
+        levels=LIBRARY_LEVEL_CODES,
+        categories=LIBRARY_CATEGORY_LABELS,
+        story=story,
+        form_theme=theme,
+        form_level=level_code,
+        form_category=category,
+    )
+
+
+@admin_bp.route("/story-generator/confirm", methods=["POST"])
+@login_required
+@admin_required
+def story_generator_confirm():
+    title = (request.form.get("title") or "").strip()
+    content_text = (request.form.get("content_text") or "").strip()
+    level_code = (request.form.get("level_code") or "A1").strip().upper()
+    category = (request.form.get("category") or "story").strip().lower()
+    if category not in LIBRARY_CATEGORY_LABELS:
+        category = "story"
+
+    if not title or not content_text:
+        flash("The title and story text cannot be empty.", "danger")
+        return redirect(url_for("admin.story_generator"))
+
+    if level_code not in LIBRARY_LEVEL_CODES:
+        flash(f"Level '{level_code}' is not a valid CEFR level.", "danger")
+        return redirect(url_for("admin.story_generator"))
+
+    code = f"AI_{level_code}_{uuid.uuid4().hex[:8].upper()}"
+    max_order = db.session.query(func.max(LibraryItem.sort_order)).scalar() or 0
+    summary = content_text if len(content_text) <= 200 else content_text[:197] + "..."
+
+    item = LibraryItem(
+        code=code,
+        level_code=level_code,
+        category=category,
+        title=title[:200],
+        summary=summary,
+        content_text=content_text,
+        source_label="Generated with local AI",
+        word_count=len(content_text.split()),
+        sort_order=max_order + 1,
+        is_published=True,
+    )
+    db.session.add(item)
+    db.session.commit()
+
+    flash(f"Story '{item.title}' was added to the reading library.", "success")
     return redirect(url_for("admin.content_manager", kind="readings"))
 
 
