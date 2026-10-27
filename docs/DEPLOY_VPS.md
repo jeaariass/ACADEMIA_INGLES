@@ -38,6 +38,13 @@ Verificar en el panel (semáforo del proyecto) o con
 Revertir: poner el `TAG` anterior en el `.env` y repetir
 `/srv/scripts/portainer-stack.sh academia --pull`.
 
+## Antes de abrir el sitio a usuarios reales
+
+Si se restauró algún dump de desarrollo en la base `academia`, quedan cuentas
+`student1`/`student2` con la clave demo pública `Student123*` (ver
+`backend/app/seed.py`). Borrarlas o cambiarles la clave antes de dar acceso
+público.
+
 ## Desarrollo local
 
 Sigue igual, sin relación con el VPS: `docker-compose.local.yml` levanta su propio

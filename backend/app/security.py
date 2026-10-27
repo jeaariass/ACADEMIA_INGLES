@@ -76,6 +76,10 @@ def _validate_csrf():
 
 
 def _validate_host():
+    # Health endpoints must stay reachable with any Host header (container
+    # healthcheck hits 127.0.0.1 directly, bypassing the reverse proxy).
+    if request.path in {"/healthz", "/readyz"}:
+        return None
     raw = (os.getenv("ALLOWED_HOSTS") or "").strip()
     if not raw:
         return None

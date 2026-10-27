@@ -12,7 +12,7 @@ name: academia
 
 services:
   backend:
-    image: ghcr.io/jeaariass/academia-api:${TAG}
+    image: ghcr.io/jeaariass/academia-api:${TAG:?debe definirse TAG}
     container_name: academia-backend
     # Información que muestra el panel (https://panel.../). Aparece sola al desplegar.
     labels:
@@ -25,9 +25,28 @@ services:
       panel.boton: "Abrir"
     restart: unless-stopped
     mem_limit: 512m
-    env_file: .env
+    # Portainer guarda las variables en su propio stack.env, no en un .env del host:
+    # no usar "env_file" aqui, pasar cada variable explicita (igual que el stack spa).
     environment:
-      DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
+      DATABASE_URL: postgresql+psycopg2://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
+      APP_ENV: ${APP_ENV:-production}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      FLASK_SECRET_KEY: ${FLASK_SECRET_KEY:?debe definirse en .env}
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?debe definirse en .env}
+      SEED_DEMO_USERS: ${SEED_DEMO_USERS:-false}
+      TRUST_PROXY: ${TRUST_PROXY:-true}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-true}
+      FORCE_HTTPS: ${FORCE_HTTPS:-false}
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:?debe definirse en .env}
+      LOGIN_MAX_FAILURES: ${LOGIN_MAX_FAILURES:-8}
+      LOGIN_FAILURE_WINDOW_SECONDS: ${LOGIN_FAILURE_WINDOW_SECONDS:-900}
+      MAX_UPLOAD_BYTES: ${MAX_UPLOAD_BYTES:-10485760}
+      GUNICORN_WORKERS: ${GUNICORN_WORKERS:-2}
+      GUNICORN_TIMEOUT: ${GUNICORN_TIMEOUT:-180}
+      RUN_STARTUP_QA: ${RUN_STARTUP_QA:-0}
+      OLLAMA_HOST: ${OLLAMA_HOST:-}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:3b}
       TZ: America/Bogota
     # nginx del host hace proxy_pass aqui (ver /srv/docs/README.md seccion 5 "Agregar un proyecto").
     ports:
