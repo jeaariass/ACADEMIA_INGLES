@@ -77,9 +77,12 @@ Se recomienda **Google Chrome o Microsoft Edge** para disponer de mejor compatib
 ```text
 ACADEMIA_INGLES/
 ├── .env.example
-├── docker-compose.local.yml
-├── docker-compose.yml
+├── docker-compose.local.yml      # desarrollo local (Postgres + Ollama propios)
+├── docker-compose.yml            # stack para /srv/stacks/academia en el VPS
+├── docs/
+│   └── DEPLOY_VPS.md
 ├── scripts/
+│   ├── build-and-push.ps1        # build + push a GHCR para el VPS
 │   ├── backup_postgres.ps1
 │   ├── restore_postgres.ps1
 │   ├── backup_postgres.sh
@@ -687,7 +690,7 @@ La aplicación incluye:
 - validación estructural de XLSX;
 - contenedor backend no-root y `no-new-privileges`.
 
-Para exposición pública, complementa el rate limiting de la app con Nginx, Cloudflare, ngrok/WAF u otra capa de infraestructura.
+Para exposición pública, el rate limiting de la app se complementa con nginx + fail2ban en el VPS (ver `docs/DEPLOY_VPS.md`).
 
 ---
 
